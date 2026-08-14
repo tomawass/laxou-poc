@@ -1,0 +1,8 @@
+{
+  "name": "laxou-map-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/test_milestone1.js && node --test tests/test_milestone2.js"
+  }
+}

@@ -1,0 +1,4060 @@
+window.LAXOU_DATA = {
+  "metadata": {
+    "title": "Carte Interactive Officielle de Laxou & Nancy",
+    "city": "Laxou",
+    "department": "Meurthe-et-Moselle",
+    "postalCode": "54520",
+    "center": {
+      "lat": 48.6865,
+      "lng": 6.1504
+    },
+    "defaultZoom": 14,
+    "totalPlaces": 211
+  },
+  "categories": [
+    {
+      "id": "services",
+      "name": "Services Publics & Mairie",
+      "label": "Services",
+      "icon": "building-columns",
+      "color": "#2563eb"
+    },
+    {
+      "id": "parcs",
+      "name": "Parcs, Nature & Loisirs",
+      "label": "Parcs",
+      "icon": "tree",
+      "color": "#16a34a"
+    },
+    {
+      "id": "culture",
+      "name": "Culture, Assos & Patrimoine",
+      "label": "Culture",
+      "icon": "landmark",
+      "color": "#9333ea"
+    },
+    {
+      "id": "sports",
+      "name": "Sports, Santé & Clubs",
+      "label": "Sports",
+      "icon": "futbol",
+      "color": "#ea580c"
+    },
+    {
+      "id": "ecoles",
+      "name": "Écoles, Enfance & Éducation",
+      "label": "Écoles",
+      "icon": "graduation-cap",
+      "color": "#d97706"
+    }
+  ],
+  "places": [
+    {
+      "id": "mairie-laxou",
+      "name": "Hôtel de Ville de Laxou",
+      "category": "services",
+      "lat": 48.6882,
+      "lng": 6.1511,
+      "address": "3 Avenue Paul Déroulède, 54520 Laxou",
+      "description": "Siège principal de l'administration municipale de Laxou, des services administratifs et de l'état civil.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Laxou_H%C3%B4tel_de_Ville.jpg/800px-Laxou_H%C3%B4tel_de_Ville.jpg",
+      "tags": [
+        "Mairie",
+        "Services publics",
+        "État civil",
+        "Laxou"
+      ],
+      "link": "https://www.laxou.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "cilm-champ-le-boeuf",
+      "name": "CILM - Centre Intercommunal Laxou Maxéville",
+      "category": "services",
+      "lat": 48.6975,
+      "lng": 6.1425,
+      "address": "23 Rue de la Meuse, 54520 Laxou",
+      "description": "Équipement social et culturel majeur du quartier Champ-le-Bœuf, au cœur du programme de renouvellement urbain (NPRNU).",
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop",
+      "tags": [
+        "NPRNU",
+        "CILM",
+        "Champ-le-Bœuf",
+        "Services publics",
+        "Social"
+      ],
+      "link": "https://www.laxou.fr/fr/le-cilm.html",
+      "isNprnu": true
+    },
+    {
+      "id": "centre-social-champ-le-boeuf",
+      "name": "Centre Social & Maison du Projet Champ-le-Bœuf",
+      "category": "services",
+      "lat": 48.6968,
+      "lng": 6.144,
+      "address": "Rue de Saint-Exupéry, 54520 Laxou",
+      "description": "Lieu d'accueil, d'information urbaine et d'animation socioculturelle pour la rénovation du quartier Champ-le-Bœuf.",
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&auto=format&fit=crop",
+      "tags": [
+        "NPRNU",
+        "Centre Social",
+        "Maison du Projet",
+        "Champ-le-Bœuf",
+        "Services"
+      ],
+      "link": "https://www.laxou.fr/fr/renouvellement-urbain.html",
+      "isNprnu": true
+    },
+    {
+      "id": "hotel-de-ville-nancy",
+      "name": "Hôtel de Ville de Nancy",
+      "category": "services",
+      "lat": 48.6936,
+      "lng": 6.1832,
+      "address": "Place Stanislas, 54000 Nancy",
+      "description": "Siège de la Métropole du Grand Nancy et de la Mairie de Nancy, joyau d'architecture du XVIIIe siècle classé à l'UNESCO.",
+      "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop",
+      "tags": [
+        "Mairie",
+        "Nancy",
+        "Patrimoine",
+        "Services publics",
+        "Grand Nancy"
+      ],
+      "link": "https://www.nancy.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "parc-boufflers",
+      "name": "Parc du Champ-de-Boufflers",
+      "category": "parcs",
+      "lat": 48.6845,
+      "lng": 6.148,
+      "address": "Avenue de Boufflers, 54520 Laxou",
+      "description": "Grand parc paysager à Laxou offrant des zones de détente, des aires de jeux et un panorama sur l'agglomération nancéienne.",
+      "image": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&auto=format&fit=crop",
+      "tags": [
+        "Parc",
+        "Espace vert",
+        "Laxou",
+        "Nature",
+        "Promenade"
+      ],
+      "link": "https://www.laxou.fr/fr/parcs-et-jardins.html",
+      "isNprnu": false
+    },
+    {
+      "id": "parc-urbain-provinces",
+      "name": "Parc Urbain des Provinces",
+      "category": "parcs",
+      "lat": 48.683,
+      "lng": 6.1565,
+      "address": "Avenue de l'Europe, 54520 Laxou",
+      "description": "Espace vert bioclimatique structurant le renouvellement urbain du secteur des Provinces à Laxou.",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+      "tags": [
+        "NPRNU",
+        "Parc",
+        "Provinces",
+        "Laxou",
+        "Écologie"
+      ],
+      "link": "https://www.laxou.fr/fr/renouvellement-urbain.html",
+      "isNprnu": true
+    },
+    {
+      "id": "parc-pepiniere-nancy",
+      "name": "Parc de la Pépinière Nancy",
+      "category": "parcs",
+      "lat": 48.6972,
+      "lng": 6.1845,
+      "address": "Boulevard 21ème Régiment d'Aviation, 54000 Nancy",
+      "description": "Parc historique de 21 hectares au cœur de Nancy avec roseraie, espace animalier et allées ombragées.",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop",
+      "tags": [
+        "Parc",
+        "Nancy",
+        "Pépinière",
+        "Nature",
+        "Loisirs"
+      ],
+      "link": "https://www.nancy.fr/les-parcs-et-jardins-732.html",
+      "isNprnu": false
+    },
+    {
+      "id": "parc-sainte-marie",
+      "name": "Parc Sainte-Marie Nancy",
+      "category": "parcs",
+      "lat": 48.681,
+      "lng": 6.172,
+      "address": "Avenue Anatole France, 54000 Nancy",
+      "description": "Deuxième plus grand parc de Nancy, réputé pour son étang, ses arbres remarquables et sa proximité avec Nancy Thermal.",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&auto=format&fit=crop",
+      "tags": [
+        "Parc",
+        "Nancy",
+        "Nature",
+        "Arbres",
+        "Détente"
+      ],
+      "link": "https://www.nancy.fr/les-parcs-et-jardins-732.html",
+      "isNprnu": false
+    },
+    {
+      "id": "mediatheque-thirion",
+      "name": "Médiathèque Gérard Thirion",
+      "category": "culture",
+      "lat": 48.687,
+      "lng": 6.153,
+      "address": "Rue de la Libération, 54520 Laxou",
+      "description": "Équipement culturel municipal de Laxou proposant livres, médias numériques, expositions et ateliers créatifs.",
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop",
+      "tags": [
+        "Culture",
+        "Médiathèque",
+        "Livres",
+        "Laxou",
+        "Lecture"
+      ],
+      "link": "https://mediatheque.laxou.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "espace-culturel-cascade",
+      "name": "Espace Culturel La Cascade",
+      "category": "culture",
+      "lat": 48.685,
+      "lng": 6.156,
+      "address": "Avenue de l'Europe, 54520 Laxou",
+      "description": "Salle de spectacles et centre d'animation artistique accueillant la saison culturelle municipale.",
+      "image": "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?w=600&auto=format&fit=crop",
+      "tags": [
+        "Culture",
+        "Théâtre",
+        "Concerts",
+        "Spectacles",
+        "Laxou"
+      ],
+      "link": "https://www.laxou.fr/fr/saison-culturelle.html",
+      "isNprnu": false
+    },
+    {
+      "id": "opera-national-lorraine",
+      "name": "Opéra National de Lorraine",
+      "category": "culture",
+      "lat": 48.6938,
+      "lng": 6.1848,
+      "address": "1 Rue Sainte-Catherine, 54000 Nancy",
+      "description": "Opéra national situé sur la Place Stanislas, haut lieu de la création lyrique et symphonique.",
+      "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop",
+      "tags": [
+        "Culture",
+        "Opéra",
+        "Musique",
+        "Nancy",
+        "Patrimoine"
+      ],
+      "link": "https://www.opera-national-lorraine.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "museum-aquarium-nancy",
+      "name": "Muséum-Aquarium de Nancy",
+      "category": "culture",
+      "lat": 48.693,
+      "lng": 6.1885,
+      "address": "34 Rue Sainte-Catherine, 54000 Nancy",
+      "description": "Établissement Art Déco présentant d'importantes collections zoologiques et des bassins aquatiques de référence.",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&auto=format&fit=crop",
+      "tags": [
+        "Culture",
+        "Musée",
+        "Aquarium",
+        "Sciences",
+        "Nancy"
+      ],
+      "link": "https://www.museumaquariumdenancy.eu",
+      "isNprnu": false
+    },
+    {
+      "id": "complexe-saussaie",
+      "name": "Complexe Sportif de la Saussaie",
+      "category": "sports",
+      "lat": 48.6912,
+      "lng": 6.1455,
+      "address": "Rue de la Saussaie, 54520 Laxou",
+      "description": "Principale infrastructure sportive de Laxou avec terrains de football, piste d'athlétisme et salles polyvalentes.",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop",
+      "tags": [
+        "Sports",
+        "Gymnase",
+        "Football",
+        "Athlétisme",
+        "Laxou"
+      ],
+      "link": "https://www.laxou.fr/fr/equipements-sportifs.html",
+      "isNprnu": false
+    },
+    {
+      "id": "gymnase-champ-le-boeuf",
+      "name": "Gymnase Champ-le-Bœuf",
+      "category": "sports",
+      "lat": 48.696,
+      "lng": 6.141,
+      "address": "Rue de la Meuse, 54520 Laxou",
+      "description": "Halle des sports rénovée desservant les clubs et écoles du quartier Champ-le-Bœuf.",
+      "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop",
+      "tags": [
+        "NPRNU",
+        "Sports",
+        "Gymnase",
+        "Champ-le-Bœuf",
+        "Laxou"
+      ],
+      "link": "https://www.laxou.fr/fr/equipements-sportifs.html",
+      "isNprnu": true
+    },
+    {
+      "id": "nancy-thermal",
+      "name": "Nancy Thermal (Complexe Aquatique & Spa)",
+      "category": "sports",
+      "lat": 48.679,
+      "lng": 6.1688,
+      "address": "45 Rue du Sergent Blandan, 54000 Nancy",
+      "description": "Complexe métropolitain dédié aux sports aquatiques, à la santé thermale et au bien-être.",
+      "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&auto=format&fit=crop",
+      "tags": [
+        "Sports",
+        "Piscine",
+        "Thermal",
+        "Bien-être",
+        "Nancy"
+      ],
+      "link": "https://www.nancythermalresort.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "college-victor-hugo",
+      "name": "Collège Victor Hugo",
+      "category": "ecoles",
+      "lat": 48.6895,
+      "lng": 6.149,
+      "address": "Rue Victor Hugo, 54520 Laxou",
+      "description": "Établissement public d'enseignement secondaire de la ville de Laxou.",
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop",
+      "tags": [
+        "Écoles",
+        "Collège",
+        "Enseignement",
+        "Laxou"
+      ],
+      "link": "http://www.clg-victor-hugo-laxou.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "ecole-champ-le-boeuf",
+      "name": "Groupe Scolaire Champ-le-Bœuf & Résidence Cèdre",
+      "category": "ecoles",
+      "lat": 48.697,
+      "lng": 6.145,
+      "address": "Rue de Lorraine, 54520 Laxou",
+      "description": "Groupe scolaire réhabilité au Champ-le-Bœuf dans le périmètre NPRNU près de la Tour Cèdre.",
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop",
+      "tags": [
+        "NPRNU",
+        "Écoles",
+        "Champ-le-Bœuf",
+        "Maternelle",
+        "Primaire",
+        "Tour Cèdre"
+      ],
+      "link": "https://www.laxou.fr/fr/ecoles.html",
+      "isNprnu": true
+    },
+    {
+      "id": "lycee-chopin-nancy",
+      "name": "Lycée Frédéric Chopin",
+      "category": "ecoles",
+      "lat": 48.6825,
+      "lng": 6.164,
+      "address": "39 Rue du Sergent Blandan, 54000 Nancy",
+      "description": "Lycée public proposant des filières générales, technologiques et des classes préparatoires.",
+      "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&auto=format&fit=crop",
+      "tags": [
+        "Écoles",
+        "Lycée",
+        "Nancy",
+        "Enseignement Supérieur"
+      ],
+      "link": "http://www.lycee-chopin.fr",
+      "isNprnu": false
+    },
+    {
+      "id": "aarpi-cabinitio-1",
+      "name": "AARPI CABINITIO",
+      "category": "services",
+      "lat": 48.68531,
+      "lng": 6.15589,
+      "address": "23 Avenue Paul Déoulède, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 57 29 13 61",
+      "email": "contact@cabinitio-avocats.fr",
+      "link": "https://cabinitio-avocats.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "AARPI"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "sac-au-dos-2",
+      "name": "Sac au Dos",
+      "category": "parcs",
+      "lat": 48.68165,
+      "lng": 6.1605,
+      "address": "83 Rue Raymond Poincaré, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 44 44 50",
+      "email": "sacaudos@hotmail.com",
+      "link": "https://sacaudos-laxou.e-monsite.com/",
+      "isNprnu": false,
+      "tags": [
+        "Parcs",
+        "Laxou",
+        "Sac"
+      ],
+      "image": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-si-l-on-se-parlait-3",
+      "name": "Association Si l'on se Parlait",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.15185,
+      "address": "Bâtiment Anjou - Entrée Sud N°45 Avenue de l'Europe - Les Provinces, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 72 79",
+      "email": "silonseparlait@gmail.com",
+      "link": "https://www.silonseparlait.com/",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-world-trailander-4",
+      "name": "Association World Trailander",
+      "category": "sports",
+      "lat": 48.68849,
+      "lng": 6.13983,
+      "address": "39 Rue de Beauregard, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 29 31 24 76",
+      "email": "contact@world-trailander.fr",
+      "link": "http://www.world-trailander.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "badminton-club-de-laxou-5",
+      "name": "Badminton Club de Laxou",
+      "category": "sports",
+      "lat": 48.69905,
+      "lng": 6.13492,
+      "address": "23 Rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 67 51 78 78",
+      "email": "badclublaxou@gmail.com",
+      "link": "http://www.laxou-badminton.com",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Badminton"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "bon-app-laxou-6",
+      "name": "Bon App' Laxou",
+      "category": "services",
+      "lat": 48.67917,
+      "lng": 6.14707,
+      "address": "Place Louis Colin, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 53 53 83",
+      "email": "bonapp_laxou@yahoo.fr",
+      "link": "https://www.bonapplaxou.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Bon"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cap-beaut-7",
+      "name": "Cap Beauté",
+      "category": "services",
+      "lat": 48.68507,
+      "lng": 6.15603,
+      "address": "34 avenue Paul Déroulède, 54520 LAXOU",
+      "description": "Description",
+      "phone": "0681349632",
+      "email": "capbeaute54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Cap"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cocorico-the-french-casse-cro-te-8",
+      "name": "Cocorico The French Casse-croûte",
+      "category": "services",
+      "lat": 48.6938,
+      "lng": 6.13066,
+      "address": "15 Avenue de la Résistance, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 22 22",
+      "email": "cocoricolaxou.54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Cocorico"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "la-fontaine-des-pains-9",
+      "name": "La Fontaine des pains",
+      "category": "services",
+      "lat": 48.68644,
+      "lng": 6.14242,
+      "address": "13 Place de la Liberté, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "lafontainedespains@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "La"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "la-gargote-10",
+      "name": "La Gargote",
+      "category": "services",
+      "lat": 48.68565,
+      "lng": 6.14077,
+      "address": "12 rue Edouard Grosjean, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 22 10",
+      "email": "lagargotelaxovienne@hotmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "La"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-point-rencontre-11",
+      "name": "Laxou Point Rencontre",
+      "category": "culture",
+      "lat": 48.68108,
+      "lng": 6.15353,
+      "address": "45 rue du Plateau, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 85 41 12 11",
+      "email": "contact@l-p-r.fr",
+      "link": "https://www.l-p-r.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Laxou"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "mon-prof-domicile-12",
+      "name": "Mon Prof à domicile",
+      "category": "services",
+      "lat": 48.69107,
+      "lng": 6.12636,
+      "address": "La Sapinière, 54520 LAXOU",
+      "description": "Description",
+      "phone": "07 68 15 78 91",
+      "email": "terriervi@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Mon"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "pascal-hequet-premium-pm-13",
+      "name": "Pascal Hequet Premium PM",
+      "category": "services",
+      "lat": 48.68499,
+      "lng": 6.14172,
+      "address": "44 rue Edouard Grosjean, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 83 48 48 57",
+      "email": "hequetpascal1@gmail.com",
+      "link": "https://phenergie-bien-etre.com",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Pascal"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "p-tisserie-kohut-14",
+      "name": "Pâtisserie KOHUT",
+      "category": "services",
+      "lat": 48.67937,
+      "lng": 6.15291,
+      "address": "25 Boulevard de Hardeval, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 27 60 24",
+      "email": "patisserie.kohut@laposte.net",
+      "link": "https://boulangeriepatisseriekohut.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Pâtisserie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "rased-r-seau-d-aides-sp-cifiques-aux-enfants-en-difficult-s-15",
+      "name": "RASED - Réseau d'Aides Spécifiques aux Enfants en Difficultés",
+      "category": "services",
+      "lat": 48.68108,
+      "lng": 6.15353,
+      "address": "15 rue du 8 mai, 54520 LAXOU",
+      "description": "RASED - Réseau d'Aides Spécifiques aux Enfants en Difficultés à Laxou.",
+      "phone": "03 57 80 58 68",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "RASED"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "samouilhan-immobilier-guy-hoquet-16",
+      "name": "Samouilhan Immobilier - Guy Hoquet",
+      "category": "services",
+      "lat": 48.67987,
+      "lng": 6.16206,
+      "address": "83 avenue de la Libération, 54520 LAXOU",
+      "description": "Description",
+      "phone": "0611254819",
+      "email": "laxou@guyhoquet.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Samouilhan"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "sarl-yes-english-17",
+      "name": "SARL Yes English",
+      "category": "services",
+      "lat": 48.68788,
+      "lng": 6.15349,
+      "address": "9 bis rue mi les Vignes, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 36 11 92 48",
+      "email": "Yes.english.france@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "SARL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "vertmoi-18",
+      "name": "Vertmoi",
+      "category": "services",
+      "lat": 48.68447,
+      "lng": 6.15713,
+      "address": "24 rue Aristide Briand, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 44 39 16 85",
+      "email": "paul.mateos54@gmail.com",
+      "link": "https://vertmoi.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Vertmoi"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "zefirm-19",
+      "name": "Zefirm",
+      "category": "services",
+      "lat": 48.68347,
+      "lng": 6.14736,
+      "address": "61 rue de la République, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "jul@zefirm.com",
+      "link": "http://www.zefirm.com/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Zefirm"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "acad-mie-l-on-tonnelier-20",
+      "name": "Académie Léon TONNELIER",
+      "category": "services",
+      "lat": 48.68637,
+      "lng": 6.14111,
+      "address": "17 rue Jules Ferry, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 05 93",
+      "email": "academieleontonnelier@yahoo.fr",
+      "link": "https://www.academieleontonnelier.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Académie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "a-ki-juku-21",
+      "name": "Aïki Juku",
+      "category": "sports",
+      "lat": 48.6814,
+      "lng": 6.14621,
+      "address": "57 rue de Maréville, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 41 00 78",
+      "email": "jacques.garin1@sfr.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Aïki"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amicale-bridge-club-d-tente-entra-nement-25",
+      "name": "Amicale Bridge Club Détente Entraînement",
+      "category": "culture",
+      "lat": 48.68392,
+      "lng": 6.15437,
+      "address": "10 boulevard Emile Zola, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 28 06",
+      "email": "abcdelaxou@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Amicale"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amicale-la-que-emile-zola-26",
+      "name": "Amicale Laïque Emile Zola",
+      "category": "services",
+      "lat": 48.68254,
+      "lng": 6.15543,
+      "address": "50 boulevard Emile Zola, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 59 37 18 30",
+      "email": "association.alez@gmail.com",
+      "link": "https://alezlaxou.wixsite.com/alez",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Amicale"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-laxovienne-victor-hugo-27",
+      "name": "Association Laxovienne Victor Hugo",
+      "category": "sports",
+      "lat": 48.67834,
+      "lng": 6.14654,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "06 11 07 07 11",
+      "email": "alvh.laxou@gmail.com",
+      "link": "http://alvh.asso.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amicale-louis-pergaud-28",
+      "name": "Amicale Louis Pergaud",
+      "category": "services",
+      "lat": 48.68613,
+      "lng": 6.15154,
+      "address": "68 rue Ernest Albert, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 81 31 49 06",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Amicale"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amicale-ornithologique-de-nancy-et-environs-29",
+      "name": "Amicale Ornithologique de Nancy et Environs",
+      "category": "parcs",
+      "lat": 48.6966,
+      "lng": 6.13016,
+      "address": "6 allée du Buttant, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 47 82",
+      "email": "yjenft@outlook.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Parcs",
+        "Laxou",
+        "Amicale"
+      ],
+      "image": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "f-d-ration-nationale-des-anciens-des-forces-fran-aises-en-allemagne-et-autriche-section-de-meurthe-et-moselle-fnaffaa-30",
+      "name": "Fédération Nationale des Anciens des Forces Françaises en Allemagne et Autriche, Section de Meurthe-et-Moselle (FNAFFAA)",
+      "category": "services",
+      "lat": 48.67659,
+      "lng": 6.14692,
+      "address": "40 rue de Turique, 54000 NANCY",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Fédération"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "andr-monta-31",
+      "name": "André MONTA",
+      "category": "services",
+      "lat": 48.68616,
+      "lng": 6.14215,
+      "address": "14 Place de la Liberté, 54520 laxou",
+      "description": "André MONTA à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "André"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "as-adepape-33",
+      "name": "AS-ADEPAPE",
+      "category": "services",
+      "lat": 48.68168,
+      "lng": 6.14212,
+      "address": "14 rue de l'Embanie, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "AS-ADEPAPE"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-si-l-on-se-parlait-34",
+      "name": "Association ''Si l'on se parlait''",
+      "category": "culture",
+      "lat": 48.68047,
+      "lng": 6.15459,
+      "address": "Bâtiment Anjou - Entrée Sud N°45 Avenue de l'Europe - Les Provinces, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 28 72 79",
+      "email": "silonseparlait@gmail.com",
+      "link": "https://www.silonseparlait.com/",
+      "isNprnu": true,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-3-et-4-35",
+      "name": "Association 3 et 4",
+      "category": "services",
+      "lat": 48.69729,
+      "lng": 6.12375,
+      "address": "13-15 Boulevard Joffre, 54000 NANCY",
+      "description": "Description",
+      "phone": "06 43 19 59 22",
+      "email": "association.3et4@gmail.com",
+      "link": "http://www.3et4.org",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-bujinkan-dojo-nancy-laxou-38",
+      "name": "Association Bujinkan Dojo Nancy Laxou",
+      "category": "sports",
+      "lat": 48.68614,
+      "lng": 6.14253,
+      "address": "17 Place de la Liberté, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 71 42 84 71",
+      "email": "bujinkanlaxou@gmail.com",
+      "link": "http://www.bujinkanlaxou.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-de-fil-en-aiguilles-39",
+      "name": "Association De Fil en Aiguilles",
+      "category": "services",
+      "lat": 48.69981,
+      "lng": 6.13153,
+      "address": "CILM - 23 rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "claude.brandenberg@sfr.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-de-lutte-olympique-et-de-la-diffusion-culturelle-40",
+      "name": "Association de Lutte Olympique et de la Diffusion Culturelle",
+      "category": "sports",
+      "lat": 48.68082,
+      "lng": 6.14576,
+      "address": "75 rue de Maréville, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 71 58 52 88",
+      "email": "karim.qribi@hotmail.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-combattants-prisonniers-de-guerre-et-combattants-alg-rie-tunisie-maroc-acpg-catm-41",
+      "name": "Association des Combattants Prisonniers de Guerre et Combattants Algérie Tunisie Maroc (ACPG-CATM)",
+      "category": "services",
+      "lat": 48.66104,
+      "lng": 6.18285,
+      "address": "11 rue d'Amsterdam, 54500 VANDOEUVRE",
+      "description": "Description",
+      "phone": "06 98 40 04 09",
+      "email": "apgcatm.54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-jardins-voirin-43",
+      "name": "Association des Jardins Voirin",
+      "category": "services",
+      "lat": 48.6842,
+      "lng": 6.14459,
+      "address": "13 rue de la Fontenelle, 54520 LAXOU",
+      "description": "Association des Jardins Voirin à Laxou.",
+      "phone": "06 82 49 30 99",
+      "email": "contact@jardinsvoirin.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-locataires-ind-pendants-du-champ-le-b-uf-44",
+      "name": "Association des Locataires Indépendants du Champ-le-Bœuf",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23 rue de la Meuse, 54520 laxou",
+      "description": "Association des Locataires Indépendants du Champ-le-Bœuf à Laxou.",
+      "phone": "03 83 97 00 22",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-mutil-s-combattants-et-victimes-de-guerre-amc-et-vg-45",
+      "name": "Association des Mutilés Combattants et Victimes de Guerre (AMC et VG)",
+      "category": "services",
+      "lat": 48.67716,
+      "lng": 6.14564,
+      "address": "8 rue du Luxembourg, 54520 Laxou",
+      "description": "Description",
+      "phone": "06 65 09 35 94",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-retrait-s-et-personnes-ag-es-de-laxou-arpal-46",
+      "name": "Association des Retraités et Personnes Agées de Laxou (ARPAL)",
+      "category": "services",
+      "lat": 48.67659,
+      "lng": 6.14692,
+      "address": "93 boulevard de Hardeval, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 85 58 30 82",
+      "email": "gerardhedwigbonnet@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-usagers-du-flandre-15-47",
+      "name": "Association des Usagers du Flandre 15",
+      "category": "services",
+      "lat": 48.68288,
+      "lng": 6.11184,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 40 05 99",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-du-flandre-15-48",
+      "name": "Association du Flandre 15",
+      "category": "services",
+      "lat": 48.68288,
+      "lng": 6.11184,
+      "address": "Bâtiment Picardie Entrée 7 – Les Provinces, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 40 05 99",
+      "email": "",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-dynamifasol-49",
+      "name": "Association Dynamifasol",
+      "category": "culture",
+      "lat": 48.6805,
+      "lng": 6.15128,
+      "address": "9 rue du 11 novembre, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 63 89 63 92",
+      "email": "chorale.dynamifasol@gmail.com",
+      "link": "https://choraledynamifasol.wixsite.com/dynamifasol",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-ecole-dao-yin-50",
+      "name": "Association Ecole DAO YIN",
+      "category": "sports",
+      "lat": 48.68252,
+      "lng": 6.15649,
+      "address": "55 rue du Colonel Moll, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 91 56",
+      "email": "",
+      "link": "http://www.daoyin.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-el-solatino-51",
+      "name": "Association El Solatino",
+      "category": "sports",
+      "lat": 48.68969,
+      "lng": 6.13808,
+      "address": "14 allée des Carriers, 54520 Laxou",
+      "description": "Description",
+      "phone": "06 82 05 71 89",
+      "email": "blaiseromain54@yahoo.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-floraine-52",
+      "name": "Association FLORAINE",
+      "category": "services",
+      "lat": 48.66205,
+      "lng": 6.15425,
+      "address": "100 rue du Jardin Botanique, 54600 Villers-lès-Nancy",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-football-laxou-sapini-re-53",
+      "name": "Association Football Laxou Sapinière",
+      "category": "sports",
+      "lat": 48.68784,
+      "lng": 6.12839,
+      "address": "9 rue de la Toulose, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 20 33",
+      "email": "laxousapiniere.af@meurtheetmoselle.fr",
+      "link": "http://www.afls54.net",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-good-to-go-55",
+      "name": "Association GOOD TO GO",
+      "category": "culture",
+      "lat": 48.68341,
+      "lng": 6.14682,
+      "address": "51 Rue de la République, 54520 LAXOU",
+      "description": "Description",
+      "phone": "07 81 23 18 42",
+      "email": "goodtogodancehall54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-kappacit-56",
+      "name": "Association Kappacité",
+      "category": "services",
+      "lat": 48.68965,
+      "lng": 6.17372,
+      "address": "Association Kappacité, 54000 nancy",
+      "description": "Description",
+      "phone": "",
+      "email": "anne-marie.didier584@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-laxovienne-pour-la-protection-des-espaces-57",
+      "name": "Association Laxovienne pour la Protection des Espaces",
+      "category": "services",
+      "lat": 48.68616,
+      "lng": 6.15178,
+      "address": "74 rue Ernest ALbert, 54520 LAXOU",
+      "description": "Association Laxovienne pour la Protection des Espaces à Laxou.",
+      "phone": "",
+      "email": "contact@alpe-laxou.org",
+      "link": "https://www.alpe-laxou.org",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-lorraine-de-soins-domicile-alsad-58",
+      "name": "Association Lorraine de Soins à Domicile (ALSAD)",
+      "category": "services",
+      "lat": 48.67421,
+      "lng": 6.16195,
+      "address": "2 bis rue Sainte-Odile, 54600 Villers-lès-Nancy",
+      "description": "Association Lorraine de Soins à Domicile (ALSAD) à Laxou.",
+      "phone": "03 83 27 08 38",
+      "email": "alsad@wanadoo.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-p-t-ca-nancy-laxou-59",
+      "name": "Association Pétéca Nancy-Laxou",
+      "category": "sports",
+      "lat": 48.68345,
+      "lng": 6.14652,
+      "address": "2 rue des Clos, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 07 44 96 60",
+      "email": "bastienka@orange.fr",
+      "link": "http://www.federationdepeteca.com",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-pour-la-promotion-des-arts-et-cr-ations-artistiques-60",
+      "name": "Association pour la Promotion des Arts et Créations Artistiques",
+      "category": "culture",
+      "lat": 48.68336,
+      "lng": 6.14169,
+      "address": "8 sentier de Saint-Arriant, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 61 14 77 71",
+      "email": "A-P-A-C-A@outlook.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-pour-la-promotion-et-l-enseignement-de-la-musique-61",
+      "name": "Association pour la Promotion et l'Enseignement de la Musique",
+      "category": "culture",
+      "lat": 48.68124,
+      "lng": 6.15473,
+      "address": "48 Boulevard Émile Zola, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 70 41 91 08",
+      "email": "coordination@apemlaxou.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-provinces-en-f-te-62",
+      "name": "Association Provinces en Fête",
+      "category": "culture",
+      "lat": 48.67944,
+      "lng": 6.14926,
+      "address": "Bâtiment Savoie – E.9 Les Provinces, 54520 laxou",
+      "description": "Description",
+      "phone": "",
+      "email": "sev.best@hotmail.com",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-sportive-laxou-volley-ball-63",
+      "name": "Association Sportive Laxou Volley-Ball",
+      "category": "sports",
+      "lat": 48.67995,
+      "lng": 6.14805,
+      "address": "22 Rue du Fort Joly, 54390 FROUARD",
+      "description": "Description",
+      "phone": "06 87 55 90 10",
+      "email": "laxou.volley-ball@laposte.net",
+      "link": "http://www.laxou-volley.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-sportive-laxovienne-de-billard-64",
+      "name": "Association Sportive Laxovienne de Billard",
+      "category": "services",
+      "lat": 48.69981,
+      "lng": 6.13153,
+      "address": "CILM 23 rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 64 11",
+      "email": "laxou.billard@wanadoo.fr",
+      "link": "https://www.laxoubillard.com/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-subtil-65",
+      "name": "Association SUBTIL'",
+      "category": "services",
+      "lat": 48.68288,
+      "lng": 6.11184,
+      "address": "Salle chorégraphie, 54520 LAXOU",
+      "description": "Description",
+      "phone": "09 81 60 36 17",
+      "email": "subtil.yogareiki@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-tambour-66",
+      "name": "Association Tambour",
+      "category": "services",
+      "lat": 48.68667,
+      "lng": 6.14081,
+      "address": "32 rue Jules Ferry, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "guy.constant3@wanadoo.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-zola-avenir-67",
+      "name": "Association Zola Avenir",
+      "category": "services",
+      "lat": 48.6792,
+      "lng": 6.15664,
+      "address": "70 bis avenue Pierre Curie, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 82 05 36 31",
+      "email": "zola.avenir@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-si-l-on-se-parlait-68",
+      "name": "Association ''Si l'on se parlait !''",
+      "category": "services",
+      "lat": 48.67983,
+      "lng": 6.14897,
+      "address": "Bâtiment Anjou sud - Avenue de l'Europe, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 72 79",
+      "email": "silonseparlait@gmail.com",
+      "link": "https://www.silonseparlait.com/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "atelier-de-dentelles-campibovidiennes-69",
+      "name": "Atelier de Dentelles Campibovidiennes",
+      "category": "services",
+      "lat": 48.70216,
+      "lng": 6.13098,
+      "address": "16 rue du Rabodeau, 54320 MAXEVILLE",
+      "description": "Description",
+      "phone": "03 83 98 17 89",
+      "email": "marcellepellerin54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Atelier"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "avec-faridol-70",
+      "name": "AVEC FARIDOL",
+      "category": "services",
+      "lat": 48.67831,
+      "lng": 6.14523,
+      "address": "29 Rue de la Mutualité, 54600 MAXEVILLE",
+      "description": "Description",
+      "phone": "03 83 27 30 82",
+      "email": "choeur.faridol@gmail.com",
+      "link": "http://www.faridol.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "AVEC"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "biblioth-que-m-diath-que-g-rard-thirion-71",
+      "name": "Bibliothèque-Médiathèque Gérard Thirion",
+      "category": "culture",
+      "lat": 48.6828,
+      "lng": 6.14962,
+      "address": "17 rue de Maréville, 54520 LAXOU",
+      "description": "Bibliothèque-Médiathèque Gérard Thirion à Laxou.",
+      "phone": "0383287116",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Bibliothèque-Médiathèque"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "caisse-d-allocations-familiales-72",
+      "name": "Caisse d'Allocations Familiales",
+      "category": "services",
+      "lat": 48.68705,
+      "lng": 6.16666,
+      "address": "21 Rue Saint Lambert, 54000 nancy",
+      "description": "Caisse d'Allocations Familiales à Laxou.",
+      "phone": "08 10 25 54 10",
+      "email": "",
+      "link": "http://www.caf.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Caisse"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "caisse-primaire-d-assurance-maladie-73",
+      "name": "Caisse Primaire d'Assurance Maladie",
+      "category": "services",
+      "lat": 48.68859,
+      "lng": 6.1777,
+      "address": "9 boulevard Joffre, 54000 nancy",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "http://www.ameli.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Caisse"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cap-danse-74",
+      "name": "CAP DANSE",
+      "category": "services",
+      "lat": 48.68377,
+      "lng": 6.15595,
+      "address": "20 bis rue du Colonel Moll, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 52 60 81 37",
+      "email": "contact@capdanse.net",
+      "link": "http://www.capdanse.net",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CAP"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "carsat-nord-est-75",
+      "name": "Carsat Nord-Est",
+      "category": "services",
+      "lat": 48.70266,
+      "lng": 6.17063,
+      "address": "81-83-85 rue de Metz, 54000 NANCY",
+      "description": "Description",
+      "phone": "09 71 10 39 60",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Carsat"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centre-germaine-marchal-76",
+      "name": "Centre Germaine MARCHAL",
+      "category": "services",
+      "lat": 48.69819,
+      "lng": 6.19275,
+      "address": "38 rue de Dieuze, 54000 nancy",
+      "description": "Description",
+      "phone": "03 83 36 65 60",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centre"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centre-information-jeunesse-lorraine-cijl-77",
+      "name": "Centre Information Jeunesse Lorraine (CIJL)",
+      "category": "services",
+      "lat": 48.69203,
+      "lng": 6.17294,
+      "address": "20 quai Claude Le Lorrain, 54000 nancy",
+      "description": "Description",
+      "phone": "03 83 37 04 46",
+      "email": "",
+      "link": "http://www.jeunesenlorraine.org",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centre"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centre-intercommunal-laxou-max-ville-78",
+      "name": "Centre Intercommunal Laxou Maxéville",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23 rue de la Meuse, 54520 LAXOU",
+      "description": "Centre Intercommunal Laxou Maxéville à Laxou.",
+      "phone": "0383961134",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centre"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centre-r-gional-des-uvres-universitaires-et-scolaires-crous-79",
+      "name": "Centre Régional des Œuvres Universitaires et Scolaires (CROUS)",
+      "category": "services",
+      "lat": 48.68446,
+      "lng": 6.15847,
+      "address": "75 rue de Laxou, 54000 nancy",
+      "description": "Centre Régional des Œuvres Universitaires et Scolaires (CROUS) à Laxou.",
+      "phone": "03 83 91 88 00",
+      "email": "",
+      "link": "http://www.crous-nancy-metz.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centre"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centres-m-dico-sociaux-80",
+      "name": "Centres médico-sociaux",
+      "category": "services",
+      "lat": 48.6808,
+      "lng": 6.15562,
+      "address": "3 rue Raymond Poincaré, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 27 74 79",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centres"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centres-m-dico-sociaux-de-laxou-81",
+      "name": "Centres Médico-sociaux de Laxou",
+      "category": "services",
+      "lat": 48.6808,
+      "lng": 6.15562,
+      "address": "3 rue Raymond Poincaré, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 27 74 79",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centres"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "centres-m-dico-sociaux-de-laxou-82",
+      "name": "Centres Médico-sociaux de Laxou",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23 rue de la Meuse, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 96 29 43",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Centres"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cercle-d-escrime-de-laxou-83",
+      "name": "Cercle d'Escrime de Laxou",
+      "category": "services",
+      "lat": 48.6889,
+      "lng": 6.12915,
+      "address": "6 rue des Affouages, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 03 11",
+      "email": "eve-marie.gallot@orange.fr",
+      "link": "http://www.escrime-laxou.net",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Cercle"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cercle-des-arts-84",
+      "name": "Cercle des Arts",
+      "category": "culture",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "13 rue des Gravières, 54180 HEILLECOURT",
+      "description": "Description",
+      "phone": "03 83 56 28 84",
+      "email": "isamo.colin@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Cercle"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cgl-54-conf-d-ration-g-n-rale-du-logement-86",
+      "name": "CGL 54 (Confédération Générale du Logement)",
+      "category": "services",
+      "lat": 48.70154,
+      "lng": 6.12856,
+      "address": "8 Rue d'Amsterdam, 54500 VANDOEUVRE-LES-NANCY",
+      "description": "CGL 54 (Confédération Générale du Logement) à Laxou.",
+      "phone": "03 83 25 20 26",
+      "email": "",
+      "link": "https://www.nancy54.com/cgl54#userForm",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CGL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cgl-laxou-conf-d-ration-g-n-rale-du-logement-87",
+      "name": "CGL LAXOU (Confédération Générale du Logement)",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.15185,
+      "address": "1 Batiment Bourgogne - Les Provinces, 54520 laxou",
+      "description": "CGL LAXOU (Confédération Générale du Logement) à Laxou.",
+      "phone": "03 83 25 20 26",
+      "email": "cgl.ud54@wanadoo.fr",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CGL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "chorale-choeur-swing-89",
+      "name": "Chorale Choeur Swing",
+      "category": "culture",
+      "lat": 48.68516,
+      "lng": 6.14176,
+      "address": "23 rue Edouard Grosjean, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 40 36 05",
+      "email": "choeur.swing@sfr.fr",
+      "link": "http://choeur.swing.free.fr",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Chorale"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "christian-caurel-90",
+      "name": "Christian Caurel",
+      "category": "services",
+      "lat": 48.6783,
+      "lng": 6.14812,
+      "address": "Rue Robert Schuman, 54520 laxou",
+      "description": "Christian Caurel à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Christian"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cidff-centre-d-information-sur-les-droits-des-femme-et-des-familles-92",
+      "name": "CIDFF (Centre d'Information sur les Droits des Femme et des Familles)",
+      "category": "services",
+      "lat": 48.69188,
+      "lng": 6.18741,
+      "address": "1 rue du Manège, 54000 NANCY",
+      "description": "CIDFF (Centre d'Information sur les Droits des Femme et des Familles) à Laxou.",
+      "phone": "03 83 35 35 84",
+      "email": "",
+      "link": "http://cidff54.wifeo.com/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CIDFF"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cimeti-re-de-l-egalit-93",
+      "name": "Cimetière de l'Egalité",
+      "category": "culture",
+      "lat": 48.68664,
+      "lng": 6.14497,
+      "address": "Rue de l&#39;Egalité, 54520 LAXOU",
+      "description": "Cimetière de l'Egalité à Laxou.",
+      "phone": "03 83 40 70 10",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Cimetière"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cimeti-re-paysager-de-la-tarrere-94",
+      "name": "Cimetière paysager de la Tarrere",
+      "category": "culture",
+      "lat": 48.6812,
+      "lng": 6.14089,
+      "address": "Allée de Malvaux, 54520 LAXOU",
+      "description": "Cimetière paysager de la Tarrere à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Cimetière"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "club-aquariophile-de-champ-le-b-uf-96",
+      "name": "Club Aquariophile de Champ-le-Bœuf",
+      "category": "services",
+      "lat": 48.70154,
+      "lng": 6.12856,
+      "address": "3 rue du Terroin, 54320 MAXEVILLE",
+      "description": "Description",
+      "phone": "06 18 52 58 71",
+      "email": "caclb@gmail.com",
+      "link": "http://www.caclb.com",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Club"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "club-laxovien-de-scrabble-97",
+      "name": "Club Laxovien de Scrabble",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "CILM - 23 rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "scrabblaxou@hotmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Club"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "coll-ge-et-lyc-e-georges-de-la-tour-98",
+      "name": "Collège et Lycée Georges de la Tour",
+      "category": "services",
+      "lat": 48.69135,
+      "lng": 6.13814,
+      "address": "Laxou (54520)",
+      "description": "Collège et Lycée Georges de la Tour à Laxou.",
+      "phone": "03 83 96 48 98",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Collège"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "coll-ge-la-fontaine-99",
+      "name": "Collège La Fontaine",
+      "category": "services",
+      "lat": 48.69802,
+      "lng": 6.1353,
+      "address": "6 rue de la Moselle, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 96 16 55",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Collège"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "coll-ge-victor-prouv-100",
+      "name": "Collège Victor Prouvé",
+      "category": "services",
+      "lat": 48.67596,
+      "lng": 6.14513,
+      "address": "10 route de Villers, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 27 03 72",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Collège"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "comit-de-jumelage-de-laxou-101",
+      "name": "Comité de Jumelage de Laxou",
+      "category": "services",
+      "lat": 48.6828,
+      "lng": 6.14962,
+      "address": "17 rue de Maréville, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 99 58 28 09",
+      "email": "acjl54520@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Comité"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "comit-des-f-tes-du-champ-le-b-uf-102",
+      "name": "Comité des Fêtes du Champ-le-Bœuf",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "44 allée de l'Alzette, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "comfeteclb@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Comité"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "compagnie-incognito-103",
+      "name": "Compagnie Incognito",
+      "category": "services",
+      "lat": 48.68442,
+      "lng": 6.14391,
+      "address": "21 rue Gebhart, 54000 NANCY",
+      "description": "Description",
+      "phone": "06 24 86 23 03",
+      "email": "compagnieincognito54@gmail.com",
+      "link": "http://www.compagnie-incognito.com",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Compagnie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "complexe-sportif-gaston-lozzia-104",
+      "name": "Complexe Sportif Gaston Lozzia",
+      "category": "services",
+      "lat": 48.68784,
+      "lng": 6.12841,
+      "address": "9 Rue de la Toulose, 54520 laxou",
+      "description": "Complexe Sportif Gaston Lozzia à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Complexe"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conf-d-ration-syndicale-des-familles-105",
+      "name": "Confédération Syndicale des Familles",
+      "category": "services",
+      "lat": 48.67944,
+      "lng": 6.14926,
+      "address": "Bâtiment Savoie Salle 4 - Les Provinces, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 03 24",
+      "email": "csf-laxou@orange.fr",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Confédération"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-g-n-ral-de-meurthe-et-moselle-106",
+      "name": "Conseil Général de Meurthe-et-Moselle",
+      "category": "services",
+      "lat": 48.68822,
+      "lng": 6.17869,
+      "address": "13-15 boulevard Joffre - Galerie des Chênes, 54000 nancy",
+      "description": "Description",
+      "phone": "03 83 30 12 26",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Conseil"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-g-n-ral-de-meurthe-et-moselle-107",
+      "name": "Conseil général de Meurthe-et-Moselle",
+      "category": "services",
+      "lat": 48.67943,
+      "lng": 6.16675,
+      "address": "48, esplanade Jacques Baudot - CO 900 19, 54035 nancy cedex",
+      "description": "Conseil général de Meurthe-et-Moselle à Laxou.",
+      "phone": "03 83 94 54 54",
+      "email": "",
+      "link": "http://www.cg54.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Conseil"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "correspondante-d-fense-laxou-108",
+      "name": "Correspondante Défense Laxou",
+      "category": "services",
+      "lat": 48.68171,
+      "lng": 6.14684,
+      "address": "48 rue de Maréville, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 85 84 11 74",
+      "email": "isabelle.langovisth@laxou.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Correspondante"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cram-nord-est-109",
+      "name": "CRAM Nord-est",
+      "category": "services",
+      "lat": 48.68514,
+      "lng": 6.16866,
+      "address": "2 Rue Carnot, 54000 nancy",
+      "description": "CRAM Nord-est à Laxou.",
+      "phone": "03 83 50 32 10",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CRAM"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cr-che-associative-franco-anglaise-le-p-tit-poucet-110",
+      "name": "Crèche associative franco-anglaise « Le P'tit Poucet »",
+      "category": "ecoles",
+      "lat": 48.68253,
+      "lng": 6.15949,
+      "address": "47 allée Neuve, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 45 80",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Crèche"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cr-che-collective-du-centre-psychoth-rapique-de-nancy-111",
+      "name": "Crèche collective du Centre Psychothérapique de Nancy",
+      "category": "services",
+      "lat": 48.67874,
+      "lng": 6.14074,
+      "address": "1 rue du Docteur Archambault, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 92 50 50",
+      "email": "",
+      "link": "http://www.cpn-laxou.com",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Crèche"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cr-che-familiale-de-laxou-112",
+      "name": "Crèche familiale de Laxou",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23, rue de la Meuse, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 96 46 99",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Crèche"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cr-che-franco-allemande-h-nsel-et-gretel-113",
+      "name": "Crèche franco-allemande « Hänsel et Gretel »",
+      "category": "services",
+      "lat": 48.6847,
+      "lng": 6.15078,
+      "address": "3 rue Pol Choné, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 43 57",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Crèche"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "cr-che-franco-anglaise-baby-prince-114",
+      "name": "Crèche franco-anglaise « Baby Prince »",
+      "category": "services",
+      "lat": 48.68253,
+      "lng": 6.15949,
+      "address": "47 allée Neuve, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 40 20 31",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Crèche"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-l-mentaire-albert-schweitzer-116",
+      "name": "Ecole élémentaire Albert Schweitzer",
+      "category": "ecoles",
+      "lat": 48.6979,
+      "lng": 6.12334,
+      "address": "11 rue de la Meuse, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 96 56 96 / 06 49 59 39 96",
+      "email": "ce.0541948z@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-l-mentaire-emile-zola-117",
+      "name": "Ecole élémentaire Emile Zola",
+      "category": "ecoles",
+      "lat": 48.68253,
+      "lng": 6.1555,
+      "address": "52 boulevard Emile Zola, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 28 52 88",
+      "email": "ce.0540124s@ac-nancy-metz.fr",
+      "link": "http://www4.ac-nancy-metz.fr/ia54-nancy/zola-laxou/",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-l-mentaire-louis-pergaud-118",
+      "name": "Ecole élémentaire Louis Pergaud",
+      "category": "ecoles",
+      "lat": 48.68589,
+      "lng": 6.1429,
+      "address": "4 Place de la Liberté, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 27 18 46",
+      "email": "ce.0541750j@ac-nancy-metz.fr",
+      "link": "http://www4.ac-nancy-metz.fr/ia54-nancy/pergaud-laxou/",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-l-mentaire-victor-hugo-119",
+      "name": "Ecole élémentaire Victor Hugo",
+      "category": "ecoles",
+      "lat": 48.68108,
+      "lng": 6.15353,
+      "address": "15 rue du 8 mai, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 86 80",
+      "email": "ce.0541908f@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-pr-l-mentaire-albert-schweitzer-120",
+      "name": "Ecole préélémentaire Albert Schweitzer",
+      "category": "ecoles",
+      "lat": 48.69819,
+      "lng": 6.12336,
+      "address": "9 rue de la Meuse, 54520 laxou",
+      "description": "Description",
+      "phone": "06 43 37 88 89",
+      "email": "ce.0541870p@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-pr-l-mentaire-emile-zola-121",
+      "name": "Ecole préélémentaire Emile Zola",
+      "category": "ecoles",
+      "lat": 48.68254,
+      "lng": 6.15543,
+      "address": "50 boulevard Emile Zola, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 27 06 88",
+      "email": "ce.0540620f@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-pr-l-mentaire-louis-pergaud-122",
+      "name": "Ecole préélémentaire Louis Pergaud",
+      "category": "ecoles",
+      "lat": 48.68532,
+      "lng": 6.14258,
+      "address": "7 rue Louis Pergaud, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 27 37 71",
+      "email": "ce.0540621g@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ecole-pr-l-mentaire-victor-hugo-123",
+      "name": "Ecole préélémentaire Victor Hugo",
+      "category": "ecoles",
+      "lat": 48.68117,
+      "lng": 6.15439,
+      "address": "13 rue du 8 Mai, 54520 Laxou",
+      "description": "Description",
+      "phone": "07 88 64 18 02",
+      "email": "ce.0540622h@ac-nancy-metz.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Ecoles",
+        "Laxou",
+        "Ecole"
+      ],
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "esaf-54-espace-de-solidarit-associative-et-de-formation-124",
+      "name": "ESAF 54 (Espace de Solidarité Associative et de Formation)",
+      "category": "services",
+      "lat": 48.70277,
+      "lng": 6.13212,
+      "address": "15 rue de la Seille, 54320 MAXEVILLE",
+      "description": "ESAF 54 (Espace de Solidarité Associative et de Formation) à Laxou.",
+      "phone": "03 83 97 03 16",
+      "email": "",
+      "link": "http://www.esaf54.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "ESAF"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "espace-de-solidarit-associative-et-de-formation-125",
+      "name": "Espace de Solidarité Associative et de Formation",
+      "category": "services",
+      "lat": 48.70277,
+      "lng": 6.13212,
+      "address": "15 rue de la Seille, 54320 MAXEVILLE",
+      "description": "Description",
+      "phone": "03 83 97 03 16",
+      "email": "esaf54@sfr.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Espace"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "espace-europe-126",
+      "name": "Espace Europe",
+      "category": "culture",
+      "lat": 48.67917,
+      "lng": 6.14707,
+      "address": "Place Louis Colin, 54520 laxou",
+      "description": "Espace Europe à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "Espace"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "f-d-ration-nationale-des-anciens-combattants-d-alg-rie-fnaca-128",
+      "name": "Fédération Nationale des Anciens Combattants d’Algérie (FNACA)",
+      "category": "services",
+      "lat": 48.65457,
+      "lng": 6.10944,
+      "address": "13 Boulevard de Champelle, 54578 Villers-les-Nancy",
+      "description": "Description",
+      "phone": "06 99 66 71 73",
+      "email": "lucien.klein35@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Fédération"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "f-d-ration-r-gionale-des-amicales-de-locataires-fral-129",
+      "name": "Fédération Régionale des Amicales de Locataires (FRAL)",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.15185,
+      "address": "Batiment Bourgogne - Salle 5 - Les Provinces, 54520 laxou",
+      "description": "Fédération Régionale des Amicales de Locataires (FRAL) à Laxou.",
+      "phone": "03 83 56 64 78",
+      "email": "",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Fédération"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "football-laxou-provinces-54-130",
+      "name": "Football Laxou Provinces 54",
+      "category": "sports",
+      "lat": 48.68048,
+      "lng": 6.15269,
+      "address": "2 rue du 11 Novembre, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 86 07 26 48",
+      "email": "broutinlaurent54@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Football"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "foyer-de-l-amiti-131",
+      "name": "Foyer de l'Amitié",
+      "category": "services",
+      "lat": 48.69981,
+      "lng": 6.13153,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 96 11 34",
+      "email": "mblavier7@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Foyer"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "foyer-de-l-amiti-132",
+      "name": "Foyer de l’Amitié",
+      "category": "services",
+      "lat": 48.69981,
+      "lng": 6.13153,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 96 11 34",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Foyer"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "france-b-n-volat-nancy-54-133",
+      "name": "France Bénévolat Nancy 54",
+      "category": "services",
+      "lat": 48.69229,
+      "lng": 6.17615,
+      "address": "125 rue Mac Mahon, dans les locaux de l'APF, 54000 NANCY",
+      "description": "Description",
+      "phone": "06 08 72 28 35",
+      "email": "fb.nancy@francebenevolat.org",
+      "link": "https://nancy.francebenevolat.org/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "France"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "gymnase-et-dojo-victor-hugo-137",
+      "name": "Gymnase et Dojo Victor  HUGO",
+      "category": "services",
+      "lat": 48.67353,
+      "lng": 6.15286,
+      "address": "Bld des Aiguillettes, 54520 laxou",
+      "description": "Gymnase et Dojo Victor  HUGO à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Gymnase"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "gymnase-et-terrain-sadoul-138",
+      "name": "Gymnase et Terrain SADOUL",
+      "category": "services",
+      "lat": 48.68086,
+      "lng": 6.15307,
+      "address": "boulevard du Maréchal Foch, 54520 laxou",
+      "description": "Gymnase et Terrain SADOUL à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Gymnase"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "gymnase-louis-pasteur-139",
+      "name": "Gymnase Louis PASTEUR",
+      "category": "services",
+      "lat": 48.68124,
+      "lng": 6.15473,
+      "address": "Rue du 8 Mai, 54520 laxou",
+      "description": "Gymnase Louis PASTEUR à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Gymnase"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "gymnase-louis-pergaud-140",
+      "name": "Gymnase Louis PERGAUD",
+      "category": "services",
+      "lat": 48.68589,
+      "lng": 6.1429,
+      "address": "4 Place de la Liberté, 54520 laxou",
+      "description": "Gymnase Louis PERGAUD à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Gymnase"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "gymnastique-volontaire-de-laxou-et-du-champ-le-boeuf-141",
+      "name": "Gymnastique Volontaire de Laxou et du Champ-le-Boeuf",
+      "category": "sports",
+      "lat": 48.68571,
+      "lng": 6.14125,
+      "address": "6 rue Paster, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 74 16 68 82",
+      "email": "agvlaxou54520@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Gymnastique"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "halte-garderie-associative-du-champ-le-b-uf-les-canailloux-142",
+      "name": "Halte-garderie associative du Champ-le-Bœuf « Les Canailloux »",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23 rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 96 48 47",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Halte-garderie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "halte-garderie-municipale-suzanne-hindahl-le-moussaillon-143",
+      "name": "Halte-garderie municipale « Suzanne HINDAHL  – Le Moussaillon »",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.14805,
+      "address": "1, place de l'Europe, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 90 86 87",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Halte-garderie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "hubert-hausermann-144",
+      "name": "Hubert Hausermann",
+      "category": "services",
+      "lat": 48.68257,
+      "lng": 6.15547,
+      "address": "48 Boulevard Emile Zola, 54520 laxou",
+      "description": "Hubert Hausermann à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Hubert"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ulis-jeunes-et-cit-laxou-champ-le-b-uf-149",
+      "name": "ULIS Jeunes et Cité Laxou Champ-Le-Bœuf",
+      "category": "services",
+      "lat": 48.70053,
+      "lng": 6.13001,
+      "address": "2 rue de la Crusnes, 54320 MAXEVILLE",
+      "description": "ULIS Jeunes et Cité Laxou Champ-Le-Bœuf à Laxou.",
+      "phone": "03 83 98 41 51",
+      "email": "jeunesetcite@ulis.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "ULIS"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "jeunes-et-cit-150",
+      "name": "Jeunes et Cité",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.14805,
+      "address": "78 Boulevard Foch, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 27 45 47",
+      "email": "ganier.jeunescite@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Jeunes"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "korian-la-saulx-152",
+      "name": "Korian La Saulx",
+      "category": "services",
+      "lat": 48.69787,
+      "lng": 6.12371,
+      "address": "1 allée de la Saulx, 54520 laxou",
+      "description": "Korian La Saulx à Laxou.",
+      "phone": "03 83 96 69 66",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Korian"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "korian-le-gentil-153",
+      "name": "Korian Le Gentilé",
+      "category": "services",
+      "lat": 48.69582,
+      "lng": 6.12968,
+      "address": "8 rue de la Saône, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 96 46 02",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Korian"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-athl-tisme-154",
+      "name": "Laxou Athlétisme",
+      "category": "sports",
+      "lat": 48.68288,
+      "lng": 6.11184,
+      "address": "46 Rue des Forts Champs, 54850 MEREVILLE",
+      "description": "Description",
+      "phone": "06 33 98 54 16",
+      "email": "laxouathletisme@gmail.com",
+      "link": "https://www.laxouathletisme.com/page/149077-agenda",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Laxou"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-basket-club-155",
+      "name": "Laxou Basket Club",
+      "category": "sports",
+      "lat": 48.67983,
+      "lng": 6.14897,
+      "address": "Bâtiment ANJOU - Entrée 1 - App 24, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 98 51 86 17",
+      "email": "cathy.meno54@hotmail.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Laxou"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-a-roule-156",
+      "name": "Laxou ça roule",
+      "category": "sports",
+      "lat": 48.6617,
+      "lng": 6.1314,
+      "address": "23 Rue Voltaire, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 64 89 06 90",
+      "email": "laxoucaroule@wanadoo.fr",
+      "link": "http://www.laxoucaroule.com/rubriques/sommaire.html",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Laxou"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-judo-jujitsu-l2j-157",
+      "name": "Laxou Judo Jujitsu - L2J",
+      "category": "sports",
+      "lat": 48.68173,
+      "lng": 6.15291,
+      "address": "23 Allée Neuve, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 08 66 42 14",
+      "email": "contact@l2j.fr",
+      "link": "http://www.l2j.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Laxou"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "le-souvenir-fran-ais-comit-de-laxou-159",
+      "name": "Le Souvenir Français – Comité de Laxou",
+      "category": "services",
+      "lat": 48.68171,
+      "lng": 6.14684,
+      "address": "48 rue de Maréville, 54520 Laxou",
+      "description": "Description",
+      "phone": "06 66 22 36 62",
+      "email": "souvenir-francais.laxou@laposte.net",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Le"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-croqueurs-de-pommes-160",
+      "name": "Les Croqueurs de pommes",
+      "category": "services",
+      "lat": 48.74981,
+      "lng": 6.16928,
+      "address": "10 rue Lyautey, 54136 BOUXIERES AUX DAMES",
+      "description": "Les Croqueurs de pommes à Laxou.",
+      "phone": "06 83 90 68 87",
+      "email": "croqpomlor@laposte.net",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-fourasses-161",
+      "name": "Les Fourasses",
+      "category": "sports",
+      "lat": 48.68948,
+      "lng": 6.15213,
+      "address": "163 rue du Petit Arbois, 54520 laxou",
+      "description": "Description",
+      "phone": "06 08 77 26 01",
+      "email": "grisez.bernard@wanadoo.fr",
+      "link": "https://lesfourasses.com/",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-pi-ces-d-tach-es-162",
+      "name": "Les Pièces Détachées",
+      "category": "services",
+      "lat": 48.65996,
+      "lng": 6.11059,
+      "address": "43 A rue Louis Braille, 54000 NANCY",
+      "description": "Description",
+      "phone": "07 81 60 97 33",
+      "email": "christophe.viant@gmail.com",
+      "link": "http://cie.piecedet.laxou.free.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-restos-du-c-ur-163",
+      "name": "Les restos du Cœur",
+      "category": "services",
+      "lat": 48.67441,
+      "lng": 6.14309,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 40 79 88",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ludoth-que-le-petit-navire-164",
+      "name": "Ludothèque « Le Petit Navire »",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.14805,
+      "address": "1, place de l’Europe, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 86 88",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Ludothèque"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "lyc-e-professionnel-r-gional-emmanuel-h-r-165",
+      "name": "Lycée Professionnel régional Emmanuel Héré",
+      "category": "services",
+      "lat": 48.68271,
+      "lng": 6.15191,
+      "address": "86 boulevard du Maréchal Foch, 54520 laxou",
+      "description": "Description",
+      "phone": "03 83 90 83 30",
+      "email": "",
+      "link": "http://www.lorraine.eu",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Lycée"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "l-abeille-lorraine-section-nancy-166",
+      "name": "L’Abeille Lorraine (Section NANCY)",
+      "category": "services",
+      "lat": 48.66176,
+      "lng": 6.20787,
+      "address": "3 place des dentellières, 54140 JARVILLE-LA-MALGRANGE",
+      "description": "L’Abeille Lorraine (Section NANCY) à Laxou.",
+      "phone": "03 83 54 03 56",
+      "email": "minithomassin@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "L’Abeille"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "forestiers-du-monde-167",
+      "name": "Forestiers du Monde",
+      "category": "services",
+      "lat": 48.69678,
+      "lng": 6.12363,
+      "address": "25 allée de la Saulx, 54520 LAXOU",
+      "description": "Forestiers du Monde à Laxou.",
+      "phone": "03 83 98 58 16",
+      "email": "",
+      "link": "http://www.forestiersdumonde.org",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Forestiers"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "maison-d-partementale-des-personnes-handicap-es-mdph-168",
+      "name": "Maison Départementale des Personnes Handicapées (MDPH)",
+      "category": "services",
+      "lat": 48.68724,
+      "lng": 6.15482,
+      "address": "123 rue Ernest Albert, 54520 laxou",
+      "description": "Maison Départementale des Personnes Handicapées (MDPH) à Laxou.",
+      "phone": "03 83 97.44.20",
+      "email": "",
+      "link": "http://www.mdph.cg54.fr/mdph",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Maison"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "mam-s-de-lax-169",
+      "name": "Mam's de Lax",
+      "category": "services",
+      "lat": 48.67999,
+      "lng": 6.14898,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "06 73 34 77 15",
+      "email": "mamsdelax@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Mam's"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "mjc-massinon-173",
+      "name": "MJC Massinon",
+      "category": "culture",
+      "lat": 48.7074,
+      "lng": 6.1656,
+      "address": "33 rue des Brasseries, 54320 MAXEVILLE",
+      "description": "Description",
+      "phone": "03 57 54 04 80",
+      "email": "contact@mjc-massinon.fr",
+      "link": "http://www.mjc-massinon.fr",
+      "isNprnu": false,
+      "tags": [
+        "Culture",
+        "Laxou",
+        "MJC"
+      ],
+      "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "mjc-massinon-174",
+      "name": "MJC Massinon",
+      "category": "services",
+      "lat": 48.7074,
+      "lng": 6.1656,
+      "address": "33 rue des Brasseries, 54320 MAXEVILLE",
+      "description": "Description",
+      "phone": "03 57 54 04 80",
+      "email": "contact@mjc-massinon.fr",
+      "link": "http://www.mjc-massinon.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "MJC"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "ligue-de-protection-des-oiseaux-dpt-54-175",
+      "name": "Ligue de Protection des Oiseaux (Dpt 54)",
+      "category": "services",
+      "lat": 48.68081,
+      "lng": 6.1719,
+      "address": "Maison de la Nature - Parc Sainte Marie, 54000 NANCY",
+      "description": "Description",
+      "phone": "03 83 28 71 77",
+      "email": "meurthe-et moselle@lpo.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Ligue"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "piscine-communautaire-de-laxou-179",
+      "name": "Piscine Communautaire de Laxou",
+      "category": "sports",
+      "lat": 48.68469,
+      "lng": 6.15197,
+      "address": "Rue Pol Choné, 54520 laxou",
+      "description": "Piscine Communautaire de Laxou à Laxou.",
+      "phone": "03 83 27 19 56",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Piscine"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "point-accueil-information-service-180",
+      "name": "Point Accueil Information Service",
+      "category": "services",
+      "lat": 48.68822,
+      "lng": 6.17869,
+      "address": "13-15 boulevard Joffre - Galerie des Chênes, 54000 nancy",
+      "description": "Description",
+      "phone": "03 83 30 12 26",
+      "email": "",
+      "link": "http://www.cg54.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Point"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "r-gie-de-quartier-laxou-provinces-181",
+      "name": "Régie de Quartier Laxou Provinces",
+      "category": "services",
+      "lat": 48.68426,
+      "lng": 6.15252,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 90 93 02",
+      "email": "direction@rqlaxou.org",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Régie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "r-gie-de-quartier-182",
+      "name": "Régie de Quartier",
+      "category": "services",
+      "lat": 48.68426,
+      "lng": 6.15252,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 90 93 02",
+      "email": "direction@rqlaxou.org",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Régie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "r-seau-g-rard-cuny-184",
+      "name": "Réseau Gérard CUNY",
+      "category": "services",
+      "lat": 48.68698,
+      "lng": 6.16462,
+      "address": "22 rue François de Neufchâteau, 54000 NANCY",
+      "description": "Description",
+      "phone": "03 83 45 84 90",
+      "email": "secretariat@reseaugcuny.fr",
+      "link": "http://www.reseaucuny.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Réseau"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "r-sidence-de-l-oseraie-association-les-bruy-res-185",
+      "name": "Résidence de l’Oseraie – Association Les Bruyères",
+      "category": "services",
+      "lat": 48.68245,
+      "lng": 6.14888,
+      "address": "27 rue de Maréville, 54520 laxou",
+      "description": "Résidence de l’Oseraie – Association Les Bruyères à Laxou.",
+      "phone": "03 83 41 24 76",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Résidence"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "saint-gen-s-association-187",
+      "name": "Saint-Genès Association",
+      "category": "services",
+      "lat": 48.68413,
+      "lng": 6.14931,
+      "address": "1 rue Louis Pergaud, 54520 Laxou",
+      "description": "Description",
+      "phone": "03 83 90 17 59",
+      "email": "saintgenesassociation@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Saint-Genès"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "salle-du-conseil-de-la-vie-locale-188",
+      "name": "Salle du Conseil de la Vie Locale",
+      "category": "services",
+      "lat": 48.68604,
+      "lng": 6.14344,
+      "address": "1 Place de la Liberté, 54520 laxou",
+      "description": "Salle du Conseil de la Vie Locale à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Salle"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "salle-louis-pergaud-189",
+      "name": "Salle Louis Pergaud",
+      "category": "services",
+      "lat": 48.68604,
+      "lng": 6.14344,
+      "address": "1 Place de la Liberté, 54520 laxou",
+      "description": "Salle Louis Pergaud à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Salle"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "secours-catholique-fran-ais-191",
+      "name": "Secours Catholique Français",
+      "category": "services",
+      "lat": 48.67995,
+      "lng": 6.15185,
+      "address": "Les Provinces Bâtiment Bourgogne entrée 3, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 41 41 06",
+      "email": "",
+      "link": "",
+      "isNprnu": true,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Secours"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "asptt-nancy-laxou-floorball-192",
+      "name": "ASPTT Nancy-Laxou Floorball",
+      "category": "sports",
+      "lat": 48.68228,
+      "lng": 6.18451,
+      "address": "45 - 47 Avenue du Général Leclerc, 54000 NANCY",
+      "description": "Description",
+      "phone": "06 15 57 97 58",
+      "email": "lesloupslorrains@gmail.com",
+      "link": "http://nancy-meurthe-et-moselle-floorball.asptt.com",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "ASPTT"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "service-d-partemental-des-affaires-sociale-193",
+      "name": "Service Départemental des Affaires Sociale",
+      "category": "services",
+      "lat": 48.67894,
+      "lng": 6.16276,
+      "address": "48 rue du Sergent Blandan, 54000 Nancy",
+      "description": "Service Départemental des Affaires Sociale à Laxou.",
+      "phone": "03 83 94 54 54",
+      "email": "",
+      "link": "http://www.aladom.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Service"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "soci-t-de-tir-de-laxou-194",
+      "name": "Société de Tir de Laxou",
+      "category": "sports",
+      "lat": 48.68642,
+      "lng": 6.13094,
+      "address": "Rue du Stade, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 86 48 09 32",
+      "email": "societe.de.tir.laxou@gmail.com",
+      "link": "http://www.tir-sportif-laxou.fr",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Société"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "stanislas-echecs-195",
+      "name": "Stanislas Echecs",
+      "category": "services",
+      "lat": 48.67979,
+      "lng": 6.15561,
+      "address": "29 rue du Colonel Grandval, 54000 NANCY",
+      "description": "Description",
+      "phone": "03 83 98 52 65",
+      "email": "echecs.stanislas@gmail.com",
+      "link": "http://www.stanislas-echecs.fr",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Stanislas"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "tennis-laxou-sapini-re-196",
+      "name": "Tennis Laxou Sapinière",
+      "category": "sports",
+      "lat": 48.686,
+      "lng": 6.12898,
+      "address": "6 rue des Forestiers, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 98 26 19",
+      "email": "tennis.laxou.sapiniere@wanadoo.fr",
+      "link": "https://tennislaxousapiniere.com/",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Tennis"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "terrain-albert-schweitzer-197",
+      "name": "Terrain Albert SCHWEITZER",
+      "category": "services",
+      "lat": 48.6989,
+      "lng": 6.1273,
+      "address": "Rue de la Meuse, 54520 laxou",
+      "description": "Terrain Albert SCHWEITZER à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Terrain"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "union-des-associations-d-aide-la-famille-de-meurthe-et-moselle-198",
+      "name": "Union des Associations d'Aide à la Famille de Meurthe et Moselle",
+      "category": "services",
+      "lat": 48.68042,
+      "lng": 6.18473,
+      "address": "25-29 rue de Saurupt, 54000 nancy",
+      "description": "Union des Associations d'Aide à la Famille de Meurthe et Moselle à Laxou.",
+      "phone": "03 83 40 33 53",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Union"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "universit-de-la-culture-permanente-199",
+      "name": "Université de la Culture Permanente",
+      "category": "services",
+      "lat": 48.68558,
+      "lng": 6.17064,
+      "address": "12 Place de la Croix de Bourgogne, 54000 NANCY",
+      "description": "Description",
+      "phone": "03 83 40 68 92",
+      "email": "ucpnancy-presidence@orange.fr",
+      "link": "https://www.ucp-nancy.org/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Université"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "vietnamiti-200",
+      "name": "Vietnamitié",
+      "category": "services",
+      "lat": 48.69752,
+      "lng": 6.12379,
+      "address": "4 allée de l'Aire, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 97 03 64",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Vietnamitié"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "well-tennis-club-201",
+      "name": "Well Tennis Club",
+      "category": "sports",
+      "lat": 48.67997,
+      "lng": 6.15811,
+      "address": "113 Boulevard Emile Zola, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 37 90 89 82",
+      "email": "welltennisclub@free.fr",
+      "link": "https://club.fft.fr/nancywelltennis/55540394_a/cms/index_public.php?us_action=show_note_site&login_off=1&ui_id_site=1",
+      "isNprnu": false,
+      "tags": [
+        "Sports",
+        "Laxou",
+        "Well"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "yogarina-202",
+      "name": "Yogarina",
+      "category": "services",
+      "lat": 48.68786,
+      "lng": 6.1523,
+      "address": "35 boulevard Emile Zola, 54200 TOUL",
+      "description": "Description",
+      "phone": "06 30 33 06 42",
+      "email": "yogarina.association@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Yogarina"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-officiers-de-r-serve-de-l-arm-e-de-l-air-et-de-l-espace-anoraae-203",
+      "name": "Association des Officiers de Réserve de l'Armée de l'Air et de l'Espace (ANORAAE)",
+      "category": "services",
+      "lat": 48.68788,
+      "lng": 6.15349,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-girandi-res-204",
+      "name": "Les Girandières",
+      "category": "services",
+      "lat": 48.69333,
+      "lng": 6.13737,
+      "address": "403 Avenue de Boufflers, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 67 29 00",
+      "email": "lxuzs0101@zenitude-groupe.com",
+      "link": "https://www.lesgirandieres.fr/residences/votre-residence-seniors-de-laxou/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-communes-foresti-res-de-meurthe-et-moselle-205",
+      "name": "Association des communes forestières de Meurthe-et-Moselle",
+      "category": "services",
+      "lat": 48.68279,
+      "lng": 6.15164,
+      "address": "80 Boulevard Maréchal Foch, 54520 LAXOU",
+      "description": "Association des communes forestières de Meurthe-et-Moselle à Laxou.",
+      "phone": "",
+      "email": "meurtheetmoselle@communesforestieres.org",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "r-gie-de-quartier-laxou-provinces-206",
+      "name": "Régie de Quartier Laxou Provinces",
+      "category": "services",
+      "lat": 48.67983,
+      "lng": 6.14897,
+      "address": "Laxou (54520)",
+      "description": "Description",
+      "phone": "03 83 90 93 02",
+      "email": "direction@rqlaxou.org",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Régie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "les-jardins-citoyens-207",
+      "name": "Les Jardins Citoyens",
+      "category": "services",
+      "lat": 48.68474,
+      "lng": 6.15833,
+      "address": "21 rue Aristide Briand, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 80 75 66 09",
+      "email": "lorrain.gerard@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Les"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-rollver-208",
+      "name": "Association Rollver",
+      "category": "services",
+      "lat": 48.68032,
+      "lng": 6.15506,
+      "address": "40 avenue de l’Europe, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 15 46 01 53",
+      "email": "rollverlerollernanceien@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-de-proximit-zola-sainte-anne-curie-209",
+      "name": "CONSEIL DE PROXIMITÉ ZOLA – SAINTE ANNE – CURIE",
+      "category": "services",
+      "lat": 48.68257,
+      "lng": 6.15547,
+      "address": "48 boulevard Emile Zola, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CONSEIL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-de-proximit-village-la-sapini-re-210",
+      "name": "CONSEIL DE PROXIMITÉ VILLAGE - LA SAPINIÈRE",
+      "category": "services",
+      "lat": 48.68604,
+      "lng": 6.14344,
+      "address": "1 Place de la liberté, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "conseildeproximite.laxouvillage@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CONSEIL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-de-proximit-laxou-champ-le-boeuf-211",
+      "name": "CONSEIL DE PROXIMITÉ LAXOU CHAMP-LE-BOEUF",
+      "category": "services",
+      "lat": 48.69997,
+      "lng": 6.13143,
+      "address": "23 rue de la Meuse, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CONSEIL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "soci-t-centrale-d-horticulture-de-nancy-scnh-212",
+      "name": "Société Centrale d’Horticulture de Nancy (SCNH)",
+      "category": "services",
+      "lat": 48.6943,
+      "lng": 6.18799,
+      "address": "11 bis rue A. Godron, 54000 NANCY",
+      "description": "Description",
+      "phone": "03 83 98 23 50",
+      "email": "pierrevalck@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Société"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "synergie-plantes-invasives-grand-est-213",
+      "name": "Synergie plantes invasives Grand-Est",
+      "category": "services",
+      "lat": 48.65146,
+      "lng": 6.14695,
+      "address": "Laxou (54520)",
+      "description": "Synergie plantes invasives Grand-Est à Laxou.",
+      "phone": "",
+      "email": "contact@spigestinvasives.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Synergie"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amis-de-la-ch-vre-de-lorraine-214",
+      "name": "Amis de la chèvre de Lorraine",
+      "category": "services",
+      "lat": 48.65146,
+      "lng": 6.14695,
+      "address": "Laxou (54520)",
+      "description": "Amis de la chèvre de Lorraine à Laxou.",
+      "phone": "03 83 59 58 87",
+      "email": "chevredelorraine@gmail.com",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Amis"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "flore-54-216",
+      "name": "Flore 54",
+      "category": "services",
+      "lat": 48.69445,
+      "lng": 6.14144,
+      "address": "65 rue Léonard Bourcier, 54000 NANCY",
+      "description": "Flore 54 à Laxou.",
+      "phone": "03 83 98 12 44",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Flore"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "le-centre-d-tude-techniques-apicoles-du-grand-nancy-cetagn-217",
+      "name": "Le centre d'étude techniques apicoles du Grand Nancy (CETAGN)",
+      "category": "services",
+      "lat": 48.66176,
+      "lng": 6.20787,
+      "address": "3 place Dentellières, 54140 JARVILLE LA MALGRANGE",
+      "description": "Le centre d'étude techniques apicoles du Grand Nancy (CETAGN) à Laxou.",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Le"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-laxovienne-pour-la-protection-des-espaces-alpe-218",
+      "name": "Association Laxovienne pour la Protection des Espaces (ALPE)",
+      "category": "services",
+      "lat": 48.68616,
+      "lng": 6.15178,
+      "address": "74 rue Ernest ALbert, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 28 51 67",
+      "email": "contact@alpe-laxou.org",
+      "link": "http://www.alpe-laxou.org",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "office-national-des-for-ts-219",
+      "name": "Office national des forêts",
+      "category": "services",
+      "lat": 48.69536,
+      "lng": 6.0732,
+      "address": "Parc de Haye, 54840 Bois de Haye",
+      "description": "Office national des forêts à Laxou.",
+      "phone": "06 16 30 75 30",
+      "email": "philippe.pernodet@onf.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Office"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "jeunes-et-cit-220",
+      "name": "Jeunes et Cité",
+      "category": "services",
+      "lat": 48.68288,
+      "lng": 6.11184,
+      "address": "78 Boulevard Foch, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 27 45 47",
+      "email": "ganier.jeunesetcite@orange.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Jeunes"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "sac-au-dos-221",
+      "name": "Sac au dos",
+      "category": "services",
+      "lat": 48.67635,
+      "lng": 6.14106,
+      "address": "83 Rue Raymond Poincaré, 54520 LAXOU",
+      "description": "Description",
+      "phone": "03 83 44 44 50",
+      "email": "sacaudos@hotmail.com",
+      "link": "https://sacaudos-laxou.e-monsite.com/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Sac"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "mutil-s-combattants-et-victimes-de-guerre-max-ville-laxou-222",
+      "name": "Mutilés combattants et victimes de guerre Maxéville-Laxou",
+      "category": "services",
+      "lat": 48.70792,
+      "lng": 6.17579,
+      "address": "27, rue Deville, 54320 Maxéville",
+      "description": "Description",
+      "phone": "06 10 49 46 03",
+      "email": "olival.nancy@free.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Mutilés"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "unp-542-nancy-meurthe-et-moselle-sud-223",
+      "name": "UNP 542 Nancy Meurthe-et-Moselle Sud",
+      "category": "services",
+      "lat": 48.71289,
+      "lng": 6.21498,
+      "address": "4, chemin Stratégique, 54130 DOMMARTEMONT",
+      "description": "Description",
+      "phone": "06 11 19 28 65",
+      "email": "jean.devos@9online.fr",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "UNP"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "conseil-de-proximit-provinces-mar-ville-hardeval-225",
+      "name": "CONSEIL DE PROXIMITÉ PROVINCES – MARÉVILLE – HARDEVAL",
+      "category": "services",
+      "lat": 48.68551,
+      "lng": 6.15181,
+      "address": "3 Avenue Paul Déroulède, 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "",
+      "link": "",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "CONSEIL"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "laxou-alez-ff-tennis-de-table-226",
+      "name": "LAXOU ALEZ FF tennis de table",
+      "category": "services",
+      "lat": 48.68254,
+      "lng": 6.15543,
+      "address": "50 boulevard Emile Zola, 54520 LAXOU",
+      "description": "Description",
+      "phone": "06 73 05 01 40",
+      "email": "alez.tt.laxou@wanadoo.fr",
+      "link": "http://laxoupongistes.free.fr/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "LAXOU"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "association-des-togolais-de-nancy-a-t-n-227",
+      "name": "Association des Togolais de Nancy (A.T.N.)",
+      "category": "services",
+      "lat": 48.68643,
+      "lng": 6.14308,
+      "address": "4 rue du four 54520 Laxou., 54520 LAXOU",
+      "description": "Description",
+      "phone": "",
+      "email": "Associationdestogolaisdenancya@gmail.com",
+      "link": "https://atn2026.github.io/Atn-site-web/",
+      "isNprnu": false,
+      "tags": [
+        "Services",
+        "Laxou",
+        "Association"
+      ],
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop"
+    }
+  ]
+};

@@ -1,0 +1,116 @@
+{
+  "ville": "Laxou",
+  "code_postal": "54520",
+  "total_equipements": 5,
+  "taxonomie_categories": [
+    "Services Municipaux & Mairie",
+    "Espaces Verts & Parcs",
+    "Culture & Médiathèques",
+    "Sport & Complexe Omnisports",
+    "Éducation & Écoles"
+  ],
+  "equipements": [
+    {
+      "id": "eq_1",
+      "nom": "Hôtel de Ville de Laxou",
+      "categorie": "Services Municipaux & Mairie",
+      "adresse": "3 Avenue Paul Déroulède, 54520 Laxou",
+      "coordonnees": {
+        "lat": 48.6865,
+        "lng": 6.152
+      },
+      "description": "Services administratifs, État civil, Passeports et Cabinet du Maire.",
+      "horaires": "Du lundi au vendredi : 8h30 - 17h00",
+      "image": "assets/logo_laxou_official_11.jpg"
+    },
+    {
+      "id": "eq_2",
+      "nom": "Parc de la Sapinière",
+      "categorie": "Espaces Verts & Parcs",
+      "adresse": "Rue de la Sapinière, 54520 Laxou",
+      "coordonnees": {
+        "lat": 48.6912,
+        "lng": 6.148
+      },
+      "description": "Grand parc naturel avec aire de jeux, espaces boisés et théâtre de verdure.",
+      "horaires": "Accès libre 7j/7",
+      "image": "assets/logo_laxou_official_18.jpg"
+    },
+    {
+      "id": "eq_3",
+      "nom": "Médiathèque Gérard Thirion",
+      "categorie": "Culture & Médiathèques",
+      "adresse": "2 Rue de la Sapinière, 54520 Laxou",
+      "coordonnees": {
+        "lat": 48.688,
+        "lng": 6.151
+      },
+      "description": "Espace de lecture, prêts de livres, DVD, expositions et ateliers numériques.",
+      "horaires": "Mardi, Mercredi, Vendredi, Samedi",
+      "image": "assets/logo_laxou_official_13.png"
+    },
+    {
+      "id": "eq_4",
+      "nom": "Gymnase & Complexe Sportif Europe",
+      "categorie": "Sport & Complexe Omnisports",
+      "adresse": "Rue de l'Europe, 54520 Laxou (Champ-le-Bœuf)",
+      "coordonnees": {
+        "lat": 48.698,
+        "lng": 6.139
+      },
+      "description": "Salles omnisports, terrains de handball, basket et dojo d'arts martiaux.",
+      "horaires": "Clubs et accès scolaire",
+      "image": "assets/logo_laxou_official_11.jpg"
+    },
+    {
+      "id": "eq_5",
+      "nom": "CILM — Centre Intercommunal Laxou Maxéville",
+      "categorie": "Culture & Médiathèques",
+      "adresse": "Rue de la Meuse, 54520 Laxou",
+      "coordonnees": {
+        "lat": 48.694,
+        "lng": 6.142
+      },
+      "description": "Centre culturel, spectacles, conférences et manifestations associatives.",
+      "horaires": "Selon programmation",
+      "image": "assets/logo_laxou_official_12.jpg"
+    }
+  ],
+  "sources_scrapees": [
+    "https://www.laxou.fr/fr/actualites/laxou-actu-ndeg-240_-n.html",
+    "https://www.laxou.fr/fr/emploi-insertion.html",
+    "https://www.laxou.fr/fr/questions-frequentes.html",
+    "https://www.laxou.fr/fr/sante-prevention.html",
+    "https://www.laxou.fr/fr/actualites/vendredis-sous-les-etoiles_-n.html",
+    "https://www.laxou.fr/fr/jeunesse-sports-et-vie-associative.html",
+    "https://www.laxou.fr/img_base/documents/56/maquette-la239-compressed-1.pdf",
+    "https://www.laxou.fr/fr/associations-patriotiques.html",
+    "https://www.laxou.fr/fr/le-parc-urbain.html",
+    "https://www.laxou.fr/fr/donnees-personnelles.html",
+    "https://www.laxou.fr/fr/conseil-municipal-d-enfants-et-de-jeunes.html",
+    "https://www.laxou.fr/fr/charte-de-la-diversite.html",
+    "https://www.laxou.fr/fr/etablissement-recevant-du-public-erp.html",
+    "https://www.laxou.fr/fr/urbanisme-et-travaux.html",
+    "https://www.laxou.fr/fr/vie-municipale.html",
+    "https://www.laxou.fr/fr/espace-famille.html",
+    "https://www.laxou.fr/fr/le-pole-enfance.html",
+    "https://www.laxou.fr/fr/actualites/guinguette-2026_-n.html",
+    "https://www.laxou.fr/fr/associations-sportives.html",
+    "https://www.laxou.fr/fr/amc-et-vg.html",
+    "https://www.laxou.fr/fr/plan-de-la-ville.html",
+    "https://www.laxou.fr/fr/agenda/cinema-plein-air-3_-d.html",
+    "https://www.laxou.fr/",
+    "https://www.laxou.fr/fr/actualites/prevention-routiere-non-au-telephone-au-volant_-n.html",
+    "https://www.laxou.fr/fr/l-art-dans-la-nature-en-dehors-des-sentiers-battus.html",
+    "https://www.laxou.fr/fr/animation-et-valorisation-touristique.html",
+    "https://www.laxou.fr/fr/recrutement.html",
+    "https://www.laxou.fr/fr/realisations-existantes-et-futures.html",
+    "https://www.laxou.fr/fr/jeunesse.html",
+    "https://www.laxou.fr/fr/associations-culturelles.html",
+    "https://www.laxou.fr/fr/l-hebergement.html",
+    "https://www.laxou.fr/fr/correspondant-defense.html",
+    "https://www.laxou.fr/fr/la-programmation-culturelle-a-laxou.html",
+    "https://www.laxou.fr/fr/seniors-2.html",
+    "https://www.laxou.fr/fr/actualites/bulletins-d-inscription-du-vide-greniers-et-de-la-braderie_-n.html"
+  ]
+}

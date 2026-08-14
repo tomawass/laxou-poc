@@ -1,0 +1,316 @@
+{
+  "url": "https://www.laxou.fr",
+  "headings": [],
+  "total_images": 59,
+  "downloaded_logos": [
+    {
+      "filename": "logo_laxou_official_1.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_1.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_2.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_2.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/Icones/ico-actu-02.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_3.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_3.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/Icones/ico-actu.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_4.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_4.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/Icones/ico-pwa.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_5.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_5.png",
+      "url": "https://www.laxou.fr/_css/medias/logo_laxou.png",
+      "alt": "Logo Ville de Laxou"
+    },
+    {
+      "filename": "logo_laxou_official_6.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_6.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/Icones/ico-accessibilite.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_7.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_7.png",
+      "url": "https://www.laxou.fr/UserFiles/Image/Icones/ico-compte.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_8.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_8.png",
+      "url": "https://www.laxou.fr/svgs_feather_zoom-in_FFFFFF",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_9.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_9.png",
+      "url": "https://www.laxou.fr/svgs_feather_zoom-out_FFFFFF",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_10.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_10.png",
+      "url": "https://www.laxou.fr/_css/medias/ico_menu.png",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_11.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_11.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/2306_829_7_hotel-de-ville-de-laxou-et-parc.jpg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_12.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_12.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/agendas/264/360_510_1_5-macondo.jpg",
+      "alt": "Concert Macondo"
+    },
+    {
+      "filename": "logo_laxou_official_13.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_13.png",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/agendas/231/360_510_1_2026-planning-du-jardin-des-1000-fleurs-1.png",
+      "alt": "Jardin des 1000 fleurs - LECTURIQUE"
+    },
+    {
+      "filename": "logo_laxou_official_14.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_14.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/agendas/262/360_510_1_5-dragons.jpg",
+      "alt": "Cinéma plein air"
+    },
+    {
+      "filename": "logo_laxou_official_15.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_15.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/agendas/263/360_510_1_6-le-robot-sauvage.jpg",
+      "alt": "Cinéma plein air"
+    },
+    {
+      "filename": "logo_laxou_official_16.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_16.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/591/500_400_7_vide-greniers-braderie.jpg",
+      "alt": "Bulletins d'inscription du vide-greniers et de la braderie"
+    },
+    {
+      "filename": "logo_laxou_official_17.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_17.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/577/500_400_7_accueil-des-nouveaux.jpg",
+      "alt": "Cérémonie d'accueil des nouveaux laxoviens"
+    },
+    {
+      "filename": "logo_laxou_official_18.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_18.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/516/500_400_7_affiche-vsle-2026-1.jpg",
+      "alt": "Vendredis sous les étoiles"
+    },
+    {
+      "filename": "logo_laxou_official_19.jpeg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_19.jpeg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/613/500_400_7_fermeture-urbaine.jpeg",
+      "alt": "FERMETURE - Service Urbanisme Mercredi 05 août 2026"
+    },
+    {
+      "filename": "logo_laxou_official_20.gif",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_20.gif",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/609/500_400_7_telephone-au-volant-2026-300x250-2026.gif",
+      "alt": "PREVENTION ROUTIERE : NON AU TELEPHONE AU VOLANT"
+    },
+    {
+      "filename": "logo_laxou_official_21.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_21.png",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/610/500_400_7_travaux-avenue-paul-deroulede-cadre.png",
+      "alt": "TRAVAUX : PORTION DE L'AVENUE PAUL DÉROULÈDE FERMÉE AUX AUTOMOBILISTES"
+    },
+    {
+      "filename": "logo_laxou_official_22.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_22.png",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/607/500_400_7_aiguillettes.png",
+      "alt": "TRAVAUX - Bd des Aiguillettes"
+    },
+    {
+      "filename": "logo_laxou_official_23.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_23.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/606/500_400_7_couverture-la.jpg",
+      "alt": "Laxou Actu N° 240"
+    },
+    {
+      "filename": "logo_laxou_official_24.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_24.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/556/500_400_7_affiche-finale-cc34-6-page-0001.jpg",
+      "alt": "Exposition"
+    },
+    {
+      "filename": "logo_laxou_official_25.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_25.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites/604/500_400_7_guinguette.jpg",
+      "alt": "GUINGUETTE 2026"
+    },
+    {
+      "filename": "logo_laxou_official_26.png",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_26.png",
+      "url": "https://www.laxou.fr/icos_fb02_FFFFFF_42",
+      "alt": "Logo Facebook"
+    },
+    {
+      "filename": "logo_laxou_official_27.jpeg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_27.jpeg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites//.fcache/360_270_7_fcache-53d8806d6b939e6e4ca68ff7535b9bb2.jpeg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_28.jpeg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_28.jpeg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites//.fcache/360_270_7_fcache-8a054833048bf5880c034c1d3d1f6ed3.jpeg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_29.jpeg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_29.jpeg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites//.fcache/360_270_7_fcache-9e5325f28aa2a19b6df5fd11945db7ad.jpeg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_30.jpeg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_30.jpeg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/actualites//.fcache/360_270_7_fcache-685222b7a819eca2726f2277117c417d.jpeg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_31.gif",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_31.gif",
+      "url": "https://www.laxou.fr/globalflexit/clients/utils/images/x.gif",
+      "alt": "X"
+    },
+    {
+      "filename": "logo_laxou_official_32.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_32.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/57/410_580_7__PDF.jpg",
+      "alt": ""
+    },
+    {
+      "filename": "logo_laxou_official_33.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_33.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/56/410_580_7_maquette-la239-compressed-1_PDF.jpg",
+      "alt": "Maquette Laxou Actu 239 "
+    },
+    {
+      "filename": "logo_laxou_official_34.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_34.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/39/410_580_7_maquette-la238-compressed_PDF.jpg",
+      "alt": "Maquette la238 compressed"
+    },
+    {
+      "filename": "logo_laxou_official_35.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_35.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/38/410_580_7_la237-janv-fev20261_PDF.jpg",
+      "alt": "La237 janv fev20261"
+    },
+    {
+      "filename": "logo_laxou_official_36.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_36.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/37/410_580_7_la236-002_PDF.jpg",
+      "alt": "Laxou Actu 236"
+    },
+    {
+      "filename": "logo_laxou_official_37.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_37.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/36/410_580_7_laxou-actu-235_PDF.jpg",
+      "alt": "Laxou actu 235"
+    },
+    {
+      "filename": "logo_laxou_official_38.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_38.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/35/410_580_7_la234-24-pages-compressed_PDF.jpg",
+      "alt": "La234 24 pages compressed"
+    },
+    {
+      "filename": "logo_laxou_official_39.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_39.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/34/410_580_7_bat-la233_PDF.jpg",
+      "alt": "Bat la233"
+    },
+    {
+      "filename": "logo_laxou_official_40.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_40.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/33/410_580_7_la-232-mars-avril_PDF.jpg",
+      "alt": "La 232 mars avril"
+    },
+    {
+      "filename": "logo_laxou_official_41.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_41.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/img_base/documents/32/410_580_7_maquette-la-231-compressed_PDF.jpg",
+      "alt": "Maquette la 231 compressed"
+    },
+    {
+      "filename": "logo_laxou_official_42.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_42.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-0.jpg",
+      "alt": "Ville amie des enfants"
+    },
+    {
+      "filename": "logo_laxou_official_43.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_43.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-1.jpg",
+      "alt": "Ville fleurie"
+    },
+    {
+      "filename": "logo_laxou_official_44.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_44.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-2.jpg",
+      "alt": "Eco quartier"
+    },
+    {
+      "filename": "logo_laxou_official_45.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_45.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-3.jpg",
+      "alt": "Commune nature"
+    },
+    {
+      "filename": "logo_laxou_official_46.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_46.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-4.jpg",
+      "alt": "Ville prudente"
+    },
+    {
+      "filename": "logo_laxou_official_47.jpg",
+      "path": "/Users/carlair/.gemini/antigravity/scratch/laxou-production/assets/logo_laxou_official_47.jpg",
+      "url": "https://www.laxou.fr/globalflexit/images/UserFiles/Image/labels/190_90_7_label-5.jpg",
+      "alt": "Active et sportive"
+    }
+  ],
+  "links_sample": [
+    "javascript:;",
+    "javascript:;",
+    "https://www.laxou.fr/fr/donnees-personnelles.html#configCookies",
+    "https://www.laxou.fr/fr/publications-municipales-1.html",
+    "https://www.laxou.fr/fr/actualites.html",
+    "https://www.laxou.fr/fr/agenda.html",
+    "https://www.laxou.fr/fr/appli.html",
+    "https://www.laxou.fr/",
+    "https://www.xmarches.fr/entreprise/listDonneesEssentielles.php",
+    "https://www.laxou.fr/fr/logos.html",
+    "https://www.laxou.fr/fr/recrutement.html",
+    "javascript:;",
+    "https://www.laxou.fr/fr/mon-compte.html",
+    "javascript:;",
+    "javascript:;",
+    "javascript:;",
+    "javascript:;",
+    "javascript:;",
+    "javascript:;",
+    "https://www.laxou.fr/fr/vie-municipale.html",
+    "https://www.laxou.fr/fr/formalites-administratives.html",
+    "https://www.laxou.fr/fr/espace-famille.html",
+    "https://www.laxou.fr/fr/signalement.html",
+    "https://www.laxou.fr/fr/mon-compte.html",
+    "https://www.laxou.fr/fr/vie-municipale.html"
+  ]
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laxou Horizon 2028 | Carte Illustrée du Projet Urbain (NPRNU)</title>
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+
+  <div id="app" class="app-container">
+    
+    <!-- Floating Navigation Bar (Top Right) -->
+    <header class="floating-header">
+      <!-- Actions & Controls -->
+      <div class="header-actions">
+        <button id="video-btn" class="action-btn video-btn" title="Découvrir la vidéo du projet NPRNU">
+          <i class="fa-solid fa-circle-play"></i>
+          <span class="btn-text">NPRNU en Vidéo</span>
+        </button>
+        <button id="toggle-sidebar-btn" class="action-btn" title="Afficher/Masquer la liste des projets">
+          <i class="fa-solid fa-list-check"></i>
+          <span class="btn-text">Projets</span>
+          <span id="places-badge" class="badge">0</span>
+        </button>
+        <button id="admin-login-btn" class="action-btn" title="Connexion Administrateur Ville de Laxou">
+          <i class="fa-solid fa-lock"></i>
+          <span class="btn-text">Admin</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="main-content">
+      
+      <!-- Custom Illustrated Image Map Viewport -->
+      <div id="map-view" class="map-view-container">
+        <div id="map-image-container" class="map-image-wrapper">
+          <img src="assets/map-provinces.png" alt="Carte Illustrée Laxou Horizon 2028" class="map-bg-image">
+          <div id="marker-overlay" class="marker-overlay"></div>
+        </div>
+
+        <div class="map-zoom-controls">
+          <button id="zoom-in-btn" class="map-ctrl-btn" aria-label="Zoom avant" title="Zoom avant">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button id="zoom-out-btn" class="map-ctrl-btn" aria-label="Zoom arrière" title="Zoom arrière">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      </div>
+
+      <!-- Collapsible Places Sidebar -->
+      <aside id="sidebar" class="glass-sidebar open">
+        <div class="sidebar-header">
+          <h2><i class="fa-solid fa-compass"></i> Aménagements 2028</h2>
+          <button id="close-sidebar-btn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Admin Control Banner -->
+        <div id="admin-banner" class="admin-banner hidden">
+          <div class="admin-banner-title"><i class="fa-solid fa-user-shield"></i> Mode Admin Actif</div>
+          <div class="admin-banner-actions">
+            <button id="admin-add-place-btn" class="admin-sm-btn success"><i class="fa-solid fa-plus"></i> Lieu</button>
+            <button id="admin-add-video-btn" class="admin-sm-btn primary" title="Gérer les Vidéos"><i class="fa-solid fa-film"></i> Vidéos</button>
+            <button id="admin-export-btn" class="admin-sm-btn primary"><i class="fa-solid fa-download"></i> JSON</button>
+            <button id="admin-logout-btn" class="admin-sm-btn danger" title="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i></button>
+          </div>
+        </div>
+
+        <div class="sidebar-stats">
+          <span id="results-count">Chargement des projets...</span>
+        </div>
+
+        <!-- Places Cards List -->
+        <div id="places-list" class="places-grid">
+          <!-- Dynamic Place Cards -->
+        </div>
+      </aside>
+
+      <!-- Backdrop Overlay for Click-Outside to Close -->
+      <div id="genially-backdrop" class="genially-backdrop hidden"></div>
+
+      <!-- Place Detail Drawer -->
+      <div id="detail-drawer" class="detail-drawer hidden">
+        <div class="drawer-header"></div>
+        <div id="drawer-content" class="drawer-scroll-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Modale de Connexion Admin -->
+      <div id="admin-login-modal" class="modal-backdrop hidden">
+        <div class="modal-content glass-panel">
+          <div class="modal-header">
+            <h3><i class="fa-solid fa-user-shield"></i> Connexion Administrateur</h3>
+            <button id="close-admin-login-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <form id="admin-login-form" class="admin-form">
+            <p class="form-help">Réservé aux agents de la Mairie de Laxou (@laxou.fr).</p>
+            <div id="login-error-msg" class="login-error hidden">
+              <i class="fa-solid fa-triangle-exclamation"></i> Identifiants incorrects. Email en @laxou.fr requis.
+            </div>
+            <div class="form-group">
+              <label for="admin-email"><i class="fa-solid fa-envelope"></i> Adresse Email :</label>
+              <input type="email" id="admin-email" placeholder="agent@laxou.fr" required autocomplete="username">
+            </div>
+            <div class="form-group">
+              <label for="admin-password"><i class="fa-solid fa-key"></i> Mot de passe :</label>
+              <input type="password" id="admin-password" placeholder="Mot de passe" required autocomplete="current-password">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary-full"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modale d'Édition / Ajout sur l'Illustration -->
+      <div id="admin-editor-modal" class="modal-backdrop hidden">
+        <div class="modal-content glass-panel modal-lg">
+          <div class="modal-header">
+            <h3 id="editor-modal-title"><i class="fa-solid fa-pen-to-square"></i> Édition d'un Aménagement</h3>
+            <button id="close-admin-editor-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <form id="admin-editor-form" class="admin-form">
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="edit-place-name">Nom du projet / aménagement :</label>
+                <input type="text" id="edit-place-name" placeholder="ex: Parc Urbain" required>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-category">Catégorie :</label>
+                <select id="edit-place-category" required>
+                  <option value="ecoles">Écoles & Éducation</option>
+                  <option value="parcs">Parcs & Nature</option>
+                  <option value="services">Services & Aménagements</option>
+                  <option value="sports">Sports & Santé</option>
+                  <option value="mobilites">Mobilités & Connexions</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-color"><i class="fa-solid fa-palette"></i> Couleur du surlignement :</label>
+                <select id="edit-place-color">
+                  <option value="#f7baba">🔴 Corail Doux (#f7baba)</option>
+                  <option value="#f9d1bb">🍊 Pêche Pastel (#f9d1bb)</option>
+                  <option value="#f9e7b9">💛 Jaune Crème (#f9e7b9)</option>
+                  <option value="#d8f0c1" selected>🟢 Vert Sauge (#d8f0c1)</option>
+                  <option value="#bae1f7">🌐 Bleu Ciel (#bae1f7)</option>
+                  <option value="#c2baf7">🔵 Bleu Pervenche (#c2baf7)</option>
+                  <option value="#d4baf7">🟣 Violet Lavande (#d4baf7)</option>
+                  <option value="#f4bee9">🌸 Rose Poudré (#f4bee9)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-x">Position X (%) sur l'image :</label>
+                <input type="number" step="0.1" min="0" max="100" id="edit-place-x" placeholder="50.0" required>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-y">Position Y (%) sur l'image :</label>
+                <input type="number" step="0.1" min="0" max="100" id="edit-place-y" placeholder="50.0" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-address">Localisation / Rue :</label>
+                <input type="text" id="edit-place-address" placeholder="ex: Avenue de l'Europe, 54520 Laxou" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-desc"><i class="fa-solid fa-pen-nib"></i> Description & Contenu (Éditeur Visuel WYSIWYG) :</label>
+                <div class="rich-toolbar">
+                  <button type="button" class="toolbar-btn" id="tb-bold" title="Texte en gras"><b>B</b> Gras</button>
+                  <button type="button" class="toolbar-btn" id="tb-bullet" title="Liste à puces">• Liste</button>
+                  <div class="toolbar-palette">
+                    <span class="palette-label"><i class="fa-solid fa-highlighter"></i> Surligner :</span>
+                    <button type="button" class="color-swatch" data-color="#d8f0c1" style="background: #d8f0c1;" title="Vert Sauge"></button>
+                    <button type="button" class="color-swatch" data-color="#f9e7b9" style="background: #f9e7b9;" title="Jaune Crème"></button>
+                    <button type="button" class="color-swatch" data-color="#bae1f7" style="background: #bae1f7;" title="Bleu Ciel"></button>
+                    <button type="button" class="color-swatch" data-color="#f9d1bb" style="background: #f9d1bb;" title="Pêche"></button>
+                    <button type="button" class="color-swatch" data-color="#f7baba" style="background: #f7baba;" title="Corail"></button>
+                    <button type="button" class="color-swatch" data-color="#d4baf7" style="background: #d4baf7;" title="Lavande"></button>
+                  </div>
+                </div>
+                <div id="edit-place-desc" class="wysiwyg-editor" contenteditable="true" role="textbox" aria-multiline="true"></div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-file"><i class="fa-solid fa-file-image"></i> Importer une photo depuis votre ordinateur :</label>
+                <input type="file" id="edit-place-file" accept="image/*">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-image"><i class="fa-solid fa-link"></i> URL ou chemin de l'image :</label>
+                <input type="text" id="edit-place-image" placeholder="assets/... ou https://...">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-phone">Téléphone :</label>
+                <input type="text" id="edit-place-phone" placeholder="03 83 ...">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-link">Site Web d'information :</label>
+                <input type="url" id="edit-place-link" placeholder="https://...">
+              <div class="form-group">
+                <label for="edit-place-status"><i class="fa-solid fa-flag"></i> Statut de l'aménagement :</label>
+                <select id="edit-place-status">
+                  <option value="En cours" selected>🟢 En cours</option>
+                  <option value="À venir">🟡 À venir</option>
+                  <option value="Livré">🔵 Livré</option>
+                  <option value="Aucun">⚪ Aucun badge</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label for="edit-place-nprnu">
+                  <input type="checkbox" id="edit-place-nprnu" checked>
+                  <span>Inclus dans le Programme NPRNU Horizon 2028</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary-full"><i class="fa-solid fa-floppy-disk"></i> Enregistrer le projet</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer Stats / Status -->
+    <footer class="glass-footer">
+      <div class="footer-info">
+        <span><i class="fa-solid fa-location-dot"></i> Ville de Laxou - Quartier des Provinces</span>
+        <span class="dot-separator">•</span>
+        <span>Plan Illustré Interactif Horizon 2028</span>
+      </div>
+      <div class="footer-status" id="app-status">
+        <span class="status-indicator online"></span> Projets NPRNU chargés
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Modale Vidéo NPRNU (Au niveau racine pour z-index et position fixed absolus) -->
+  <div id="video-modal" class="modal-backdrop hidden">
+    <div class="modal-content glass-panel modal-lg" style="max-width: 900px; padding: 1.6rem; background: #ffffff; color: #1e293b; border-radius: 24px; box-shadow: 0 25px 60px rgba(0,0,0,0.35);">
+      <div class="modal-header" style="margin-bottom: 1.2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.8rem;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-circle-play" style="color: #ef4444;"></i> Le NPRNU en Vidéos
+        </h3>
+        <button id="close-video-modal" class="icon-btn" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #475569; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Sélection visuelle des vidéos -->
+      <div id="dual-video-cards" class="dual-video-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+        <!-- Dynamique via JS -->
+      </div>
+
+      <!-- Lecteur Vidéo Principal -->
+      <div class="video-container" style="position: relative; width: 100%; aspect-ratio: 16/9; min-height: 400px; border-radius: 16px; overflow: hidden; background: #000000; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <iframe id="youtube-iframe" style="width: 100%; height: 100%; border: 0;" src="" title="Présentation Vidéo Laxou NPRNU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale Gestion des Vidéos Admin -->
+  <div id="admin-video-modal" class="modal-backdrop hidden">
+    <div class="modal-content glass-panel" style="max-width: 540px; background: #ffffff; color: #1e293b; border-radius: 20px; padding: 1.5rem;">
+      <div class="modal-header" style="margin-bottom: 1rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.6rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;"><i class="fa-solid fa-film"></i> Gérer les Vidéos du NPRNU</h3>
+        <button id="close-admin-video-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="admin-form">
+        <div id="admin-videos-list" style="display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.2rem; max-height: 220px; overflow-y: auto;">
+          <!-- Liste dynamique des vidéos avec bouton suppression -->
+        </div>
+
+        <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 0.8rem;">Ajouter une nouvelle vidéo :</h4>
+          <div class="form-group" style="margin-bottom: 0.8rem;">
+            <label for="new-video-title">Titre de la vidéo :</label>
+            <input type="text" id="new-video-title" placeholder="ex: Présentation Rénovation" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="new-video-url">Lien YouTube (URL ou embed) :</label>
+            <input type="url" id="new-video-url" placeholder="https://www.youtube.com/watch?v=..." required>
+          </div>
+          <button id="btn-save-new-video" class="btn-primary-full"><i class="fa-solid fa-plus"></i> Enregistrer cette vidéo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded Dataset Fallback for file:// -->
+  <script src="js/data.js"></script>
+  <!-- Main App JS (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

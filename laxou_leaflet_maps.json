@@ -1,0 +1,669 @@
+[
+  {
+    "id": "map_laxou_1",
+    "page_source": "https://www.laxou.fr/fr/actualites/laxou-actu-ndeg-240_-n.html",
+    "titre": "Laxou Actu N° 240 - Laxou actu n° 240 ville de laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_2",
+    "page_source": "https://www.laxou.fr/fr/emploi-insertion.html",
+    "titre": "Emploi - insertion Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_3",
+    "page_source": "https://www.laxou.fr/fr/questions-frequentes.html",
+    "titre": "Questions fréquentes Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_4",
+    "page_source": "https://www.laxou.fr/fr/sante-prevention.html",
+    "titre": "Santé/prévention Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_5",
+    "page_source": "https://www.laxou.fr/fr/actualites/vendredis-sous-les-etoiles_-n.html",
+    "titre": "Vendredis sous les étoiles - Vendredis sous les étoiles ville de laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_6",
+    "page_source": "https://www.laxou.fr/fr/jeunesse-sports-et-vie-associative.html",
+    "titre": "Jeunesse, sports et vie associative Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_7",
+    "page_source": "https://www.laxou.fr/img_base/documents/56/maquette-la239-compressed-1.pdf",
+    "titre": "Équipements et Carte de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "%PDF-1.6\n%\n33 0 obj /Filter /FlateDecode\n/Length 128\n>>\nstream\nh\u001c\u0007\u0012@\u0000\u0004\b\u0018\f\n\u0012̘ۮՎ֖6 >\nstream\nx\u0005V@\u0014\u0000\u000e݊V\u001c! ߝN~\u0019>\u0018L\u0010\u0014e85#Qj\u0019#qjɖM\u0001i\u0010l\u0018siBS\u0000EYL\u00124`\n+Y%5hz\u00126(\u0011l\u00116P.QA\u0013\u0003s\u0000E9$#j9ܝ$\ngd <i\u0017.\u0015Q\\Cnp\u000b%\u000b\u001e@G\"{⯞W]oPwhg(_P \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000_Z}\nend...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Services Municipaux",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "assets/logo_laxou_official_11.jpg",
+    "iframes": [],
+    "texte_complet_extrait": "%PDF-1.6\n%\n33 0 obj /Filter /FlateDecode\n/Length 128\n>>\nstream\nh\u001c\u0007\u0012@\u0000\u0004\b\u0018\f\n\u0012̘ۮՎ֖6 >\nstream\nx\u0005V@\u0014\u0000\u000e݊V\u001c! ߝN~\u0019>\u0018L\u0010\u0014e85#Qj\u0019#qjɖM\u0001i\u0010l\u0018siBS\u0000EYL\u00124`\n+Y%5hz\u00126(\u0011l\u00116P.QA\u0013\u0003s\u0000E9$#j9ܝ$\ngd <i\u0017.\u0015Q\\Cnp\u000b%\u000b\u001e@G\"{⯞W]oPwhg(_P \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000_Z}\nendstream\nendobj\n37 0 obj /Length 40\n>>\nstream\n2\n\"\u00001\n\"\u00001\n!\u00000\t!\u0000/\t!\u0000/\t \u0000.\t \u0000.\t\u001f\u0000-\t\u001f\u0000-\b\u001f\u0000\nendstream\nendobj\n38 0 obj /BitsPerComponent 8\n/ColorSpace 36 0 R\n/Height 60\n/Subtype /Image\n/Type /XObject\n/Width 63\n/Filter /FlateDecode\n/Length 47\n>>\nstream\nx\t\u0000 \b@A\u000bA$;\u0011[X\u0005p\"\u0000^\fhMm\u000e`A\n\nendstream\nendobj\n41 0 obj /Filter /FlateDecode\n/Length 99\n>>\nstream\nh\u001c\u0007\u00120\u0010\u0004Q\u0006D\u0014`\u001bvU\u00038ux\u0004\u001aH\u001aɶDN3\u0016\u0006[c\f:he\u0016GN:s\u0016\u001e򴯴qiʍ䝯\u001e_\u0001\u0000V\u0019\u00056\nendstream\nendobj\n42 0 obj /BitsPerComponent 8\n/ColorSpace 40 0 R\n/Height 165\n/Subtype /Image\n/Type /XObject\n/Width 97\n/Filter /FlateDecode\n/Length 587\n>>\nstream\nxZ\u00131\u0014a@h+\u0005)\u001e\u0015\u0010\nr#dvN\u00025ϞZVjZVjZ\u0018\r>j\u0003\\:0\u0004\u001f\u000b\u001a `\u00072aס\u0006|4\u0018g\bo\u0006H0ʹa\u001bF4k ׻\u0011\rF484 \u001ahf,\u0012aD}]\u0016ymc4x{-hp\u0006#\u001a\u001c{?7\u0018X-Ab>p\u0016\u001a 4P\f?>h\u001cH~\u00162\u0006X0?D+?\u0002^|4\u0018`\n\u001dg\nendstream\nendobj\n45 0 obj /Length 4\n>>\nstream\n\u0000\u0000\u0000\u0000\nends"
+  },
+  {
+    "id": "map_laxou_8",
+    "page_source": "https://www.laxou.fr/fr/associations-patriotiques.html",
+    "titre": "Associations patriotiques Ville de Laxou",
+    "type_de_contenu": "Leaflet / OSM",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_9",
+    "page_source": "https://www.laxou.fr/fr/le-parc-urbain.html",
+    "titre": "Le parc urbain Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.6912,
+      "lng": 6.148,
+      "adresse": "Rue de la Sapinière, 54520 Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_10",
+    "page_source": "https://www.laxou.fr/fr/donnees-personnelles.html",
+    "titre": "Données personnelles Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Publications Municipales Actualités Agenda l'"
+  },
+  {
+    "id": "map_laxou_11",
+    "page_source": "https://www.laxou.fr/fr/conseil-municipal-d-enfants-et-de-jeunes.html",
+    "titre": "Conseil municipal d'enfants et de jeunes Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_12",
+    "page_source": "https://www.laxou.fr/fr/charte-de-la-diversite.html",
+    "titre": "Charte de la diversité Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_13",
+    "page_source": "https://www.laxou.fr/fr/etablissement-recevant-du-public-erp.html",
+    "titre": "Etablissement recevant du public (erp) Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_14",
+    "page_source": "https://www.laxou.fr/fr/urbanisme-et-travaux.html",
+    "titre": "Urbanisme et travaux Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_15",
+    "page_source": "https://www.laxou.fr/fr/vie-municipale.html",
+    "titre": "Vie municipale Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_16",
+    "page_source": "https://www.laxou.fr/fr/espace-famille.html",
+    "titre": "Espace famille Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_17",
+    "page_source": "https://www.laxou.fr/fr/le-pole-enfance.html",
+    "titre": "Le pôle enfance Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_18",
+    "page_source": "https://www.laxou.fr/fr/actualites/guinguette-2026_-n.html",
+    "titre": "GUINGUETTE 2026 - Guinguette 2026 ville de laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_19",
+    "page_source": "https://www.laxou.fr/fr/associations-sportives.html",
+    "titre": "Associations sportives Ville de Laxou",
+    "type_de_contenu": "Leaflet / OSM",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_20",
+    "page_source": "https://www.laxou.fr/fr/amc-et-vg.html",
+    "titre": "Amc et vg Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_21",
+    "page_source": "https://www.laxou.fr/fr/plan-de-la-ville.html",
+    "titre": "Plan de la ville Ville de Laxou",
+    "type_de_contenu": "Leaflet / OSM",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_22",
+    "page_source": "https://www.laxou.fr/fr/agenda/cinema-plein-air-3_-d.html",
+    "titre": "Cinéma plein air - Cinéma plein air ville de laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_23",
+    "page_source": "https://www.laxou.fr/",
+    "titre": "Accueil - Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_24",
+    "page_source": "https://www.laxou.fr/fr/actualites/prevention-routiere-non-au-telephone-au-volant_-n.html",
+    "titre": "PREVENTION ROUTIERE : NON AU TELEPHONE AU VOLANT - Prevention routiere : non au",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [
+      "/fr/fpopup_rgpd_videos.html?p=vieprivee%3Aelements%3A%3Argpd_disabled"
+    ],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_25",
+    "page_source": "https://www.laxou.fr/fr/l-art-dans-la-nature-en-dehors-des-sentiers-battus.html",
+    "titre": "L'art dans la nature : « en dehors des sentiers battus » Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_26",
+    "page_source": "https://www.laxou.fr/fr/animation-et-valorisation-touristique.html",
+    "titre": "Animation et valorisation touristique Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_27",
+    "page_source": "https://www.laxou.fr/fr/recrutement.html",
+    "titre": "Recrutement Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_28",
+    "page_source": "https://www.laxou.fr/fr/realisations-existantes-et-futures.html",
+    "titre": "Réalisations existantes et futures Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_29",
+    "page_source": "https://www.laxou.fr/fr/jeunesse.html",
+    "titre": "Jeunesse Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_30",
+    "page_source": "https://www.laxou.fr/fr/associations-culturelles.html",
+    "titre": "Associations culturelles Ville de Laxou",
+    "type_de_contenu": "Leaflet / OSM",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_31",
+    "page_source": "https://www.laxou.fr/fr/l-hebergement.html",
+    "titre": "L’hébergement Ville de Laxou",
+    "type_de_contenu": "Leaflet / OSM",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_32",
+    "page_source": "https://www.laxou.fr/fr/correspondant-defense.html",
+    "titre": "Correspondant defense Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_33",
+    "page_source": "https://www.laxou.fr/fr/la-programmation-culturelle-a-laxou.html",
+    "titre": "La programmation culturelle à laxou Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_34",
+    "page_source": "https://www.laxou.fr/fr/seniors-2.html",
+    "titre": "Seniors Ville de Laxou",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  },
+  {
+    "id": "map_laxou_35",
+    "page_source": "https://www.laxou.fr/fr/actualites/bulletins-d-inscription-du-vide-greniers-et-de-la-braderie_-n.html",
+    "titre": "Bulletins d'inscription du vide-greniers et de la braderie - Bulletins",
+    "type_de_contenu": "Carte SIG / Visuel Cartographique",
+    "resume": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n  ...",
+    "lieux_cites": [
+      "Commune de Laxou"
+    ],
+    "categories": "Sport & Équipements Sportifs",
+    "coordonnees": {
+      "lat": 48.685,
+      "lng": 6.15,
+      "adresse": "Commune de Laxou"
+    },
+    "image_source": "https://www.laxou.fr/UserFiles/Image/2019/icones/speech-bubble-01.png",
+    "iframes": [],
+    "texte_complet_extrait": "if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }\n  if (typeof window.gtag === 'undefined') {\n    window.gtag = function(){ window.dataLayer.push(arguments); };\n  }\n    gtag('consent', 'default', {\n      ad_storage: 'denied',\n      analytics_storage: 'denied',\n      ad_user_data: 'denied',\n      ad_personalization: 'denied',\n      wait_for_update: 500\n    }); window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-0D02JLEFGK', { 'cookie_expires': 33696000 }); if (typeof flexitGetCook === 'undefined') {\n    function flexitGetCook(name) {\n      var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, '\\\\$&') + '=([^;]*)'));\n      return m ? decodeURIComponent(m[1]) : null;\n    }\n  }\nif (flexitGetCook('flexit_rgpd_stats') == '1') {\n    gtag('consent', 'update', {\n      analytics_storage: 'granted'\n    });} Ce site utilise des cookies pour son bon fonc"
+  }
+]

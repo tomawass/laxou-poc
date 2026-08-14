@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laxou Map Explorer | Carte Interactive</title>
+  <meta name="description" content="Explorer la carte interactive de la ville de Laxou : services publics, parcs, culture, sports et écoles.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <div id="app-container">
+    
+    <!-- Header / Navbar -->
+    <header class="glass-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Laxou <span>Map App</span></h1>
+          <p class="subtitle">Meurthe-et-Moselle (54520)</p>
+        </div>
+      </div>
+      
+      <!-- Quick Search Bar -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Rechercher un lieu, un parc, une école..." autocomplete="off">
+        <button id="clear-search-btn" class="hidden" title="Effacer"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Actions & Controls -->
+      <div class="header-actions">
+        <button id="toggle-sidebar-btn" class="action-btn" title="Afficher/Masquer le panneau">
+          <i class="fa-solid fa-list-check"></i>
+          <span class="btn-text">Lieux</span>
+          <span id="places-badge" class="badge">0</span>
+        </button>
+        <button id="admin-login-btn" class="action-btn" title="Connexion Administrateur Ville de Laxou">
+          <i class="fa-solid fa-lock"></i>
+          <span class="btn-text">Admin</span>
+        </button>
+        <button id="theme-toggle-btn" class="action-btn icon-only" title="Changer de thème">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="main-content">
+      
+      <!-- Custom HTML5 Canvas Vector Map -->
+      <div id="map-view" class="map-view-container">
+        <canvas id="map-canvas"></canvas>
+        <div id="marker-overlay" class="marker-overlay"></div>
+        <div class="map-zoom-controls">
+          <button id="zoom-in-btn" class="map-ctrl-btn" aria-label="Zoom avant" title="Zoom avant">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button id="zoom-out-btn" class="map-ctrl-btn" aria-label="Zoom arrière" title="Zoom arrière">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills Bar (Floating Over Map) -->
+      <nav class="categories-wrapper">
+        <div id="categories-bar" class="categories-container">
+          <!-- Dynamic Category Chips loaded from JS -->
+        </div>
+      </nav>
+
+      <!-- Collapsible Places Sidebar -->
+      <aside id="sidebar" class="glass-sidebar open">
+        <div class="sidebar-header">
+          <h2><i class="fa-solid fa-compass"></i> Lieux d'intérêt</h2>
+          <button id="close-sidebar-btn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Admin Active Control Bar -->
+        <div id="admin-banner" class="admin-banner hidden">
+          <div class="admin-banner-title"><i class="fa-solid fa-user-shield"></i> Mode Admin Active</div>
+          <div class="admin-banner-actions">
+            <button id="admin-add-place-btn" class="admin-sm-btn success"><i class="fa-solid fa-plus"></i> Ajouter</button>
+            <button id="admin-export-btn" class="admin-sm-btn primary"><i class="fa-solid fa-download"></i> JSON</button>
+            <button id="admin-logout-btn" class="admin-sm-btn danger" title="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i></button>
+          </div>
+        </div>
+
+        <div class="sidebar-stats">
+          <span id="results-count">Chargement des lieux...</span>
+        </div>
+
+        <!-- Places Cards List -->
+        <div id="places-list" class="places-grid">
+          <!-- Dynamic Place Cards -->
+        </div>
+      </aside>
+
+      <!-- Place Detail Modal / Drawer -->
+      <div id="detail-drawer" class="detail-drawer glass-panel hidden">
+        <button id="close-drawer-btn" class="icon-btn drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        <div id="drawer-content">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Modale de Connexion Admin -->
+      <div id="admin-login-modal" class="modal-backdrop hidden">
+        <div class="modal-content glass-panel">
+          <div class="modal-header">
+            <h3><i class="fa-solid fa-user-shield"></i> Connexion Administrateur</h3>
+            <button id="close-admin-login-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <form id="admin-login-form" class="admin-form">
+            <p class="form-help">Réservé aux agents de la Mairie de Laxou (@laxou.fr).</p>
+            <div id="login-error-msg" class="login-error hidden">
+              <i class="fa-solid fa-triangle-exclamation"></i> Identifiants incorrects. Email en @laxou.fr requis.
+            </div>
+            <div class="form-group">
+              <label for="admin-email"><i class="fa-solid fa-envelope"></i> Adresse Email :</label>
+              <input type="email" id="admin-email" placeholder="agent@laxou.fr" required autocomplete="username">
+            </div>
+            <div class="form-group">
+              <label for="admin-password"><i class="fa-solid fa-key"></i> Mot de passe :</label>
+              <input type="password" id="admin-password" placeholder="Mot de passe" required autocomplete="current-password">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary-full"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modale d'Édition / Ajout de Lieu Admin -->
+      <div id="admin-editor-modal" class="modal-backdrop hidden">
+        <div class="modal-content glass-panel modal-lg">
+          <div class="modal-header">
+            <h3 id="editor-modal-title"><i class="fa-solid fa-pen-to-square"></i> Édition de Lieu</h3>
+            <button id="close-admin-editor-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <form id="admin-editor-form" class="admin-form">
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="edit-place-name">Nom du lieu / association :</label>
+                <input type="text" id="edit-place-name" placeholder="ex: Muséum de Laxou" required>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-category">Catégorie :</label>
+                <select id="edit-place-category" required>
+                  <option value="services">Services Publics & Mairie</option>
+                  <option value="parcs">Parcs, Nature & Loisirs</option>
+                  <option value="culture">Culture, Assos & Patrimoine</option>
+                  <option value="sports">Sports, Santé & Clubs</option>
+                  <option value="ecoles">Écoles, Enfance & Éducation</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-lat">Latitude :</label>
+                <input type="number" step="0.0001" id="edit-place-lat" placeholder="48.6865" required>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-lng">Longitude :</label>
+                <input type="number" step="0.0001" id="edit-place-lng" placeholder="6.1504" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-address">Adresse complète :</label>
+                <input type="text" id="edit-place-address" placeholder="ex: 3 Avenue Paul Déroulède, 54520 Laxou" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="edit-place-desc">Description :</label>
+                <textarea id="edit-place-desc" rows="3" placeholder="Description du lieu..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-image">URL de l'image :</label>
+                <input type="url" id="edit-place-image" placeholder="https://...">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-phone">Téléphone :</label>
+                <input type="text" id="edit-place-phone" placeholder="03 83 ...">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-email">Email :</label>
+                <input type="email" id="edit-place-email" placeholder="contact@...">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-place-link">Site Web :</label>
+                <input type="url" id="edit-place-link" placeholder="https://...">
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label for="edit-place-nprnu">
+                  <input type="checkbox" id="edit-place-nprnu">
+                  <span>Inclus dans le Programme NPRNU 2028 (Rénovation Urbaine)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary-full"><i class="fa-solid fa-floppy-disk"></i> Enregistrer les modifications</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer Stats / Status -->
+    <footer class="glass-footer">
+      <div class="footer-info">
+        <span><i class="fa-solid fa-location-dot"></i> Ville de Laxou - 54520</span>
+        <span class="dot-separator">•</span>
+        <span>Moteur Carte Canvas Vectoriel sur-mesure</span>
+      </div>
+      <div class="footer-status" id="app-status">
+        <span class="status-indicator online"></span> Données chargées
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Leaflet JS & MarkerCluster plugin -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <!-- Embedded Dataset Fallback for direct file:// protocol -->
+  <script src="js/data.js"></script>
+  <!-- Main App JS (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+

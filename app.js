@@ -4,11 +4,42 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initShrinkingHeader();
   initThemeToggle();
   initMobileNav();
   initScrollReveal();
   initGdprForms();
 });
+
+/* 0. Shrinking Sticky Header on Scroll */
+function initShrinkingHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  let ticking = false;
+
+  function updateHeader(scrollPos) {
+    if (scrollPos > 30) {
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY || window.pageYOffset;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateHeader(scrollPos);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial check on load
+  updateHeader(window.scrollY || window.pageYOffset);
+}
 
 /* 1. Theme & High-Contrast Toggles */
 function initThemeToggle() {

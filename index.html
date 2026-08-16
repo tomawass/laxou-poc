@@ -162,41 +162,133 @@
       <a href="#acces-rapides" class="hero-arrow-down" aria-label="Défiler vers les accès rapides">↓</a>
     </section>
 
-    <!-- 3. ACCÈS RAPIDES -->
-    <section id="acces-rapides" class="section-padding">
+    <!-- 3. VOS SERVICES MUNICIPAUX -->
+    <section id="services-municipaux" class="services-section">
       <div class="container">
-        <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Accès rapides</h2>
+        <!-- Section Header -->
+        <div class="services-header">
+          <h2 class="services-title">Vos Services Municipaux</h2>
+          <p class="services-subtitle">Un accès simplifié et dématérialisé aux démarches administratives, éducatives et sociales pour faciliter votre quotidien.</p>
+        </div>
 
-        <div class="acces-rapides-grid">
-          <a href="archives.html" class="acces-card">
-            <div class="acces-icon">🪪</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">Démarches en ligne et état civil</div>
-          </a>
+        <!-- 4 Main Categories Grid -->
+        <div class="services-main-grid">
 
-          <a href="page-type.html" class="acces-card">
-            <div class="acces-icon">💧</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">Tarifs d'eau et assainissement</div>
-          </a>
+          <!-- Category 1: Administration & Citoyenneté -->
+          <div class="service-cat-card">
+            <div class="service-cat-header">
+              <div class="service-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              </div>
+              <h3 class="service-cat-title">Administration & Citoyenneté</h3>
+            </div>
+            <div class="service-cat-body">
+              <a href="archives.html" class="service-subcard">
+                <div class="service-subcard-title">État civil</div>
+                <p class="service-subcard-desc">Gestion et délivrance des actes officiels de naissance, mariage et décès.</p>
+              </a>
 
-          <a href="simulateur-periscolaire.html" class="acces-card">
-            <div class="acces-icon">🥗</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">La restauration scolaire et périscolaire</div>
-          </a>
+              <a href="archives.html" class="service-subcard">
+                <div class="service-subcard-title">Cartes d'identité et passeports</div>
+                <p class="service-subcard-desc">Service de prise de rendez-vous et de traitement des demandes de titres d'identité.</p>
+              </a>
 
-          <a href="page-type.html" class="acces-card">
-            <div class="acces-icon">🏫</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">Écoles maternelles et élémentaires</div>
-          </a>
+              <a href="archives.html" class="service-subcard">
+                <div class="service-subcard-title">Élections et Inscriptions</div>
+                <p class="service-subcard-desc">Service d'inscription sur les listes électorales pour les citoyens de la commune.</p>
+              </a>
+            </div>
+          </div>
 
-          <a href="archives.html" class="acces-card">
-            <div class="acces-icon">🗳️</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">S'inscrire sur les listes électorales</div>
-          </a>
+          <!-- Category 2: Enfance & Éducation -->
+          <div class="service-cat-card">
+            <div class="service-cat-header">
+              <div class="service-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="service-cat-title">Enfance & Éducation</h3>
+            </div>
+            <div class="service-cat-body">
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Petite Enfance et Crèches</div>
+                <p class="service-subcard-desc">Services d'accueil, d'inscription et de garde pour les jeunes enfants.</p>
+              </a>
 
-          <a href="iframe.html" class="acces-card">
-            <div class="acces-icon">⚽</div>
-            <div style="font-weight: 700; font-size: var(--text-sm);">Un équipement sportif</div>
-          </a>
+              <!-- RESTAURATION SCOLAIRE -> SIMULATEUR PERISCOLAIRE -->
+              <a href="simulateur-periscolaire.html" class="service-subcard">
+                <div class="service-subcard-title">Restauration scolaire</div>
+                <p class="service-subcard-desc">Gestion de la cantine et des repas pour les écoles maternelles et élémentaires.</p>
+              </a>
+
+              <a href="simulateur-periscolaire.html" class="service-subcard">
+                <div class="service-subcard-title">Accueil Périscolaire et Garderie</div>
+                <p class="service-subcard-desc">Services de garde et d'activités pour les enfants de 3 à 11 ans le matin, le soir et durant le plan mercredi.</p>
+              </a>
+
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Portail Famille dématérialisé</div>
+                <p class="service-subcard-desc">Espace en ligne pour gérer les inscriptions et paiements des services scolaires et extrascolaires.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 3: Cadre de Vie & Urbanisme -->
+          <div class="service-cat-card">
+            <div class="service-cat-header">
+              <div class="service-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+              </div>
+              <h3 class="service-cat-title">Cadre de Vie & Urbanisme</h3>
+            </div>
+            <div class="service-cat-body">
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Urbanisme</div>
+                <p class="service-subcard-desc">Traitement des demandes de permis de construire, de travaux et d'autorisations d'urbanisme.</p>
+              </a>
+
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Eau et Assainissement</div>
+                <p class="service-subcard-desc">Gestion des tarifs et des services liés au réseau d'eau potable et à l'assainissement.</p>
+              </a>
+
+              <a href="contact.html" class="service-subcard">
+                <div class="service-subcard-title">Signalements urbains</div>
+                <p class="service-subcard-desc">Plateforme permettant aux habitants de signaler des problèmes de voirie, d'éclairage ou de propreté.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 4: Solidarité & Loisirs -->
+          <div class="service-cat-card">
+            <div class="service-cat-header">
+              <div class="service-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <h3 class="service-cat-title">Solidarité & Loisirs</h3>
+            </div>
+            <div class="service-cat-body">
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Action sociale et Seniors</div>
+                <p class="service-subcard-desc">Accompagnement social via le CCAS et services dédiés au bien-être des personnes âgées.</p>
+              </a>
+
+              <a href="page-type.html" class="service-subcard">
+                <div class="service-subcard-title">Culture et Médiathèques</div>
+                <p class="service-subcard-desc">Accès aux espaces de lecture publique, à l'école de musique et aux salles de spectacle.</p>
+              </a>
+
+              <a href="iframe.html" class="service-subcard">
+                <div class="service-subcard-title">Installations sportives</div>
+                <p class="service-subcard-desc">Mise à disposition et gestion des gymnases, complexes omnisports et terrains de sport.</p>
+              </a>
+
+              <a href="iframe.html" class="service-subcard">
+                <div class="service-subcard-title">Réservation de salles et terrains</div>
+                <p class="service-subcard-desc">Service permettant aux associations et particuliers de réserver des équipements municipaux.</p>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

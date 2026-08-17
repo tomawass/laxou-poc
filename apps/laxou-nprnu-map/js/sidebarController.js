@@ -364,7 +364,7 @@ export class SidebarController {
   }
 
   highlightCard(placeId) {
-    const { placesList } = this.elements;
+    const { placesList, sidebar } = this.elements;
     if (!placesList) return;
 
     placesList.querySelectorAll('.place-card').forEach(card => {
@@ -374,7 +374,18 @@ export class SidebarController {
     const targetCard = placesList.querySelector(`[data-place-id="${placeId}"]`);
     if (targetCard) {
       targetCard.classList.add('selected');
-      targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Scroll ONLY inside the sidebar container if it is currently open
+      const isSidebarOpen = sidebar && sidebar.classList.contains('open');
+      if (isSidebarOpen) {
+        const listRect = placesList.getBoundingClientRect();
+        const cardRect = targetCard.getBoundingClientRect();
+        const relativeTop = cardRect.top - listRect.top;
+        placesList.scrollTo({
+          top: placesList.scrollTop + relativeTop - 20,
+          behavior: 'smooth'
+        });
+      }
     }
   }
 

@@ -385,7 +385,7 @@ img {
   height: 65vh;
   min-height: 500px;
   max-height: 768px;
-  background-image: url('assets/hero_mosaic.png');
+  background-image: url('assets/hero_mosaic.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;

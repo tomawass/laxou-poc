@@ -31,7 +31,28 @@ export class App {
     this._cacheDOMElements();
     this._initEngineComponents();
     this.setupEventListeners();
+    this._installScrollLock();
     await this.loadData();
+  }
+
+  /**
+   * Permanently prevent the document/window from scrolling.
+   * This kills the browser's automatic "scroll-to-focused-element" behavior
+   * that causes the viewport to shift when off-screen elements receive
+   * class changes or focus.
+   */
+  _installScrollLock() {
+    const lock = () => {
+      if (window.scrollX !== 0 || window.scrollY !== 0) {
+        window.scrollTo(0, 0);
+      }
+      document.documentElement.scrollLeft = 0;
+      document.documentElement.scrollTop = 0;
+      document.body.scrollLeft = 0;
+      document.body.scrollTop = 0;
+    };
+    window.addEventListener('scroll', lock, { passive: true });
+    document.addEventListener('scroll', lock, { passive: true });
   }
 
   _cacheDOMElements() {

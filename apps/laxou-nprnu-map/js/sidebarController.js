@@ -44,7 +44,9 @@ export class SidebarController {
       const targetPlace = place || this.dataProvider.getPlaceById(placeId);
       if (!targetPlace) return;
 
-      if (source === 'map') {
+      // Only highlight the sidebar card if the sidebar is actually visible
+      const sidebarIsOpen = this.elements.sidebar && this.elements.sidebar.classList.contains('open');
+      if (source === 'map' && sidebarIsOpen) {
         this.highlightCard(placeId);
       }
 
@@ -274,6 +276,10 @@ export class SidebarController {
       }
       this.isDrawerOpen = false;
       this.isTransitioning = false;
+      // Reset any accidental scroll
+      window.scrollTo(0, 0);
+      document.documentElement.scrollLeft = 0;
+      document.body.scrollLeft = 0;
 
       this.showDetailDrawer(nextPlace);
     }, 220);
@@ -340,6 +346,12 @@ export class SidebarController {
     detailDrawer.classList.remove('hidden', 'closing');
     detailDrawer.classList.add('open');
     this.isDrawerOpen = true;
+    // Force-reset scroll position to prevent any horizontal shift
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollLeft = 0;
+      document.body.scrollLeft = 0;
+    });
     this.eventBus.emit('drawer:toggled', { isOpen: true });
   }
 
@@ -359,6 +371,10 @@ export class SidebarController {
       detailDrawer.classList.remove('closing');
       this.isDrawerOpen = false;
       this.isTransitioning = false;
+      // Reset any accidental scroll
+      window.scrollTo(0, 0);
+      document.documentElement.scrollLeft = 0;
+      document.body.scrollLeft = 0;
       this.eventBus.emit('drawer:toggled', { isOpen: false });
     }, 220);
   }
@@ -366,6 +382,10 @@ export class SidebarController {
   highlightCard(placeId) {
     const { placesList, sidebar } = this.elements;
     if (!placesList) return;
+
+    // Absolute guard: do nothing if sidebar is not open
+    const isSidebarOpen = sidebar && sidebar.classList.contains('open');
+    if (!isSidebarOpen) return;
 
     placesList.querySelectorAll('.place-card').forEach(card => {
       card.classList.remove('selected');
@@ -375,17 +395,14 @@ export class SidebarController {
     if (targetCard) {
       targetCard.classList.add('selected');
       
-      // Scroll ONLY inside the sidebar container if it is currently open
-      const isSidebarOpen = sidebar && sidebar.classList.contains('open');
-      if (isSidebarOpen) {
-        const listRect = placesList.getBoundingClientRect();
-        const cardRect = targetCard.getBoundingClientRect();
-        const relativeTop = cardRect.top - listRect.top;
-        placesList.scrollTo({
-          top: placesList.scrollTop + relativeTop - 20,
-          behavior: 'smooth'
-        });
-      }
+      // Scroll vertically inside the sidebar list only
+      const listRect = placesList.getBoundingClientRect();
+      const cardRect = targetCard.getBoundingClientRect();
+      const relativeTop = cardRect.top - listRect.top;
+      placesList.scrollTo({
+        top: placesList.scrollTop + relativeTop - 20,
+        behavior: 'smooth'
+      });
     }
   }
 

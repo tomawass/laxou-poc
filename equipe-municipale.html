@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Équipe Municipale | Ville de Laxou</title>
+  <meta name="description" content="Découvrez le Maire de Laxou Laurent Garcia, les adjoints au maire, les conseillers municipaux délégués et l'opposition municipale.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Styling specific to Équipe Municipale Page */
+    .elus-page-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-4);
+    }
+
+    .elus-header-banner {
+      border-top: 4px solid #76b82f;
+      background: #ffffff;
+      padding: 1.8rem 2.2rem 1.4rem;
+      margin-bottom: 2rem;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-left: 1px solid var(--color-border);
+      border-right: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .elus-badge-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #5a8f22;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+      background: #f0f7e6;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .elus-main-title {
+      margin: 0.4rem 0 0.5rem;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #1e293b;
+      line-height: 1.25;
+      font-family: var(--font-display);
+    }
+
+    .elus-subtitle {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    /* Jump Bar Navigation */
+    .elus-jump-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .elus-jump-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--user-primary-dark);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .elus-jump-btn:hover {
+      background: #f0f7e6;
+      border-color: #76b82f;
+      color: #5a8f22;
+      transform: translateY(-1px);
+    }
+
+    /* Mayor Hero Card */
+    .mayor-hero-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f4faed 100%);
+      border: 2px solid #76b82f;
+      border-radius: 18px;
+      padding: 2.2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      box-shadow: 0 8px 24px rgba(118, 184, 47, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .mayor-hero-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(118, 184, 47, 0.18);
+    }
+
+    .mayor-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #76b82f;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(118, 184, 47, 0.28);
+    }
+
+    .mayor-role-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #5a8f22;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+    }
+
+    .mayor-name {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #1e293b;
+      font-family: var(--font-display);
+    }
+
+    .mayor-desc {
+      margin: 0;
+      font-size: 1rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    /* Section Headers */
+    .elus-section-header {
+      margin: 2.8rem 0 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .elus-section-bar {
+      width: 6px;
+      height: 30px;
+      background: linear-gradient(180deg, #76b82f, #5a8f22);
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .elus-section-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1e293b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-family: var(--font-display);
+    }
+
+    /* Cards Grid */
+    .elus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Individual Official Card */
+    .elu-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .elu-card:hover {
+      border-color: #76b82f;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(118, 184, 47, 0.12);
+    }
+
+    .elu-card.opposition:hover {
+      border-color: #94a3b8;
+      box-shadow: 0 8px 20px rgba(148, 163, 184, 0.15);
+    }
+
+    .elu-avatar {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #76b82f;
+      flex-shrink: 0;
+      background: #f1f5f9;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .elu-card.opposition .elu-avatar {
+      border-color: #cbd5e1;
+    }
+
+    .elu-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .elu-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+      font-family: var(--font-display);
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+    }
+
+    .elu-role {
+      font-size: 0.85rem;
+      color: #5a8f22;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .elu-card.opposition .elu-role {
+      color: #64748b;
+    }
+
+    @media (max-width: 640px) {
+      .mayor-hero-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.2rem;
+      }
+      .mayor-avatar {
+        width: 100px;
+        height: 100px;
+      }
+      .elus-grid {
+        grid-template-columns: 1fr;
+      }
+      .elu-card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Clean Logo -->
+      <a href="index.html" class="logo-brand" title="Accueil - Ville de Laxou">
+        <img src="assets/logo_laxou_official_5.png" alt="Logo Officiel de la Ville de Laxou" style="height: 54px; width: auto;" loading="eager">
+      </a>
+
+      <!-- Streamlined Navigation Bar -->
+      <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Accueil</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="page-type.html" class="nav-link active" aria-haspopup="true">Ma mairie ▾</a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="equipe-municipale.html">Conseil municipal</a></li>
+                <li><a href="equipe-municipale.html">La mairie / Équipe municipale</a></li>
+                <li><a href="page-type.html">Jumelages</a></li>
+                <li><a href="page-type.html">Conseils de proximité</a></li>
+                <li><a href="page-type.html">Police municipale</a></li>
+                <li><a href="archives.html">Marchés publics</a></li>
+                <li><a href="page-type.html">Budget / Finances</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="archives.html" class="nav-link" aria-haspopup="true">Démarches ▾</a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="article.html">État civil (Naissance, mariage, décès)</a></li>
+                <li><a href="article.html">Cartes d'identité / passeports</a></li>
+                <li><a href="iframe.html">Urbanisme (Permis & Travaux)</a></li>
+                <li><a href="archives.html">Élections & Inscriptions</a></li>
+                <li><a href="page-type.html">Cimetières</a></li>
+                <li><a href="page-type.html">Portail famille dématérialisé</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- CONSOLIDATED MEGA TAB: "Vivre à Laxou" -->
+          <li class="nav-item">
+            <a href="iframe.html" class="nav-link" aria-haspopup="true">Vivre à Laxou ▾</a>
+            <div class="dropdown-menu mega-menu-3col">
+              <div>
+                <div class="mega-col-title">👶 Petite Enfance & Famille</div>
+                <ul>
+                  <li><a href="page-type.html">Crèches & Inscriptions</a></li>
+                  <li><a href="page-type.html">Portail Famille dématérialisé</a></li>
+                  <li><a href="page-type.html">ATE / Activités 6-11 ans</a></li>
+                  <li><a href="simulateur-periscolaire.html">Restauration scolaire & Cantine</a></li>
+                  <li><a href="page-type.html">Garderie matin & soir</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">🌳 Vie Locale, Culture & Cadre de vie</div>
+                <ul>
+                  <li><a href="page-type.html">Jeunesse, ALSH & Plan mercredi</a></li>
+                  <li><a href="iframe.html">Sports & Installations sportives</a></li>
+                  <li><a href="agenda.html">Culture, Médiathèques & CILM</a></li>
+                  <li><a href="page-type.html">Seniors, CCAS & Action sociale</a></li>
+                  <li><a href="iframe.html">Parcs, Rénovation & Laxou Nature</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">🤝 Associations & Équipements</div>
+                <ul>
+                  <li><a href="archives.html"><strong>Annuaire complet des associations</strong></a></li>
+                  <li><a href="archives.html">Associations sportives & culturelles</a></li>
+                  <li><a href="archives.html">Associations jeunesse & patriotiques</a></li>
+                  <li><a href="page-type.html">Subventions aux associations</a></li>
+                  <li><a href="iframe.html">Réservation de salles & terrains</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="actualites.html" class="nav-link" aria-haspopup="true">Actualités ▾</a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="actualites.html">Actualités municipales</a></li>
+                <li><a href="archives.html">Publications administratives & Arrêtés</a></li>
+                <li><a href="agenda.html">Agenda des événements</a></li>
+                <li><a href="iframe.html">L'application mobile Laxou</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" aria-haspopup="true">Contact ▾</a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="contact.html">Formulaire de contact</a></li>
+                <li><a href="contact.html">Annuaire des services municipaux</a></li>
+                <li><a href="contact.html">Signalements (voirie, éclairage, etc.)</a></li>
+                <li><a href="contact.html">Rendez-vous avec le Maire</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hero Banner -->
+    <div style="position: relative; height: 240px; overflow: hidden; background-image: url('assets/logo_laxou_official_11.jpg'); background-size: cover; background-position: center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7, 27, 59, 0.45), rgba(7, 27, 59, 0.88));"></div>
+      <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: flex-end; padding-bottom: var(--space-6);">
+        <h1 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 4.5vw, 3.2rem); color: white; margin: 0;">L'Équipe Municipale</h1>
+      </div>
+    </div>
+
+    <!-- Date metadata bar -->
+    <div style="background-color: var(--color-surface); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border);">
+      <div class="container" style="font-size: 0.85rem; color: var(--color-muted); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <a href="index.html" style="color: var(--color-muted); text-decoration: none;">Accueil</a> &gt; 
+          <a href="page-type.html" style="color: var(--color-muted); text-decoration: none;">Ma Mairie</a> &gt; 
+          <strong style="color: var(--user-primary-dark);">L'Équipe Municipale</strong>
+        </div>
+        <div>
+          <span>Publié le <strong>20/05/2024</strong></span> — <span>Mis à jour le <strong>14/08/2026</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="elus-page-container">
+      
+      <!-- Top Title Header -->
+      <div class="elus-header-banner">
+        <span class="elus-badge-tag"><i class="fa-solid fa-landmark"></i> Démocratie Locale</span>
+        <h2 class="elus-main-title">Le Conseil Municipal</h2>
+        <p class="elus-subtitle">Retrouvez la composition de l'exécutif municipal, les délégations attribuées à chaque élu et les membres de l'assemblée délibérante de la Ville de Laxou.</p>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      <div class="elus-jump-nav">
+        <a href="#maire" class="elus-jump-btn"><i class="fa-solid fa-user-tie"></i> Le Maire</a>
+        <a href="#adjoints" class="elus-jump-btn"><i class="fa-solid fa-users"></i> Les Adjoints (9)</a>
+        <a href="#delegues" class="elus-jump-btn"><i class="fa-solid fa-user-gear"></i> Conseillers Délégués (18)</a>
+        <a href="#opposition" class="elus-jump-btn"><i class="fa-solid fa-scale-balanced"></i> Opposition (5)</a>
+      </div>
+
+      <!-- LE MAIRE HERO CARD -->
+      <div id="maire" class="mayor-hero-card">
+        <img 
+          src="assets/elus/laurent-garcia.jpg" 
+          alt="Laurent GARCIA - Maire de Laxou" 
+          class="mayor-avatar"
+          onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/UserFiles/Image/133_200_1_lg.jpg';"
+        >
+        <div>
+          <span class="mayor-role-badge"><i class="fa-solid fa-award"></i> Maire de Laxou — VivonsLaxou</span>
+          <h3 class="mayor-name">Laurent GARCIA</h3>
+          <p class="mayor-desc">Préside le Conseil Municipal, prépare et exécute les décisions de la commune.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 1: LES ADJOINTS AU MAIRE -->
+      <div id="adjoints" class="elus-section-header">
+        <div class="elus-section-bar"></div>
+        <h2 class="elus-section-title">Les Adjoints au Maire</h2>
+      </div>
+
+      <div class="elus-grid">
+        
+        <!-- 1. Marion HOUSSEAUX -->
+        <div class="elu-card">
+          <img src="assets/elus/marion-housseaux.jpg" alt="Marion HOUSSEAUX" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_marion-housseaux1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Marion HOUSSEAUX</h3>
+            <div class="elu-role">1ère Adjointe au maire<br>Scolaire et périscolaire</div>
+          </div>
+        </div>
+
+        <!-- 2. Jean-Pierre EHRENFELD -->
+        <div class="elu-card">
+          <img src="assets/elus/jean-pierre-ehrenfeld.jpg" alt="Jean-Pierre EHRENFELD" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_jean-pierre-ehrenfeld.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Jean-Pierre EHRENFELD</h3>
+            <div class="elu-role">2ème Adjoint au maire<br>Finances, urbanisme, travaux, sécurité des bâtiments, entreprises et administration générale</div>
+          </div>
+        </div>
+
+        <!-- 3. Alexandra PETITJEAN-MONNIN -->
+        <div class="elu-card">
+          <img src="assets/elus/alexandra-petitjean-monnin.jpg" alt="Alexandra PETITJEAN-MONNIN" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_alexandra-petitean-monnin.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Alexandra PETITJEAN-MONNIN</h3>
+            <div class="elu-role">3ème Adjointe au maire<br>Démocratie participative et seniors</div>
+          </div>
+        </div>
+
+        <!-- 4. Karim QRIBI -->
+        <div class="elu-card">
+          <img src="assets/elus/karim-qribi.jpg" alt="Karim QRIBI" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_karim-qribi1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Karim QRIBI</h3>
+            <div class="elu-role">4ème Adjoint au maire<br>Rénovations urbaines</div>
+          </div>
+        </div>
+
+        <!-- 5. Isabelle ARCEDIANO -->
+        <div class="elu-card">
+          <img src="assets/elus/isabelle-arcediano.jpg" alt="Isabelle ARCEDIANO" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_isabelle-arcediano1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Isabelle ARCEDIANO</h3>
+            <div class="elu-role">5ème Adjointe au maire<br>Sport</div>
+          </div>
+        </div>
+
+        <!-- 6. Alain VIGNE -->
+        <div class="elu-card">
+          <img src="assets/elus/alain-vigne.jpg" alt="Alain VIGNE" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_alain-vigne1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Alain VIGNE</h3>
+            <div class="elu-role">6ème Adjoint au maire<br>Politique de la Ville, santé, social, handicap et logement</div>
+          </div>
+        </div>
+
+        <!-- 7. Claire VASSEUR -->
+        <div class="elu-card">
+          <img src="assets/elus/claire-vasseur.jpg" alt="Claire VASSEUR" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_claire-vasseur.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Claire VASSEUR</h3>
+            <div class="elu-role">7ème Adjointe au maire<br>Petite enfance, jeunesse et vie associative</div>
+          </div>
+        </div>
+
+        <!-- 8. David GARLAND -->
+        <div class="elu-card">
+          <img src="assets/elus/david-garland.jpg" alt="David GARLAND" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_david-garland1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">David GARLAND</h3>
+            <div class="elu-role">8ème Adjoint au maire<br>Environnement, propreté, culture, patrimoine, jumelage et bien-être animal</div>
+          </div>
+        </div>
+
+        <!-- 9. Isabelle LANGOVISTH -->
+        <div class="elu-card">
+          <img src="assets/elus/isabelle-langovisth.jpg" alt="Isabelle LANGOVISTH" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_isabelle-langovisth4.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Isabelle LANGOVISTH</h3>
+            <div class="elu-role">9ème Adjointe au maire<br>Fêtes et cérémonies, marchés en plein air, anciens combattants — Correspondante défense</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 2: CONSEILLER RATTACHÉ AU MAIRE -->
+      <div class="elus-section-header">
+        <div class="elus-section-bar"></div>
+        <h2 class="elus-section-title">Les Conseillers Municipaux directement rattachés au Maire</h2>
+      </div>
+
+      <div class="elus-grid">
+        <!-- Ilan LAVOT -->
+        <div class="elu-card">
+          <img src="assets/elus/ilan-lavot.jpg" alt="Ilan LAVOT" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_ilan-lavot1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Ilan LAVOT</h3>
+            <div class="elu-role">Délégué à l'évaluation des politiques périscolaires municipales</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: CONSEILLERS DÉLÉGUÉS -->
+      <div id="delegues" class="elus-section-header">
+        <div class="elus-section-bar"></div>
+        <h2 class="elus-section-title">Les Conseillers Municipaux Délégués</h2>
+      </div>
+
+      <div class="elus-grid">
+        
+        <!-- Christophe HAMMANN -->
+        <div class="elu-card">
+          <img src="assets/elus/christophe-hammann.jpg" alt="Christophe HAMMANN" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/590/150_150_4_christophe-hammann.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Christophe HAMMANN</h3>
+            <div class="elu-role">Délégué à la santé<br><small style="color: #64748b;">Rattaché au 6ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Nathalie JACQUOT -->
+        <div class="elu-card">
+          <img src="assets/elus/nathalie-jacquot.jpg" alt="Nathalie JACQUOT" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_nathalie-jacquot.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Nathalie JACQUOT</h3>
+            <div class="elu-role">Déléguée aux relations avec les entreprises<br><small style="color: #64748b;">Rattachée au 2ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Nathalie PINET -->
+        <div class="elu-card">
+          <img src="assets/elus/nathalie-pinet.jpg" alt="Nathalie PINET" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_nathalie-pinet.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Nathalie PINET</h3>
+            <div class="elu-role">Déléguée à la petite enfance<br><small style="color: #64748b;">Rattachée à la 7ème Adjointe</small></div>
+          </div>
+        </div>
+
+        <!-- Olivier NICLOUX -->
+        <div class="elu-card">
+          <img src="assets/elus/olivier-nicloux.jpg" alt="Olivier NICLOUX" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/594/150_150_4_olivier-nicloux.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Olivier NICLOUX</h3>
+            <div class="elu-role">Délégué à la rénovation urbaine des Provinces<br><small style="color: #64748b;">Rattaché au 4ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Ève-Marie GALLOT -->
+        <div class="elu-card">
+          <img src="assets/elus/eve-marie-gallot.jpg" alt="Ève-Marie GALLOT" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_eve-marie-gallot1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Ève-Marie GALLOT</h3>
+            <div class="elu-role">Déléguée aux marchés publics, aux affaires juridiques et à l'urbanisme<br><small style="color: #64748b;">Rattachée au 2ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Mathieu EHLINGER -->
+        <div class="elu-card">
+          <img src="assets/elus/matthieu-ehlinger.jpg" alt="Mathieu EHLINGER" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_matthieu-ehlinger.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Mathieu EHLINGER</h3>
+            <div class="elu-role">Délégué au sport<br><small style="color: #64748b;">Rattaché à la 5ème Adjointe</small></div>
+          </div>
+        </div>
+
+        <!-- Geneviève PIERSON -->
+        <div class="elu-card">
+          <img src="assets/elus/genevieve-pierson.jpg" alt="Geneviève PIERSON" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_genevieve-pierson.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Geneviève PIERSON</h3>
+            <div class="elu-role">Déléguée aux seniors<br><small style="color: #64748b;">Rattachée à la 3ème Adjointe</small></div>
+          </div>
+        </div>
+
+        <!-- Sébastien ABADA -->
+        <div class="elu-card">
+          <img src="assets/elus/sebastien-abada.jpg" alt="Sébastien ABADA" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_sebastien-abada.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Sébastien ABADA</h3>
+            <div class="elu-role">Délégué au handicap<br><small style="color: #64748b;">Rattaché au 6ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Annie MARTIN CENIZO -->
+        <div class="elu-card">
+          <img src="assets/elus/annie-martin-cenizo.jpg" alt="Annie MARTIN CENIZO" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_annie-henrard1.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Annie MARTIN CENIZO</h3>
+            <div class="elu-role">Déléguée au social et logement<br><small style="color: #64748b;">Rattachée au 6ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Christian PERCONTE-DUPLAIN -->
+        <div class="elu-card">
+          <img src="assets/elus/christian-perconte.jpg" alt="Christian PERCONTE-DUPLAIN" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_christian-perconte.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Christian PERCONTE-DUPLAIN</h3>
+            <div class="elu-role">Délégué à la culture<br><small style="color: #64748b;">Rattaché au 8ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Marie-José BALTHAZARD -->
+        <div class="elu-card">
+          <img src="assets/elus/marie-jose-balthazard.jpg" alt="Marie-José BALTHAZARD" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_marie-jose-balthazard.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Marie-José BALTHAZARD</h3>
+            <div class="elu-role">Déléguée aux fêtes et cérémonies<br><small style="color: #64748b;">Rattachée à la 9ème Adjointe</small></div>
+          </div>
+        </div>
+
+        <!-- Nicolas TOUSSAINT -->
+        <div class="elu-card">
+          <img src="assets/elus/nicolas-toussaint.jpg" alt="Nicolas TOUSSAINT" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/593/150_150_4_nicolas-toussaint.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Nicolas TOUSSAINT</h3>
+            <div class="elu-role">Délégué aux finances<br><small style="color: #64748b;">Rattaché au 2ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Emmanuelle GEOFFROY -->
+        <div class="elu-card">
+          <img src="assets/elus/emmanuelle-geoffroy.jpg" alt="Emmanuelle GEOFFROY" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/595/150_150_4_emmanuelle-geoffroy.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Emmanuelle GEOFFROY</h3>
+            <div class="elu-role">Déléguée au patrimoine historique et architectural<br><small style="color: #64748b;">Rattachée au 8ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Patrick MAS -->
+        <div class="elu-card">
+          <img src="assets/elus/patrick-mas.jpg" alt="Patrick MAS" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/591/150_150_4_patrick-mas.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Patrick MAS</h3>
+            <div class="elu-role">Délégué à la sécurité et propreté<br><small style="color: #64748b;">Rattaché aux 2ème et 8ème Adjoints</small></div>
+          </div>
+        </div>
+
+        <!-- Christine LEJEUNE-VILLAIN -->
+        <div class="elu-card">
+          <img src="assets/elus/christine-lejeune.jpg" alt="Christine LEJEUNE-VILLAIN" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/592/150_150_4_christine-lejeune.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Christine LEJEUNE-VILLAIN</h3>
+            <div class="elu-role">Déléguée à la démocratie participative et bien-être animal<br><small style="color: #64748b;">Rattachée aux 3ème et 8ème Adjoints</small></div>
+          </div>
+        </div>
+
+        <!-- Cheikh Mbacké MBOW -->
+        <div class="elu-card">
+          <img src="assets/elus/cheik-mbow.jpg" alt="Cheikh Mbacké MBOW" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_cheik-mbow.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Cheikh Mbacké MBOW</h3>
+            <div class="elu-role">Délégué à la rénovation urbaine du Champ-le-Boeuf<br><small style="color: #64748b;">Rattaché au 4ème Adjoint</small></div>
+          </div>
+        </div>
+
+        <!-- Ursule BROUSSIER -->
+        <div class="elu-card">
+          <img src="assets/elus/ursule-broussier.jpg" alt="Ursule BROUSSIER" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/589/150_150_4_ursulle-broussier-150x150.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Ursule BROUSSIER</h3>
+            <div class="elu-role">Déléguée aux fêtes et cérémonies<br><small style="color: #64748b;">Rattachée à la 9ème Adjointe</small></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 4: CONSEILLERS D'OPPOSITION -->
+      <div id="opposition" class="elus-section-header">
+        <div class="elus-section-bar" style="background: linear-gradient(180deg, #94a3b8, #64748b);"></div>
+        <h2 class="elus-section-title">Les Conseillers Municipaux d'Opposition</h2>
+      </div>
+
+      <div class="elus-grid">
+        
+        <!-- Pierre CANTUS -->
+        <div class="elu-card opposition">
+          <img src="assets/elus/pierre-cantus.jpg" alt="Pierre CANTUS" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/150_150_4_1-cantus-pierre.JPG';">
+          <div class="elu-info">
+            <h3 class="elu-name">Pierre CANTUS</h3>
+            <div class="elu-role">Conseiller municipal d'opposition</div>
+          </div>
+        </div>
+
+        <!-- Gaëlle DE ROSSI-BOGNER -->
+        <div class="elu-card opposition">
+          <img src="assets/elus/gaelle-de-rossi-bogner.jpg" alt="Gaëlle DE ROSSI-BOGNER" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/596/150_150_4_2-de-rossi-bogner.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Gaëlle DE ROSSI-BOGNER</h3>
+            <div class="elu-role">Conseillère municipale d'opposition</div>
+          </div>
+        </div>
+
+        <!-- Ralph FERNANDES -->
+        <div class="elu-card opposition">
+          <img src="assets/elus/ralph-fernandes.jpg" alt="Ralph FERNANDES" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/597/150_150_4_3-fernandes-r.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Ralph FERNANDES</h3>
+            <div class="elu-role">Conseiller municipal d'opposition</div>
+          </div>
+        </div>
+
+        <!-- Kamila BENSAADI -->
+        <div class="elu-card opposition">
+          <img src="assets/elus/kamila-bensaadi.jpg" alt="Kamila BENSAADI" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/598/150_150_4_4-bensaadi.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Kamila BENSAADI</h3>
+            <div class="elu-role">Conseillère municipale d'opposition</div>
+          </div>
+        </div>
+
+        <!-- Pierre BAUMANN -->
+        <div class="elu-card opposition">
+          <img src="assets/elus/pierre-baumann.jpg" alt="Pierre BAUMANN" class="elu-avatar" onerror="this.onerror=null; this.src='https://www.laxou.fr/globalflexit/images/img_base/annuaires/599/150_150_4_5-baumann.jpg';">
+          <div class="elu-info">
+            <h3 class="elu-name">Pierre BAUMANN</h3>
+            <div class="elu-role">Conseiller municipal d'opposition</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 Ville de Laxou — Conseil Municipal & Équipe Municipale</span>
+      <span><a href="index.html">Retour à l'accueil</a></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

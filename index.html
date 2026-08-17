@@ -124,7 +124,13 @@
         </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+      <div class="header-actions-group">
+        <a href="simulateur-periscolaire.html" class="btn-header-demarches">
+          <i class="fa-solid fa-shapes"></i> Mes démarches
+        </a>
+        <button id="headerSearchBtn" class="btn-header-search-circle" title="Rechercher sur le site" onclick="document.getElementById('site-search-input').focus(); document.getElementById('search-overlap').scrollIntoView({behavior: 'smooth', block: 'center'});">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
         <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
       </div>
     </div>
@@ -132,34 +138,140 @@
 
   <main id="main-content">
 
-    <!-- 2. LANDSCAPE WIDESCREEN HERO BANNER ("VENDREDIS SOUS LES ÉTOILES" COMPLETED POSTER FORMAT) -->
-    <section class="hero-landscape-banner">
-      <!-- Glow Effects -->
-      <div class="hero-glow-orb-1"></div>
-      <div class="hero-glow-orb-2"></div>
-
-      <div class="hero-landscape-content">
-        <!-- Giant Neon Title -->
-        <div class="neon-title-wrapper">
-          <div class="neon-title-main">VENDREDIS</div>
-          <div class="neon-title-script">sous les étoiles</div>
-        </div>
-
-        <!-- Event Pills -->
-        <div class="hero-events-pills">
-          <div class="hero-event-pill">CONCERTS <span class="hero-star-icon">★</span></div>
-          <div class="hero-event-pill">CINÉMA PLEIN AIR <span class="hero-star-icon">★</span></div>
-          <div class="hero-event-pill">ANIMATIONS</div>
-        </div>
-
-        <!-- Date Badge -->
-        <a href="#sortir-section" class="hero-date-badge">
-          DU 3 JUILLET AU 28 AOÛT 2026
-        </a>
+    <!-- 2. AUBAGNE-STYLE INSTITUTIONAL HERO BANNER -->
+    <section class="hero-aubagne-banner" aria-label="Bannière événementielle">
+      <div class="hero-aubagne-overlay"></div>
+      
+      <!-- Date Pill Top-Right -->
+      <div class="hero-event-date-pill">
+        <i class="fa-regular fa-calendar-check" style="color: var(--user-accent);"></i>
+        DU 3 JUILLET AU 28 AOÛT 2026
       </div>
 
-      <!-- Arrow Down -->
-      <a href="#acces-rapides" class="hero-arrow-down" aria-label="Défiler vers les accès rapides">↓</a>
+      <div class="container hero-aubagne-content">
+        <!-- Event Caption Bottom-Left (Aubagne Style) -->
+        <div class="hero-event-caption-card">
+          <div style="font-size: 1.8rem; color: #ff7744; flex-shrink: 0;">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div>
+            <div class="hero-event-caption-tag">Événement de l'été</div>
+            <h2 class="hero-event-caption-title">Les Vendredis sous les Étoiles !</h2>
+            <div style="font-size: 0.85rem; color: var(--color-muted); margin-top: 2px;">Concerts, cinéma plein air et animations festives au centre-ville & parcs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SEARCH OVERLAP BAR & QUICK PILLS (AUBAGNE SIGNATURE) -->
+    <section id="search-overlap" class="search-overlap-container">
+      <div class="container">
+        
+        <!-- Search Input Pill -->
+        <div class="search-box-aubagne-wrapper">
+          <form class="search-box-aubagne" onsubmit="event.preventDefault(); handleSearch(document.getElementById('site-search-input').value);">
+            <input 
+              type="text" 
+              id="site-search-input" 
+              placeholder="Que recherchez-vous ? (ex : cantine, passeport, carte interactive, élus...)" 
+              autocomplete="off"
+            >
+            <button type="submit" class="search-submit-btn" aria-label="Lancer la recherche">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Quick Access Pills Row -->
+        <div class="quick-pills-row">
+          <a href="simulateur-periscolaire.html" class="quick-pill-link accent">
+            <i class="fa-solid fa-utensils"></i> Espace Famille & Cantine
+          </a>
+          <a href="nprnu-map.html" class="quick-pill-link">
+            <i class="fa-solid fa-map-location-dot"></i> Carte Interactive NPRNU
+          </a>
+          <a href="equipe-municipale.html" class="quick-pill-link">
+            <i class="fa-solid fa-users"></i> L'Équipe Municipale
+          </a>
+          <a href="article.html" class="quick-pill-link">
+            <i class="fa-solid fa-id-card"></i> État Civil & Papiers
+          </a>
+          <a href="contact.html" class="quick-pill-link">
+            <i class="fa-solid fa-headset"></i> Contact & Signalements
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. ACCÈS RAPIDES & HIGHLIGHT MAGAZINE (STYLE AUBAGNE) -->
+    <section class="container" style="margin-bottom: var(--space-12);">
+      <div class="acces-rapides-aubagne-grid">
+        
+        <!-- Left: 6 Icon Tiles Grid -->
+        <div class="tiles-carousel-container">
+          
+          <a href="simulateur-periscolaire.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
+          </a>
+
+          <a href="article.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-passport"></i>
+            </div>
+            <div class="quick-action-tile-title">Passeports & Cartes d'Identité</div>
+          </a>
+
+          <a href="nprnu-map.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <div class="quick-action-tile-title">Projets Urbains NPRNU</div>
+          </a>
+
+          <a href="iframe.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="quick-action-tile-title">Urbanisme & Autorisations</div>
+          </a>
+
+          <a href="equipe-municipale.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div class="quick-action-tile-title">Les Élus & Conseil Municipal</div>
+          </a>
+
+          <a href="contact.html" class="quick-action-tile">
+            <div class="quick-action-tile-icon">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="quick-action-tile-title">Signaler un Incident Voirie</div>
+          </a>
+
+        </div>
+
+        <!-- Right: Highlight Promo Card (Style AJJ Aubagne) -->
+        <a href="nprnu-map.html" class="promo-highlight-card">
+          <div>
+            <div class="promo-badge-tag">
+              <i class="fa-solid fa-paper-plane"></i> Grand Projet Ville de Laxou
+            </div>
+            <h3 class="promo-title">NPRNU & Renouveau Urbain</h3>
+            <p class="promo-desc">
+              Découvrez la maquette interactive 3D des futurs aménagements des Provinces et du Champ-le-Bœuf.
+            </p>
+          </div>
+          <div class="promo-link-arrow">
+            Explorer la carte interactive →
+          </div>
+        </a>
+
+      </div>
     </section>
 
     <!-- 3. VOS SERVICES MUNICIPAUX -->

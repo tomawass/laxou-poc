@@ -319,168 +319,401 @@ img {
 }
 
 /* ==========================================================================
-   2. LANDSCAPE WIDESCREEN HERO BANNER ("VENDREDIS SOUS LES ÉTOILES")
+   2. AUBAGNE-STYLE INSTITUTIONAL HERO BANNER & SEARCH OVERLAP
    ========================================================================== */
-.hero-landscape-banner {
+
+/* Header CTA & Search buttons */
+.header-actions-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.btn-header-demarches {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid var(--user-accent);
+  color: var(--user-accent-dark);
+  background: rgba(118, 184, 47, 0.06);
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.25s var(--ease-apple);
+  white-space: nowrap;
+}
+
+.btn-header-demarches:hover {
+  background: var(--user-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(118, 184, 47, 0.25);
+}
+
+.btn-header-search-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--user-secondary);
+  color: #ffffff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-apple);
+  box-shadow: 0 2px 8px rgba(0, 87, 184, 0.2);
+}
+
+.btn-header-search-circle:hover {
+  background-color: var(--user-secondary-dark);
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(0, 87, 184, 0.35);
+}
+
+/* Aubagne Full-Width Hero */
+.hero-aubagne-banner {
   position: relative;
   width: 100%;
-  height: 480px;
-  background: linear-gradient(135deg, #028090 0%, #00a896 40%, #028090 70%, #f07167 100%);
+  height: 440px;
+  background-image: url('assets/vendredis_etoiles_hero.jpg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
-  border-bottom: 4px solid var(--user-accent);
   display: flex;
+  align-items: flex-end;
+}
+
+.hero-aubagne-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 27, 59, 0.85) 0%, rgba(7, 27, 59, 0.25) 45%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+}
+
+.hero-aubagne-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding-bottom: 3.5rem;
+}
+
+.hero-event-caption-card {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.4s var(--ease-apple), box-shadow 0.4s ease;
-  will-change: transform;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border-left: 5px solid var(--user-accent);
 }
 
-.hero-landscape-banner:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
-}
-
-.hero-glow-orb-1 {
-  position: absolute;
-  top: -100px;
-  right: 10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(240, 113, 103, 0.45) 0%, rgba(240, 113, 103, 0) 70%);
-  pointer-events: none;
-  filter: blur(40px);
-  animation: orbPulse 8s ease-in-out infinite alternate;
-}
-.hero-glow-orb-2 {
-  position: absolute;
-  bottom: -100px;
-  left: 5%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(2, 128, 144, 0.6) 0%, rgba(2, 128, 144, 0) 70%);
-  pointer-events: none;
-  filter: blur(30px);
-}
-
-@keyframes orbPulse {
-  0% { transform: scale(0.9) translateY(0); opacity: 0.8; }
-  100% { transform: scale(1.1) translateY(-20px); opacity: 1; }
-}
-
-.hero-landscape-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  color: #ffffff;
-  padding: 0 var(--space-4);
-  max-width: 1100px;
-  margin: 0 auto;
-  transition: transform 0.6s var(--ease-apple), filter 0.4s ease;
-  will-change: transform;
-}
-
-.hero-landscape-banner:hover .hero-landscape-content {
-  transform: scale(1.025);
-  filter: brightness(1.04);
-}
-
-.neon-title-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-bottom: var(--space-2);
-}
-
-.neon-title-main {
-  font-family: var(--font-display);
-  font-size: clamp(3.2rem, 6.5vw, 6rem);
-  font-weight: 900;
-  letter-spacing: 6px;
-  color: transparent;
-  -webkit-text-stroke: 2px #ffffff;
-  text-shadow: 0 0 25px rgba(255, 255, 255, 0.7), 0 0 50px rgba(0, 168, 150, 0.6);
-  line-height: 1;
+.hero-event-caption-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--user-accent-dark);
+  margin-bottom: 2px;
 }
 
-.neon-title-script {
+.hero-event-caption-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero-event-date-pill {
   position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-4deg);
-  font-family: 'Brush Script MT', 'Outfit', cursive;
-  font-size: clamp(2rem, 4.2vw, 4rem);
-  font-weight: 700;
-  color: #ff7744;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5), 0 0 15px rgba(255, 119, 68, 0.6);
-  white-space: nowrap;
-  z-index: 2;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #ffffff;
+  color: #071b3b;
+  border-radius: 50px;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 6;
 }
 
-.hero-events-pills {
+/* Overlapping Search Bar & Quick Pills Section */
+.search-overlap-container {
+  position: relative;
+  z-index: 20;
+  margin-top: -32px;
+  margin-bottom: var(--space-8);
+}
+
+.search-box-aubagne-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-box-aubagne {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 6px 8px 6px 1.5rem;
+  box-shadow: 0 10px 30px rgba(7, 27, 59, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.3s var(--ease-apple);
+}
+
+.search-box-aubagne:focus-within {
+  border-color: var(--user-secondary);
+  box-shadow: 0 12px 36px rgba(0, 87, 184, 0.2), 0 0 0 4px rgba(0, 87, 184, 0.12);
+  transform: translateY(-2px);
+}
+
+.search-box-aubagne input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--user-neutral-dark);
+  background: transparent;
+  padding: 8px 0;
+}
+
+.search-box-aubagne input::placeholder {
+  color: #8a94a6;
+  font-weight: 400;
+}
+
+.search-box-aubagne .search-submit-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--user-secondary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.search-box-aubagne .search-submit-btn:hover {
+  background: var(--user-secondary-dark);
+  transform: scale(1.05);
+}
+
+/* Quick Pills Under Search */
+.quick-pills-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-4);
-  margin: var(--space-4) 0 var(--space-6) 0;
+  gap: 0.6rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
-.hero-event-pill {
-  font-family: var(--font-display);
-  font-size: var(--text-sm);
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #ffffff;
+.quick-pill-link {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-}
-
-.hero-star-icon { color: #ff7744; font-size: 1rem; }
-
-.hero-date-badge {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #028090;
-  font-family: var(--font-display);
-  font-size: var(--text-base);
-  font-weight: 800;
-  letter-spacing: 2px;
-  padding: 0.5rem 1.6rem;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  text-transform: uppercase;
-  transition: transform 0.3s var(--ease-spring), background-color 0.2s ease;
-}
-.hero-date-badge:hover {
-  transform: scale(1.05);
-  background-color: #ffffff;
-  color: var(--user-secondary-dark);
-}
-
-.hero-arrow-down {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 46px;
-  height: 46px;
-  background-color: var(--user-secondary);
+  gap: 5px;
+  background: #0057b8;
   color: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 87, 184, 0.25);
+}
+
+.quick-pill-link:hover {
+  background: #003d81;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 87, 184, 0.35);
+}
+
+.quick-pill-link.accent {
+  background: #5a8f22;
+}
+
+.quick-pill-link.accent:hover {
+  background: #46701a;
+}
+
+/* Aubagne-Style Accès Rapides (Icon Tiles + Promo Card) */
+.acces-rapides-aubagne-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.15fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+  align-items: stretch;
+}
+
+.tiles-carousel-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.quick-action-tile {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--user-primary-dark);
+  transition: all 0.25s var(--ease-apple);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.quick-action-tile:hover {
+  border-color: var(--user-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(118, 184, 47, 0.15);
+  color: var(--user-accent-dark);
+}
+
+.quick-action-tile-icon {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  background: #f0f7e6;
+  color: #5a8f22;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-  z-index: 10;
-  transition: transform 0.25s var(--ease-spring), background-color 0.2s ease;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  transition: all 0.25s ease;
 }
-.hero-arrow-down:hover {
-  transform: translateX(-50%) translateY(6px);
-  background-color: var(--user-accent);
+
+.quick-action-tile:hover .quick-action-tile-icon {
+  background: #5a8f22;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.quick-action-tile-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Promo Feature Card (Style AJJ Aubagne) */
+.promo-highlight-card {
+  background: linear-gradient(145deg, #0057b8 0%, #071b3b 100%);
+  border-radius: 16px;
+  padding: 1.8rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(0, 87, 184, 0.25);
+  transition: all 0.3s var(--ease-apple);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-highlight-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.promo-highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 87, 184, 0.35);
+}
+
+.promo-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #93c5fd;
+  margin-bottom: 0.8rem;
+}
+
+.promo-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.25;
+}
+
+.promo-desc {
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+  margin: 0 0 1.2rem 0;
+}
+
+.promo-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .acces-rapides-aubagne-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-aubagne-banner {
+    height: 360px;
+  }
+  .tiles-carousel-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-event-caption-card {
+    padding: 0.65rem 1rem;
+  }
+  .hero-event-caption-title {
+    font-size: 1.05rem;
+  }
 }
 
 /* ==========================================================================

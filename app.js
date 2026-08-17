@@ -138,3 +138,41 @@ function initGdprForms() {
     });
   });
 }
+
+/* 5. Smart Search & Direct Navigation */
+window.handleSearch = function(query) {
+  if (!query || !query.trim()) {
+    const input = document.getElementById('site-search-input');
+    if (input) input.focus();
+    return;
+  }
+
+  const q = query.trim().toLowerCase();
+  
+  const routes = [
+    { keys: ['cantine', 'repas', 'periscolaire', 'périscolaire', 'garderie', 'tarifs', 'simulateur', 'famille', 'enfance', 'ecole', 'école'], url: 'simulateur-periscolaire.html' },
+    { keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'aménagement', 'provinces', 'champ le boeuf', '3d', 'maquette', 'renovation', 'rénovation'], url: 'nprnu-map.html' },
+    { keys: ['elu', 'élus', 'elus', 'maire', 'laurent garcia', 'garcia', 'adjoint', 'conseil', 'equipe', 'équipe'], url: 'equipe-municipale.html' },
+    { keys: ['passeport', 'cni', 'identite', 'identité', 'etat civil', 'état civil', 'naissance', 'mariage', 'deces', 'décès', 'papiers'], url: 'article.html' },
+    { keys: ['contact', 'signaler', 'signalement', 'voirie', 'eclairage', 'proprete', 'propreté', 'standard', 'telephone', 'horaires'], url: 'contact.html' },
+    { keys: ['agenda', 'concert', 'cinema', 'cinéma', 'festival', 'etoiles', 'étoiles', 'sortir', 'spectacle', 'evenement', 'événement'], url: 'agenda.html' },
+    { keys: ['arrete', 'arrêté', 'deliberation', 'délibération', 'marches', 'marchés', 'recrutement', 'publications'], url: 'archives.html' },
+    { keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
+  ];
+
+  for (const route of routes) {
+    if (route.keys.some(k => q.includes(k))) {
+      window.location.href = route.url;
+      return;
+    }
+  }
+
+  // Fallback: scroll to services section or show alert
+  const servicesSec = document.getElementById('services-municipaux');
+  if (servicesSec) {
+    servicesSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    window.location.href = 'archives.html';
+  }
+};
+

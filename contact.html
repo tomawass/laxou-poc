@@ -203,49 +203,157 @@
           <div style="grid-column: span 2; background: white; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-8);">
             <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; color: var(--user-primary-dark); margin-bottom: var(--space-6);">Formulaire de Saisine / Contact Direct</h2>
             
-            <form onsubmit="event.preventDefault(); alert('Votre message a bien été envoyé aux services de la Ville de Laxou.');">
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-bottom: var(--space-4);">
-                <div class="form-group" style="margin-bottom: 0;">
-                  <label class="form-label" for="nom">Nom *</label>
-                  <input type="text" id="nom" class="form-control" placeholder="Votre nom" required style="height: 48px;">
+            <style>
+              .contact-form .form-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.25rem;
+                margin-bottom: 1.25rem;
+              }
+              .contact-form .form-row.full {
+                grid-template-columns: 1fr;
+              }
+              .contact-form .field-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+              }
+              .contact-form .field-label {
+                font-family: var(--font-body);
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--user-primary-dark);
+                letter-spacing: 0.01em;
+              }
+              .contact-form .field-label .required {
+                color: #dc2626;
+                margin-left: 0.15em;
+              }
+              .contact-form .field-input,
+              .contact-form .field-select,
+              .contact-form .field-textarea {
+                width: 100%;
+                height: 48px;
+                padding: 0 1rem;
+                font-family: var(--font-body);
+                font-size: 0.95rem;
+                color: var(--user-primary-dark);
+                background: #f8f9fb;
+                border: 1.5px solid #dde1e7;
+                border-radius: 10px;
+                outline: none;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+                -webkit-appearance: none;
+                appearance: none;
+              }
+              .contact-form .field-input::placeholder,
+              .contact-form .field-textarea::placeholder {
+                color: #9ca3af;
+                font-weight: 400;
+              }
+              .contact-form .field-input:focus,
+              .contact-form .field-select:focus,
+              .contact-form .field-textarea:focus {
+                border-color: #2563eb;
+                background: #ffffff;
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+              }
+              .contact-form .field-select {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M1.41 0L6 4.58 10.59 0 12 1.41 6 7.41 0 1.41z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 1rem center;
+                padding-right: 2.5rem;
+                cursor: pointer;
+              }
+              .contact-form .field-textarea {
+                height: auto;
+                min-height: 140px;
+                padding: 0.875rem 1rem;
+                resize: vertical;
+                line-height: 1.6;
+              }
+              .contact-form .submit-btn {
+                display: block;
+                width: 100%;
+                height: 52px;
+                background: #2563eb;
+                color: #ffffff;
+                border: none;
+                border-radius: 10px;
+                font-family: var(--font-body);
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                cursor: pointer;
+                transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+                margin-top: 0.5rem;
+              }
+              .contact-form .submit-btn:hover {
+                background: #1d4ed8;
+                box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+                transform: translateY(-1px);
+              }
+              .contact-form .submit-btn:active {
+                transform: translateY(0);
+                box-shadow: none;
+              }
+              @media (max-width: 640px) {
+                .contact-form .form-row {
+                  grid-template-columns: 1fr;
+                }
+              }
+            </style>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Votre message a bien été envoyé aux services de la Ville de Laxou.');">
+              
+              <!-- Row 1: Nom / Prénom -->
+              <div class="form-row">
+                <div class="field-group">
+                  <label class="field-label" for="nom">Nom<span class="required">*</span></label>
+                  <input type="text" id="nom" class="field-input" placeholder="Votre nom" required>
                 </div>
-                <div class="form-group" style="margin-bottom: 0;">
-                  <label class="form-label" for="prenom">Prénom *</label>
-                  <input type="text" id="prenom" class="form-control" placeholder="Votre prénom" required style="height: 48px;">
+                <div class="field-group">
+                  <label class="field-label" for="prenom">Prénom<span class="required">*</span></label>
+                  <input type="text" id="prenom" class="field-input" placeholder="Votre prénom" required>
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-bottom: var(--space-4);">
-                <div class="form-group" style="margin-bottom: 0;">
-                  <label class="form-label" for="email">Adresse E-mail *</label>
-                  <input type="email" id="email" class="form-control" placeholder="votre.email@exemple.fr" required style="height: 48px;">
+              <!-- Row 2: Email / Téléphone -->
+              <div class="form-row">
+                <div class="field-group">
+                  <label class="field-label" for="email">Adresse e-mail<span class="required">*</span></label>
+                  <input type="email" id="email" class="field-input" placeholder="votre.email@exemple.fr" required>
                 </div>
-                <div class="form-group" style="margin-bottom: 0;">
-                  <label class="form-label" for="telephone">Téléphone</label>
-                  <input type="tel" id="telephone" class="form-control" placeholder="06 00 00 00 00" style="height: 48px;">
+                <div class="field-group">
+                  <label class="field-label" for="telephone">Téléphone</label>
+                  <input type="tel" id="telephone" class="field-input" placeholder="06 00 00 00 00">
                 </div>
               </div>
 
-              <div class="form-group" style="margin-bottom: var(--space-4);">
-                <label class="form-label" for="service">Service concerné *</label>
-                <select id="service" class="form-control" style="height: 48px;">
-                  <option value="accueil">Accueil & État Civil</option>
-                  <option value="urbanisme">Urbanisme & Travaux</option>
-                  <option value="famille">Enfance & Restauration Scolaire</option>
-                  <option value="culture">Culture & Événements</option>
-                  <option value="police">Police Municipale</option>
-                  <option value="maire">Cabinet du Maire</option>
-                </select>
+              <!-- Row 3: Service (full width) -->
+              <div class="form-row full">
+                <div class="field-group">
+                  <label class="field-label" for="service">Service concerné<span class="required">*</span></label>
+                  <select id="service" class="field-select">
+                    <option value="accueil">Accueil & État Civil</option>
+                    <option value="urbanisme">Urbanisme & Travaux</option>
+                    <option value="famille">Enfance & Restauration Scolaire</option>
+                    <option value="culture">Culture & Événements</option>
+                    <option value="police">Police Municipale</option>
+                    <option value="maire">Cabinet du Maire</option>
+                  </select>
+                </div>
               </div>
 
-              <div class="form-group" style="margin-bottom: var(--space-6);">
-                <label class="form-label" for="message">Votre Message *</label>
-                <textarea id="message" class="form-control" rows="5" placeholder="Décrivez votre demande en détail..." required style="padding: var(--space-3);"></textarea>
+              <!-- Row 4: Message (full width) -->
+              <div class="form-row full">
+                <div class="field-group">
+                  <label class="field-label" for="message">Votre message<span class="required">*</span></label>
+                  <textarea id="message" class="field-textarea" rows="5" placeholder="Décrivez votre demande en détail..." required></textarea>
+                </div>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="background: #2563eb; border-color: #2563eb; padding: 14px 28px; font-weight: 700; font-size: 1rem; width: 100%;">
-                Envoyer mon message →
-              </button>
+              <button type="submit" class="submit-btn">Envoyer mon message →</button>
             </form>
           </div>
 

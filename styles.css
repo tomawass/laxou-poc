@@ -1408,3 +1408,200 @@ img {
   box-shadow: var(--shadow-apple-md);
 }
 
+/* ==========================================================================
+   EQUIPEMENTS & CULTURE SECTION (MODERN SPLIT & CAROUSEL)
+   ========================================================================== */
+.equipements-container {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .equipements-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.equipements-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--space-8);
+}
+
+.equip-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-surface, #f8fafc);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--user-primary-dark, #071b3b);
+  transition: all 0.25s var(--ease-apple);
+}
+
+.equip-pill-badge i {
+  color: #009933;
+}
+
+.equip-pill-badge:hover {
+  border-color: #009933;
+  background: rgba(0, 153, 51, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-equipements-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #071b3b;
+  color: #ffffff;
+  padding: 0.95rem 1.8rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-apple);
+  box-shadow: 0 4px 14px rgba(7, 27, 59, 0.25);
+}
+
+.btn-equipements-map:hover {
+  background: #009933;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 153, 51, 0.35);
+}
+
+/* Equipment Carousel Component */
+.equip-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 440px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(7, 27, 59, 0.16);
+  background: #0b0f19;
+  justify-self: center;
+}
+
+.equip-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: scale(1.04);
+}
+
+.equip-carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.equip-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equip-carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 27, 59, 0.85) 0%, rgba(7, 27, 59, 0.2) 50%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+}
+
+.equip-carousel-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  color: #ffffff;
+  z-index: 5;
+}
+
+.equip-carousel-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.equip-carousel-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.equip-carousel-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.equip-carousel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: none;
+  color: #071b3b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.equip-carousel-btn:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.equip-carousel-indicators {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.equip-dot {
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.equip-dot.active {
+  background: #ffffff;
+  width: 32px;
+}
+
+

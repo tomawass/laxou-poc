@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=260819122356">
+  <link rel="stylesheet" href="styles.css?v=260819124408">
 </head>
 <body>
 
@@ -432,71 +432,82 @@
       </div>
     </section>
 
-    <!-- 5. EQUIPEMENTS - 50/50 LAYOUT -->
+    <!-- 5. EQUIPEMENTS - MODERN SPLIT & INTERACTIVE CAROUSEL -->
     <section class="section-padding">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); align-items: center;">
+        <div class="equipements-container">
           <!-- Left Content -->
           <div>
-            <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-display); font-weight: 800; color: var(--user-primary-dark); line-height: 1.1; margin-bottom: var(--space-4);">
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-display); font-weight: 800; color: var(--user-primary-dark); line-height: 1.15; margin-bottom: var(--space-4);">
               Vous cherchez un lieu culturel ou sportif <br><span style="color: #009933;">à Laxou ?</span>
             </h2>
-            <p style="color: var(--color-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--space-6);">
-              Consultez en 1 clic l'annuaire complet de vos salles omnisports, la médiathèque, les parcs et les espaces associatifs laxoviens grâce à notre carte interactive.
+            <p style="color: var(--color-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: var(--space-6);">
+              Consultez en 1 clic l'annuaire complet de vos piscines, complexes omnisports, médiathèque, parcs et espaces associatifs laxoviens grâce à notre carte interactive.
             </p>
             
-            <div style="display: flex; flex-direction: column; gap: var(--space-5); margin-bottom: var(--space-8);">
-              <!-- Feature 1 -->
-              <div style="display: flex; gap: var(--space-4);">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: #e6f0ff; color: #0066ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">
-                  <i class="fa-solid fa-futbol"></i>
-                </div>
-                <div>
-                  <h3 style="font-size: 1.1rem; color: var(--user-primary-dark); margin-bottom: 4px;">Terrains et Gymnases</h3>
-                  <p style="color: var(--color-muted); font-size: 0.95rem; margin: 0; line-height: 1.4;">Accédez aux informations des installations sportives et complexes omnisports.</p>
-                </div>
-              </div>
-              
-              <!-- Feature 2 -->
-              <div style="display: flex; gap: var(--space-4);">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: #fff0e6; color: #cc5200; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">
-                  <i class="fa-solid fa-masks-theater"></i>
-                </div>
-                <div>
-                  <h3 style="font-size: 1.1rem; color: var(--user-primary-dark); margin-bottom: 4px;">Lieux Culturels</h3>
-                  <p style="color: var(--color-muted); font-size: 0.95rem; margin: 0; line-height: 1.4;">Découvrez la médiathèque, l'école de musique et nos salles de spectacle.</p>
-                </div>
-              </div>
-
-              <!-- Feature 3 -->
-              <div style="display: flex; gap: var(--space-4);">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: #e6ffed; color: #009933; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">
-                  <i class="fa-solid fa-tree"></i>
-                </div>
-                <div>
-                  <h3 style="font-size: 1.1rem; color: var(--user-primary-dark); margin-bottom: 4px;">Parcs & Espaces Verts</h3>
-                  <p style="color: var(--color-muted); font-size: 0.95rem; margin: 0; line-height: 1.4;">Localisez les parcs aménagés, aires de jeux et lieux de promenade.</p>
-                </div>
-              </div>
+            <!-- Modern Category Badges -->
+            <div class="equipements-badges-row">
+              <span class="equip-pill-badge"><i class="fa-solid fa-person-swimming"></i> Piscine & Bassins</span>
+              <span class="equip-pill-badge"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis & Gymnases</span>
+              <span class="equip-pill-badge"><i class="fa-solid fa-masks-theater"></i> Médiathèque & Culture</span>
+              <span class="equip-pill-badge"><i class="fa-solid fa-tree"></i> Parcs & Jardins</span>
             </div>
 
-            <a href="iframe.html" class="btn-dark" style="font-size: 1rem; padding: 14px 28px;">Ouvrir la carte interactive →</a>
+            <a href="iframe.html" class="btn-equipements-map">
+              <i class="fa-solid fa-map-location-dot"></i> Explorer les 80+ lieux sur la carte →
+            </a>
           </div>
 
-          <!-- Right Image with Badge -->
-          <div style="position: relative; justify-self: center; max-width: 500px; width: 100%;">
-            <img src="assets/logo_laxou_official_11.jpg" alt="Équipement sportif et complexe de Laxou" style="width: 100%; height: 550px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+          <!-- Right: Interactive Photo Carousel -->
+          <div class="equip-carousel-wrapper" id="equipCarousel">
             
-            <!-- Floating Badge -->
-            <div style="position: absolute; bottom: 30px; left: -20px; background: white; padding: var(--space-4) var(--space-5); border-radius: var(--radius-md); box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: var(--space-4); z-index: 2;">
-              <div style="width: 50px; height: 50px; background-color: #009933; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                <i class="fa-solid fa-map-location-dot"></i>
-              </div>
-              <div>
-                <div style="color: #009933; font-size: 2rem; font-weight: 900; font-family: var(--font-display); line-height: 1;">80+</div>
-                <div style="color: var(--color-muted); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Lieux<br>référencés</div>
+            <!-- Slide 1: Piscine -->
+            <div class="equip-carousel-slide active">
+              <img src="assets/equipement_piscine.jpg" alt="Piscine municipale et complexe aquatique de Laxou">
+              <div class="equip-carousel-overlay"></div>
+              <div class="equip-carousel-caption">
+                <div class="equip-carousel-tag"><i class="fa-solid fa-person-swimming"></i> Équipement Nautique</div>
+                <h3 class="equip-carousel-title">Piscine Municipale & Complexe Aquatique</h3>
               </div>
             </div>
+
+            <!-- Slide 2: Tennis -->
+            <div class="equip-carousel-slide">
+              <img src="assets/equipement_tennis.jpg" alt="Courts de tennis en terre battue de Laxou">
+              <div class="equip-carousel-overlay"></div>
+              <div class="equip-carousel-caption">
+                <div class="equip-carousel-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Complexe Sportif</div>
+                <h3 class="equip-carousel-title">Courts de Tennis & Terrains Extérieurs</h3>
+              </div>
+            </div>
+
+            <!-- Slide 3: Urbain / Bâtiment moderne -->
+            <div class="equip-carousel-slide">
+              <img src="assets/equipement_urbain.jpg" alt="Pôle urbain et espaces associatifs de Laxou">
+              <div class="equip-carousel-overlay"></div>
+              <div class="equip-carousel-caption">
+                <div class="equip-carousel-tag"><i class="fa-solid fa-city"></i> Renouveau Urbain</div>
+                <h3 class="equip-carousel-title">Pôle d'Aménagement & Espaces Associatifs</h3>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="equip-carousel-controls">
+              <button class="equip-carousel-btn" onclick="prevEquipSlide()" aria-label="Photo précédente">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="equip-carousel-btn" onclick="nextEquipSlide()" aria-label="Photo suivante">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="equip-carousel-indicators">
+              <div class="equip-dot active" onclick="showEquipSlide(0)"></div>
+              <div class="equip-dot" onclick="showEquipSlide(1)"></div>
+              <div class="equip-dot" onclick="showEquipSlide(2)"></div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -679,7 +690,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=260819122356"></script>
+  <script src="app.js?v=260819124408"></script>
 
   <script>
     function switchTab(tabId, btnElement) {
@@ -692,6 +703,43 @@
       document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
       // Show targeted tab panel
       document.getElementById("panel-" + tabId).classList.add("active");
+    }
+
+    // Equipment Photo Carousel Logic
+    let currentEquipSlide = 0;
+    function showEquipSlide(index) {
+      const slides = document.querySelectorAll(".equip-carousel-slide");
+      const dots = document.querySelectorAll(".equip-dot");
+      if (!slides.length) return;
+      if (index >= slides.length) index = 0;
+      if (index < 0) index = slides.length - 1;
+      currentEquipSlide = index;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextEquipSlide() {
+      showEquipSlide(currentEquipSlide + 1);
+    }
+
+    function prevEquipSlide() {
+      showEquipSlide(currentEquipSlide - 1);
+    }
+
+    // Auto-advance carousel every 4.5s
+    let equipTimer = setInterval(nextEquipSlide, 4500);
+    const carouselEl = document.getElementById("equipCarousel");
+    if (carouselEl) {
+      carouselEl.addEventListener("mouseenter", () => clearInterval(equipTimer));
+      carouselEl.addEventListener("mouseleave", () => {
+        clearInterval(equipTimer);
+        equipTimer = setInterval(nextEquipSlide, 4500);
+      });
     }
   </script>
 </body>

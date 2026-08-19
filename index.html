@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=260819125543">
+  <link rel="stylesheet" href="styles.css?v=260819131133">
 </head>
 <body>
 
@@ -507,42 +507,50 @@
           <a href="actualites.html" style="font-weight: 700; color: var(--user-accent);">Toutes les actualités -></a>
         </div>
 
-        <div class="grid-4">
-          <article class="card-news">
-            <img src="assets/logo_laxou_official_16.jpg" alt="Vide greniers Laxou" class="card-news-img">
-            <div class="card-news-body">
-              <span class="card-tag" style="margin-bottom: var(--space-2);">Vie locale</span>
-              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2);"><a href="article.html" style="color: var(--user-primary-dark); text-decoration: none;">Ouverture des inscriptions du vide-greniers et braderie</a></h3>
-              <div style="font-size: var(--text-xs); color: var(--color-muted);">28 juillet 2026</div>
+        <div class="news-bento-grid">
+          <!-- 1. Featured (Une) -->
+          <a href="article.html" class="news-bento-card bento-featured">
+            <img src="assets/logo_laxou_official_16.jpg" class="bento-bg" alt="Vide greniers Laxou" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag">Vie locale</span>
+              <h3 class="bento-title">Ouverture des inscriptions du grand vide-greniers et de la braderie d'automne</h3>
+              <span class="bento-date">28 juillet 2026</span>
             </div>
-          </article>
+          </a>
 
-          <article class="card-news">
-            <img src="assets/logo_laxou_official_17.jpg" alt="Accueil des nouveaux laxoviens" class="card-news-img">
-            <div class="card-news-body">
-              <span class="card-tag" style="margin-bottom: var(--space-2);">Citoyenneté</span>
-              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2);"><a href="article.html" style="color: var(--user-primary-dark); text-decoration: none;">Cérémonie d'accueil des nouveaux habitants</a></h3>
-              <div style="font-size: var(--text-xs); color: var(--color-muted);">4 août 2026</div>
+          <!-- 2. Standard 1 -->
+          <a href="article.html" class="news-bento-card bento-standard">
+            <img src="assets/logo_laxou_official_17.jpg" class="bento-bg" alt="Accueil des nouveaux laxoviens" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag">Citoyenneté</span>
+              <h3 class="bento-title">Cérémonie d'accueil des nouveaux habitants</h3>
+              <span class="bento-date">4 août 2026</span>
             </div>
-          </article>
+          </a>
 
-          <article class="card-news">
-            <img src="assets/logo_laxou_official_21.jpg" alt="Travaux avenue Paul Deroulède" class="card-news-img">
-            <div class="card-news-body">
-              <span class="card-tag" style="margin-bottom: var(--space-2);">Travaux</span>
-              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2);"><a href="article.html" style="color: var(--user-primary-dark); text-decoration: none;">Portion de l'Avenue Déroulède fermée pour réfection</a></h3>
-              <div style="font-size: var(--text-xs); color: var(--color-muted);">5 août 2026</div>
+          <!-- 3. Standard 2 -->
+          <a href="article.html" class="news-bento-card bento-standard">
+            <img src="assets/logo_laxou_official_21.jpg" class="bento-bg" alt="Travaux avenue Paul Deroulède" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag" style="background: rgba(255, 59, 48, 0.75);">Travaux</span>
+              <h3 class="bento-title">Avenue Déroulède fermée pour réfection</h3>
+              <span class="bento-date">5 août 2026</span>
             </div>
-          </article>
+          </a>
 
-          <article class="card-news">
-            <img src="assets/logo_laxou_official_23.jpg" alt="Laxou Actu N°240" class="card-news-img">
-            <div class="card-news-body">
-              <span class="card-tag" style="margin-bottom: var(--space-2);">Magazine</span>
-              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2);"><a href="article.html" style="color: var(--user-primary-dark); text-decoration: none;">Publication du journal Laxou Actu n°240</a></h3>
-              <div style="font-size: var(--text-xs); color: var(--color-muted);">1er août 2026</div>
+          <!-- 4. Wide (Promo Magazine) -->
+          <a href="article.html" class="news-bento-card bento-wide">
+            <img src="assets/logo_laxou_official_23.jpg" class="bento-bg" alt="Laxou Actu N°240" loading="lazy">
+            <div class="bento-overlay bento-overlay-wide"></div>
+            <div class="bento-content">
+              <span class="bento-tag" style="background: var(--user-accent); color: white;">Nouveau Numéro</span>
+              <h3 class="bento-title">Le journal municipal Laxou Actu n°240 est disponible</h3>
+              <span class="bento-date">1er août 2026</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -674,7 +682,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=260819125543"></script>
+  <script src="app.js?v=260819131133"></script>
 
   <script>
     function switchTab(tabId, btnElement) {

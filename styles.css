@@ -388,9 +388,10 @@ img {
   overflow: hidden;
   display: flex;
   align-items: center; /* Center the empty content if any */
+  cursor: pointer;
 }
 
-/* Pseudo-element for smooth performant background zoom-out animation */
+/* Background image starts slightly zoomed and zooms out smoothly on hover */
 .hero-aubagne-banner::before {
   content: '';
   position: absolute;
@@ -398,13 +399,13 @@ img {
   background-image: url('assets/hero_mosaic.jpg');
   background-size: cover;
   background-position: center;
-  animation: heroZoomOut 18s ease-out forwards;
+  transform: scale(1.18);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
-@keyframes heroZoomOut {
-  0% { transform: scale(1.15); }
-  100% { transform: scale(1.02); }
+.hero-aubagne-banner:hover::before {
+  transform: scale(1.02);
 }
 
 .hero-aubagne-overlay {
@@ -681,74 +682,91 @@ img {
   line-height: 1.3;
 }
 
-/* Promo Feature Card (Style AJJ Aubagne) */
+/* Promo Feature Card (Style Aubagne L'AJJ) */
 .promo-highlight-card {
-  background: linear-gradient(145deg, #0057b8 0%, #071b3b 100%);
-  border-radius: 16px;
-  padding: 1.8rem;
+  background: #0057b8;
+  border-radius: 20px;
+  padding: 2.2rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
   box-shadow: 0 10px 28px rgba(0, 87, 184, 0.25);
-  transition: all 0.3s var(--ease-apple);
+  transition: transform 0.3s var(--ease-apple), box-shadow 0.3s var(--ease-apple), background-color 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.promo-highlight-card::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 140px;
-  height: 140px;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .promo-highlight-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 87, 184, 0.35);
+  background: #004ba3;
+  box-shadow: 0 16px 36px rgba(0, 87, 184, 0.4);
 }
 
-.promo-badge-tag {
-  display: inline-flex;
+.promo-header-brand {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #93c5fd;
-  margin-bottom: 0.8rem;
+  gap: 16px;
+  margin-bottom: 1.2rem;
 }
 
-.promo-title {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.25;
-}
-
-.promo-desc {
-  font-size: 0.88rem;
-  color: #e2e8f0;
-  line-height: 1.45;
-  margin: 0 0 1.2rem 0;
-}
-
-.promo-link-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.95rem;
-  font-weight: 700;
+.promo-origami-icon {
+  width: 44px;
+  height: 44px;
   color: #ffffff;
-  margin-top: auto;
+  flex-shrink: 0;
+  transform: rotate(-10deg);
+}
+
+.promo-title-aubagne {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/* Sliding underline micro-interaction */
+.promo-title-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.promo-highlight-card:hover .promo-title-underline {
+  transform: scaleX(1);
+}
+
+.promo-desc-aubagne {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.promo-arrow-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 1.8rem;
+  transition: transform 0.3s var(--ease-apple);
+}
+
+.promo-highlight-card:hover .promo-arrow-bottom {
+  transform: translateX(8px);
 }
 
 @media (max-width: 900px) {

@@ -78,18 +78,31 @@ function initMobileNav() {
   const mainNav = document.getElementById("mainNav");
 
   if (toggleBtn && mainNav) {
+    // Create overlay dynamically
+    let overlay = document.createElement("div");
+    overlay.className = "mobile-menu-overlay";
+    document.body.appendChild(overlay);
+
+    function closeMenu() {
+      toggleBtn.setAttribute("aria-expanded", "false");
+      mainNav.classList.remove("is-open");
+      overlay.classList.remove("is-active");
+      document.body.style.overflow = "";
+    }
+
     toggleBtn.addEventListener("click", () => {
       const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
-      toggleBtn.setAttribute("aria-expanded", !isExpanded);
-      mainNav.classList.toggle("is-open");
-      
-      // Prevent body scroll when menu is open
-      if (!isExpanded) {
-        document.body.style.overflow = "hidden";
+      if (isExpanded) {
+        closeMenu();
       } else {
-        document.body.style.overflow = "";
+        toggleBtn.setAttribute("aria-expanded", "true");
+        mainNav.classList.add("is-open");
+        overlay.classList.add("is-active");
+        document.body.style.overflow = "hidden";
       }
     });
+
+    overlay.addEventListener("click", closeMenu);
 
     // Accordion logic for submenus
     const navItems = mainNav.querySelectorAll(".nav-item");

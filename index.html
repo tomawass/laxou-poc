@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=260817112530">
+  <link rel="stylesheet" href="styles.css?v=260819120331">
 </head>
 <body>
 
@@ -166,21 +166,21 @@
 
         <!-- Quick Access Pills Row -->
         <div class="quick-pills-row">
-          <a href="simulateur-periscolaire.html" class="quick-pill-link accent">
-            <i class="fa-solid fa-utensils"></i> Espace Famille & Cantine
-          </a>
-          <a href="nprnu-map.html" class="quick-pill-link">
-            <i class="fa-solid fa-map-location-dot"></i> Carte Interactive NPRNU
-          </a>
-          <a href="equipe-municipale.html" class="quick-pill-link">
-            <i class="fa-solid fa-users"></i> L'Équipe Municipale
-          </a>
-          <a href="article.html" class="quick-pill-link">
-            <i class="fa-solid fa-id-card"></i> État Civil & Papiers
-          </a>
-          <a href="contact.html" class="quick-pill-link">
-            <i class="fa-solid fa-headset"></i> Contact & Signalements
-          </a>
+          <button class="quick-pill-link active" onclick="switchTab("essentiel", this)">
+            <i class="fa-solid fa-star"></i> L"essentiel du moment
+          </button>
+          <button class="quick-pill-link" onclick="switchTab("famille", this)">
+            <i class="fa-solid fa-child"></i> Enfance & Famille
+          </button>
+          <button class="quick-pill-link" onclick="switchTab("demarches", this)">
+            <i class="fa-solid fa-id-card"></i> Démarches & Citoyenneté
+          </button>
+          <button class="quick-pill-link" onclick="switchTab("urbanisme", this)">
+            <i class="fa-solid fa-city"></i> Urbanisme & NPRNU
+          </button>
+          <button class="quick-pill-link" onclick="switchTab("cadre", this)">
+            <i class="fa-solid fa-leaf"></i> Cadre de Vie & Signalements
+          </button>
         </div>
 
       </div>
@@ -193,47 +193,105 @@
         <!-- Left: 6 Icon Tiles Grid -->
         <div class="tiles-carousel-container">
           
-          <a href="simulateur-periscolaire.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-calculator"></i>
-            </div>
-            <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
-          </a>
+          <!-- PANEL: ESSENTIEL -->
+          <div id="panel-essentiel" class="tab-panel active">
+            <a href="simulateur-periscolaire.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-calculator"></i></div>
+              <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
+            </a>
+            <a href="nprnu-map.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="quick-action-tile-title">Carte Interactive NPRNU</div>
+            </a>
+            <a href="article.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-passport"></i></div>
+              <div class="quick-action-tile-title">Passeports & Cartes d"Identité</div>
+            </a>
+            <a href="contact.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="quick-action-tile-title">Signaler un Incident Voirie</div>
+            </a>
+          </div>
 
-          <a href="article.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-passport"></i>
-            </div>
-            <div class="quick-action-tile-title">Passeports & Cartes d'Identité</div>
-          </a>
+          <!-- PANEL: FAMILLE -->
+          <div id="panel-famille" class="tab-panel">
+            <a href="simulateur-periscolaire.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-calculator"></i></div>
+              <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-utensils"></i></div>
+              <div class="quick-action-tile-title">Menus de la cantine</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-laptop-file"></i></div>
+              <div class="quick-action-tile-title">Portail Famille (Inscriptions)</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-palette"></i></div>
+              <div class="quick-action-tile-title">Centre de loisirs (ALSH)</div>
+            </a>
+          </div>
 
-          <a href="nprnu-map.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-city"></i>
-            </div>
-            <div class="quick-action-tile-title">Projets Urbains NPRNU</div>
-          </a>
+          <!-- PANEL: DEMARCHES -->
+          <div id="panel-demarches" class="tab-panel">
+            <a href="article.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-passport"></i></div>
+              <div class="quick-action-tile-title">Passeports & Cartes d"Identité</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-file-signature"></i></div>
+              <div class="quick-action-tile-title">Demande d"acte d"état civil</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+              <div class="quick-action-tile-title">Inscription listes électorales</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-ring"></i></div>
+              <div class="quick-action-tile-title">Mariage & PACS</div>
+            </a>
+          </div>
 
-          <a href="iframe.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div class="quick-action-tile-title">Urbanisme & Autorisations</div>
-          </a>
+          <!-- PANEL: URBANISME -->
+          <div id="panel-urbanisme" class="tab-panel">
+            <a href="nprnu-map.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-city"></i></div>
+              <div class="quick-action-tile-title">Carte Interactive NPRNU</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-traffic-light"></i></div>
+              <div class="quick-action-tile-title">Info Travaux & Déviations</div>
+            </a>
+            <a href="iframe.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-file-contract"></i></div>
+              <div class="quick-action-tile-title">Permis de construire</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-tree-city"></i></div>
+              <div class="quick-action-tile-title">Projets de végétalisation</div>
+            </a>
+          </div>
 
-          <a href="equipe-municipale.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-landmark"></i>
-            </div>
-            <div class="quick-action-tile-title">Les Élus & Conseil Municipal</div>
-          </a>
-
-          <a href="contact.html" class="quick-action-tile">
-            <div class="quick-action-tile-icon">
-              <i class="fa-solid fa-triangle-exclamation"></i>
-            </div>
-            <div class="quick-action-tile-title">Signaler un Incident Voirie</div>
-          </a>
+          <!-- PANEL: CADRE -->
+          <div id="panel-cadre" class="tab-panel">
+            <a href="contact.html" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="quick-action-tile-title">Signaler un incident</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-recycle"></i></div>
+              <div class="quick-action-tile-title">Jours de collecte des déchets</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-couch"></i></div>
+              <div class="quick-action-tile-title">Enlèvement d"encombrants</div>
+            </a>
+            <a href="#" class="quick-action-tile">
+              <div class="quick-action-tile-icon"><i class="fa-solid fa-people-group"></i></div>
+              <div class="quick-action-tile-title">Annuaire des associations</div>
+            </a>
+          </div>
 
         </div>
 
@@ -612,6 +670,20 @@
     </div>
   </footer>
 
-  <script src="app.js?v=260817112530"></script>
+  <script src="app.js?v=260819120331"></script>
+
+  <script>
+    function switchTab(tabId, btnElement) {
+      // Remove active class from all buttons
+      document.querySelectorAll(".quick-pill-link").forEach(btn => btn.classList.remove("active"));
+      // Add active class to clicked button
+      btnElement.classList.add("active");
+      
+      // Hide all tab panels
+      document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+      // Show targeted tab panel
+      document.getElementById("panel-" + tabId).classList.add("active");
+    }
+  </script>
 </body>
 </html>

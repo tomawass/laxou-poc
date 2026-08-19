@@ -1953,3 +1953,25 @@ img {
     color: var(--user-primary-dark);
   }
 }
+
+/* Animated Underline for Project Cards (Laxou Actu style) */
+.project-title-animated {
+  position: relative;
+  display: inline-block;
+}
+.project-title-animated::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+.project-card:hover .project-title-animated::after {
+  transform: scaleX(1);
+}

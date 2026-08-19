@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=260819125034">
+  <link rel="stylesheet" href="styles.css?v=260819125543">
 </head>
 <body>
 
@@ -125,12 +125,7 @@
       </nav>
 
       <div class="header-actions-group">
-        <a href="simulateur-periscolaire.html" class="btn-header-demarches">
-          <i class="fa-solid fa-shapes"></i> Mes démarches
-        </a>
-        <button id="headerSearchBtn" class="btn-header-search-circle" title="Rechercher sur le site" onclick="document.getElementById('site-search-input').focus(); document.getElementById('search-overlap').scrollIntoView({behavior: 'smooth', block: 'center'});">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        
         <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
       </div>
     </div>
@@ -463,7 +458,7 @@
             
             <!-- Slide 1: Piscine -->
             <div class="equip-carousel-slide active">
-              <img src="assets/equipement_piscine.jpg" alt="Piscine municipale et complexe aquatique de Laxou">
+              <img src="assets/laxou_piscine_municipale.jpg?v=260819125543" alt="Piscine municipale et complexe aquatique de Laxou">
               <div class="equip-carousel-overlay"></div>
               <div class="equip-carousel-caption">
                 <div class="equip-carousel-tag"><i class="fa-solid fa-person-swimming"></i> Équipement Nautique</div>
@@ -491,21 +486,10 @@
               </div>
             </div>
 
-            <!-- Carousel Controls -->
-            <div class="equip-carousel-controls">
-              <button class="equip-carousel-btn" onclick="prevEquipSlide()" aria-label="Photo précédente">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <button class="equip-carousel-btn" onclick="nextEquipSlide()" aria-label="Photo suivante">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-
-            <!-- Carousel Indicators -->
             <div class="equip-carousel-indicators">
-              <div class="equip-dot active" onclick="showEquipSlide(0)"></div>
-              <div class="equip-dot" onclick="showEquipSlide(1)"></div>
-              <div class="equip-dot" onclick="showEquipSlide(2)"></div>
+              <div class="equip-dot active"></div>
+              <div class="equip-dot"></div>
+              <div class="equip-dot"></div>
             </div>
 
           </div>
@@ -690,7 +674,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=260819125034"></script>
+  <script src="app.js?v=260819125543"></script>
 
   <script>
     function switchTab(tabId, btnElement) {

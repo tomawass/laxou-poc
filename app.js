@@ -74,14 +74,55 @@ function initThemeToggle() {
 
 /* 2. Accessible Mobile Drawer Navigation */
 function initMobileNav() {
-  const toggleBtn = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
+  const toggleBtn = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
 
   if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener('click', () => {
-      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', !isExpanded);
-      mainNav.classList.toggle('is-open');
+    toggleBtn.addEventListener("click", () => {
+      const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+      toggleBtn.setAttribute("aria-expanded", !isExpanded);
+      mainNav.classList.toggle("is-open");
+      
+      // Prevent body scroll when menu is open
+      if (!isExpanded) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Accordion logic for submenus
+    const navItems = mainNav.querySelectorAll(".nav-item");
+    navItems.forEach(item => {
+      const link = item.querySelector(".nav-link[aria-haspopup=\"true\"]");
+      const dropdown = item.querySelector(".dropdown-menu, .mega-menu-3col");
+      if (link && dropdown) {
+        link.addEventListener("click", (e) => {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            const isOpen = dropdown.classList.contains("is-open");
+            
+            // Close siblings
+            navItems.forEach(sibling => {
+              if (sibling !== item) {
+                const siblingDropdown = sibling.querySelector(".dropdown-menu, .mega-menu-3col");
+                if (siblingDropdown) siblingDropdown.classList.remove("is-open");
+                const siblingLink = sibling.querySelector(".nav-link");
+                if(siblingLink) siblingLink.classList.remove("submenu-open");
+              }
+            });
+
+            // Toggle current
+            if (isOpen) {
+              dropdown.classList.remove("is-open");
+              link.classList.remove("submenu-open");
+            } else {
+              dropdown.classList.add("is-open");
+              link.classList.add("submenu-open");
+            }
+          }
+        });
+      }
     });
   }
 }

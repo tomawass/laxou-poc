@@ -1472,6 +1472,7 @@ img {
 }
 
 .btn-equipements-map:hover {
+  color: #ffffff;
   background: #009933;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 153, 51, 0.35);
@@ -1780,4 +1781,37 @@ img {
   .bento-overlay-wide {
     background: linear-gradient(to top, rgba(7, 27, 59, 0.9) 0%, rgba(7, 27, 59, 0.4) 60%, rgba(0,0,0,0) 100%);
   }
+}
+
+/* Section Headers */
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--user-primary-dark);
+  border: 1.5px solid var(--color-border);
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-apple);
+}
+
+.btn-secondary:hover {
+  background: var(--user-accent);
+  color: #ffffff !important;
+  border-color: var(--user-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 153, 51, 0.2);
 }

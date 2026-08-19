@@ -1842,7 +1842,7 @@ img {
     display: block !important;
     position: fixed !important;
     top: 0 !important;
-    right: -100% !important;
+    right: -100% !important; left: auto !important;
     width: 85vw !important;
     max-width: 400px !important;
     height: 100dvh !important;

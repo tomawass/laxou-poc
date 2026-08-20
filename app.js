@@ -193,40 +193,113 @@ function initGdprForms() {
   });
 }
 
-/* 5. Smart Search & Direct Navigation */
-window.handleSearch = function(query) {
-  if (!query || !query.trim()) {
-    const input = document.getElementById('site-search-input');
-    if (input) input.focus();
-    return;
-  }
-
-  const q = query.trim().toLowerCase();
+/* 5. Smart Search & Autocomplete Live Search */
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('site-search-input');
+  const dropdown = document.getElementById('search-autocomplete-dropdown');
   
+  if (!searchInput || !dropdown) return;
+
   const routes = [
-    { keys: ['cantine', 'repas', 'periscolaire', 'périscolaire', 'garderie', 'tarifs', 'simulateur', 'famille', 'enfance', 'ecole', 'école'], url: 'simulateur-periscolaire.html' },
-    { keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'aménagement', 'provinces', 'champ le boeuf', '3d', 'maquette', 'renovation', 'rénovation'], url: 'nprnu-map.html' },
-    { keys: ['elu', 'élus', 'elus', 'maire', 'laurent garcia', 'garcia', 'adjoint', 'conseil', 'equipe', 'équipe'], url: 'equipe-municipale.html' },
-    { keys: ['passeport', 'cni', 'identite', 'identité', 'etat civil', 'état civil', 'naissance', 'mariage', 'deces', 'décès', 'papiers'], url: 'article.html' },
-    { keys: ['contact', 'signaler', 'signalement', 'voirie', 'eclairage', 'proprete', 'propreté', 'standard', 'telephone', 'horaires'], url: 'contact.html' },
-    { keys: ['agenda', 'concert', 'cinema', 'cinéma', 'festival', 'etoiles', 'étoiles', 'sortir', 'spectacle', 'evenement', 'événement'], url: 'agenda.html' },
-    { keys: ['arrete', 'arrêté', 'deliberation', 'délibération', 'marches', 'marchés', 'recrutement', 'publications'], url: 'archives.html' },
-    { keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
+    { title: 'Simulateur Périscolaire', icon: 'fa-calculator', keys: ['cantine', 'repas', 'periscolaire', 'garderie', 'simulateur', 'famille', 'ecole'], url: 'simulateur-periscolaire.html' },
+    { title: 'Carte Interactive (Projets & NPRNU)', icon: 'fa-map-location-dot', keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'champ le boeuf', '3d'], url: 'nprnu-map.html' },
+    { title: 'Équipe Municipale & Élus', icon: 'fa-users', keys: ['elu', 'elus', 'maire', 'garcia', 'adjoint', 'conseil', 'equipe'], url: 'equipe-municipale.html' },
+    { title: 'Démarches : État Civil & CNI', icon: 'fa-id-card', keys: ['passeport', 'cni', 'identite', 'etat civil', 'naissance', 'mariage', 'deces', 'papiers'], url: 'article.html' },
+    { title: 'Contact & Signalements', icon: 'fa-phone', keys: ['contact', 'signaler', 'signalement', 'voirie', 'proprete', 'telephone', 'horaires'], url: 'contact.html' },
+    { title: 'Agenda & Événements', icon: 'fa-calendar-days', keys: ['agenda', 'concert', 'cinema', 'festival', 'etoiles', 'sortir', 'spectacle', 'evenement'], url: 'agenda.html' },
+    { title: 'Publications & Arrêtés', icon: 'fa-file-signature', keys: ['arrete', 'deliberation', 'marches', 'recrutement', 'publications'], url: 'archives.html' },
+    { title: 'Installations Sportives', icon: 'fa-volleyball', keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
   ];
 
+  let activeIndex = -1;
+
+  function renderResults(query) {
+    if (!query || query.length < 2) {
+      dropdown.classList.remove('active');
+      dropdown.innerHTML = '';
+      return;
+    }
+
+    const q = query.toLowerCase();
+    const results = routes.filter(route => route.keys.some(k => k.includes(q) || q.includes(k)));
+
+    if (results.length === 0) {
+      dropdown.innerHTML = '<div class="autocomplete-item" style="color: #888;">Aucun résultat trouvé...</div>';
+      dropdown.classList.add('active');
+      return;
+    }
+
+    dropdown.innerHTML = results.slice(0, 5).map((res, index) => `
+      <a href="${res.url}" class="autocomplete-item" data-index="${index}">
+        <i class="fa-solid ${res.icon}"></i> ${res.title}
+      </a>
+    `).join('');
+    
+    dropdown.classList.add('active');
+    activeIndex = -1;
+  }
+
+  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
+  
+  searchInput.addEventListener('focus', (e) => renderResults(e.target.value));
+
+  // Close dropdown on click outside
+  document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+    }
+  });
+
+  // Keyboard navigation
+  searchInput.addEventListener('keydown', (e) => {
+    const items = dropdown.querySelectorAll('.autocomplete-item');
+    if (!dropdown.classList.contains('active') || items.length === 0) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIndex = (activeIndex + 1) % items.length;
+      updateHighlight(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIndex = (activeIndex - 1 + items.length) % items.length;
+      updateHighlight(items);
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault();
+      items[activeIndex].click();
+    }
+  });
+
+  function updateHighlight(items) {
+    items.forEach((item, index) => {
+      if (index === activeIndex) {
+        item.classList.add('highlighted');
+      } else {
+        item.classList.remove('highlighted');
+      }
+    });
+  }
+});
+
+window.handleSearch = function(query) {
+  // Legacy fallback if someone presses Enter without selecting from dropdown
+  if (!query || !query.trim()) return;
+  const q = query.trim().toLowerCase();
+  const routes = [
+    { keys: ['cantine', 'repas', 'periscolaire', 'garderie', 'simulateur', 'famille', 'ecole'], url: 'simulateur-periscolaire.html' },
+    { keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'champ le boeuf', '3d'], url: 'nprnu-map.html' },
+    { keys: ['elu', 'elus', 'maire', 'garcia', 'adjoint', 'conseil', 'equipe'], url: 'equipe-municipale.html' },
+    { keys: ['passeport', 'cni', 'identite', 'etat civil', 'naissance', 'mariage', 'deces', 'papiers'], url: 'article.html' },
+    { keys: ['contact', 'signaler', 'signalement', 'voirie', 'proprete', 'telephone', 'horaires'], url: 'contact.html' },
+    { keys: ['agenda', 'concert', 'cinema', 'festival', 'etoiles', 'sortir', 'spectacle', 'evenement'], url: 'agenda.html' },
+    { keys: ['arrete', 'deliberation', 'marches', 'recrutement', 'publications'], url: 'archives.html' },
+    { keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
+  ];
   for (const route of routes) {
-    if (route.keys.some(k => q.includes(k))) {
+    if (route.keys.some(k => q.includes(k) || k.includes(q))) {
       window.location.href = route.url;
       return;
     }
   }
-
-  // Fallback: scroll to services section or show alert
-  const servicesSec = document.getElementById('services-municipaux');
-  if (servicesSec) {
-    servicesSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    window.location.href = 'archives.html';
-  }
+  window.location.href = 'archives.html';
 };
 

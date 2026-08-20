@@ -2070,3 +2070,183 @@ img {
   background-color: var(--user-accent);
   color: #ffffff !important;
 }
+
+/* =========================================
+   SOCIAL HUB 2027 (FACEBOOK FEED)
+   ========================================= */
+.social-2027-section {
+  padding: 120px 0;
+  background-color: #f8fafc;
+  background-image: radial-gradient(at 0% 0%, rgba(118, 184, 47, 0.05) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(0, 123, 255, 0.05) 0px, transparent 50%);
+  overflow: hidden;
+  position: relative;
+}
+.social-header-2027 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  padding: 0 5vw;
+}
+.social-title-2027 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  color: var(--user-primary-dark);
+}
+.social-title-2027 span {
+  background: linear-gradient(90deg, #0866ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-track-2027 {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 3rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.social-track-2027::-webkit-scrollbar {
+  display: none;
+}
+.social-card-2027 {
+  flex: 0 0 400px;
+  scroll-snap-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-decoration: none;
+}
+.social-card-2027:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,102,255,0.08), inset 0 1px 0 rgba(255,255,255,1);
+}
+.social-author-2027 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.social-avatar-2027 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.social-avatar-2027 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.social-meta-2027 h4 { 
+  margin: 0; 
+  font-size: 1.05rem; 
+  font-weight: 800; 
+  color: var(--user-neutral-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.social-meta-2027 span { 
+  font-size: 0.85rem; 
+  color: var(--color-muted); 
+  font-weight: 500;
+}
+.social-media-2027 {
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+  background: #e9ecef;
+}
+.social-media-2027 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.social-card-2027:hover .social-media-2027 img {
+  transform: scale(1.05);
+}
+.social-text-2027 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--user-neutral-dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+.social-footer-2027 {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.social-reaction-group {
+  display: flex;
+  align-items: center;
+}
+.reaction-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-left: -8px;
+  font-size: 0.75rem;
+}
+.reaction-icon:first-child { margin-left: 0; }
+.reaction-icon.like { color: #0866ff; background: #e7f0ff; }
+.reaction-icon.heart { color: #f02849; background: #ffe9ec; }
+.social-stats {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin-left: 8px;
+}
+.btn-fb-2027 {
+  background: #0866ff;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 20px rgba(8, 102, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-fb-2027:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(8, 102, 255, 0.4);
+  color: #fff;
+}
+@media(max-width: 768px) {
+  .social-card-2027 { flex: 0 0 85vw; }
+  .social-header-2027 { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

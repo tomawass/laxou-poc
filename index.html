@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=201218166612">
+  <link rel="stylesheet" href="styles.css?v=201236954360">
 </head>
 <body>
 
@@ -377,19 +377,22 @@
         <div class="equipements-container">
           <!-- Left Content -->
           <div>
-            <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-display); font-weight: 800; color: var(--user-primary-dark); line-height: 1.15; margin-bottom: var(--space-4);">
-              Vous cherchez un lieu culturel ou sportif <br><span style="color: #009933;">à Laxou ?</span>
+            <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-family: var(--font-display); font-weight: 900; color: var(--user-primary-dark); line-height: 1.1; margin-bottom: var(--space-2); letter-spacing: -1px;">
+              Proche de vous
             </h2>
-            <p style="color: var(--color-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: var(--space-6);">
-              Consultez en 1 clic l'annuaire complet de vos piscines, complexes omnisports, médiathèque, parcs et espaces associatifs laxoviens grâce à notre carte interactive.
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #009933; margin-bottom: var(--space-4); text-transform: uppercase; letter-spacing: 1px;">
+              Annuaires
+            </h3>
+            <p style="color: var(--color-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--space-6);">
+              Que vous cherchiez un service public, un équipement, une association ou un commerce, ils sont tous dans les annuaires !
             </p>
             
             <!-- Modern Category Badges -->
             <div class="equipements-badges-row">
-              <span class="equip-pill-badge"><i class="fa-solid fa-person-swimming"></i> Piscine & Bassins</span>
-              <span class="equip-pill-badge"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis & Gymnases</span>
-              <span class="equip-pill-badge"><i class="fa-solid fa-masks-theater"></i> Médiathèque & Culture</span>
-              <span class="equip-pill-badge"><i class="fa-solid fa-tree"></i> Parcs & Jardins</span>
+              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-person-swimming"></i> Piscine & Bassins</a>
+              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis & Gymnases</a>
+              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-masks-theater"></i> Médiathèque & Culture</a>
+              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-tree"></i> Parcs & Jardins</a>
             </div>
 
             <a href="iframe.html" class="btn-equipements-map">
@@ -401,34 +404,34 @@
           <div class="equip-carousel-wrapper" id="equipCarousel">
             
             <!-- Slide 1: Piscine -->
-            <div class="equip-carousel-slide active">
+            <a href="iframe.html" class="equip-carousel-slide active" style="display:block; text-decoration:none;">
               <img src="assets/laxou_piscine_officielle.jpg?v=260819130621" alt="Piscine municipale et complexe aquatique de Laxou">
               <div class="equip-carousel-overlay"></div>
               <div class="equip-carousel-caption">
                 <div class="equip-carousel-tag"><i class="fa-solid fa-person-swimming"></i> Équipement Nautique</div>
                 <h3 class="equip-carousel-title">Piscine Municipale & Complexe Aquatique</h3>
               </div>
-            </div>
+            </a>
 
             <!-- Slide 2: Tennis -->
-            <div class="equip-carousel-slide">
+            <a href="iframe.html" class="equip-carousel-slide" style="display:block; text-decoration:none;">
               <img src="assets/equipement_tennis.jpg" alt="Courts de tennis en terre battue de Laxou">
               <div class="equip-carousel-overlay"></div>
               <div class="equip-carousel-caption">
                 <div class="equip-carousel-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Complexe Sportif</div>
                 <h3 class="equip-carousel-title">Courts de Tennis & Terrains Extérieurs</h3>
               </div>
-            </div>
+            </a>
 
             <!-- Slide 3: Urbain / Bâtiment moderne -->
-            <div class="equip-carousel-slide">
+            <a href="iframe.html" class="equip-carousel-slide" style="display:block; text-decoration:none;">
               <img src="assets/equipement_urbain.jpg" alt="Pôle urbain et espaces associatifs de Laxou">
               <div class="equip-carousel-overlay"></div>
               <div class="equip-carousel-caption">
                 <div class="equip-carousel-tag"><i class="fa-solid fa-city"></i> Renouveau Urbain</div>
                 <h3 class="equip-carousel-title">Pôle d'Aménagement & Espaces Associatifs</h3>
               </div>
-            </div>
+            </a>
 
             <div class="equip-carousel-indicators">
               <div class="equip-dot active"></div>
@@ -623,7 +626,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=201218166612"></script>
+  <script src="app.js?v=201236954360"></script>
 
   <script>
     function switchTab(tabId, btnElement) {

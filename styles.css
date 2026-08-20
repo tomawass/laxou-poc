@@ -1388,6 +1388,11 @@ img {
 }
 
 .equip-pill-badge {
+  color: var(--user-neutral-dark);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1406,6 +1411,8 @@ img {
 }
 
 .equip-pill-badge:hover {
+  color: #ffffff;
+  text-decoration: none;
   border-color: #009933;
   background: rgba(0, 153, 51, 0.05);
   transform: translateY(-2px);
@@ -1447,6 +1454,7 @@ img {
 }
 
 .equip-carousel-slide {
+  cursor: pointer;
   position: absolute;
   inset: 0;
   opacity: 0;

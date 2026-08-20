@@ -7,10 +7,10 @@ export class Projection {
    * Default Laxou / Nancy geographic bounding box coordinates
    */
   static DEFAULT_BOUNDS = Object.freeze({
-    minLat: 48.6650,
-    maxLat: 48.7080,
-    minLng: 6.1200,
-    maxLng: 6.2000
+    minLat: 48.665,
+    maxLat: 48.708,
+    minLng: 6.12,
+    maxLng: 6.2,
   });
 
   /**
@@ -18,21 +18,24 @@ export class Projection {
    */
   static LAXOU_CENTER = Object.freeze({
     lat: 48.6865,
-    lng: 6.1504
+    lng: 6.1504,
   });
 
   /**
    * @param {Object} [bounds] - Geographic bounding box { minLat, maxLat, minLng, maxLng }
    * @param {Object} [canvasSize] - Target canvas size { width, height }
    */
-  constructor(bounds = Projection.DEFAULT_BOUNDS, canvasSize = { width: 800, height: 600 }) {
+  constructor(
+    bounds = Projection.DEFAULT_BOUNDS,
+    canvasSize = { width: 800, height: 600 },
+  ) {
     this.setBounds(bounds);
     this.setCanvasSize(canvasSize?.width, canvasSize?.height);
   }
 
   /**
    * Set geographic bounds with defensive zero-span & inversion handling.
-   * @param {Object} bounds 
+   * @param {Object} bounds
    */
   setBounds(bounds) {
     const raw = bounds || Projection.DEFAULT_BOUNDS;
@@ -56,7 +59,7 @@ export class Projection {
       minLng: actualMinLng,
       maxLng: actualMaxLng,
       dLat,
-      dLng
+      dLng,
     };
 
     this.centerLat = (actualMinLat + actualMaxLat) / 2;
@@ -73,15 +76,15 @@ export class Projection {
 
   /**
    * Set target canvas screen dimensions.
-   * @param {number} width 
-   * @param {number} height 
+   * @param {number} width
+   * @param {number} height
    */
   setCanvasSize(width, height) {
     const w = Number(width);
     const h = Number(height);
 
-    this.canvasWidth = (isFinite(w) && w > 0) ? w : 800;
-    this.canvasHeight = (isFinite(h) && h > 0) ? h : 600;
+    this.canvasWidth = isFinite(w) && w > 0 ? w : 800;
+    this.canvasHeight = isFinite(h) && h > 0 ? h : 600;
 
     this._recomputeBaseDimensions();
   }
@@ -131,8 +134,8 @@ export class Projection {
    * Convert lat/lng to normalized (0..1) world coordinates.
    * x = 0 at minLng, 1 at maxLng
    * y = 0 at maxLat, 1 at minLat (top-down 2D coordinate system)
-   * @param {number} lat 
-   * @param {number} lng 
+   * @param {number} lat
+   * @param {number} lng
    * @returns {{ x: number, y: number }}
    */
   geoToWorld(lat, lng) {
@@ -151,8 +154,8 @@ export class Projection {
 
   /**
    * Convert normalized (0..1) world coordinates to lat/lng.
-   * @param {number} worldX 
-   * @param {number} worldY 
+   * @param {number} worldX
+   * @param {number} worldY
    * @returns {{ lat: number, lng: number }}
    */
   worldToGeo(worldX, worldY) {
@@ -171,8 +174,8 @@ export class Projection {
 
   /**
    * Convert normalized world coordinates to screen pixel coordinates given viewport state.
-   * @param {number} worldX 
-   * @param {number} worldY 
+   * @param {number} worldX
+   * @param {number} worldY
    * @param {Object} [viewport] { x/panX, y/panY, zoom, width, height }
    * @returns {{ x: number, y: number }}
    */
@@ -198,9 +201,9 @@ export class Projection {
 
   /**
    * Convert screen pixel coordinates to normalized world coordinates.
-   * @param {number} screenX 
-   * @param {number} screenY 
-   * @param {Object} [viewport] 
+   * @param {number} screenX
+   * @param {number} screenY
+   * @param {Object} [viewport]
    * @returns {{ x: number, y: number }}
    */
   screenToWorld(screenX, screenY, viewport = {}) {
@@ -225,9 +228,9 @@ export class Projection {
 
   /**
    * Direct forward conversion: lat/lng to screen pixel coordinates.
-   * @param {number} lat 
-   * @param {number} lng 
-   * @param {Object} [viewport] 
+   * @param {number} lat
+   * @param {number} lng
+   * @param {Object} [viewport]
    * @returns {{ x: number, y: number }}
    */
   geoToScreen(lat, lng, viewport = {}) {
@@ -237,9 +240,9 @@ export class Projection {
 
   /**
    * Direct inverse conversion: screen pixel coordinates to lat/lng.
-   * @param {number} screenX 
-   * @param {number} screenY 
-   * @param {Object} [viewport] 
+   * @param {number} screenX
+   * @param {number} screenY
+   * @param {Object} [viewport]
    * @returns {{ lat: number, lng: number }}
    */
   screenToGeo(screenX, screenY, viewport = {}) {
@@ -249,8 +252,8 @@ export class Projection {
 
   /**
    * Check if a geographic point is within current bounding box.
-   * @param {number} lat 
-   * @param {number} lng 
+   * @param {number} lat
+   * @param {number} lng
    * @returns {boolean}
    */
   isPointInBounds(lat, lng) {
@@ -268,17 +271,19 @@ export class Projection {
 
   /**
    * Calculate bounding box from an array of point objects with lat/lng.
-   * @param {Array<{lat: number, lng: number}>} points 
-   * @param {number} [paddingPercent=0.10] 
+   * @param {Array<{lat: number, lng: number}>} points
+   * @param {number} [paddingPercent=0.10]
    * @returns {{ minLat: number, maxLat: number, minLng: number, maxLng: number }}
    */
-  static calculateBounds(points, paddingPercent = 0.10) {
+  static calculateBounds(points, paddingPercent = 0.1) {
     if (!Array.isArray(points) || points.length === 0) {
       return { ...Projection.DEFAULT_BOUNDS };
     }
 
-    let minLat = Infinity, maxLat = -Infinity;
-    let minLng = Infinity, maxLng = -Infinity;
+    let minLat = Infinity,
+      maxLat = -Infinity;
+    let minLng = Infinity,
+      maxLng = -Infinity;
 
     for (const p of points) {
       const lat = Number(p.lat);
@@ -303,7 +308,7 @@ export class Projection {
       minLat: minLat - dLat * p,
       maxLat: maxLat + dLat * p,
       minLng: minLng - dLng * p,
-      maxLng: maxLng + dLng * p
+      maxLng: maxLng + dLng * p,
     };
   }
 }

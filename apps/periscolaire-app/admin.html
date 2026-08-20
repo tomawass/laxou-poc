@@ -1,898 +1,1234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Console Mairie — Pilotage & Barèmes Périscolaires</title>
-  <style>
-  *, *::before, *::after { box-sizing: border-box; }
-  :root {
-    --navy: #153A5B;
-    --navy-dark: #0D2740;
-    --navy-light: #2A5680;
-    --gold: #C08A34;
-    --gold-light: #E4B665;
-    --cream: #F6F3EC;
-    --surface: #FFFFFF;
-    --surface-alt: #FBF9F4;
-    --ink: #1E2A33;
-    --muted: #5B6773;
-    --muted-light: #8A94A0;
-    --border: #E3DCC9;
-    --border-soft: #ECE7DA;
-    --success: #2F7D5A;
-    --success-bg: #E5F3EC;
-    --danger: #B3452E;
-    --accent: #1B4A73;
-    --footer-bg: #0D2740;
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-head: "Georgia", "Iowan Old Style", serif;
-    --transition: 180ms cubic-bezier(.4,0,.2,1);
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 20px;
-    --shadow-sm: 0 1px 3px rgba(21,58,91,0.06);
-    --shadow-md: 0 6px 20px rgba(21,58,91,0.08);
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console Mairie — Pilotage & Barèmes Périscolaires</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      :root {
+        --navy: #153a5b;
+        --navy-dark: #0d2740;
+        --navy-light: #2a5680;
+        --gold: #c08a34;
+        --gold-light: #e4b665;
+        --cream: #f6f3ec;
+        --surface: #ffffff;
+        --surface-alt: #fbf9f4;
+        --ink: #1e2a33;
+        --muted: #5b6773;
+        --muted-light: #8a94a0;
+        --border: #e3dcc9;
+        --border-soft: #ece7da;
+        --success: #2f7d5a;
+        --success-bg: #e5f3ec;
+        --danger: #b3452e;
+        --accent: #1b4a73;
+        --footer-bg: #0d2740;
+        --font-body:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --font-head: "Georgia", "Iowan Old Style", serif;
+        --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --shadow-sm: 0 1px 3px rgba(21, 58, 91, 0.06);
+        --shadow-md: 0 6px 20px rgba(21, 58, 91, 0.08);
+      }
 
-  html {
-    width: 100%;
-    overflow-x: hidden;
-  }
+      html {
+        width: 100%;
+        overflow-x: hidden;
+      }
 
-  body {
-    margin: 0;
-    padding: 0;
-    background: var(--cream);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 15px;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 15px;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
 
-  h1, h2, h3, h4 { font-family: var(--font-head); color: var(--navy); margin: 0 0 .3em; }
-  a { color: var(--navy-light); text-decoration: none; }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-head);
+        color: var(--navy);
+        margin: 0 0 0.3em;
+      }
+      a {
+        color: var(--navy-light);
+        text-decoration: none;
+      }
 
-  /* OVERLAY D'AUTHENTIFICATION STRICTE MAIRIE */
-  .auth-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(13,39,64,0.92);
-    backdrop-filter: blur(12px);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
+      /* OVERLAY D'AUTHENTIFICATION STRICTE MAIRIE */
+      .auth-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(13, 39, 64, 0.92);
+        backdrop-filter: blur(12px);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
-  .auth-modal {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    max-width: 440px;
-    width: 100%;
-    padding: 32px 30px;
-    text-align: center;
-  }
+      .auth-modal {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        max-width: 440px;
+        width: 100%;
+        padding: 32px 30px;
+        text-align: center;
+      }
 
-  .auth-modal-icon {
-    width: 64px;
-    height: 64px;
-    background: var(--surface-alt);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 16px auto;
-    border: 1px solid var(--border);
-  }
+      .auth-modal-icon {
+        width: 64px;
+        height: 64px;
+        background: var(--surface-alt);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px auto;
+        border: 1px solid var(--border);
+      }
 
-  .auth-modal h2 { font-size: 1.45rem; margin-bottom: 6px; }
-  .auth-modal p { font-size: 0.88rem; color: var(--muted); margin-bottom: 22px; }
+      .auth-modal h2 {
+        font-size: 1.45rem;
+        margin-bottom: 6px;
+      }
+      .auth-modal p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin-bottom: 22px;
+      }
 
-  .auth-input-group {
-    text-align: left;
-    margin-bottom: 16px;
-  }
+      .auth-input-group {
+        text-align: left;
+        margin-bottom: 16px;
+      }
 
-  .auth-input-group label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
+      .auth-input-group label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
 
-  .auth-input {
-    width: 100%;
-    padding: 11px 14px;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    font-size: 0.92rem;
-    background: var(--surface-alt);
-    color: var(--ink);
-    transition: border-color var(--transition);
-  }
+      .auth-input {
+        width: 100%;
+        padding: 11px 14px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-size: 0.92rem;
+        background: var(--surface-alt);
+        color: var(--ink);
+        transition: border-color var(--transition);
+      }
 
-  .auth-input:focus {
-    outline: none;
-    border-color: var(--navy-light);
-    box-shadow: 0 0 0 3px rgba(21,58,91,0.12);
-  }
+      .auth-input:focus {
+        outline: none;
+        border-color: var(--navy-light);
+        box-shadow: 0 0 0 3px rgba(21, 58, 91, 0.12);
+      }
 
-  .btn-auth-submit {
-    width: 100%;
-    background: var(--navy);
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.92rem;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: background var(--transition);
-  }
+      .btn-auth-submit {
+        width: 100%;
+        background: var(--navy);
+        color: #fff;
+        border: none;
+        padding: 12px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background var(--transition);
+      }
 
-  .btn-auth-submit:hover { background: var(--navy-dark); }
+      .btn-auth-submit:hover {
+        background: var(--navy-dark);
+      }
 
-  .auth-error-msg {
-    background: #FDF2F0;
-    color: var(--danger);
-    border: 1px solid rgba(179,69,46,0.2);
-    padding: 10px 14px;
-    border-radius: var(--radius-sm);
-    font-size: 0.82rem;
-    font-weight: 600;
-    margin-top: 14px;
-    display: none;
-  }
+      .auth-error-msg {
+        background: #fdf2f0;
+        color: var(--danger);
+        border: 1px solid rgba(179, 69, 46, 0.2);
+        padding: 10px 14px;
+        border-radius: var(--radius-sm);
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-top: 14px;
+        display: none;
+      }
 
-  /* HEADER & LAYOUT ADMIN RESPONSIVE */
-  .site-header {
-    background: linear-gradient(135deg, var(--footer-bg), var(--accent) 60%, #3A6C99);
-    color: #F4F7FA;
-    padding: 0;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(13,39,64,0.15);
-    width: 100%;
-  }
+      /* HEADER & LAYOUT ADMIN RESPONSIVE */
+      .site-header {
+        background: linear-gradient(
+          135deg,
+          var(--footer-bg),
+          var(--accent) 60%,
+          #3a6c99
+        );
+        color: #f4f7fa;
+        padding: 0;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(13, 39, 64, 0.15);
+        width: 100%;
+      }
 
-  .header-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+      .header-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
 
-  .brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-  .brand-badge {
-    background: var(--gold);
-    color: var(--navy-dark);
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 3px 9px;
-    border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .brand-badge {
+        background: var(--gold);
+        color: var(--navy-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 3px 9px;
+        border-radius: 999px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-  .brand-text h1 { color: #fff; font-size: 1.3rem; margin: 0; font-weight: 600; line-height: 1.25; }
-  .brand-text p { margin: 0; opacity: .8; font-size: .85rem; }
+      .brand-text h1 {
+        color: #fff;
+        font-size: 1.3rem;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      .brand-text p {
+        margin: 0;
+        opacity: 0.8;
+        font-size: 0.85rem;
+      }
 
-  .header-actions { display: flex; gap: 12px; align-items: center; }
-  .btn-front {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: #fff;
-    padding: 7px 16px;
-    border-radius: 999px;
-    font-size: 0.83rem;
-    font-weight: 600;
-    transition: background var(--transition);
-    white-space: nowrap;
-  }
-  .btn-front:hover { background: rgba(255,255,255,0.22); color: #fff; }
+      .header-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .btn-front {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        padding: 7px 16px;
+        border-radius: 999px;
+        font-size: 0.83rem;
+        font-weight: 600;
+        transition: background var(--transition);
+        white-space: nowrap;
+      }
+      .btn-front:hover {
+        background: rgba(255, 255, 255, 0.22);
+        color: #fff;
+      }
 
-  .admin-layout {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    min-height: calc(100vh - 85px);
-    overflow-x: hidden;
-  }
+      .admin-layout {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        min-height: calc(100vh - 85px);
+        overflow-x: hidden;
+      }
 
-  .sidebar {
-    background: var(--navy-dark);
-    color: #fff;
-    padding: 24px 18px;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+      .sidebar {
+        background: var(--navy-dark);
+        color: #fff;
+        padding: 24px 18px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-  .sidebar-title {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gold-light);
-    margin-bottom: 14px;
-    font-weight: 700;
-  }
+      .sidebar-title {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold-light);
+        margin-bottom: 14px;
+        font-weight: 700;
+      }
 
-  .sidebar-menu { list-style: none; padding: 0; margin: 0; }
-  .sidebar-item { margin-bottom: 6px; }
+      .sidebar-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar-item {
+        margin-bottom: 6px;
+      }
 
-  .sidebar-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgba(255,255,255,0.8);
-    padding: 10px 14px;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 0.88rem;
-    transition: all var(--transition);
-  }
+      .sidebar-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 10px 14px;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: all var(--transition);
+      }
 
-  .sidebar-link:hover, .sidebar-link.active {
-    background: var(--accent);
-    color: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
+      .sidebar-link:hover,
+      .sidebar-link.active {
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
 
-  .sidebar-user {
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 0.78rem;
-    color: var(--muted-light);
-  }
-  .sidebar-user strong { color: #fff; }
+      .sidebar-user {
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.78rem;
+        color: var(--muted-light);
+      }
+      .sidebar-user strong {
+        color: #fff;
+      }
 
-  .btn-logout {
-    background: transparent;
-    color: #FFB3A6;
-    border: 1px solid rgba(255,179,166,0.3);
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: all var(--transition);
-  }
-  .btn-logout:hover { background: rgba(255,179,166,0.15); color: #fff; }
+      .btn-logout {
+        background: transparent;
+        color: #ffb3a6;
+        border: 1px solid rgba(255, 179, 166, 0.3);
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: all var(--transition);
+      }
+      .btn-logout:hover {
+        background: rgba(255, 179, 166, 0.15);
+        color: #fff;
+      }
 
-  .admin-content {
-    padding: 32px 28px 120px 28px;
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-  }
+      .admin-content {
+        padding: 32px 28px 120px 28px;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+      }
 
-  .admin-title-box {
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
+      .admin-title-box {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
 
-  .admin-title-box h2 { font-size: 1.65rem; margin: 0; }
-  .admin-title-box p { color: var(--muted); font-size: 0.92rem; margin-top: 4px; }
+      .admin-title-box h2 {
+        font-size: 1.65rem;
+        margin: 0;
+      }
+      .admin-title-box p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-top: 4px;
+      }
 
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin-bottom: 28px;
-  }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 28px;
+      }
 
-  .stat-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 18px 20px;
-    box-shadow: var(--shadow-sm);
-  }
+      .stat-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        box-shadow: var(--shadow-sm);
+      }
 
-  .stat-card-title {
-    font-size: 0.74rem;
-    font-weight: 700;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
-  }
+      .stat-card-title {
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 6px;
+      }
 
-  .stat-card-value {
-    font-family: var(--font-head);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--navy);
-  }
+      .stat-card-value {
+        font-family: var(--font-head);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
 
-  .stat-card-sub {
-    font-size: 0.78rem;
-    color: var(--gold);
-    font-weight: 600;
-    margin-top: 2px;
-  }
+      .stat-card-sub {
+        font-size: 0.78rem;
+        color: var(--gold);
+        font-weight: 600;
+        margin-top: 2px;
+      }
 
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    padding: 24px 26px;
-    margin-bottom: 24px;
-    width: 100%;
-    max-width: 100%;
-  }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        padding: 24px 26px;
+        margin-bottom: 24px;
+        width: 100%;
+        max-width: 100%;
+      }
 
-  .card-header-box {
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+      .card-header-box {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
 
-  .card-header-box h3 { font-size: 1.15rem; margin: 0; }
+      .card-header-box h3 {
+        font-size: 1.15rem;
+        margin: 0;
+      }
 
-  .table-wrap {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-soft);
-    -webkit-overflow-scrolling: touch;
-  }
+      .table-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-soft);
+        -webkit-overflow-scrolling: touch;
+      }
 
-  table.config-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--surface);
-    min-width: 620px;
-  }
+      table.config-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--surface);
+        min-width: 620px;
+      }
 
-  table.config-table th {
-    background: var(--navy);
-    color: #fff;
-    padding: 10px 14px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    text-align: left;
-  }
+      table.config-table th {
+        background: var(--navy);
+        color: #fff;
+        padding: 10px 14px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        text-align: left;
+      }
 
-  table.config-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border-soft);
-    font-size: 0.88rem;
-  }
+      table.config-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border-soft);
+        font-size: 0.88rem;
+      }
 
-  table.config-table tbody tr:hover {
-    background: var(--surface-alt);
-  }
+      table.config-table tbody tr:hover {
+        background: var(--surface-alt);
+      }
 
-  .table-input {
-    width: 100%;
-    max-width: 110px;
-    padding: 7px 10px;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--surface-alt);
-    color: var(--ink);
-    font-family: inherit;
-    font-size: 0.88rem;
-    font-weight: 600;
-    transition: border-color var(--transition);
-  }
+      .table-input {
+        width: 100%;
+        max-width: 110px;
+        padding: 7px 10px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--surface-alt);
+        color: var(--ink);
+        font-family: inherit;
+        font-size: 0.88rem;
+        font-weight: 600;
+        transition: border-color var(--transition);
+      }
 
-  .table-input:focus {
-    outline: none;
-    border-color: var(--navy-light);
-    box-shadow: 0 0 0 3px rgba(21,58,91,0.12);
-  }
+      .table-input:focus {
+        outline: none;
+        border-color: var(--navy-light);
+        box-shadow: 0 0 0 3px rgba(21, 58, 91, 0.12);
+      }
 
-  .badge-tranche {
-    display: inline-block;
-    padding: 3px 9px;
-    background: var(--warning-bg);
-    color: var(--warning);
-    font-weight: 700;
-    font-size: 0.76rem;
-    border-radius: 999px;
-  }
+      .badge-tranche {
+        display: inline-block;
+        padding: 3px 9px;
+        background: var(--warning-bg);
+        color: var(--warning);
+        font-weight: 700;
+        font-size: 0.76rem;
+        border-radius: 999px;
+      }
 
-  .btn-action {
-    background: var(--surface-alt);
-    border: 1px solid var(--border);
-    color: var(--navy);
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all var(--transition);
-  }
+      .btn-action {
+        background: var(--surface-alt);
+        border: 1px solid var(--border);
+        color: var(--navy);
+        padding: 7px 14px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all var(--transition);
+      }
 
-  .btn-action:hover {
-    background: var(--navy);
-    color: #fff;
-    border-color: var(--navy);
-  }
+      .btn-action:hover {
+        background: var(--navy);
+        color: #fff;
+        border-color: var(--navy);
+      }
 
-  .btn-excel {
-    background: var(--success);
-    color: #fff;
-    border: 1px solid var(--success);
-    padding: 7px 16px;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all var(--transition);
-  }
+      .btn-excel {
+        background: var(--success);
+        color: #fff;
+        border: 1px solid var(--success);
+        padding: 7px 16px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all var(--transition);
+      }
 
-  .btn-excel:hover {
-    background: #256345;
-    transform: translateY(-1px);
-  }
+      .btn-excel:hover {
+        background: #256345;
+        transform: translateY(-1px);
+      }
 
-  .save-bar {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--navy-dark);
-    color: #fff;
-    padding: 14px 24px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 12px 32px rgba(13,39,64,0.35);
-    z-index: 100;
-    border: 1px solid rgba(255,255,255,0.15);
-    max-width: 90vw;
-  }
+      .save-bar {
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--navy-dark);
+        color: #fff;
+        padding: 14px 24px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 12px 32px rgba(13, 39, 64, 0.35);
+        z-index: 100;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        max-width: 90vw;
+      }
 
-  .btn-save {
-    background: var(--gold);
-    color: var(--navy-dark);
-    border: none;
-    padding: 9px 20px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: transform var(--transition), background var(--transition);
-    white-space: nowrap;
-  }
+      .btn-save {
+        background: var(--gold);
+        color: var(--navy-dark);
+        border: none;
+        padding: 9px 20px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition:
+          transform var(--transition),
+          background var(--transition);
+        white-space: nowrap;
+      }
 
-  .btn-save:hover {
-    background: var(--gold-light);
-    transform: translateY(-1px);
-  }
+      .btn-save:hover {
+        background: var(--gold-light);
+        transform: translateY(-1px);
+      }
 
-  /* MEDIA QUERIES MOBILE ADAPTATION */
-  @media (max-width: 820px) {
-    .admin-layout { grid-template-columns: 1fr; }
-    .header-inner { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
-    .brand-text h1 { font-size: 1.15rem; }
-    .admin-content { padding: 20px 14px 100px 14px; }
-    .card { padding: 18px 14px; }
-    .save-bar { flex-direction: column; text-align: center; gap: 10px; padding: 14px 18px; border-radius: 18px; }
-  }
-  </style>
-</head>
-<body>
-
-  <!-- MODAL D'AUTHENTIFICATION STRICTE -->
-  <div class="auth-overlay" id="authOverlay">
-    <div class="auth-modal">
-      <div class="auth-modal-icon">
-        <svg width="28" height="28" fill="none" stroke="#153A5B" stroke-width="2" viewBox="0 0 24 24">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-          <path d="M7 11V7a5 5 0 0110 0v4"/>
-        </svg>
-      </div>
-      <h2>Espace Réservé Mairie</h2>
-      <p>Veuillez vous authentifier avec votre adresse e-mail municipale pour accéder à la console d'administration.</p>
-      
-      <form id="authForm" onsubmit="event.preventDefault(); handleLogin();">
-        <div class="auth-input-group">
-          <label for="agentEmail">Adresse e-mail professionnelle</label>
-          <input type="email" id="agentEmail" class="auth-input" placeholder="agent.periscolaire@laxou.fr" required>
+      /* MEDIA QUERIES MOBILE ADAPTATION */
+      @media (max-width: 820px) {
+        .admin-layout {
+          grid-template-columns: 1fr;
+        }
+        .header-inner {
+          padding: 14px 16px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .brand-text h1 {
+          font-size: 1.15rem;
+        }
+        .admin-content {
+          padding: 20px 14px 100px 14px;
+        }
+        .card {
+          padding: 18px 14px;
+        }
+        .save-bar {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+          padding: 14px 18px;
+          border-radius: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- MODAL D'AUTHENTIFICATION STRICTE -->
+    <div class="auth-overlay" id="authOverlay">
+      <div class="auth-modal">
+        <div class="auth-modal-icon">
+          <svg
+            width="28"
+            height="28"
+            fill="none"
+            stroke="#153A5B"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0110 0v4" />
+          </svg>
         </div>
-        <div class="auth-input-group">
-          <label for="agentPassword">Mot de passe de la Mairie</label>
-          <input type="password" id="agentPassword" class="auth-input" placeholder="••••••••" required>
-        </div>
-        <button type="submit" class="btn-auth-submit" id="btnAuthSubmit">Se connecter à la Console</button>
-        <div class="auth-error-msg" id="authError"></div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Header Harmonisé Responsive -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <svg width="40" height="40" viewBox="0 0 52 52" fill="none" style="flex-shrink:0;">
-          <rect width="52" height="52" rx="14" fill="rgba(255,255,255,0.12)"/>
-          <path d="M26 8L40 17V19H12V17L26 8Z" fill="#E4B665"/>
-          <rect x="14" y="21" width="4" height="16" fill="#F4F7FA"/>
-          <rect x="21" y="21" width="4" height="16" fill="#F4F7FA"/>
-          <rect x="28" y="21" width="4" height="16" fill="#F4F7FA"/>
-          <rect x="35" y="21" width="4" height="16" fill="#F4F7FA"/>
-          <rect x="11" y="39" width="30" height="4" rx="1" fill="#F4F7FA"/>
-        </svg>
-        <div class="brand-text">
-          <span class="brand-badge">Console Mairie</span>
-          <h1>Mairie de Laxou · Service Périscolaire</h1>
-        </div>
-      </div>
-      <div class="header-actions">
-        <a href="/" class="btn-front" target="_blank">↗ Voir le Portail Familles</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="admin-layout">
-    <!-- Sidebar Dark -->
-    <aside class="sidebar">
-      <div>
-        <div class="sidebar-title">Navigation Métier</div>
-        <ul class="sidebar-menu">
-          <li class="sidebar-item">
-            <a href="#stats" class="sidebar-link active"><span>📊</span> Tableau de bord</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#identite" class="sidebar-link"><span>📅</span> Année & Métadonnées</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#baremes" class="sidebar-link"><span>⚙️</span> Barèmes Tranches QF</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#uniques" class="sidebar-link"><span>🏷️</span> Tarifs Uniques Fixes</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#plafonds" class="sidebar-link"><span>🗓️</span> Plafonds Mensuels</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#vacances" class="sidebar-link"><span>🏖️</span> Périodes de Vacances</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#feries" class="sidebar-link"><span>🎉</span> Jours Fériés (Holidays)</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#calendrier" class="sidebar-link"><span>📆</span> Occurrences de Jours</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#historique" class="sidebar-link"><span>📜</span> Historique & Export Excel</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sidebar-user">
-        <p><strong>Session Agent :</strong><br><span id="loggedAgentEmail">non connecté</span></p>
-        <button type="button" class="btn-logout" onclick="handleLogout()">Se déconnecter</button>
-      </div>
-    </aside>
-
-    <!-- Content -->
-    <main class="admin-content">
-      <div class="admin-title-box">
-        <div>
-          <h2>Pilotage & Paramétrage Périscolaire</h2>
-          <p>Ajustez tous les barèmes, plafonds et calendriers scolaires municipaux.</p>
-        </div>
-        <div>
-          <button class="btn-save" id="btnSaveTop" onclick="saveConfiguration()">Enregistrer toute la grille</button>
-        </div>
-      </div>
-
-      <!-- Stat Cards -->
-      <div class="stats-grid" id="stats">
-        <div class="stat-card">
-          <div class="stat-card-title">Simulations réalisées</div>
-          <div class="stat-card-value" id="statSimCount">3</div>
-          <div class="stat-card-sub">Demandes enregistrées</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-title">QF Moyen Foyer</div>
-          <div class="stat-card-value" id="statQfMoyen">650</div>
-          <div class="stat-card-sub">Tranche 2 (421-649)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-title">Panier Mensuel Moyen</div>
-          <div class="stat-card-value" id="statMensuelMoyen">106.00 €</div>
-          <div class="stat-card-sub">Facturation estimée par foyer</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-title">Tranches Tarifaires</div>
-          <div class="stat-card-value" id="statTranchesCount">4</div>
-          <div class="stat-card-sub">Dégressives selon QF</div>
-        </div>
-      </div>
-
-      <form id="configForm" onsubmit="event.preventDefault(); saveConfiguration();">
-
-        <!-- Section 1 : Identité & Année Scolaire -->
-        <div class="card" id="identite">
-          <div class="card-header-box">
-            <h3>1. Année Scolaire & Métadonnées</h3>
-          </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
-            <div>
-              <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:5px;">Libellé Année Scolaire</label>
-              <input type="text" id="anneeScolaireLabel" class="table-input" style="max-width:100%;" value="2026 – 2027">
-            </div>
-            <div>
-              <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:5px;">Zone Vacances Scolaires</label>
-              <input type="text" id="zoneScolaire" class="table-input" style="max-width:100%;" value="Zone B">
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 2 : Grille des Tranches QF -->
-        <div class="card" id="baremes">
-          <div class="card-header-box">
-            <h3>2. Grille Tarifaire par Tranche de Quotient Familial (€)</h3>
-            <button type="button" class="btn-action" onclick="addTranche()">+ Ajouter une tranche QF</button>
-          </div>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Tranche</th>
-                  <th>QF Min (€)</th>
-                  <th>QF Max (€)</th>
-                  <th>Garderie Normal (€)</th>
-                  <th>Garderie Réduit (€)</th>
-                  <th>Repas Normal (€)</th>
-                  <th>Repas Réduit (€)</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="tranchesTbody">
-                <!-- Rempli dynamiquement par JS -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 3 : Tarifs Uniques Fixes -->
-        <div class="card" id="uniques">
-          <div class="card-header-box">
-            <h3>3. Tarifs Uniques Fixes Hors-Tranches (€)</h3>
-          </div>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Prestation Unique</th>
-                  <th>Tarif Unitaire (€)</th>
-                  <th>Condition d'application</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Garderie Occasionnelle</strong></td>
-                  <td><input type="number" step="0.05" id="tarifGarderieOccasionnel" class="table-input" value="2.10"> € / 30 min</td>
-                  <td>Enfant en garderie sans réservation préalable</td>
-                </tr>
-                <tr>
-                  <td><strong>Garderie Extérieurs</strong></td>
-                  <td><input type="number" step="0.05" id="tarifGarderieExterieur" class="table-input" value="1.66"> € / 30 min</td>
-                  <td>Enfant scolarisé hors commune de Laxou</td>
-                </tr>
-                <tr>
-                  <td><strong>Cantine PAI</strong></td>
-                  <td><input type="number" step="0.05" id="tarifRestaurationPai" class="table-input" value="3.97"> € / repas</td>
-                  <td>Projet d'Accueil Individualisé (allergies/paniers repas)</td>
-                </tr>
-                <tr>
-                  <td><strong>Cantine Occasionnelle</strong></td>
-                  <td><input type="number" step="0.05" id="tarifRestaurationOccasionnel" class="table-input" value="7.00"> € / repas</td>
-                  <td>Repas pris sans réservation au préalable</td>
-                </tr>
-                <tr>
-                  <td><strong>Cantine Extérieurs (QF 0 – 649)</strong></td>
-                  <td><input type="number" step="0.05" id="tarifRestaurationExt649" class="table-input" value="7.00"> € / repas</td>
-                  <td>Enfant hors Laxou (Tranche 1 & 2)</td>
-                </tr>
-                <tr>
-                  <td><strong>Cantine Extérieurs (QF 650+)</strong></td>
-                  <td><input type="number" step="0.05" id="tarifRestaurationExt650" class="table-input" value="8.25"> € / repas</td>
-                  <td>Enfant hors Laxou (Tranche 3 & 4)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 4 : Plafonds Mensuels par Mois -->
-        <div class="card" id="plafonds">
-          <div class="card-header-box">
-            <h3>4. Plafonds Mensuels Maximum Facturables par Mois (10 mois)</h3>
-          </div>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Mois Scolaire</th>
-                  <th>Plafond Garderie Matins</th>
-                  <th>Plafond Garderie Soirs</th>
-                  <th>Plafond Cantine Repas</th>
-                </tr>
-              </thead>
-              <tbody id="plafondsTbody">
-                <!-- Rempli dynamiquement par JS -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 5A : Périodes de Vacances Scolaires (Periods) -->
-        <div class="card" id="vacances">
-          <div class="card-header-box">
-            <h3>5A. Dates des Vacances Scolaires (Periods)</h3>
-          </div>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Période</th>
-                  <th>Date Fin de Cours</th>
-                  <th>Date Reprise</th>
-                </tr>
-              </thead>
-              <tbody id="vacancesTbody">
-                <!-- Rempli dynamiquement par JS -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 5B : Jours Fériés (Holidays) -->
-        <div class="card" id="feries">
-          <div class="card-header-box">
-            <h3>5B. Liste des Jours Fériés de l'Année (Holidays)</h3>
-            <button type="button" class="btn-action" onclick="addHoliday()">+ Ajouter un jour férié</button>
-          </div>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Date (AAAA-MM-JJ)</th>
-                  <th>Libellé Indicatif</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="holidaysTbody">
-                <!-- Rempli dynamiquement par JS -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 5C : Matrice des Occurrences de Jours (Months) -->
-        <div class="card" id="calendrier">
-          <div class="card-header-box">
-            <h3>5C. Matrice des Occurrences de Jours par Mois (Months)</h3>
-          </div>
-          <p style="font-size:0.88rem; color:var(--muted); margin-bottom:16px;">
-            Nombre brut de lundis, mardis, mercredis, jeudis et vendredis pour chaque mois de l'année scolaire.
-          </p>
-          <div class="table-wrap">
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th>Mois</th>
-                  <th>Lundis</th>
-                  <th>Mardis</th>
-                  <th>Mercredis</th>
-                  <th>Jeudis</th>
-                  <th>Vendredis</th>
-                </tr>
-              </thead>
-              <tbody id="occurrencesTbody">
-                <!-- Rempli dynamiquement par JS -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </form>
-
-      <!-- Section 6 : Historique & Export Excel -->
-      <div class="card" id="historique">
-        <div class="card-header-box">
-          <div>
-            <h3>6. Journal d'Historique des Simulations & Recherche Famille</h3>
-            <p style="font-size:0.85rem; color:var(--muted); margin:4px 0 0 0;">Retrouvez instantanément le dossier d'un parent lors d'un appel téléphonique.</p>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button type="button" class="btn-excel" onclick="exportToExcel()">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Exporter en Excel (.csv)
-            </button>
-            <button type="button" onclick="loadHistory()" style="background: transparent; border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px; font-size: 0.8rem; cursor: pointer; font-weight: 600;">🔄 Rafraîchir</button>
-          </div>
-        </div>
-
-        <!-- Barre de recherche rapide -->
-        <div style="margin-bottom:16px;">
-          <input type="text" id="searchHistoryInput" class="table-input" style="max-width:380px; font-weight:normal;" placeholder="🔍 Rechercher un prénom d'enfant ou nom de foyer (ex: Léa)..." oninput="filterHistory()">
-        </div>
-
-        <div class="table-wrap">
-          <table class="config-table">
-            <thead>
-              <tr>
-                <th>Date / Heure</th>
-                <th>Enfants / Foyer</th>
-                <th>Quotient Familial</th>
-                <th>Estimation Garderie</th>
-                <th>Estimation Cantine</th>
-                <th>Total Général</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="historyTbody">
-              <!-- Rempli dynamiquement par JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Section 7 : Export / Import de la Config Mairie -->
-      <div class="card" id="gestionJson">
-        <div class="card-header-box">
-          <h3>7. Sauvegarde & Importation de la Configuration Mairie</h3>
-        </div>
-        <p style="font-size:0.88rem; color:var(--muted); margin-bottom:14px;">
-          Téléchargez une sauvegarde au format JSON des barèmes d'une année scolaire pour les archiver ou charger la grille d'une autre commune.
+        <h2>Espace Réservé Mairie</h2>
+        <p>
+          Veuillez vous authentifier avec votre adresse e-mail municipale pour
+          accéder à la console d'administration.
         </p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <button type="button" class="btn-action" onclick="exportConfigJson()">💾 Exporter la grille de l'année (JSON)</button>
+
+        <form
+          id="authForm"
+          onsubmit="
+            event.preventDefault();
+            handleLogin();
+          "
+        >
+          <div class="auth-input-group">
+            <label for="agentEmail">Adresse e-mail professionnelle</label>
+            <input
+              type="email"
+              id="agentEmail"
+              class="auth-input"
+              placeholder="agent.periscolaire@laxou.fr"
+              required
+            />
+          </div>
+          <div class="auth-input-group">
+            <label for="agentPassword">Mot de passe de la Mairie</label>
+            <input
+              type="password"
+              id="agentPassword"
+              class="auth-input"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-auth-submit" id="btnAuthSubmit">
+            Se connecter à la Console
+          </button>
+          <div class="auth-error-msg" id="authError"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Header Harmonisé Responsive -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 52 52"
+            fill="none"
+            style="flex-shrink: 0"
+          >
+            <rect
+              width="52"
+              height="52"
+              rx="14"
+              fill="rgba(255,255,255,0.12)"
+            />
+            <path d="M26 8L40 17V19H12V17L26 8Z" fill="#E4B665" />
+            <rect x="14" y="21" width="4" height="16" fill="#F4F7FA" />
+            <rect x="21" y="21" width="4" height="16" fill="#F4F7FA" />
+            <rect x="28" y="21" width="4" height="16" fill="#F4F7FA" />
+            <rect x="35" y="21" width="4" height="16" fill="#F4F7FA" />
+            <rect x="11" y="39" width="30" height="4" rx="1" fill="#F4F7FA" />
+          </svg>
+          <div class="brand-text">
+            <span class="brand-badge">Console Mairie</span>
+            <h1>Mairie de Laxou · Service Périscolaire</h1>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a href="/" class="btn-front" target="_blank"
+            >↗ Voir le Portail Familles</a
+          >
         </div>
       </div>
+    </header>
 
-    </main>
-  </div>
+    <div class="admin-layout">
+      <!-- Sidebar Dark -->
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar-title">Navigation Métier</div>
+          <ul class="sidebar-menu">
+            <li class="sidebar-item">
+              <a href="#stats" class="sidebar-link active"
+                ><span>📊</span> Tableau de bord</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#identite" class="sidebar-link"
+                ><span>📅</span> Année & Métadonnées</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#baremes" class="sidebar-link"
+                ><span>⚙️</span> Barèmes Tranches QF</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#uniques" class="sidebar-link"
+                ><span>🏷️</span> Tarifs Uniques Fixes</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#plafonds" class="sidebar-link"
+                ><span>🗓️</span> Plafonds Mensuels</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#vacances" class="sidebar-link"
+                ><span>🏖️</span> Périodes de Vacances</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#feries" class="sidebar-link"
+                ><span>🎉</span> Jours Fériés (Holidays)</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#calendrier" class="sidebar-link"
+                ><span>📆</span> Occurrences de Jours</a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="#historique" class="sidebar-link"
+                ><span>📜</span> Historique & Export Excel</a
+              >
+            </li>
+          </ul>
+        </div>
 
-  <!-- Sticky Save Bar -->
-  <div class="save-bar" id="saveBar" style="display: none;">
-    <div>
-      <strong style="font-size: 0.9rem;">Changements non enregistrés dans la grille tarifaire</strong>
-      <span style="font-size: 0.78rem; color: var(--gold-light); display: block;">Cliquez sur enregistrer pour appliquer immédiatement ces nouveaux paramètres au moteur Serverless.</span>
+        <div class="sidebar-user">
+          <p>
+            <strong>Session Agent :</strong><br /><span id="loggedAgentEmail"
+              >non connecté</span
+            >
+          </p>
+          <button type="button" class="btn-logout" onclick="handleLogout()">
+            Se déconnecter
+          </button>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <main class="admin-content">
+        <div class="admin-title-box">
+          <div>
+            <h2>Pilotage & Paramétrage Périscolaire</h2>
+            <p>
+              Ajustez tous les barèmes, plafonds et calendriers scolaires
+              municipaux.
+            </p>
+          </div>
+          <div>
+            <button
+              class="btn-save"
+              id="btnSaveTop"
+              onclick="saveConfiguration()"
+            >
+              Enregistrer toute la grille
+            </button>
+          </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stats-grid" id="stats">
+          <div class="stat-card">
+            <div class="stat-card-title">Simulations réalisées</div>
+            <div class="stat-card-value" id="statSimCount">3</div>
+            <div class="stat-card-sub">Demandes enregistrées</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">QF Moyen Foyer</div>
+            <div class="stat-card-value" id="statQfMoyen">650</div>
+            <div class="stat-card-sub">Tranche 2 (421-649)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">Panier Mensuel Moyen</div>
+            <div class="stat-card-value" id="statMensuelMoyen">106.00 €</div>
+            <div class="stat-card-sub">Facturation estimée par foyer</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-title">Tranches Tarifaires</div>
+            <div class="stat-card-value" id="statTranchesCount">4</div>
+            <div class="stat-card-sub">Dégressives selon QF</div>
+          </div>
+        </div>
+
+        <form
+          id="configForm"
+          onsubmit="
+            event.preventDefault();
+            saveConfiguration();
+          "
+        >
+          <!-- Section 1 : Identité & Année Scolaire -->
+          <div class="card" id="identite">
+            <div class="card-header-box">
+              <h3>1. Année Scolaire & Métadonnées</h3>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 16px;
+              "
+            >
+              <div>
+                <label
+                  style="
+                    display: block;
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    margin-bottom: 5px;
+                  "
+                  >Libellé Année Scolaire</label
+                >
+                <input
+                  type="text"
+                  id="anneeScolaireLabel"
+                  class="table-input"
+                  style="max-width: 100%"
+                  value="2026 – 2027"
+                />
+              </div>
+              <div>
+                <label
+                  style="
+                    display: block;
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    margin-bottom: 5px;
+                  "
+                  >Zone Vacances Scolaires</label
+                >
+                <input
+                  type="text"
+                  id="zoneScolaire"
+                  class="table-input"
+                  style="max-width: 100%"
+                  value="Zone B"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2 : Grille des Tranches QF -->
+          <div class="card" id="baremes">
+            <div class="card-header-box">
+              <h3>2. Grille Tarifaire par Tranche de Quotient Familial (€)</h3>
+              <button type="button" class="btn-action" onclick="addTranche()">
+                + Ajouter une tranche QF
+              </button>
+            </div>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Tranche</th>
+                    <th>QF Min (€)</th>
+                    <th>QF Max (€)</th>
+                    <th>Garderie Normal (€)</th>
+                    <th>Garderie Réduit (€)</th>
+                    <th>Repas Normal (€)</th>
+                    <th>Repas Réduit (€)</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="tranchesTbody">
+                  <!-- Rempli dynamiquement par JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3 : Tarifs Uniques Fixes -->
+          <div class="card" id="uniques">
+            <div class="card-header-box">
+              <h3>3. Tarifs Uniques Fixes Hors-Tranches (€)</h3>
+            </div>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Prestation Unique</th>
+                    <th>Tarif Unitaire (€)</th>
+                    <th>Condition d'application</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Garderie Occasionnelle</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifGarderieOccasionnel"
+                        class="table-input"
+                        value="2.10"
+                      />
+                      € / 30 min
+                    </td>
+                    <td>Enfant en garderie sans réservation préalable</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Garderie Extérieurs</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifGarderieExterieur"
+                        class="table-input"
+                        value="1.66"
+                      />
+                      € / 30 min
+                    </td>
+                    <td>Enfant scolarisé hors commune de Laxou</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cantine PAI</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifRestaurationPai"
+                        class="table-input"
+                        value="3.97"
+                      />
+                      € / repas
+                    </td>
+                    <td>
+                      Projet d'Accueil Individualisé (allergies/paniers repas)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cantine Occasionnelle</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifRestaurationOccasionnel"
+                        class="table-input"
+                        value="7.00"
+                      />
+                      € / repas
+                    </td>
+                    <td>Repas pris sans réservation au préalable</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cantine Extérieurs (QF 0 – 649)</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifRestaurationExt649"
+                        class="table-input"
+                        value="7.00"
+                      />
+                      € / repas
+                    </td>
+                    <td>Enfant hors Laxou (Tranche 1 & 2)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cantine Extérieurs (QF 650+)</strong></td>
+                    <td>
+                      <input
+                        type="number"
+                        step="0.05"
+                        id="tarifRestaurationExt650"
+                        class="table-input"
+                        value="8.25"
+                      />
+                      € / repas
+                    </td>
+                    <td>Enfant hors Laxou (Tranche 3 & 4)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 4 : Plafonds Mensuels par Mois -->
+          <div class="card" id="plafonds">
+            <div class="card-header-box">
+              <h3>
+                4. Plafonds Mensuels Maximum Facturables par Mois (10 mois)
+              </h3>
+            </div>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Mois Scolaire</th>
+                    <th>Plafond Garderie Matins</th>
+                    <th>Plafond Garderie Soirs</th>
+                    <th>Plafond Cantine Repas</th>
+                  </tr>
+                </thead>
+                <tbody id="plafondsTbody">
+                  <!-- Rempli dynamiquement par JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 5A : Périodes de Vacances Scolaires (Periods) -->
+          <div class="card" id="vacances">
+            <div class="card-header-box">
+              <h3>5A. Dates des Vacances Scolaires (Periods)</h3>
+            </div>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Période</th>
+                    <th>Date Fin de Cours</th>
+                    <th>Date Reprise</th>
+                  </tr>
+                </thead>
+                <tbody id="vacancesTbody">
+                  <!-- Rempli dynamiquement par JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 5B : Jours Fériés (Holidays) -->
+          <div class="card" id="feries">
+            <div class="card-header-box">
+              <h3>5B. Liste des Jours Fériés de l'Année (Holidays)</h3>
+              <button type="button" class="btn-action" onclick="addHoliday()">
+                + Ajouter un jour férié
+              </button>
+            </div>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Date (AAAA-MM-JJ)</th>
+                    <th>Libellé Indicatif</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="holidaysTbody">
+                  <!-- Rempli dynamiquement par JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 5C : Matrice des Occurrences de Jours (Months) -->
+          <div class="card" id="calendrier">
+            <div class="card-header-box">
+              <h3>5C. Matrice des Occurrences de Jours par Mois (Months)</h3>
+            </div>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--muted);
+                margin-bottom: 16px;
+              "
+            >
+              Nombre brut de lundis, mardis, mercredis, jeudis et vendredis pour
+              chaque mois de l'année scolaire.
+            </p>
+            <div class="table-wrap">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Mois</th>
+                    <th>Lundis</th>
+                    <th>Mardis</th>
+                    <th>Mercredis</th>
+                    <th>Jeudis</th>
+                    <th>Vendredis</th>
+                  </tr>
+                </thead>
+                <tbody id="occurrencesTbody">
+                  <!-- Rempli dynamiquement par JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </form>
+
+        <!-- Section 6 : Historique & Export Excel -->
+        <div class="card" id="historique">
+          <div class="card-header-box">
+            <div>
+              <h3>
+                6. Journal d'Historique des Simulations & Recherche Famille
+              </h3>
+              <p
+                style="
+                  font-size: 0.85rem;
+                  color: var(--muted);
+                  margin: 4px 0 0 0;
+                "
+              >
+                Retrouvez instantanément le dossier d'un parent lors d'un appel
+                téléphonique.
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <button type="button" class="btn-excel" onclick="exportToExcel()">
+                <svg
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+                Exporter en Excel (.csv)
+              </button>
+              <button
+                type="button"
+                onclick="loadHistory()"
+                style="
+                  background: transparent;
+                  border: 1px solid var(--border);
+                  padding: 5px 12px;
+                  border-radius: 999px;
+                  font-size: 0.8rem;
+                  cursor: pointer;
+                  font-weight: 600;
+                "
+              >
+                🔄 Rafraîchir
+              </button>
+            </div>
+          </div>
+
+          <!-- Barre de recherche rapide -->
+          <div style="margin-bottom: 16px">
+            <input
+              type="text"
+              id="searchHistoryInput"
+              class="table-input"
+              style="max-width: 380px; font-weight: normal"
+              placeholder="🔍 Rechercher un prénom d'enfant ou nom de foyer (ex: Léa)..."
+              oninput="filterHistory()"
+            />
+          </div>
+
+          <div class="table-wrap">
+            <table class="config-table">
+              <thead>
+                <tr>
+                  <th>Date / Heure</th>
+                  <th>Enfants / Foyer</th>
+                  <th>Quotient Familial</th>
+                  <th>Estimation Garderie</th>
+                  <th>Estimation Cantine</th>
+                  <th>Total Général</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="historyTbody">
+                <!-- Rempli dynamiquement par JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section 7 : Export / Import de la Config Mairie -->
+        <div class="card" id="gestionJson">
+          <div class="card-header-box">
+            <h3>7. Sauvegarde & Importation de la Configuration Mairie</h3>
+          </div>
+          <p
+            style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px"
+          >
+            Téléchargez une sauvegarde au format JSON des barèmes d'une année
+            scolaire pour les archiver ou charger la grille d'une autre commune.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap">
+            <button
+              type="button"
+              class="btn-action"
+              onclick="exportConfigJson()"
+            >
+              💾 Exporter la grille de l'année (JSON)
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
-    <button class="btn-save" onclick="saveConfiguration()">Enregistrer toute la grille</button>
-  </div>
 
-  <script src="/js/admin.js"></script>
-</body>
+    <!-- Sticky Save Bar -->
+    <div class="save-bar" id="saveBar" style="display: none">
+      <div>
+        <strong style="font-size: 0.9rem"
+          >Changements non enregistrés dans la grille tarifaire</strong
+        >
+        <span
+          style="font-size: 0.78rem; color: var(--gold-light); display: block"
+          >Cliquez sur enregistrer pour appliquer immédiatement ces nouveaux
+          paramètres au moteur Serverless.</span
+        >
+      </div>
+      <button class="btn-save" onclick="saveConfiguration()">
+        Enregistrer toute la grille
+      </button>
+    </div>
+
+    <script src="/js/admin.js"></script>
+  </body>
 </html>

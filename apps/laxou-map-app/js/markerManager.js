@@ -1,27 +1,27 @@
 /**
  * MarkerManager - Gestionnaire de marqueurs DOM interactifs
  * Positionne des éléments HTML/SVG sur un overlay aligné avec le Canvas.
- * 
+ *
  * Les marqueurs sont des éléments DOM (pas Canvas) pour bénéficier de
  * l'accessibilité native (tabindex, aria-label, focus visible).
  */
 export class MarkerManager {
   /** Correspondance catégorie → icône FontAwesome */
   static CATEGORY_ICONS = {
-    services: 'building-columns',
-    parcs: 'tree',
-    culture: 'landmark',
-    sports: 'futbol',
-    ecoles: 'graduation-cap'
+    services: "building-columns",
+    parcs: "tree",
+    culture: "landmark",
+    sports: "futbol",
+    ecoles: "graduation-cap",
   };
 
   /** Correspondance catégorie → couleur */
   static CATEGORY_COLORS = {
-    services: '#2563eb',
-    parcs: '#16a34a',
-    culture: '#9333ea',
-    sports: '#ea580c',
-    ecoles: '#d97706'
+    services: "#2563eb",
+    parcs: "#16a34a",
+    culture: "#9333ea",
+    sports: "#ea580c",
+    ecoles: "#d97706",
   };
 
   /**
@@ -59,13 +59,13 @@ export class MarkerManager {
    */
   _setupEventListeners() {
     // Repositionner les marqueurs à chaque changement de viewport (pan/zoom)
-    this.eventBus.on('viewport:changed', (vpState) => {
+    this.eventBus.on("viewport:changed", (vpState) => {
       this.updatePositions(vpState);
       this._updateLabelVisibility(vpState.zoom);
     });
 
     // Mettre en surbrillance le marqueur sélectionné
-    this.eventBus.on('place:selected', ({ placeId }) => {
+    this.eventBus.on("place:selected", ({ placeId }) => {
       this.setActiveMarker(placeId);
     });
   }
@@ -78,11 +78,15 @@ export class MarkerManager {
     // Supprimer les anciens marqueurs
     this.clearMarkers();
 
-    const leafletEngine = (this.viewport && this.viewport.leafletEngine) || (typeof window !== 'undefined' && window.laxouApp && window.laxouApp.leafletEngine);
+    const leafletEngine =
+      (this.viewport && this.viewport.leafletEngine) ||
+      (typeof window !== "undefined" &&
+        window.laxouApp &&
+        window.laxouApp.leafletEngine);
 
-    if (leafletEngine && leafletEngine.map && typeof L !== 'undefined') {
+    if (leafletEngine && leafletEngine.map && typeof L !== "undefined") {
       // --- MODE LEAFLET NATIVE CLUSTERING ---
-      if (typeof L.markerClusterGroup === 'function') {
+      if (typeof L.markerClusterGroup === "function") {
         this.clusterGroup = L.markerClusterGroup({
           showCoverageOnHover: false,
           maxClusterRadius: 30, // Clusters moins agressifs
@@ -90,28 +94,30 @@ export class MarkerManager {
           spiderfyOnMaxZoom: true,
           iconCreateFunction: (cluster) => {
             const count = cluster.getChildCount();
-            let cClass = 'marker-cluster-small';
-            if (count > 15) cClass = 'marker-cluster-medium';
-            if (count > 40) cClass = 'marker-cluster-large';
+            let cClass = "marker-cluster-small";
+            if (count > 15) cClass = "marker-cluster-medium";
+            if (count > 40) cClass = "marker-cluster-large";
 
             return L.divIcon({
               html: `<div class="custom-cluster-inner"><span>${count}</span></div>`,
               className: `custom-marker-cluster ${cClass}`,
-              iconSize: L.point(38, 38)
+              iconSize: L.point(38, 38),
             });
-          }
+          },
         });
         leafletEngine.map.addLayer(this.clusterGroup);
       }
 
       for (const place of places) {
-        const iconName = MarkerManager.CATEGORY_ICONS[place.category] || 'map-pin';
-        const color = MarkerManager.CATEGORY_COLORS[place.category] || '#6366f1';
+        const iconName =
+          MarkerManager.CATEGORY_ICONS[place.category] || "map-pin";
+        const color =
+          MarkerManager.CATEGORY_COLORS[place.category] || "#6366f1";
 
         const divIcon = L.divIcon({
-          className: 'custom-div-icon',
+          className: "custom-div-icon",
           html: `
-            <div class="map-marker ${place.isNprnu ? 'nprnu' : ''}" data-place-id="${place.id}">
+            <div class="map-marker ${place.isNprnu ? "nprnu" : ""}" data-place-id="${place.id}">
               <div class="marker-pin" style="--marker-color: ${color}">
                 <i class="fa-solid fa-${iconName}"></i>
               </div>
@@ -119,17 +125,17 @@ export class MarkerManager {
             </div>
           `,
           iconSize: [36, 42],
-          iconAnchor: [18, 42]
+          iconAnchor: [18, 42],
         });
 
         const marker = L.marker([place.lat, place.lng], { icon: divIcon });
 
-        marker.on('click', (e) => {
+        marker.on("click", (e) => {
           if (e.originalEvent) e.originalEvent.stopPropagation();
-          this.eventBus.emit('place:selected', {
+          this.eventBus.emit("place:selected", {
             placeId: place.id,
             place,
-            source: 'map'
+            source: "map",
           });
         });
 
@@ -165,15 +171,15 @@ export class MarkerManager {
    * @private
    */
   _createMarkerElement(place) {
-    const icon = MarkerManager.CATEGORY_ICONS[place.category] || 'map-pin';
-    const color = MarkerManager.CATEGORY_COLORS[place.category] || '#6366f1';
+    const icon = MarkerManager.CATEGORY_ICONS[place.category] || "map-pin";
+    const color = MarkerManager.CATEGORY_COLORS[place.category] || "#6366f1";
 
-    const marker = document.createElement('div');
-    marker.className = 'map-marker';
+    const marker = document.createElement("div");
+    marker.className = "map-marker";
     marker.dataset.placeId = place.id;
-    marker.setAttribute('tabindex', '0');
-    marker.setAttribute('role', 'button');
-    marker.setAttribute('aria-label', `${place.name} — ${place.address}`);
+    marker.setAttribute("tabindex", "0");
+    marker.setAttribute("role", "button");
+    marker.setAttribute("aria-label", `${place.name} — ${place.address}`);
 
     marker.innerHTML = `
       <div class="marker-pin" style="--marker-color: ${color}">
@@ -183,36 +189,36 @@ export class MarkerManager {
     `;
 
     if (place.isNprnu) {
-      marker.classList.add('nprnu');
+      marker.classList.add("nprnu");
     }
 
-    marker.addEventListener('click', (e) => {
+    marker.addEventListener("click", (e) => {
       e.stopPropagation();
-      this.eventBus.emit('place:selected', {
+      this.eventBus.emit("place:selected", {
         placeId: place.id,
         place,
-        source: 'map'
+        source: "map",
       });
     });
 
-    marker.addEventListener('mouseenter', () => {
-      this.eventBus.emit('place:hovered', { placeId: place.id });
-      marker.classList.add('hovered');
+    marker.addEventListener("mouseenter", () => {
+      this.eventBus.emit("place:hovered", { placeId: place.id });
+      marker.classList.add("hovered");
     });
 
-    marker.addEventListener('mouseleave', () => {
-      this.eventBus.emit('place:hovered', { placeId: null });
-      marker.classList.remove('hovered');
+    marker.addEventListener("mouseleave", () => {
+      this.eventBus.emit("place:hovered", { placeId: null });
+      marker.classList.remove("hovered");
     });
 
-    marker.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    marker.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         e.stopPropagation();
-        this.eventBus.emit('place:selected', {
+        this.eventBus.emit("place:selected", {
           placeId: place.id,
           place,
-          source: 'map'
+          source: "map",
         });
       }
     });
@@ -227,9 +233,10 @@ export class MarkerManager {
    * @private
    */
   _isHtmlElement(el) {
-    if (!el || typeof el !== 'object') return false;
-    if (typeof HTMLElement !== 'undefined' && el instanceof HTMLElement) return true;
-    return Boolean(el.classList && typeof el.classList.add === 'function');
+    if (!el || typeof el !== "object") return false;
+    if (typeof HTMLElement !== "undefined" && el instanceof HTMLElement)
+      return true;
+    return Boolean(el.classList && typeof el.classList.add === "function");
   }
 
   /**
@@ -242,9 +249,13 @@ export class MarkerManager {
       vpState = this.viewport.getState();
     }
 
-    const leafletEngine = (this.viewport && this.viewport.leafletEngine) || (typeof window !== 'undefined' && window.laxouApp && window.laxouApp.leafletEngine);
+    const leafletEngine =
+      (this.viewport && this.viewport.leafletEngine) ||
+      (typeof window !== "undefined" &&
+        window.laxouApp &&
+        window.laxouApp.leafletEngine);
 
-    if (leafletEngine && leafletEngine.map && typeof L !== 'undefined') {
+    if (leafletEngine && leafletEngine.map && typeof L !== "undefined") {
       // Leaflet gère son propre repositionnement à 60 FPS
       return;
     }
@@ -256,7 +267,11 @@ export class MarkerManager {
 
       let screen = { x: 0, y: 0 };
       if (this.projection) {
-        screen = this.projection.geoToScreen(place.lat, place.lng, vpState || {});
+        screen = this.projection.geoToScreen(
+          place.lat,
+          place.lng,
+          vpState || {},
+        );
       }
 
       el.style.transform = `translate(${screen.x}px, ${screen.y}px)`;
@@ -264,11 +279,12 @@ export class MarkerManager {
       const width = (vpState && vpState.width) || 800;
       const height = (vpState && vpState.height) || 600;
 
-      const isOnScreen = (
-        screen.x > -60 && screen.x < width + 60 &&
-        screen.y > -60 && screen.y < height + 60
-      );
-      el.style.display = (isOnScreen && this.visibleIds.has(id)) ? '' : 'none';
+      const isOnScreen =
+        screen.x > -60 &&
+        screen.x < width + 60 &&
+        screen.y > -60 &&
+        screen.y < height + 60;
+      el.style.display = isOnScreen && this.visibleIds.has(id) ? "" : "none";
     }
   }
 
@@ -289,7 +305,7 @@ export class MarkerManager {
   setActiveMarker(placeId) {
     // Retirer la classe active et réinitialiser le zIndexOffset de tous les marqueurs
     for (const [id, marker] of this.markerElements) {
-      if (marker && typeof marker.setZIndexOffset === 'function') {
+      if (marker && typeof marker.setZIndexOffset === "function") {
         marker.setZIndexOffset(0);
       }
 
@@ -301,9 +317,12 @@ export class MarkerManager {
       }
 
       if (domNode) {
-        if (domNode.classList) domNode.classList.remove('active');
-        const innerMarker = domNode.querySelector ? domNode.querySelector('.map-marker') : null;
-        if (innerMarker && innerMarker.classList) innerMarker.classList.remove('active');
+        if (domNode.classList) domNode.classList.remove("active");
+        const innerMarker = domNode.querySelector
+          ? domNode.querySelector(".map-marker")
+          : null;
+        if (innerMarker && innerMarker.classList)
+          innerMarker.classList.remove("active");
       }
     }
 
@@ -314,7 +333,10 @@ export class MarkerManager {
       const activeMarker = this.markerElements.get(placeId);
 
       const applyActiveStyles = () => {
-        if (activeMarker && typeof activeMarker.setZIndexOffset === 'function') {
+        if (
+          activeMarker &&
+          typeof activeMarker.setZIndexOffset === "function"
+        ) {
           activeMarker.setZIndexOffset(10000);
         }
 
@@ -326,13 +348,20 @@ export class MarkerManager {
         }
 
         if (domNode) {
-          if (domNode.classList) domNode.classList.add('active');
-          const innerMarker = domNode.querySelector ? domNode.querySelector('.map-marker') : null;
-          if (innerMarker && innerMarker.classList) innerMarker.classList.add('active');
+          if (domNode.classList) domNode.classList.add("active");
+          const innerMarker = domNode.querySelector
+            ? domNode.querySelector(".map-marker")
+            : null;
+          if (innerMarker && innerMarker.classList)
+            innerMarker.classList.add("active");
         }
       };
 
-      if (this.clusterGroup && activeMarker && typeof activeMarker.getLatLng === 'function') {
+      if (
+        this.clusterGroup &&
+        activeMarker &&
+        typeof activeMarker.getLatLng === "function"
+      ) {
         this.clusterGroup.zoomToShowLayer(activeMarker, () => {
           applyActiveStyles();
         });
@@ -349,9 +378,18 @@ export class MarkerManager {
   setVisiblePlaces(placeIds) {
     this.visibleIds = new Set(placeIds);
 
-    const leafletEngine = (this.viewport && this.viewport.leafletEngine) || (typeof window !== 'undefined' && window.laxouApp && window.laxouApp.leafletEngine);
+    const leafletEngine =
+      (this.viewport && this.viewport.leafletEngine) ||
+      (typeof window !== "undefined" &&
+        window.laxouApp &&
+        window.laxouApp.leafletEngine);
 
-    if (leafletEngine && leafletEngine.map && this.clusterGroup && typeof L !== 'undefined') {
+    if (
+      leafletEngine &&
+      leafletEngine.map &&
+      this.clusterGroup &&
+      typeof L !== "undefined"
+    ) {
       this.clusterGroup.clearLayers();
       for (const id of placeIds) {
         const marker = this.markerElements.get(id);
@@ -362,7 +400,7 @@ export class MarkerManager {
     } else {
       for (const [id, el] of this.markerElements) {
         if (this._isHtmlElement(el)) {
-          el.style.display = this.visibleIds.has(id) ? '' : 'none';
+          el.style.display = this.visibleIds.has(id) ? "" : "none";
         }
       }
     }
@@ -372,7 +410,11 @@ export class MarkerManager {
    * Supprime tous les marqueurs du conteneur overlay / Leaflet.
    */
   clearMarkers() {
-    const leafletEngine = (this.viewport && this.viewport.leafletEngine) || (typeof window !== 'undefined' && window.laxouApp && window.laxouApp.leafletEngine);
+    const leafletEngine =
+      (this.viewport && this.viewport.leafletEngine) ||
+      (typeof window !== "undefined" &&
+        window.laxouApp &&
+        window.laxouApp.leafletEngine);
 
     if (this.clusterGroup && leafletEngine && leafletEngine.map) {
       this.clusterGroup.clearLayers();

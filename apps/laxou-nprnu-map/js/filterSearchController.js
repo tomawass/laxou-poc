@@ -3,11 +3,11 @@
  */
 export class FilterSearchController {
   static CATEGORY_COLORS = {
-    ecoles: '#d97706',
-    parcs: '#16a34a',
-    services: '#2563eb',
-    sports: '#ea580c',
-    mobilites: '#9333ea'
+    ecoles: "#d97706",
+    parcs: "#16a34a",
+    services: "#2563eb",
+    sports: "#ea580c",
+    mobilites: "#9333ea",
   };
 
   /**
@@ -20,8 +20,8 @@ export class FilterSearchController {
     this.dataProvider = dataProvider;
     this.elements = elements;
 
-    this.activeCategory = 'all';
-    this.searchQuery = '';
+    this.activeCategory = "all";
+    this.searchQuery = "";
 
     this._setupEventListeners();
   }
@@ -30,13 +30,13 @@ export class FilterSearchController {
     const { searchInput, clearSearchBtn } = this.elements;
 
     if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener("input", (e) => {
         this.searchQuery = e.target.value;
         if (clearSearchBtn) {
           if (this.searchQuery.length > 0) {
-            clearSearchBtn.classList.remove('hidden');
+            clearSearchBtn.classList.remove("hidden");
           } else {
-            clearSearchBtn.classList.add('hidden');
+            clearSearchBtn.classList.add("hidden");
           }
         }
         this._triggerFilterUpdate();
@@ -44,10 +44,10 @@ export class FilterSearchController {
     }
 
     if (clearSearchBtn && searchInput) {
-      clearSearchBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        this.searchQuery = '';
-        clearSearchBtn.classList.add('hidden');
+      clearSearchBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        this.searchQuery = "";
+        clearSearchBtn.classList.add("hidden");
         this._triggerFilterUpdate();
       });
     }
@@ -59,32 +59,32 @@ export class FilterSearchController {
 
     const categories = this.dataProvider.getCategories();
 
-    categoriesBar.innerHTML = '';
+    categoriesBar.innerHTML = "";
 
     // Chip "Tous"
-    const allChip = document.createElement('button');
-    allChip.className = `category-chip${this.activeCategory === 'all' ? ' active' : ''}`;
-    allChip.dataset.category = 'all';
+    const allChip = document.createElement("button");
+    allChip.className = `category-chip${this.activeCategory === "all" ? " active" : ""}`;
+    allChip.dataset.category = "all";
     allChip.innerHTML = `<i class="fa-solid fa-border-all"></i> Tous`;
-    allChip.addEventListener('click', () => this.setCategory('all'));
+    allChip.addEventListener("click", () => this.setCategory("all"));
     categoriesBar.appendChild(allChip);
 
     // Chips par catégorie
-    categories.forEach(cat => {
-      const chip = document.createElement('button');
-      chip.className = `category-chip${this.activeCategory === cat.id ? ' active' : ''}`;
+    categories.forEach((cat) => {
+      const chip = document.createElement("button");
+      chip.className = `category-chip${this.activeCategory === cat.id ? " active" : ""}`;
       chip.dataset.category = cat.id;
 
-      const iconClass = cat.icon || 'location-dot';
-      const color = FilterSearchController.CATEGORY_COLORS[cat.id] || '#6366f1';
-      chip.style.setProperty('--cat-color', color);
+      const iconClass = cat.icon || "location-dot";
+      const color = FilterSearchController.CATEGORY_COLORS[cat.id] || "#6366f1";
+      chip.style.setProperty("--cat-color", color);
 
       chip.innerHTML = `
         <i class="fa-solid fa-${iconClass}"></i>
         <span>${cat.name}</span>
       `;
 
-      chip.addEventListener('click', () => this.setCategory(cat.id));
+      chip.addEventListener("click", () => this.setCategory(cat.id));
       categoriesBar.appendChild(chip);
     });
   }
@@ -94,11 +94,11 @@ export class FilterSearchController {
 
     const { categoriesBar } = this.elements;
     if (categoriesBar) {
-      categoriesBar.querySelectorAll('.category-chip').forEach(chip => {
+      categoriesBar.querySelectorAll(".category-chip").forEach((chip) => {
         if (chip.dataset.category === catId) {
-          chip.classList.add('active');
+          chip.classList.add("active");
         } else {
-          chip.classList.remove('active');
+          chip.classList.remove("active");
         }
       });
     }
@@ -109,13 +109,13 @@ export class FilterSearchController {
   _triggerFilterUpdate() {
     const filteredPlaces = this.dataProvider.filterPlaces(
       this.activeCategory,
-      this.searchQuery
+      this.searchQuery,
     );
 
-    this.eventBus.emit('filter:changed', {
+    this.eventBus.emit("filter:changed", {
       category: this.activeCategory,
       query: this.searchQuery,
-      places: filteredPlaces
+      places: filteredPlaces,
     });
   }
 }

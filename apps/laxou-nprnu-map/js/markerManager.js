@@ -3,19 +3,19 @@
  */
 export class MarkerManager {
   static CATEGORY_ICONS = {
-    ecoles: 'graduation-cap',
-    parcs: 'tree',
-    services: 'building-columns',
-    sports: 'dumbbell',
-    mobilites: 'route'
+    ecoles: "graduation-cap",
+    parcs: "tree",
+    services: "building-columns",
+    sports: "dumbbell",
+    mobilites: "route",
   };
 
   static CATEGORY_COLORS = {
-    ecoles: '#d97706',
-    parcs: '#16a34a',
-    services: '#2563eb',
-    sports: '#ea580c',
-    mobilites: '#9333ea'
+    ecoles: "#d97706",
+    parcs: "#16a34a",
+    services: "#2563eb",
+    sports: "#ea580c",
+    mobilites: "#9333ea",
   };
 
   /**
@@ -39,7 +39,7 @@ export class MarkerManager {
 
   _setupEventListeners() {
     if (this.eventBus) {
-      this.eventBus.on('place:selected', ({ placeId }) => {
+      this.eventBus.on("place:selected", ({ placeId }) => {
         this.setActiveMarker(placeId);
       });
     }
@@ -47,12 +47,12 @@ export class MarkerManager {
 
   /**
    * Génère les éléments DOM des marqueurs positionnés en pourcentage (x%, y%) sur le conteneur image.
-   * @param {Array<Object>} places 
+   * @param {Array<Object>} places
    */
   renderMarkers(places) {
     this.clearMarkers();
 
-    places.forEach(place => {
+    places.forEach((place) => {
       const markerEl = this._createMarkerElement(place);
       this.overlay.appendChild(markerEl);
       this.markerElements.set(place.id, markerEl);
@@ -62,22 +62,23 @@ export class MarkerManager {
 
   /**
    * Crée l'élément DOM d'un marqueur positionné.
-   * @param {Object} place 
+   * @param {Object} place
    * @returns {HTMLElement}
    * @private
    */
   _createMarkerElement(place) {
-    const el = document.createElement('div');
-    el.className = `map-marker${place.isNprnu ? ' nprnu' : ''}`;
+    const el = document.createElement("div");
+    el.className = `map-marker${place.isNprnu ? " nprnu" : ""}`;
     el.dataset.placeId = place.id;
     el.style.left = `${place.x}%`;
     el.style.top = `${place.y}%`;
-    el.setAttribute('tabindex', '0');
-    el.setAttribute('role', 'button');
-    el.setAttribute('aria-label', `${place.name}`);
+    el.setAttribute("tabindex", "0");
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", `${place.name}`);
 
-    const iconClass = MarkerManager.CATEGORY_ICONS[place.category] || 'location-dot';
-    const color = MarkerManager.CATEGORY_COLORS[place.category] || '#6366f1';
+    const iconClass =
+      MarkerManager.CATEGORY_ICONS[place.category] || "location-dot";
+    const color = MarkerManager.CATEGORY_COLORS[place.category] || "#6366f1";
 
     el.innerHTML = `
       <div class="marker-pin" style="--marker-color: ${color}">
@@ -87,26 +88,26 @@ export class MarkerManager {
     `;
 
     // Clic
-    el.addEventListener('click', (e) => {
+    el.addEventListener("click", (e) => {
       e.stopPropagation();
       if (this.eventBus) {
-        this.eventBus.emit('place:selected', {
+        this.eventBus.emit("place:selected", {
           placeId: place.id,
           place,
-          source: 'map'
+          source: "map",
         });
       }
     });
 
     // Clavier
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         if (this.eventBus) {
-          this.eventBus.emit('place:selected', {
+          this.eventBus.emit("place:selected", {
             placeId: place.id,
             place,
-            source: 'map'
+            source: "map",
           });
         }
       }
@@ -117,29 +118,29 @@ export class MarkerManager {
 
   /**
    * Active le marqueur sélectionné et lui donne la priorité visuelle.
-   * @param {string|null} placeId 
+   * @param {string|null} placeId
    */
   setActiveMarker(placeId) {
     for (const [id, el] of this.markerElements) {
-      el.classList.remove('active');
+      el.classList.remove("active");
     }
 
     this.activeMarkerId = placeId;
 
     if (placeId && this.markerElements.has(placeId)) {
       const activeEl = this.markerElements.get(placeId);
-      activeEl.classList.add('active');
+      activeEl.classList.add("active");
     }
   }
 
   /**
    * Filtre la visibilité des marqueurs.
-   * @param {Array<string>} placeIds 
+   * @param {Array<string>} placeIds
    */
   setVisiblePlaces(placeIds) {
     this.visibleIds = new Set(placeIds);
     for (const [id, el] of this.markerElements) {
-      el.style.display = this.visibleIds.has(id) ? '' : 'none';
+      el.style.display = this.visibleIds.has(id) ? "" : "none";
     }
   }
 

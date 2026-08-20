@@ -11,10 +11,10 @@ export class CanvasEngine {
    */
   constructor(canvas, projection, viewportController, eventBus = null) {
     if (!canvas) {
-      throw new Error('CanvasEngine requires a valid canvas element.');
+      throw new Error("CanvasEngine requires a valid canvas element.");
     }
     this.canvas = canvas;
-    this.ctx = canvas.getContext('2d');
+    this.ctx = canvas.getContext("2d");
     this.projection = projection;
     this.viewportController = viewportController;
     this.eventBus = eventBus;
@@ -43,7 +43,7 @@ export class CanvasEngine {
    * Auto-scale canvas for High-DPI / Retina displays and update Projection size.
    */
   resize() {
-    const dpr = (typeof window !== 'undefined' && window.devicePixelRatio) || 1;
+    const dpr = (typeof window !== "undefined" && window.devicePixelRatio) || 1;
     let cssWidth = 800;
     let cssHeight = 600;
 
@@ -62,7 +62,10 @@ export class CanvasEngine {
     this.canvas.style.width = `${cssWidth}px`;
     this.canvas.style.height = `${cssHeight}px`;
 
-    if (this.projection && typeof this.projection.setCanvasSize === 'function') {
+    if (
+      this.projection &&
+      typeof this.projection.setCanvasSize === "function"
+    ) {
       this.projection.setCanvasSize(cssWidth, cssHeight);
     }
     this.requestRedraw();
@@ -72,13 +75,13 @@ export class CanvasEngine {
    * Setup EventBus and window resize listeners.
    */
   setupListeners() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', () => this.resize());
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", () => this.resize());
     }
 
-    if (this.eventBus && typeof this.eventBus.on === 'function') {
-      this.eventBus.on('viewport:changed', () => this.requestRedraw());
-      this.eventBus.on('theme:changed', (e) => {
+    if (this.eventBus && typeof this.eventBus.on === "function") {
+      this.eventBus.on("viewport:changed", () => this.requestRedraw());
+      this.eventBus.on("theme:changed", (e) => {
         this.setDarkMode(e?.isDark ?? true);
       });
     }
@@ -86,7 +89,7 @@ export class CanvasEngine {
 
   /**
    * Set theme mode (Dark / Light).
-   * @param {boolean} isDark 
+   * @param {boolean} isDark
    */
   setDarkMode(isDark) {
     this.isDarkMode = Boolean(isDark);
@@ -99,7 +102,7 @@ export class CanvasEngine {
   requestRedraw() {
     if (!this.needsRedraw) {
       this.needsRedraw = true;
-      if (typeof requestAnimationFrame === 'function') {
+      if (typeof requestAnimationFrame === "function") {
         this.rafId = requestAnimationFrame(() => this.render());
       } else {
         this.render();
@@ -114,13 +117,15 @@ export class CanvasEngine {
     this.needsRedraw = false;
     this.rafId = null;
 
-    const viewport = this.viewportController ? this.viewportController.getState() : { x: 0, y: 0, zoom: 1, width: this.cssWidth, height: this.cssHeight };
+    const viewport = this.viewportController
+      ? this.viewportController.getState()
+      : { x: 0, y: 0, zoom: 1, width: this.cssWidth, height: this.cssHeight };
     const ctx = this.ctx;
     if (!ctx) return;
 
     ctx.save();
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    if (typeof ctx.scale === 'function') {
+    if (typeof ctx.scale === "function") {
       ctx.scale(this.dpr, this.dpr);
     }
 
@@ -139,7 +144,7 @@ export class CanvasEngine {
   // --- LAYER DRAWING IMPLEMENTATIONS ---
 
   drawBackground(viewport) {
-    this.ctx.fillStyle = this.isDarkMode ? '#0f172a' : '#f1f5f9';
+    this.ctx.fillStyle = this.isDarkMode ? "#0f172a" : "#f1f5f9";
     this.ctx.fillRect(0, 0, this.cssWidth, this.cssHeight);
   }
 
@@ -148,18 +153,24 @@ export class CanvasEngine {
     if (!projection) return;
 
     const zoom = viewport.zoom || 1;
-    const gridStep = zoom < 2.0 ? 0.01 : (zoom < 5.0 ? 0.005 : 0.002);
+    const gridStep = zoom < 2.0 ? 0.01 : zoom < 5.0 ? 0.005 : 0.002;
     const bounds = projection.getBounds();
 
     ctx.save();
-    ctx.strokeStyle = this.isDarkMode ? 'rgba(255, 255, 255, 0.07)' : 'rgba(0, 0, 0, 0.07)';
-    ctx.fillStyle = this.isDarkMode ? '#64748b' : '#94a3b8';
-    ctx.font = '10px Inter, sans-serif';
-    if (typeof ctx.setLineDash === 'function') {
+    ctx.strokeStyle = this.isDarkMode
+      ? "rgba(255, 255, 255, 0.07)"
+      : "rgba(0, 0, 0, 0.07)";
+    ctx.fillStyle = this.isDarkMode ? "#64748b" : "#94a3b8";
+    ctx.font = "10px Inter, sans-serif";
+    if (typeof ctx.setLineDash === "function") {
       ctx.setLineDash([4, 4]);
     }
 
-    for (let lng = Math.ceil(bounds.minLng / gridStep) * gridStep; lng <= bounds.maxLng; lng += gridStep) {
+    for (
+      let lng = Math.ceil(bounds.minLng / gridStep) * gridStep;
+      lng <= bounds.maxLng;
+      lng += gridStep
+    ) {
       const p1 = projection.geoToScreen(bounds.minLat, lng, viewport);
       const p2 = projection.geoToScreen(bounds.maxLat, lng, viewport);
       ctx.beginPath();
@@ -171,7 +182,11 @@ export class CanvasEngine {
       }
     }
 
-    for (let lat = Math.ceil(bounds.minLat / gridStep) * gridStep; lat <= bounds.maxLat; lat += gridStep) {
+    for (
+      let lat = Math.ceil(bounds.minLat / gridStep) * gridStep;
+      lat <= bounds.maxLat;
+      lat += gridStep
+    ) {
       const p1 = projection.geoToScreen(lat, bounds.minLng, viewport);
       const p2 = projection.geoToScreen(lat, bounds.maxLng, viewport);
       ctx.beginPath();
@@ -196,31 +211,43 @@ export class CanvasEngine {
 
       ctx.save();
       ctx.beginPath();
-      const first = projection.geoToScreen(district.polygon[0].lat, district.polygon[0].lng, viewport);
+      const first = projection.geoToScreen(
+        district.polygon[0].lat,
+        district.polygon[0].lng,
+        viewport,
+      );
       ctx.moveTo(first.x, first.y);
 
       for (let i = 1; i < district.polygon.length; i++) {
-        const pt = projection.geoToScreen(district.polygon[i].lat, district.polygon[i].lng, viewport);
+        const pt = projection.geoToScreen(
+          district.polygon[i].lat,
+          district.polygon[i].lng,
+          viewport,
+        );
         ctx.lineTo(pt.x, pt.y);
       }
       ctx.closePath();
 
-      ctx.fillStyle = district.color[this.isDarkMode ? 'dark' : 'light'];
+      ctx.fillStyle = district.color[this.isDarkMode ? "dark" : "light"];
       ctx.fill();
 
-      ctx.strokeStyle = district.stroke[this.isDarkMode ? 'dark' : 'light'];
+      ctx.strokeStyle = district.stroke[this.isDarkMode ? "dark" : "light"];
       ctx.lineWidth = 1.5;
-      if (typeof ctx.setLineDash === 'function') {
+      if (typeof ctx.setLineDash === "function") {
         ctx.setLineDash([6, 3]);
       }
       ctx.stroke();
 
       // Centroid Label
       if (zoom >= 1.3 && district.center) {
-        const centerPt = projection.geoToScreen(district.center.lat, district.center.lng, viewport);
-        ctx.fillStyle = this.isDarkMode ? '#f8fafc' : '#0f172a';
-        ctx.font = 'bold 12px Outfit, sans-serif';
-        ctx.textAlign = 'center';
+        const centerPt = projection.geoToScreen(
+          district.center.lat,
+          district.center.lng,
+          viewport,
+        );
+        ctx.fillStyle = this.isDarkMode ? "#f8fafc" : "#0f172a";
+        ctx.font = "bold 12px Outfit, sans-serif";
+        ctx.textAlign = "center";
         ctx.fillText(district.name, centerPt.x, centerPt.y);
       }
       ctx.restore();
@@ -235,18 +262,28 @@ export class CanvasEngine {
       if (!park.polygon || park.polygon.length === 0) continue;
       ctx.save();
       ctx.beginPath();
-      const first = projection.geoToScreen(park.polygon[0].lat, park.polygon[0].lng, viewport);
+      const first = projection.geoToScreen(
+        park.polygon[0].lat,
+        park.polygon[0].lng,
+        viewport,
+      );
       ctx.moveTo(first.x, first.y);
 
       for (let i = 1; i < park.polygon.length; i++) {
-        const pt = projection.geoToScreen(park.polygon[i].lat, park.polygon[i].lng, viewport);
+        const pt = projection.geoToScreen(
+          park.polygon[i].lat,
+          park.polygon[i].lng,
+          viewport,
+        );
         ctx.lineTo(pt.x, pt.y);
       }
       ctx.closePath();
 
-      ctx.fillStyle = this.isDarkMode ? 'rgba(16, 185, 129, 0.20)' : 'rgba(34, 197, 94, 0.25)';
+      ctx.fillStyle = this.isDarkMode
+        ? "rgba(16, 185, 129, 0.20)"
+        : "rgba(34, 197, 94, 0.25)";
       ctx.fill();
-      ctx.strokeStyle = 'rgba(16, 185, 129, 0.4)';
+      ctx.strokeStyle = "rgba(16, 185, 129, 0.4)";
       ctx.lineWidth = 1;
       ctx.stroke();
       ctx.restore();
@@ -262,17 +299,25 @@ export class CanvasEngine {
       if (!water.path || water.path.length === 0) continue;
       ctx.save();
       ctx.beginPath();
-      const first = projection.geoToScreen(water.path[0].lat, water.path[0].lng, viewport);
+      const first = projection.geoToScreen(
+        water.path[0].lat,
+        water.path[0].lng,
+        viewport,
+      );
       ctx.moveTo(first.x, first.y);
 
       for (let i = 1; i < water.path.length; i++) {
-        const pt = projection.geoToScreen(water.path[i].lat, water.path[i].lng, viewport);
+        const pt = projection.geoToScreen(
+          water.path[i].lat,
+          water.path[i].lng,
+          viewport,
+        );
         ctx.lineTo(pt.x, pt.y);
       }
-      ctx.strokeStyle = '#0284c7';
+      ctx.strokeStyle = "#0284c7";
       ctx.lineWidth = Math.max(2, (water.width || 4) * Math.sqrt(zoom));
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
       ctx.stroke();
       ctx.restore();
     }
@@ -285,31 +330,41 @@ export class CanvasEngine {
     const zoom = viewport.zoom || 1;
 
     for (const road of this.roads) {
-      if (road.type === 'local' && zoom < 1.2) continue; // LOD Culling
+      if (road.type === "local" && zoom < 1.2) continue; // LOD Culling
 
       ctx.save();
       ctx.beginPath();
-      const first = projection.geoToScreen(road.path[0].lat, road.path[0].lng, viewport);
+      const first = projection.geoToScreen(
+        road.path[0].lat,
+        road.path[0].lng,
+        viewport,
+      );
       ctx.moveTo(first.x, first.y);
 
       for (let i = 1; i < road.path.length; i++) {
-        const pt = projection.geoToScreen(road.path[i].lat, road.path[i].lng, viewport);
+        const pt = projection.geoToScreen(
+          road.path[i].lat,
+          road.path[i].lng,
+          viewport,
+        );
         ctx.lineTo(pt.x, pt.y);
       }
 
-      if (road.type === 'highway') {
-        ctx.strokeStyle = this.isDarkMode ? '#f59e0b' : '#d97706';
+      if (road.type === "highway") {
+        ctx.strokeStyle = this.isDarkMode ? "#f59e0b" : "#d97706";
         ctx.lineWidth = Math.max(3, 4 * Math.sqrt(zoom));
-      } else if (road.type === 'primary') {
-        ctx.strokeStyle = this.isDarkMode ? '#38bdf8' : '#0284c7';
+      } else if (road.type === "primary") {
+        ctx.strokeStyle = this.isDarkMode ? "#38bdf8" : "#0284c7";
         ctx.lineWidth = Math.max(2, 3 * Math.sqrt(zoom));
       } else {
-        ctx.strokeStyle = this.isDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)';
+        ctx.strokeStyle = this.isDarkMode
+          ? "rgba(255, 255, 255, 0.15)"
+          : "rgba(0, 0, 0, 0.15)";
         ctx.lineWidth = Math.max(1, 1.5 * Math.sqrt(zoom));
       }
 
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
       ctx.stroke();
       ctx.restore();
     }
@@ -325,7 +380,8 @@ export class CanvasEngine {
 
     // 1. Calculate meters per pixel
     const centerCos = Math.cos((centerLat * Math.PI) / 180);
-    const degPerPx = bounds.dLng / ((projection.baseWidth || this.cssWidth) * zoom);
+    const degPerPx =
+      bounds.dLng / ((projection.baseWidth || this.cssWidth) * zoom);
     const metersPerPx = degPerPx * 111320 * centerCos;
 
     // 2. Select target metric distance
@@ -347,8 +403,8 @@ export class CanvasEngine {
     const barHeight = 6;
 
     ctx.save();
-    ctx.strokeStyle = this.isDarkMode ? '#f8fafc' : '#0f172a';
-    ctx.fillStyle = this.isDarkMode ? '#f8fafc' : '#0f172a';
+    ctx.strokeStyle = this.isDarkMode ? "#f8fafc" : "#0f172a";
+    ctx.fillStyle = this.isDarkMode ? "#f8fafc" : "#0f172a";
     ctx.lineWidth = 2;
 
     // Main Bar line
@@ -363,9 +419,10 @@ export class CanvasEngine {
     ctx.stroke();
 
     // Label Text
-    const label = chosenMeters >= 1000 ? `${chosenMeters / 1000} km` : `${chosenMeters} m`;
-    ctx.font = 'bold 11px Inter, sans-serif';
-    ctx.textAlign = 'left';
+    const label =
+      chosenMeters >= 1000 ? `${chosenMeters / 1000} km` : `${chosenMeters} m`;
+    ctx.font = "bold 11px Inter, sans-serif";
+    ctx.textAlign = "left";
     ctx.fillText(label, x + actualBarPx + 8, y + 3);
     ctx.restore();
   }
@@ -378,168 +435,192 @@ export class CanvasEngine {
     // 1. District Boundaries
     this.districts = [
       {
-        id: 'champ-le-boeuf',
-        name: 'Champ-le-Bœuf (NPRNU)',
-        center: { lat: 48.6970, lng: 6.1430 },
-        color: { dark: 'rgba(16, 185, 129, 0.12)', light: 'rgba(16, 185, 129, 0.15)' },
-        stroke: { dark: 'rgba(16, 185, 129, 0.5)', light: 'rgba(16, 185, 129, 0.6)' },
+        id: "champ-le-boeuf",
+        name: "Champ-le-Bœuf (NPRNU)",
+        center: { lat: 48.697, lng: 6.143 },
+        color: {
+          dark: "rgba(16, 185, 129, 0.12)",
+          light: "rgba(16, 185, 129, 0.15)",
+        },
+        stroke: {
+          dark: "rgba(16, 185, 129, 0.5)",
+          light: "rgba(16, 185, 129, 0.6)",
+        },
         polygon: [
-          { lat: 48.7020, lng: 6.1350 },
-          { lat: 48.7020, lng: 6.1480 },
-          { lat: 48.6930, lng: 6.1480 },
-          { lat: 48.6930, lng: 6.1350 }
-        ]
+          { lat: 48.702, lng: 6.135 },
+          { lat: 48.702, lng: 6.148 },
+          { lat: 48.693, lng: 6.148 },
+          { lat: 48.693, lng: 6.135 },
+        ],
       },
       {
-        id: 'laxou-village',
-        name: 'Laxou Village',
-        center: { lat: 48.6870, lng: 6.1490 },
-        color: { dark: 'rgba(99, 102, 241, 0.12)', light: 'rgba(99, 102, 241, 0.15)' },
-        stroke: { dark: 'rgba(99, 102, 241, 0.5)', light: 'rgba(99, 102, 241, 0.6)' },
+        id: "laxou-village",
+        name: "Laxou Village",
+        center: { lat: 48.687, lng: 6.149 },
+        color: {
+          dark: "rgba(99, 102, 241, 0.12)",
+          light: "rgba(99, 102, 241, 0.15)",
+        },
+        stroke: {
+          dark: "rgba(99, 102, 241, 0.5)",
+          light: "rgba(99, 102, 241, 0.6)",
+        },
         polygon: [
-          { lat: 48.6920, lng: 6.1420 },
-          { lat: 48.6920, lng: 6.1560 },
-          { lat: 48.6820, lng: 6.1560 },
-          { lat: 48.6820, lng: 6.1420 }
-        ]
+          { lat: 48.692, lng: 6.142 },
+          { lat: 48.692, lng: 6.156 },
+          { lat: 48.682, lng: 6.156 },
+          { lat: 48.682, lng: 6.142 },
+        ],
       },
       {
-        id: 'laxou-provinces',
-        name: 'Laxou Sapinière & Provinces (NPRNU)',
-        center: { lat: 48.6795, lng: 6.1500 },
-        color: { dark: 'rgba(236, 72, 153, 0.12)', light: 'rgba(236, 72, 153, 0.15)' },
-        stroke: { dark: 'rgba(236, 72, 153, 0.5)', light: 'rgba(236, 72, 153, 0.6)' },
+        id: "laxou-provinces",
+        name: "Laxou Sapinière & Provinces (NPRNU)",
+        center: { lat: 48.6795, lng: 6.15 },
+        color: {
+          dark: "rgba(236, 72, 153, 0.12)",
+          light: "rgba(236, 72, 153, 0.15)",
+        },
+        stroke: {
+          dark: "rgba(236, 72, 153, 0.5)",
+          light: "rgba(236, 72, 153, 0.6)",
+        },
         polygon: [
-          { lat: 48.6840, lng: 6.1400 },
-          { lat: 48.6840, lng: 6.1600 },
-          { lat: 48.6750, lng: 6.1600 },
-          { lat: 48.6750, lng: 6.1400 }
-        ]
+          { lat: 48.684, lng: 6.14 },
+          { lat: 48.684, lng: 6.16 },
+          { lat: 48.675, lng: 6.16 },
+          { lat: 48.675, lng: 6.14 },
+        ],
       },
       {
-        id: 'nancy-centre',
-        name: 'Nancy Centre',
-        center: { lat: 48.6925, lng: 6.1800 },
-        color: { dark: 'rgba(245, 158, 11, 0.08)', light: 'rgba(245, 158, 11, 0.12)' },
-        stroke: { dark: 'rgba(245, 158, 11, 0.4)', light: 'rgba(245, 158, 11, 0.5)' },
+        id: "nancy-centre",
+        name: "Nancy Centre",
+        center: { lat: 48.6925, lng: 6.18 },
+        color: {
+          dark: "rgba(245, 158, 11, 0.08)",
+          light: "rgba(245, 158, 11, 0.12)",
+        },
+        stroke: {
+          dark: "rgba(245, 158, 11, 0.4)",
+          light: "rgba(245, 158, 11, 0.5)",
+        },
         polygon: [
-          { lat: 48.7000, lng: 6.1650 },
-          { lat: 48.7000, lng: 6.1950 },
-          { lat: 48.6850, lng: 6.1950 },
-          { lat: 48.6850, lng: 6.1650 }
-        ]
-      }
+          { lat: 48.7, lng: 6.165 },
+          { lat: 48.7, lng: 6.195 },
+          { lat: 48.685, lng: 6.195 },
+          { lat: 48.685, lng: 6.165 },
+        ],
+      },
     ];
 
     // 2. Parks & Woodland
     this.parks = [
       {
-        id: 'champ-de-boufflers',
+        id: "champ-de-boufflers",
         polygon: [
-          { lat: 48.6860, lng: 6.1460 },
-          { lat: 48.6860, lng: 6.1500 },
-          { lat: 48.6830, lng: 6.1500 },
-          { lat: 48.6830, lng: 6.1460 }
-        ]
+          { lat: 48.686, lng: 6.146 },
+          { lat: 48.686, lng: 6.15 },
+          { lat: 48.683, lng: 6.15 },
+          { lat: 48.683, lng: 6.146 },
+        ],
       },
       {
-        id: 'parc-provinces',
+        id: "parc-provinces",
         polygon: [
-          { lat: 48.6840, lng: 6.1540 },
-          { lat: 48.6840, lng: 6.1590 },
-          { lat: 48.6815, lng: 6.1590 },
-          { lat: 48.6815, lng: 6.1540 }
-        ]
+          { lat: 48.684, lng: 6.154 },
+          { lat: 48.684, lng: 6.159 },
+          { lat: 48.6815, lng: 6.159 },
+          { lat: 48.6815, lng: 6.154 },
+        ],
       },
       {
-        id: 'pepiniere-nancy',
+        id: "pepiniere-nancy",
         polygon: [
-          { lat: 48.6990, lng: 6.1820 },
-          { lat: 48.6990, lng: 6.1880 },
-          { lat: 48.6950, lng: 6.1880 },
-          { lat: 48.6950, lng: 6.1820 }
-        ]
+          { lat: 48.699, lng: 6.182 },
+          { lat: 48.699, lng: 6.188 },
+          { lat: 48.695, lng: 6.188 },
+          { lat: 48.695, lng: 6.182 },
+        ],
       },
       {
-        id: 'parc-sainte-marie',
+        id: "parc-sainte-marie",
         polygon: [
-          { lat: 48.6825, lng: 6.1700 },
-          { lat: 48.6825, lng: 6.1740 },
-          { lat: 48.6795, lng: 6.1740 },
-          { lat: 48.6795, lng: 6.1700 }
-        ]
-      }
+          { lat: 48.6825, lng: 6.17 },
+          { lat: 48.6825, lng: 6.174 },
+          { lat: 48.6795, lng: 6.174 },
+          { lat: 48.6795, lng: 6.17 },
+        ],
+      },
     ];
 
     // 3. Rivers & Waterways
     this.waterways = [
       {
-        id: 'la-meurthe',
+        id: "la-meurthe",
         width: 6,
         path: [
-          { lat: 48.7050, lng: 6.1960 },
-          { lat: 48.6980, lng: 6.1930 },
-          { lat: 48.6900, lng: 6.1910 },
-          { lat: 48.6800, lng: 6.1950 }
-        ]
+          { lat: 48.705, lng: 6.196 },
+          { lat: 48.698, lng: 6.193 },
+          { lat: 48.69, lng: 6.191 },
+          { lat: 48.68, lng: 6.195 },
+        ],
       },
       {
-        id: 'canal-marne-rhin',
+        id: "canal-marne-rhin",
         width: 4,
         path: [
-          { lat: 48.7040, lng: 6.1900 },
-          { lat: 48.6960, lng: 6.1870 },
-          { lat: 48.6880, lng: 6.1850 }
-        ]
-      }
+          { lat: 48.704, lng: 6.19 },
+          { lat: 48.696, lng: 6.187 },
+          { lat: 48.688, lng: 6.185 },
+        ],
+      },
     ];
 
     // 4. Vector Roads
     this.roads = [
       {
-        id: 'a31-highway',
-        type: 'highway',
+        id: "a31-highway",
+        type: "highway",
         path: [
-          { lat: 48.7080, lng: 6.1280 },
-          { lat: 48.6950, lng: 6.1320 },
-          { lat: 48.6800, lng: 6.1360 },
-          { lat: 48.6650, lng: 6.1400 }
-        ]
+          { lat: 48.708, lng: 6.128 },
+          { lat: 48.695, lng: 6.132 },
+          { lat: 48.68, lng: 6.136 },
+          { lat: 48.665, lng: 6.14 },
+        ],
       },
       {
-        id: 'av-boufflers',
-        type: 'primary',
+        id: "av-boufflers",
+        type: "primary",
         path: [
-          { lat: 48.6880, lng: 6.1350 },
-          { lat: 48.6870, lng: 6.1550 },
-          { lat: 48.6890, lng: 6.1750 }
-        ]
+          { lat: 48.688, lng: 6.135 },
+          { lat: 48.687, lng: 6.155 },
+          { lat: 48.689, lng: 6.175 },
+        ],
       },
       {
-        id: 'av-europe',
-        type: 'primary',
+        id: "av-europe",
+        type: "primary",
         path: [
-          { lat: 48.6830, lng: 6.1400 },
-          { lat: 48.6820, lng: 6.1600 },
-          { lat: 48.6840, lng: 6.1780 }
-        ]
+          { lat: 48.683, lng: 6.14 },
+          { lat: 48.682, lng: 6.16 },
+          { lat: 48.684, lng: 6.178 },
+        ],
       },
       {
-        id: 'rue-saint-exupery',
-        type: 'local',
+        id: "rue-saint-exupery",
+        type: "local",
         path: [
-          { lat: 48.6975, lng: 6.1400 },
-          { lat: 48.6965, lng: 6.1460 }
-        ]
+          { lat: 48.6975, lng: 6.14 },
+          { lat: 48.6965, lng: 6.146 },
+        ],
       },
       {
-        id: 'rue-deroulede',
-        type: 'local',
+        id: "rue-deroulede",
+        type: "local",
         path: [
-          { lat: 48.6890, lng: 6.1480 },
-          { lat: 48.6875, lng: 6.1530 }
-        ]
-      }
+          { lat: 48.689, lng: 6.148 },
+          { lat: 48.6875, lng: 6.153 },
+        ],
+      },
     ];
   }
 }

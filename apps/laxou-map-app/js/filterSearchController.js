@@ -14,8 +14,8 @@ export class FilterSearchController {
     this.dataProvider = dataProvider;
     this.elements = elements;
 
-    this.activeCategory = 'all';
-    this.searchQuery = '';
+    this.activeCategory = "all";
+    this.searchQuery = "";
     this.debounceTimer = null;
 
     this._setupEventListeners();
@@ -30,7 +30,7 @@ export class FilterSearchController {
 
     // Recherche en temps réel avec anti-rebond
     if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener("input", (e) => {
         const query = e.target.value;
         this.setSearchQuery(query);
       });
@@ -38,16 +38,18 @@ export class FilterSearchController {
 
     // Bouton de réinitialisation de recherche
     if (clearSearchBtn) {
-      clearSearchBtn.addEventListener('click', () => {
-        if (searchInput) searchInput.value = '';
-        this.setSearchQuery('');
+      clearSearchBtn.addEventListener("click", () => {
+        if (searchInput) searchInput.value = "";
+        this.setSearchQuery("");
       });
     }
 
     // Auto-basculement de catégorie lors de la sélection d'un lieu
     if (this.eventBus) {
-      this.eventBus.on('place:selected', ({ place, placeId }) => {
-        const p = place || (this.dataProvider ? this.dataProvider.getPlaceById(placeId) : null);
+      this.eventBus.on("place:selected", ({ place, placeId }) => {
+        const p =
+          place ||
+          (this.dataProvider ? this.dataProvider.getPlaceById(placeId) : null);
         if (p && p.category && p.category !== this.activeCategory) {
           this.setCategory(p.category);
         }
@@ -62,33 +64,45 @@ export class FilterSearchController {
     const { categoriesBar } = this.elements;
     if (!categoriesBar) return;
 
-    categoriesBar.innerHTML = '';
+    categoriesBar.innerHTML = "";
     const categories = this.dataProvider.getCategories();
 
     // S'assurer d'inclure l'option "Tous"
-    const allCat = { id: 'all', name: 'Tous les lieux', label: 'Tous', icon: 'layer-group' };
-    const fullCategories = categories.some(c => c.id === 'all') ? categories : [allCat, ...categories];
+    const allCat = {
+      id: "all",
+      name: "Tous les lieux",
+      label: "Tous",
+      icon: "layer-group",
+    };
+    const fullCategories = categories.some((c) => c.id === "all")
+      ? categories
+      : [allCat, ...categories];
 
     const categoryIcons = {
-      services: 'building-columns',
-      parcs: 'tree',
-      culture: 'landmark',
-      sports: 'futbol',
-      ecoles: 'graduation-cap',
-      all: 'layer-group'
+      services: "building-columns",
+      parcs: "tree",
+      culture: "landmark",
+      sports: "futbol",
+      ecoles: "graduation-cap",
+      all: "layer-group",
     };
 
-    fullCategories.forEach(cat => {
-      const chip = document.createElement('button');
-      chip.className = `category-chip ${cat.id === this.activeCategory ? 'active' : ''}`;
+    fullCategories.forEach((cat) => {
+      const chip = document.createElement("button");
+      chip.className = `category-chip ${cat.id === this.activeCategory ? "active" : ""}`;
       chip.dataset.categoryId = cat.id;
-      chip.setAttribute('type', 'button');
-      chip.setAttribute('aria-pressed', cat.id === this.activeCategory ? 'true' : 'false');
+      chip.setAttribute("type", "button");
+      chip.setAttribute(
+        "aria-pressed",
+        cat.id === this.activeCategory ? "true" : "false",
+      );
 
-      const iconName = cat.icon ? cat.icon.replace(/^fa-/, '') : (categoryIcons[cat.id] || 'tag');
+      const iconName = cat.icon
+        ? cat.icon.replace(/^fa-/, "")
+        : categoryIcons[cat.id] || "tag";
       chip.innerHTML = `<i class="fa-solid fa-${iconName}"></i> <span>${cat.label || cat.name}</span>`;
 
-      chip.addEventListener('click', () => {
+      chip.addEventListener("click", () => {
         this.setCategory(cat.id);
       });
 
@@ -98,18 +112,18 @@ export class FilterSearchController {
 
   /**
    * Modifie la catégorie active et émet un événement.
-   * @param {string} categoryId 
+   * @param {string} categoryId
    */
   setCategory(categoryId) {
-    this.activeCategory = categoryId || 'all';
+    this.activeCategory = categoryId || "all";
 
     // Mettre à jour la classe active sur les puces
     const { categoriesBar } = this.elements;
     if (categoriesBar) {
-      categoriesBar.querySelectorAll('.category-chip').forEach(chip => {
+      categoriesBar.querySelectorAll(".category-chip").forEach((chip) => {
         const isActive = chip.dataset.categoryId === this.activeCategory;
-        chip.classList.toggle('active', isActive);
-        chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        chip.classList.toggle("active", isActive);
+        chip.setAttribute("aria-pressed", isActive ? "true" : "false");
       });
     }
 
@@ -118,16 +132,16 @@ export class FilterSearchController {
 
   /**
    * Modifie le texte de recherche avec anti-rebond léger.
-   * @param {string} query 
-   * @param {number} [debounceMs=150] 
+   * @param {string} query
+   * @param {number} [debounceMs=150]
    */
   setSearchQuery(query, debounceMs = 150) {
-    this.searchQuery = query || '';
+    this.searchQuery = query || "";
 
     // Gérer l'affichage du bouton d'effacement
     const { clearSearchBtn } = this.elements;
     if (clearSearchBtn) {
-      clearSearchBtn.classList.toggle('hidden', !this.searchQuery.trim());
+      clearSearchBtn.classList.toggle("hidden", !this.searchQuery.trim());
     }
 
     if (this.debounceTimer) clearTimeout(this.debounceTimer);
@@ -146,13 +160,16 @@ export class FilterSearchController {
    * @private
    */
   _emitFilterChanged() {
-    const filteredPlaces = this.dataProvider.filterPlaces(this.activeCategory, this.searchQuery);
+    const filteredPlaces = this.dataProvider.filterPlaces(
+      this.activeCategory,
+      this.searchQuery,
+    );
 
-    this.eventBus.emit('filter:changed', {
+    this.eventBus.emit("filter:changed", {
       categoryId: this.activeCategory,
       query: this.searchQuery,
       places: filteredPlaces,
-      count: filteredPlaces.length
+      count: filteredPlaces.length,
     });
   }
 }

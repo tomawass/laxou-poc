@@ -1,13 +1,13 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
+import test from "node:test";
+import assert from "node:assert/strict";
 
-import { EventBus } from '../js/eventBus.js';
-import { DataProvider } from '../js/dataProvider.js';
-import { ImageMapEngine } from '../js/imageMapEngine.js';
+import { EventBus } from "../js/eventBus.js";
+import { DataProvider } from "../js/dataProvider.js";
+import { ImageMapEngine } from "../js/imageMapEngine.js";
 
-test('NPRNU Map — Dataset Integrity', async (t) => {
+test("NPRNU Map — Dataset Integrity", async (t) => {
   const provider = new DataProvider();
-  const data = await provider.loadData('./data.json');
+  const data = await provider.loadData("./data.json");
 
   assert.ok(data);
   assert.equal(provider.getPlaces().length, 12);
@@ -23,18 +23,27 @@ test('NPRNU Map — Dataset Integrity', async (t) => {
   }
 });
 
-test('NPRNU Map — ImageMapEngine Coordinates Projection', async (t) => {
+test("NPRNU Map — ImageMapEngine Coordinates Projection", async (t) => {
   const eventBus = new EventBus();
   const mockContainer = {
     clientWidth: 1000,
     clientHeight: 600,
-    getBoundingClientRect: () => ({ width: 1000, height: 600, left: 0, top: 0 }),
+    getBoundingClientRect: () => ({
+      width: 1000,
+      height: 600,
+      left: 0,
+      top: 0,
+    }),
     addEventListener: () => {},
-    style: {}
+    style: {},
   };
   const mockImageContainer = { style: {} };
 
-  const engine = new ImageMapEngine(mockContainer, mockImageContainer, eventBus);
+  const engine = new ImageMapEngine(
+    mockContainer,
+    mockImageContainer,
+    eventBus,
+  );
 
   const posCenter = engine.geoToScreen(50, 50);
   assert.equal(posCenter.x, 500);
@@ -44,14 +53,14 @@ test('NPRNU Map — ImageMapEngine Coordinates Projection', async (t) => {
   assert.equal(engine.zoom, 2.0);
 });
 
-test('NPRNU Map — DataProvider Filtering & Search', async (t) => {
+test("NPRNU Map — DataProvider Filtering & Search", async (t) => {
   const provider = new DataProvider();
-  await provider.loadData('./data.json');
+  await provider.loadData("./data.json");
 
-  const ecoles = provider.filterPlaces('ecoles');
+  const ecoles = provider.filterPlaces("ecoles");
   assert.ok(ecoles.length >= 3);
 
-  const zola = provider.filterPlaces('all', 'zola');
+  const zola = provider.filterPlaces("all", "zola");
   assert.equal(zola.length, 1);
-  assert.equal(zola[0].id, 'ecole-emile-zola');
+  assert.equal(zola[0].id, "ecole-emile-zola");
 });

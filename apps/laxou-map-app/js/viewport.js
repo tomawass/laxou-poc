@@ -48,14 +48,14 @@ export class ViewportController {
       zoom: this.zoom,
       width: this.width,
       height: this.height,
-      bounds: this.getVisibleGeoBounds()
+      bounds: this.getVisibleGeoBounds(),
     };
   }
 
   /**
    * Set viewport screen dimensions.
-   * @param {number} width 
-   * @param {number} height 
+   * @param {number} width
+   * @param {number} height
    */
   setDimensions(width, height) {
     const w = Number(width);
@@ -65,7 +65,10 @@ export class ViewportController {
     this.width = w;
     this.height = h;
 
-    if (this.projection && typeof this.projection.setCanvasSize === 'function') {
+    if (
+      this.projection &&
+      typeof this.projection.setCanvasSize === "function"
+    ) {
       this.projection.setCanvasSize(w, h);
     }
 
@@ -75,8 +78,8 @@ export class ViewportController {
 
   /**
    * Translate camera pan position by (dx, dy) screen pixels.
-   * @param {number} dx 
-   * @param {number} dy 
+   * @param {number} dx
+   * @param {number} dy
    */
   panBy(dx, dy) {
     const deltaX = Number(dx) || 0;
@@ -101,10 +104,14 @@ export class ViewportController {
     const sy = Number(screenY);
     const factor = Number(zoomFactor);
 
-    if (!isFinite(sx) || !isFinite(sy) || !isFinite(factor) || factor <= 0) return;
+    if (!isFinite(sx) || !isFinite(sy) || !isFinite(factor) || factor <= 0)
+      return;
 
     const oldZoom = this.zoom;
-    const newZoom = Math.max(this.minZoom, Math.min(this.maxZoom, oldZoom * factor));
+    const newZoom = Math.max(
+      this.minZoom,
+      Math.min(this.maxZoom, oldZoom * factor),
+    );
 
     if (Math.abs(newZoom - oldZoom) < 1e-6) return;
 
@@ -124,9 +131,9 @@ export class ViewportController {
 
   /**
    * Center camera on target geographic coordinate (lat, lng) at optional zoom level.
-   * @param {number} lat 
-   * @param {number} lng 
-   * @param {number} [zoomLevel] 
+   * @param {number} lat
+   * @param {number} lng
+   * @param {number} [zoomLevel]
    */
   centerOnGeo(lat, lng, zoomLevel = null) {
     if (!this.projection) return;
@@ -136,7 +143,10 @@ export class ViewportController {
     if (!isFinite(numLat) || !isFinite(numLng)) return;
 
     if (zoomLevel !== null && isFinite(Number(zoomLevel))) {
-      this.zoom = Math.max(this.minZoom, Math.min(this.maxZoom, Number(zoomLevel)));
+      this.zoom = Math.max(
+        this.minZoom,
+        Math.min(this.maxZoom, Number(zoomLevel)),
+      );
     }
 
     const world = this.projection.geoToWorld(numLat, numLng);
@@ -156,7 +166,7 @@ export class ViewportController {
   /**
    * Calculate zoom and camera position to fit geographic bounding box with padding.
    * @param {Object} geoBounds - { minLat, maxLat, minLng, maxLng }
-   * @param {number} [paddingPercent=0.05] 
+   * @param {number} [paddingPercent=0.05]
    */
   fitBounds(geoBounds, paddingPercent = 0.05) {
     if (!this.projection || !geoBounds) return;
@@ -166,7 +176,13 @@ export class ViewportController {
     const minLng = Number(geoBounds.minLng);
     const maxLng = Number(geoBounds.maxLng);
 
-    if (!isFinite(minLat) || !isFinite(maxLat) || !isFinite(minLng) || !isFinite(maxLng)) return;
+    if (
+      !isFinite(minLat) ||
+      !isFinite(maxLat) ||
+      !isFinite(minLng) ||
+      !isFinite(maxLng)
+    )
+      return;
 
     const wMin = this.projection.geoToWorld(maxLat, minLng);
     const wMax = this.projection.geoToWorld(minLat, maxLng);
@@ -206,23 +222,33 @@ export class ViewportController {
       return { minLat: 48.665, maxLat: 48.708, minLng: 6.12, maxLng: 6.2 };
     }
 
-    const state = { x: this.x, y: this.y, zoom: this.zoom, width: this.width, height: this.height };
+    const state = {
+      x: this.x,
+      y: this.y,
+      zoom: this.zoom,
+      width: this.width,
+      height: this.height,
+    };
     const topLeft = this.projection.screenToGeo(0, 0, state);
-    const bottomRight = this.projection.screenToGeo(this.width, this.height, state);
+    const bottomRight = this.projection.screenToGeo(
+      this.width,
+      this.height,
+      state,
+    );
 
     return {
       minLat: Math.min(topLeft.lat, bottomRight.lat),
       maxLat: Math.max(topLeft.lat, bottomRight.lat),
       minLng: Math.min(topLeft.lng, bottomRight.lng),
-      maxLng: Math.max(topLeft.lng, bottomRight.lng)
+      maxLng: Math.max(topLeft.lng, bottomRight.lng),
     };
   }
 
   /**
    * Attach gesture event listeners to container element and optional zoom buttons.
-   * @param {HTMLElement} containerEl 
-   * @param {HTMLElement} [zoomInBtnEl] 
-   * @param {HTMLElement} [zoomOutBtnEl] 
+   * @param {HTMLElement} containerEl
+   * @param {HTMLElement} [zoomInBtnEl]
+   * @param {HTMLElement} [zoomOutBtnEl]
    */
   attachEventListeners(containerEl, zoomInBtnEl = null, zoomOutBtnEl = null) {
     if (!containerEl || !(containerEl instanceof HTMLElement)) return;
@@ -232,8 +258,8 @@ export class ViewportController {
     this.zoomOutBtnEl = zoomOutBtnEl;
 
     // Set cursor styling
-    this.containerEl.style.cursor = 'grab';
-    this.containerEl.style.touchAction = 'none';
+    this.containerEl.style.cursor = "grab";
+    this.containerEl.style.touchAction = "none";
 
     // Pointer Events (Pan / Drag)
     const onPointerDown = (e) => {
@@ -243,16 +269,20 @@ export class ViewportController {
       this.lastPointerY = e.clientY;
       this.activePointerId = e.pointerId;
 
-      if (typeof containerEl.setPointerCapture === 'function') {
+      if (typeof containerEl.setPointerCapture === "function") {
         try {
           containerEl.setPointerCapture(e.pointerId);
         } catch (_) {}
       }
-      this.containerEl.style.cursor = 'grabbing';
+      this.containerEl.style.cursor = "grabbing";
     };
 
     const onPointerMove = (e) => {
-      if (!this.isDragging || (this.activePointerId !== null && e.pointerId !== this.activePointerId)) return;
+      if (
+        !this.isDragging ||
+        (this.activePointerId !== null && e.pointerId !== this.activePointerId)
+      )
+        return;
       const dx = e.clientX - this.lastPointerX;
       const dy = e.clientY - this.lastPointerY;
 
@@ -263,8 +293,11 @@ export class ViewportController {
     };
 
     const onPointerUpCancel = (e) => {
-      if (this.activePointerId !== null && e.pointerId === this.activePointerId) {
-        if (typeof containerEl.releasePointerCapture === 'function') {
+      if (
+        this.activePointerId !== null &&
+        e.pointerId === this.activePointerId
+      ) {
+        if (typeof containerEl.releasePointerCapture === "function") {
           try {
             containerEl.releasePointerCapture(e.pointerId);
           } catch (_) {}
@@ -272,16 +305,16 @@ export class ViewportController {
         this.isDragging = false;
         this.activePointerId = null;
         if (this.containerEl) {
-          this.containerEl.style.cursor = 'grab';
+          this.containerEl.style.cursor = "grab";
         }
       }
     };
 
-    containerEl.addEventListener('pointerdown', onPointerDown);
-    containerEl.addEventListener('pointermove', onPointerMove);
-    containerEl.addEventListener('pointerup', onPointerUpCancel);
-    containerEl.addEventListener('pointercancel', onPointerUpCancel);
-    containerEl.addEventListener('pointerleave', onPointerUpCancel);
+    containerEl.addEventListener("pointerdown", onPointerDown);
+    containerEl.addEventListener("pointermove", onPointerMove);
+    containerEl.addEventListener("pointerup", onPointerUpCancel);
+    containerEl.addEventListener("pointercancel", onPointerUpCancel);
+    containerEl.addEventListener("pointerleave", onPointerUpCancel);
 
     // Mouse Wheel Zoom
     const onWheel = (e) => {
@@ -290,13 +323,14 @@ export class ViewportController {
       const screenX = e.clientX - rect.left;
       const screenY = e.clientY - rect.top;
 
-      const delta = e.deltaY * (e.deltaMode === 1 ? 20 : e.deltaMode === 2 ? 600 : 1);
+      const delta =
+        e.deltaY * (e.deltaMode === 1 ? 20 : e.deltaMode === 2 ? 600 : 1);
       const zoomFactor = Math.pow(0.999, delta);
 
       this.zoomAt(screenX, screenY, zoomFactor);
     };
 
-    containerEl.addEventListener('wheel', onWheel, { passive: false });
+    containerEl.addEventListener("wheel", onWheel, { passive: false });
 
     // Double-click Zoom
     const onDblClick = (e) => {
@@ -308,11 +342,11 @@ export class ViewportController {
       this.zoomAt(screenX, screenY, 1.5);
     };
 
-    containerEl.addEventListener('dblclick', onDblClick);
+    containerEl.addEventListener("dblclick", onDblClick);
 
     // Zoom Buttons
     if (zoomInBtnEl) {
-      zoomInBtnEl.addEventListener('click', (e) => {
+      zoomInBtnEl.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (this.leafletEngine) {
@@ -324,7 +358,7 @@ export class ViewportController {
     }
 
     if (zoomOutBtnEl) {
-      zoomOutBtnEl.addEventListener('click', (e) => {
+      zoomOutBtnEl.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (this.leafletEngine) {
@@ -336,7 +370,10 @@ export class ViewportController {
     }
 
     // ResizeObserver
-    if (typeof window !== 'undefined' && typeof window.ResizeObserver === 'function') {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.ResizeObserver === "function"
+    ) {
       this.resizeObserver = new ResizeObserver((entries) => {
         for (const entry of entries) {
           const w = entry.contentRect.width;
@@ -373,8 +410,8 @@ export class ViewportController {
    * @private
    */
   _emitChanged() {
-    if (this.eventBus && typeof this.eventBus.emit === 'function') {
-      this.eventBus.emit('viewport:changed', this.getState());
+    if (this.eventBus && typeof this.eventBus.emit === "function") {
+      this.eventBus.emit("viewport:changed", this.getState());
     }
   }
 }

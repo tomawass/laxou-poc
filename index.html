@@ -1,765 +1,1449 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ville de Laxou | Site Officiel de la Commune</title>
-  <meta name="description" content="Site officiel de la Ville de Laxou. Retrouvez vos démarches, l'agenda, les actualités et les équipements municipaux.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <link rel="stylesheet" href="styles.css?v=201344116150">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ville de Laxou | Site Officiel de la Commune</title>
+    <meta
+      name="description"
+      content="Site officiel de la Ville de Laxou. Retrouvez vos démarches, l'agenda, les actualités et les équipements municipaux."
+    />
 
-  <!-- 1. STICKY HEADER WITH CLEAN LOGO & CONSOLIDATED NAVIGATION -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <!-- Clean Logo -->
-      <a href="index.html" class="logo-brand" title="Accueil - Ville de Laxou">
-        <img src="assets/logo_laxou_official_5.png" alt="Logo Officiel de la Ville de Laxou" style="height: 54px; width: auto;" loading="eager">
-      </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-      <!-- Streamlined Navigation Bar (Centered) -->
-      <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
-        <ul>
-          <li class="nav-item">
-            <a href="page-type.html" class="nav-link" aria-haspopup="true">Ma mairie <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
-            <div class="dropdown-menu">
-              <ul>
-                <li><a href="equipe-municipale.html">L'Équipe municipale & Conseil</a></li>
-                <li><a href="page-type.html">Jumelages</a></li>
-                <li><a href="page-type.html">Conseils de proximité</a></li>
-                <li><a href="page-type.html">Police municipale</a></li>
-                <li><a href="archives.html">Marchés publics</a></li>
-                <li><a href="page-type.html">Budget / Finances</a></li>
-              </ul>
-            </div>
-          </li>
+    <link rel="stylesheet" href="styles.css?v=201344116150" />
+  </head>
+  <body>
+    <!-- 1. STICKY HEADER WITH CLEAN LOGO & CONSOLIDATED NAVIGATION -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Clean Logo -->
+        <a
+          href="index.html"
+          class="logo-brand"
+          title="Accueil - Ville de Laxou"
+        >
+          <img
+            src="assets/logo_laxou_official_5.png"
+            alt="Logo Officiel de la Ville de Laxou"
+            style="height: 54px; width: auto"
+            loading="eager"
+          />
+        </a>
 
-          <!-- NOUVEAU MENU : MES SERVICES -->
-          <li class="nav-item">
-            <a href="archives.html" class="nav-link" aria-haspopup="true">Mes Services <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
-            <div class="dropdown-menu mega-menu-3col">
-              <div>
-                <div class="mega-col-title">Démarches & Citoyenneté</div>
+        <!-- Streamlined Navigation Bar (Centered) -->
+        <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li class="nav-item">
+              <a href="page-type.html" class="nav-link" aria-haspopup="true"
+                >Ma mairie
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 0.7em; margin-left: 4px"
+                ></i
+              ></a>
+              <div class="dropdown-menu">
                 <ul>
-                  <li><a href="article.html">État civil (Naissance, mariage, décès)</a></li>
-                  <li><a href="article.html">Cartes d'identité / passeports</a></li>
-                  <li><a href="archives.html">Élections & Inscriptions</a></li>
-                  <li><a href="page-type.html">Cimetières</a></li>
+                  <li>
+                    <a href="equipe-municipale.html"
+                      >L'Équipe municipale & Conseil</a
+                    >
+                  </li>
+                  <li><a href="page-type.html">Jumelages</a></li>
+                  <li><a href="page-type.html">Conseils de proximité</a></li>
+                  <li><a href="page-type.html">Police municipale</a></li>
+                  <li><a href="archives.html">Marchés publics</a></li>
+                  <li><a href="page-type.html">Budget / Finances</a></li>
                 </ul>
               </div>
-              <div>
-                <div class="mega-col-title">Enfance & Famille</div>
-                <ul>
-                  <li><a href="page-type.html">Portail Famille dématérialisé</a></li>
-                  <li><a href="page-type.html">Crèches & Inscriptions</a></li>
-                  <li><a href="page-type.html">Restauration scolaire & Cantine</a></li>
-                  <li><a href="page-type.html">Garderie & Activités 6-11 ans</a></li>
-                </ul>
-              </div>
-              <div>
-                <div class="mega-col-title">Quotidien & Solidarité</div>
-                <ul>
-                  <li><a href="iframe.html">Urbanisme (Permis & Travaux)</a></li>
-                  <li><a href="contact.html">Signalements (voirie, éclairage)</a></li>
-                  <li><a href="page-type.html">Seniors, CCAS & Action sociale</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
+            </li>
 
-          <!-- NOUVEAU MENU : DÉCOUVRIR LAXOU -->
-          <li class="nav-item">
-            <a href="iframe.html" class="nav-link" aria-haspopup="true">Découvrir Laxou <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
-            <div class="dropdown-menu mega-menu-3col">
-              <div>
-                <div class="mega-col-title">Culture & Sorties</div>
-                <ul>
-                  <li><a href="agenda.html">Agenda des événements</a></li>
-                  <li><a href="agenda.html">Médiathèques & CILM</a></li>
-                  <li><a href="page-type.html">L'École de Musique</a></li>
-                </ul>
+            <!-- NOUVEAU MENU : MES SERVICES -->
+            <li class="nav-item">
+              <a href="archives.html" class="nav-link" aria-haspopup="true"
+                >Mes Services
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 0.7em; margin-left: 4px"
+                ></i
+              ></a>
+              <div class="dropdown-menu mega-menu-3col">
+                <div>
+                  <div class="mega-col-title">Démarches & Citoyenneté</div>
+                  <ul>
+                    <li>
+                      <a href="article.html"
+                        >État civil (Naissance, mariage, décès)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="article.html">Cartes d'identité / passeports</a>
+                    </li>
+                    <li>
+                      <a href="archives.html">Élections & Inscriptions</a>
+                    </li>
+                    <li><a href="page-type.html">Cimetières</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mega-col-title">Enfance & Famille</div>
+                  <ul>
+                    <li>
+                      <a href="page-type.html">Portail Famille dématérialisé</a>
+                    </li>
+                    <li><a href="page-type.html">Crèches & Inscriptions</a></li>
+                    <li>
+                      <a href="page-type.html"
+                        >Restauration scolaire & Cantine</a
+                      >
+                    </li>
+                    <li>
+                      <a href="page-type.html">Garderie & Activités 6-11 ans</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mega-col-title">Quotidien & Solidarité</div>
+                  <ul>
+                    <li>
+                      <a href="iframe.html">Urbanisme (Permis & Travaux)</a>
+                    </li>
+                    <li>
+                      <a href="contact.html"
+                        >Signalements (voirie, éclairage)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="page-type.html"
+                        >Seniors, CCAS & Action sociale</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <div class="mega-col-title">Sport & Nature</div>
-                <ul>
-                  <li><a href="iframe.html">Installations sportives</a></li>
-                  <li><a href="iframe.html">Parcs, Jardins & Rénovation</a></li>
-                  <li><a href="page-type.html">Laxou Nature</a></li>
-                </ul>
-              </div>
-              <div>
-                <div class="mega-col-title">Vie Associative</div>
-                <ul>
-                  <li><a href="archives.html"><strong>Annuaire des associations</strong></a></li>
-                  <li><a href="page-type.html">Subventions aux associations</a></li>
-                  <li><a href="iframe.html">Réservation de salles & terrains</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="nav-item">
-            <a href="article.html" class="nav-link" aria-haspopup="true">Actualités <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
-            <div class="dropdown-menu">
-              <ul>
-                <li><a href="article.html">Actualités municipales</a></li>
-                <li><a href="archives.html">Publications administratives & Arrêtés</a></li>
-                <li><a href="iframe.html">L'application mobile Laxou</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
+            <!-- NOUVEAU MENU : DÉCOUVRIR LAXOU -->
+            <li class="nav-item">
+              <a href="iframe.html" class="nav-link" aria-haspopup="true"
+                >Découvrir Laxou
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 0.7em; margin-left: 4px"
+                ></i
+              ></a>
+              <div class="dropdown-menu mega-menu-3col">
+                <div>
+                  <div class="mega-col-title">Culture & Sorties</div>
+                  <ul>
+                    <li><a href="agenda.html">Agenda des événements</a></li>
+                    <li><a href="agenda.html">Médiathèques & CILM</a></li>
+                    <li><a href="page-type.html">L'École de Musique</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mega-col-title">Sport & Nature</div>
+                  <ul>
+                    <li><a href="iframe.html">Installations sportives</a></li>
+                    <li>
+                      <a href="iframe.html">Parcs, Jardins & Rénovation</a>
+                    </li>
+                    <li><a href="page-type.html">Laxou Nature</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mega-col-title">Vie Associative</div>
+                  <ul>
+                    <li>
+                      <a href="archives.html"
+                        ><strong>Annuaire des associations</strong></a
+                      >
+                    </li>
+                    <li>
+                      <a href="page-type.html">Subventions aux associations</a>
+                    </li>
+                    <li>
+                      <a href="iframe.html">Réservation de salles & terrains</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
 
-      <!-- Boutons Actions à droite (Style Aubagne) -->
-      <div class="header-actions-group">
-        <a href="contact.html" class="nav-link" style="text-transform: none; font-weight: 600;">Contact</a>
-        <a href="archives.html" class="btn-dark" style="border-radius: 50px; padding: 10px 24px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;">Mes Démarches</a>
-        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+            <li class="nav-item">
+              <a href="article.html" class="nav-link" aria-haspopup="true"
+                >Actualités
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 0.7em; margin-left: 4px"
+                ></i
+              ></a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="article.html">Actualités municipales</a></li>
+                  <li>
+                    <a href="archives.html"
+                      >Publications administratives & Arrêtés</a
+                    >
+                  </li>
+                  <li><a href="iframe.html">L'application mobile Laxou</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Boutons Actions à droite (Style Aubagne) -->
+        <div class="header-actions-group">
+          <a
+            href="contact.html"
+            class="nav-link"
+            style="text-transform: none; font-weight: 600"
+            >Contact</a
+          >
+          <a
+            href="archives.html"
+            class="btn-dark"
+            style="
+              border-radius: 50px;
+              padding: 10px 24px;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 0.85rem;
+              letter-spacing: 0.5px;
+            "
+            >Mes Démarches</a
+          >
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            ☰
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main id="main-content">
+    <main id="main-content">
+      <!-- 2. AUBAGNE-STYLE INSTITUTIONAL HERO BANNER -->
+      <section class="hero-event-banner" aria-label="Bannière événementielle">
+        <div class="hero-event-overlay"></div>
+        <a
+          href="agenda.html"
+          class="hero-event-link-wrapper"
+          aria-label="Découvrir l'événement : Vendredis sous les étoiles"
+        >
+        </a>
+      </section>
 
-    <!-- 2. AUBAGNE-STYLE INSTITUTIONAL HERO BANNER -->
-    <section class="hero-event-banner" aria-label="Bannière événementielle">
-      <div class="hero-event-overlay"></div>
-      <a href="agenda.html" class="hero-event-link-wrapper" aria-label="Découvrir l'événement : Vendredis sous les étoiles">
-        
-      </a>
-    </section>
-
-    <!-- 3. SEARCH OVERLAP BAR & QUICK PILLS (AUBAGNE SIGNATURE) -->
-    <section id="search-overlap" class="search-overlap-container">
-      <div class="container">
-        
-        <!-- Search Input Pill -->
-        <div class="search-box-main-wrapper">
-          <form class="search-box-main" onsubmit="event.preventDefault(); handleSearch(document.getElementById('site-search-input').value);">
-            <input 
-              type="text" 
-              id="site-search-input" 
-              placeholder="Que recherchez-vous ? (ex : cantine, passeport, carte interactive, élus...)" 
-              autocomplete="off"
+      <!-- 3. SEARCH OVERLAP BAR & QUICK PILLS (AUBAGNE SIGNATURE) -->
+      <section id="search-overlap" class="search-overlap-container">
+        <div class="container">
+          <!-- Search Input Pill -->
+          <div class="search-box-main-wrapper">
+            <form
+              class="search-box-main"
+              onsubmit="
+                event.preventDefault();
+                handleSearch(
+                  document.getElementById('site-search-input').value,
+                );
+              "
             >
-            <div id="search-autocomplete-dropdown" class="search-autocomplete-dropdown"></div>
-            <button type="submit" class="search-submit-btn" aria-label="Lancer la recherche">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                id="site-search-input"
+                placeholder="Que recherchez-vous ? (ex : cantine, passeport, carte interactive, élus...)"
+                autocomplete="off"
+              />
+              <div
+                id="search-autocomplete-dropdown"
+                class="search-autocomplete-dropdown"
+              ></div>
+              <button
+                type="submit"
+                class="search-submit-btn"
+                aria-label="Lancer la recherche"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Access Pills Row -->
+          <div class="quick-pills-row">
+            <button
+              class="quick-pill-link active"
+              onclick="switchTab('essentiel', this)"
+            >
+              <i class="fa-solid fa-star"></i> L'essentiel du moment
             </button>
-          </form>
+            <button
+              class="quick-pill-link"
+              onclick="switchTab('famille', this)"
+            >
+              <i class="fa-solid fa-child"></i> Enfance & Famille
+            </button>
+            <button
+              class="quick-pill-link"
+              onclick="switchTab('demarches', this)"
+            >
+              <i class="fa-solid fa-id-card"></i> Démarches & Citoyenneté
+            </button>
+            <button
+              class="quick-pill-link"
+              onclick="switchTab('urbanisme', this)"
+            >
+              <i class="fa-solid fa-city"></i> Urbanisme & NPRNU
+            </button>
+            <button class="quick-pill-link" onclick="switchTab('cadre', this)">
+              <i class="fa-solid fa-leaf"></i> Cadre de Vie & Signalements
+            </button>
+          </div>
         </div>
+      </section>
 
-        <!-- Quick Access Pills Row -->
-        <div class="quick-pills-row">
-          <button class="quick-pill-link active" onclick="switchTab('essentiel', this)">
-            <i class="fa-solid fa-star"></i> L'essentiel du moment
-          </button>
-          <button class="quick-pill-link" onclick="switchTab('famille', this)">
-            <i class="fa-solid fa-child"></i> Enfance & Famille
-          </button>
-          <button class="quick-pill-link" onclick="switchTab('demarches', this)">
-            <i class="fa-solid fa-id-card"></i> Démarches & Citoyenneté
-          </button>
-          <button class="quick-pill-link" onclick="switchTab('urbanisme', this)">
-            <i class="fa-solid fa-city"></i> Urbanisme & NPRNU
-          </button>
-          <button class="quick-pill-link" onclick="switchTab('cadre', this)">
-            <i class="fa-solid fa-leaf"></i> Cadre de Vie & Signalements
-          </button>
-        </div>
+      <!-- 4. ACCÈS RAPIDES & HIGHLIGHT MAGAZINE (STYLE AUBAGNE) -->
+      <section class="container" style="margin-bottom: var(--space-12)">
+        <div class="acces-rapides-aubagne-grid">
+          <!-- Left: 6 Icon Tiles Grid -->
+          <div class="tiles-carousel-container">
+            <!-- PANEL: ESSENTIEL -->
+            <div id="panel-essentiel" class="tab-panel active">
+              <a href="simulateur-periscolaire.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Simulateur Cantine & Périscolaire
+                </div>
+              </a>
+              <a href="nprnu-map.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Carte Interactive NPRNU
+                </div>
+              </a>
+              <a href="article.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-passport"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Passeports & Cartes d'Identité
+                </div>
+              </a>
+              <a href="contact.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Signaler un Incident Voirie
+                </div>
+              </a>
+            </div>
 
-      </div>
-    </section>
+            <!-- PANEL: FAMILLE -->
+            <div id="panel-famille" class="tab-panel">
+              <a href="simulateur-periscolaire.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Simulateur Cantine & Périscolaire
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="quick-action-tile-title">Menus de la cantine</div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-laptop-file"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Portail Famille (Inscriptions)
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Centre de loisirs (ALSH)
+                </div>
+              </a>
+            </div>
 
-    <!-- 4. ACCÈS RAPIDES & HIGHLIGHT MAGAZINE (STYLE AUBAGNE) -->
-    <section class="container" style="margin-bottom: var(--space-12);">
-      <div class="acces-rapides-aubagne-grid">
-        
-        <!-- Left: 6 Icon Tiles Grid -->
-        <div class="tiles-carousel-container">
-          
-          <!-- PANEL: ESSENTIEL -->
-          <div id="panel-essentiel" class="tab-panel active">
-            <a href="simulateur-periscolaire.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-calculator"></i></div>
-              <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
-            </a>
-            <a href="nprnu-map.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-              <div class="quick-action-tile-title">Carte Interactive NPRNU</div>
-            </a>
-            <a href="article.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-passport"></i></div>
-              <div class="quick-action-tile-title">Passeports & Cartes d'Identité</div>
-            </a>
-            <a href="contact.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-              <div class="quick-action-tile-title">Signaler un Incident Voirie</div>
-            </a>
+            <!-- PANEL: DEMARCHES -->
+            <div id="panel-demarches" class="tab-panel">
+              <a href="article.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-passport"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Passeports & Cartes d'Identité
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Demande d'acte d'état civil
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Inscription listes électorales
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-ring"></i>
+                </div>
+                <div class="quick-action-tile-title">Mariage & PACS</div>
+              </a>
+            </div>
+
+            <!-- PANEL: URBANISME -->
+            <div id="panel-urbanisme" class="tab-panel">
+              <a href="nprnu-map.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-city"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Carte Interactive NPRNU
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-traffic-light"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Info Travaux & Déviations
+                </div>
+              </a>
+              <a href="iframe.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <div class="quick-action-tile-title">Permis de construire</div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-tree-city"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Projets de végétalisation
+                </div>
+              </a>
+            </div>
+
+            <!-- PANEL: CADRE -->
+            <div id="panel-cadre" class="tab-panel">
+              <a href="contact.html" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="quick-action-tile-title">Signaler un incident</div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Jours de collecte des déchets
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-couch"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Enlèvement d'encombrants
+                </div>
+              </a>
+              <a href="#" class="quick-action-tile">
+                <div class="quick-action-tile-icon">
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div class="quick-action-tile-title">
+                  Annuaire des associations
+                </div>
+              </a>
+            </div>
           </div>
 
-          <!-- PANEL: FAMILLE -->
-          <div id="panel-famille" class="tab-panel">
-            <a href="simulateur-periscolaire.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-calculator"></i></div>
-              <div class="quick-action-tile-title">Simulateur Cantine & Périscolaire</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-utensils"></i></div>
-              <div class="quick-action-tile-title">Menus de la cantine</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-laptop-file"></i></div>
-              <div class="quick-action-tile-title">Portail Famille (Inscriptions)</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-palette"></i></div>
-              <div class="quick-action-tile-title">Centre de loisirs (ALSH)</div>
-            </a>
-          </div>
-
-          <!-- PANEL: DEMARCHES -->
-          <div id="panel-demarches" class="tab-panel">
-            <a href="article.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-passport"></i></div>
-              <div class="quick-action-tile-title">Passeports & Cartes d'Identité</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-file-signature"></i></div>
-              <div class="quick-action-tile-title">Demande d'acte d'état civil</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-              <div class="quick-action-tile-title">Inscription listes électorales</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-ring"></i></div>
-              <div class="quick-action-tile-title">Mariage & PACS</div>
-            </a>
-          </div>
-
-          <!-- PANEL: URBANISME -->
-          <div id="panel-urbanisme" class="tab-panel">
-            <a href="nprnu-map.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-city"></i></div>
-              <div class="quick-action-tile-title">Carte Interactive NPRNU</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-traffic-light"></i></div>
-              <div class="quick-action-tile-title">Info Travaux & Déviations</div>
-            </a>
-            <a href="iframe.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-file-contract"></i></div>
-              <div class="quick-action-tile-title">Permis de construire</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-tree-city"></i></div>
-              <div class="quick-action-tile-title">Projets de végétalisation</div>
-            </a>
-          </div>
-
-          <!-- PANEL: CADRE -->
-          <div id="panel-cadre" class="tab-panel">
-            <a href="contact.html" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-              <div class="quick-action-tile-title">Signaler un incident</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-recycle"></i></div>
-              <div class="quick-action-tile-title">Jours de collecte des déchets</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-couch"></i></div>
-              <div class="quick-action-tile-title">Enlèvement d'encombrants</div>
-            </a>
-            <a href="#" class="quick-action-tile">
-              <div class="quick-action-tile-icon"><i class="fa-solid fa-people-group"></i></div>
-              <div class="quick-action-tile-title">Annuaire des associations</div>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right: Highlight Promo Card (Style Aubagne) -->
-        <a href="https://www.laxou.fr/img_base/documents/56/maquette-la239-compressed-1.pdf" target="_blank" rel="noopener noreferrer" class="promo-highlight-card">
-          <div class="promo-card-top">
-            <div class="promo-header-brand">
-              <svg class="promo-origami-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 2L11 13"></path>
-                <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+          <!-- Right: Highlight Promo Card (Style Aubagne) -->
+          <a
+            href="https://www.laxou.fr/img_base/documents/56/maquette-la239-compressed-1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="promo-highlight-card"
+          >
+            <div class="promo-card-top">
+              <div class="promo-header-brand">
+                <svg
+                  class="promo-origami-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 2L11 13"></path>
+                  <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                </svg>
+                <h3 class="promo-title-main">
+                  LAXOU ACTU
+                  <span class="promo-title-underline"></span>
+                </h3>
+              </div>
+              <p class="promo-desc-aubagne">
+                Retrouvez votre magazine municipal de l'été 2026, hors série
+                juillet-août.
+              </p>
+            </div>
+            <div class="promo-arrow-bottom">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-              <h3 class="promo-title-main">
-                LAXOU ACTU
-                <span class="promo-title-underline"></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="sortir-section" class="section-sortir">
+        <div class="container">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              margin-bottom: var(--space-8);
+            "
+          >
+            <div>
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+                  font-weight: 800;
+                  color: #ffffff;
+                  margin: 0;
+                "
+              >
+                Sortir à Laxou
+              </h2>
+              <p
+                style="
+                  color: #ffffff;
+                  opacity: 0.9;
+                  font-size: var(--text-base);
+                  margin-top: 6px;
+                  margin-bottom: 0;
+                "
+              >
+                Événements, spectacles et animations à venir dans la ville
+              </p>
+            </div>
+            <a
+              href="agenda.html"
+              class="section-link"
+              style="
+                color: var(--user-accent);
+                font-weight: 700;
+                font-size: var(--text-sm);
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+              "
+              >Voir tout l'agenda →</a
+            >
+          </div>
+
+          <!-- 4 Grand 3D Perspective Posters -->
+          <div class="grid-posters-3d">
+            <!-- Poster 1 -->
+            <a
+              href="agenda.html"
+              class="poster-card-3d"
+              style="
+                background-image: url(&quot;assets/logo_laxou_official_12.jpg&quot;);
+              "
+            >
+              <div class="poster-overlay-monet"></div>
+              <div class="poster-date-tag-3d">13 AU 15 AOÛT</div>
+              <div class="poster-content-3d">
+                <div class="poster-title-3d">Concert Macondo & Estivales</div>
+                <div style="font-size: var(--text-xs); opacity: 0.95">
+                  📍 Parc de la Sapinière • 20h30
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 2 -->
+            <a
+              href="agenda.html"
+              class="poster-card-3d"
+              style="
+                background-image: url(&quot;assets/logo_laxou_official_18.jpg&quot;);
+              "
+            >
+              <div class="poster-overlay-monet"></div>
+              <div class="poster-date-tag-3d">20 AOÛT</div>
+              <div class="poster-content-3d">
+                <div class="poster-title-3d">Vendredis sous les Étoiles</div>
+                <div style="font-size: var(--text-xs); opacity: 0.95">
+                  📍 Centre-Village Historique • 21h00
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 3 -->
+            <a
+              href="agenda.html"
+              class="poster-card-3d"
+              style="
+                background-image: url(&quot;assets/logo_laxou_official_14.jpg&quot;);
+              "
+            >
+              <div class="poster-overlay-monet"></div>
+              <div class="poster-date-tag-3d">28 AOÛT</div>
+              <div class="poster-content-3d">
+                <div class="poster-title-3d">Cinéma plein air : "Dragons"</div>
+                <div style="font-size: var(--text-xs); opacity: 0.95">
+                  📍 Agora Champ-le-Bœuf • Tombée de la nuit
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 4 -->
+            <a
+              href="agenda.html"
+              class="poster-card-3d"
+              style="
+                background-image: url(&quot;assets/logo_laxou_official_25.jpg&quot;);
+              "
+            >
+              <div class="poster-overlay-monet"></div>
+              <div class="poster-date-tag-3d">5 SEPTEMBRE</div>
+              <div class="poster-content-3d">
+                <div class="poster-title-3d">Guinguette Municipale 2026</div>
+                <div style="font-size: var(--text-xs); opacity: 0.95">
+                  📍 Rives de Laxou • 15h00 - 23h00
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. EQUIPEMENTS - MODERN SPLIT & INTERACTIVE CAROUSEL -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="equipements-container">
+            <!-- Left Content -->
+            <div>
+              <h2
+                style="
+                  font-size: clamp(2.5rem, 4vw, 3.5rem);
+                  font-family: var(--font-display);
+                  font-weight: 900;
+                  color: var(--user-primary-dark);
+                  line-height: 1.1;
+                  margin-bottom: var(--space-2);
+                  letter-spacing: -1px;
+                "
+              >
+                Proche de vous
+              </h2>
+              <h3
+                style="
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: #009933;
+                  margin-bottom: var(--space-4);
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                "
+              >
+                Annuaires
+              </h3>
+              <p
+                style="
+                  color: var(--color-muted);
+                  font-size: 1.1rem;
+                  line-height: 1.6;
+                  margin-bottom: var(--space-6);
+                "
+              >
+                Que vous cherchiez un service public, un équipement, une
+                association ou un commerce, ils sont tous dans les annuaires !
+              </p>
+
+              <!-- Modern Category Badges -->
+              <div class="equipements-badges-row">
+                <a
+                  href="archives.html"
+                  class="equip-pill-badge"
+                  style="text-decoration: none"
+                  ><i class="fa-solid fa-person-swimming"></i> Piscine &
+                  Bassins</a
+                >
+                <a
+                  href="archives.html"
+                  class="equip-pill-badge"
+                  style="text-decoration: none"
+                  ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis &
+                  Gymnases</a
+                >
+                <a
+                  href="archives.html"
+                  class="equip-pill-badge"
+                  style="text-decoration: none"
+                  ><i class="fa-solid fa-masks-theater"></i> Médiathèque &
+                  Culture</a
+                >
+                <a
+                  href="archives.html"
+                  class="equip-pill-badge"
+                  style="text-decoration: none"
+                  ><i class="fa-solid fa-tree"></i> Parcs & Jardins</a
+                >
+              </div>
+
+              <a href="iframe.html" class="btn-equipements-map">
+                <i class="fa-solid fa-map-location-dot"></i> Explorer les 80+
+                lieux sur la carte →
+              </a>
+            </div>
+
+            <!-- Right: Interactive Photo Carousel -->
+            <div class="equip-carousel-wrapper" id="equipCarousel">
+              <!-- Slide 1: Piscine -->
+              <a
+                href="iframe.html"
+                class="equip-carousel-slide active"
+                style="display: block; text-decoration: none"
+              >
+                <img
+                  src="assets/laxou_piscine_officielle.jpg?v=260819130621"
+                  alt="Piscine municipale et complexe aquatique de Laxou"
+                />
+                <div class="equip-carousel-overlay"></div>
+                <div class="equip-carousel-caption">
+                  <div class="equip-carousel-tag">
+                    <i class="fa-solid fa-person-swimming"></i> Équipement
+                    Nautique
+                  </div>
+                  <h3 class="equip-carousel-title">
+                    Piscine Municipale & Complexe Aquatique
+                  </h3>
+                </div>
+              </a>
+
+              <!-- Slide 2: Tennis -->
+              <a
+                href="iframe.html"
+                class="equip-carousel-slide"
+                style="display: block; text-decoration: none"
+              >
+                <img
+                  src="assets/equipement_tennis.jpg"
+                  alt="Courts de tennis en terre battue de Laxou"
+                />
+                <div class="equip-carousel-overlay"></div>
+                <div class="equip-carousel-caption">
+                  <div class="equip-carousel-tag">
+                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                    Complexe Sportif
+                  </div>
+                  <h3 class="equip-carousel-title">
+                    Courts de Tennis & Terrains Extérieurs
+                  </h3>
+                </div>
+              </a>
+
+              <!-- Slide 3: Urbain / Bâtiment moderne -->
+              <a
+                href="iframe.html"
+                class="equip-carousel-slide"
+                style="display: block; text-decoration: none"
+              >
+                <img
+                  src="assets/equipement_urbain.jpg"
+                  alt="Pôle urbain et espaces associatifs de Laxou"
+                />
+                <div class="equip-carousel-overlay"></div>
+                <div class="equip-carousel-caption">
+                  <div class="equip-carousel-tag">
+                    <i class="fa-solid fa-city"></i> Renouveau Urbain
+                  </div>
+                  <h3 class="equip-carousel-title">
+                    Pôle d'Aménagement & Espaces Associatifs
+                  </h3>
+                </div>
+              </a>
+
+              <div class="equip-carousel-indicators">
+                <div class="equip-dot active"></div>
+                <div class="equip-dot"></div>
+                <div class="equip-dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. REFINED APPLE-GRADE NEWS CARDS -->
+      <section
+        class="section-padding"
+        style="background-color: var(--color-surface)"
+      >
+        <div class="container">
+          <div style="margin-bottom: 40px">
+            <h2
+              style="
+                margin-bottom: 0;
+                font-family: var(--font-display);
+                font-size: clamp(2.5rem, 4vw, 3.5rem);
+                font-weight: 900;
+                color: var(--user-primary-dark);
+                letter-spacing: -1px;
+              "
+            >
+              Actualités de la ville
+            </h2>
+          </div>
+
+          <div class="news-bento-grid">
+            <!-- 1. Featured (Une) -->
+            <a href="article.html" class="news-bento-card bento-featured">
+              <img
+                src="assets/logo_laxou_official_16.jpg"
+                class="bento-bg"
+                alt="Vide greniers Laxou"
+                loading="lazy"
+              />
+              <div class="bento-overlay"></div>
+              <div class="bento-content">
+                <span class="bento-tag">Vie locale</span>
+                <h3 class="bento-title">
+                  Ouverture des inscriptions du grand vide-greniers et de la
+                  braderie d'automne
+                </h3>
+                <span class="bento-date">28 juillet 2026</span>
+              </div>
+            </a>
+
+            <!-- 2. Standard 1 -->
+            <a href="article.html" class="news-bento-card bento-standard">
+              <img
+                src="assets/logo_laxou_official_17.jpg"
+                class="bento-bg"
+                alt="Accueil des nouveaux laxoviens"
+                loading="lazy"
+              />
+              <div class="bento-overlay"></div>
+              <div class="bento-content">
+                <span class="bento-tag">Citoyenneté</span>
+                <h3 class="bento-title">
+                  Cérémonie d'accueil des nouveaux habitants
+                </h3>
+                <span class="bento-date">4 août 2026</span>
+              </div>
+            </a>
+
+            <!-- 3. Standard 2 -->
+            <a href="article.html" class="news-bento-card bento-standard">
+              <img
+                src="assets/logo_laxou_official_21.jpg"
+                class="bento-bg"
+                alt="Travaux avenue Paul Deroulède"
+                loading="lazy"
+              />
+              <div class="bento-overlay"></div>
+              <div class="bento-content">
+                <span
+                  class="bento-tag"
+                  style="background: rgba(255, 59, 48, 0.75)"
+                  >Travaux</span
+                >
+                <h3 class="bento-title">
+                  Avenue Déroulède fermée pour réfection
+                </h3>
+                <span class="bento-date">5 août 2026</span>
+              </div>
+            </a>
+
+            <!-- 4. Wide (Promo Magazine) -->
+            <a href="article.html" class="news-bento-card bento-wide">
+              <img
+                src="assets/logo_laxou_official_23.jpg"
+                class="bento-bg"
+                alt="Laxou Actu N°240"
+                loading="lazy"
+              />
+              <div class="bento-overlay bento-overlay-wide"></div>
+              <div class="bento-content">
+                <span
+                  class="bento-tag"
+                  style="background: var(--user-accent); color: white"
+                  >Nouveau Numéro</span
+                >
+                <h3 class="bento-title">
+                  Le journal municipal Laxou Actu n°240 est disponible
+                </h3>
+                <span class="bento-date">1er août 2026</span>
+              </div>
+            </a>
+          </div>
+
+          <div style="text-align: center; margin-top: 60px">
+            <a
+              href="actualites.html"
+              class="btn-dark"
+              style="
+                border-radius: 50px;
+                font-size: 1.1rem;
+                padding: 16px 40px;
+                font-weight: 700;
+                display: inline-block;
+                letter-spacing: 0.5px;
+                transition: transform 0.2s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+              >Toutes les actualités</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. SOCIAL HUB 2027 (FACEBOOK FEED) -->
+      <section class="social-2027-section">
+        <div class="social-header-2027">
+          <div>
+            <h2 class="social-title-2027">Laxou en <span>Direct</span></h2>
+            <p
+              style="
+                font-size: 1.2rem;
+                color: var(--color-muted);
+                margin-top: 0.5rem;
+                max-width: 500px;
+              "
+            >
+              Suivez la vie de la commune en temps réel à travers notre flux
+              d'actualités immersif.
+            </p>
+          </div>
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="btn-fb-2027"
+          >
+            <i class="fa-brands fa-facebook"></i> Rejoindre la communauté
+          </a>
+        </div>
+
+        <div class="social-track-2027">
+          <!-- Post 1 -->
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="social-card-2027"
+          >
+            <div class="social-author-2027">
+              <div class="social-avatar-2027">
+                <img
+                  src="assets/logo_laxou_official_5.png"
+                  alt="Mairie de Laxou"
+                />
+              </div>
+              <div class="social-meta-2027">
+                <h4>
+                  Mairie de Laxou
+                  <i
+                    class="fa-solid fa-circle-check"
+                    style="color: #34d399; font-size: 0.9rem"
+                  ></i>
+                </h4>
+                <span>Il y a 2 heures</span>
+              </div>
+            </div>
+            <div class="social-media-2027">
+              <img
+                src="assets/logo_laxou_official_16.jpg"
+                alt="Vide Grenier"
+                loading="lazy"
+              />
+            </div>
+            <p class="social-text-2027">
+              🎉 Retour en images sur le vide-greniers de ce week-end ! Merci
+              aux centaines d'exposants et aux visiteurs d'avoir bravé la
+              chaleur. Une ambiance exceptionnelle dans nos rues !
+            </p>
+            <div class="social-footer-2027">
+              <div class="social-reaction-group">
+                <div class="reaction-icon like">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <div class="reaction-icon heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <span class="social-stats">142</span>
+              </div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  color: var(--color-muted);
+                  font-weight: 600;
+                "
+              >
+                12 Commentaires
+              </div>
+            </div>
+          </a>
+
+          <!-- Post 2 -->
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="social-card-2027"
+          >
+            <div class="social-author-2027">
+              <div class="social-avatar-2027">
+                <img
+                  src="assets/logo_laxou_official_5.png"
+                  alt="Mairie de Laxou"
+                />
+              </div>
+              <div class="social-meta-2027">
+                <h4>
+                  Mairie de Laxou
+                  <i
+                    class="fa-solid fa-circle-check"
+                    style="color: #34d399; font-size: 0.9rem"
+                  ></i>
+                </h4>
+                <span>Hier à 14:30</span>
+              </div>
+            </div>
+            <div class="social-media-2027">
+              <img
+                src="assets/logo_laxou_official_18.jpg"
+                alt="Travaux Écoles"
+                loading="lazy"
+              />
+            </div>
+            <p class="social-text-2027">
+              🚧 Point Travaux : L'isolation thermique de l'école Victor Hugo
+              avance à grands pas. Objectif : -30% de consommation énergétique
+              dès cet hiver ! #TransitionEcologique #Laxou
+            </p>
+            <div class="social-footer-2027">
+              <div class="social-reaction-group">
+                <div class="reaction-icon like">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <span class="social-stats">89</span>
+              </div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  color: var(--color-muted);
+                  font-weight: 600;
+                "
+              >
+                5 Partages
+              </div>
+            </div>
+          </a>
+
+          <!-- Post 3 -->
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="social-card-2027"
+          >
+            <div class="social-author-2027">
+              <div class="social-avatar-2027">
+                <img
+                  src="assets/logo_laxou_official_5.png"
+                  alt="Mairie de Laxou"
+                />
+              </div>
+              <div class="social-meta-2027">
+                <h4>
+                  Mairie de Laxou
+                  <i
+                    class="fa-solid fa-circle-check"
+                    style="color: #34d399; font-size: 0.9rem"
+                  ></i>
+                </h4>
+                <span>Mardi à 09:15</span>
+              </div>
+            </div>
+            <div class="social-media-2027">
+              <img
+                src="assets/logo_laxou_official_17.jpg"
+                alt="Accueil des nouveaux"
+                loading="lazy"
+              />
+            </div>
+            <p class="social-text-2027">
+              👋 Bienvenue à Laxou ! La cérémonie d'accueil des nouveaux
+              habitants s'est tenue hier soir à l'Hôtel de Ville. Un moment
+              d'échange privilégié avec vos élus.
+            </p>
+            <div class="social-footer-2027">
+              <div class="social-reaction-group">
+                <div class="reaction-icon heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="reaction-icon like">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <span class="social-stats">215</span>
+              </div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  color: var(--color-muted);
+                  font-weight: 600;
+                "
+              >
+                18 Commentaires
+              </div>
+            </div>
+          </a>
+
+          <!-- Post 4 -->
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="social-card-2027"
+          >
+            <div class="social-author-2027">
+              <div class="social-avatar-2027">
+                <img
+                  src="assets/logo_laxou_official_5.png"
+                  alt="Mairie de Laxou"
+                />
+              </div>
+              <div class="social-meta-2027">
+                <h4>
+                  Mairie de Laxou
+                  <i
+                    class="fa-solid fa-circle-check"
+                    style="color: #34d399; font-size: 0.9rem"
+                  ></i>
+                </h4>
+                <span>Lundi à 18:00</span>
+              </div>
+            </div>
+            <div
+              class="social-media-2027"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(
+                  135deg,
+                  #ff9a9e 0%,
+                  #fecfef 99%,
+                  #fecfef 100%
+                );
+              "
+            >
+              <h3
+                style="
+                  padding: 2rem;
+                  text-align: center;
+                  color: #d62450;
+                  font-size: 1.8rem;
+                  font-weight: 900;
+                  line-height: 1.2;
+                "
+              >
+                ⚠️ Alerte Canicule : N'oubliez pas s'inscrire au registre CCAS.
               </h3>
             </div>
-            <p class="promo-desc-aubagne">
-              Retrouvez votre magazine municipal de l'été 2026, hors série juillet-août.
+            <p class="social-text-2027">
+              Protégeons nos aînés. Pensez à vous hydrater régulièrement et
+              contactez le CCAS si vous ou un proche êtes isolés. Le numéro vert
+              est actif 24h/24.
             </p>
-          </div>
-          <div class="promo-arrow-bottom">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-        <section id="sortir-section" class="section-sortir">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: var(--space-8);">
-          <div>
-            <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #ffffff; margin: 0;">Sortir à Laxou</h2>
-            <p style="color: #ffffff; opacity: 0.9; font-size: var(--text-base); margin-top: 6px; margin-bottom: 0;">Événements, spectacles et animations à venir dans la ville</p>
-          </div>
-          <a href="agenda.html" class="section-link" style="color: var(--user-accent); font-weight: 700; font-size: var(--text-sm); display: inline-flex; align-items: center; gap: 5px;">Voir tout l'agenda →</a>
-        </div>
-
-        <!-- 4 Grand 3D Perspective Posters -->
-        <div class="grid-posters-3d">
-          <!-- Poster 1 -->
-          <a href="agenda.html" class="poster-card-3d" style="background-image: url('assets/logo_laxou_official_12.jpg');">
-            <div class="poster-overlay-monet"></div>
-            <div class="poster-date-tag-3d">13 AU 15 AOÛT</div>
-            <div class="poster-content-3d">
-              <div class="poster-title-3d">Concert Macondo & Estivales</div>
-              <div style="font-size: var(--text-xs); opacity: 0.95;">📍 Parc de la Sapinière • 20h30</div>
-            </div>
-          </a>
-
-          <!-- Poster 2 -->
-          <a href="agenda.html" class="poster-card-3d" style="background-image: url('assets/logo_laxou_official_18.jpg');">
-            <div class="poster-overlay-monet"></div>
-            <div class="poster-date-tag-3d">20 AOÛT</div>
-            <div class="poster-content-3d">
-              <div class="poster-title-3d">Vendredis sous les Étoiles</div>
-              <div style="font-size: var(--text-xs); opacity: 0.95;">📍 Centre-Village Historique • 21h00</div>
-            </div>
-          </a>
-
-          <!-- Poster 3 -->
-          <a href="agenda.html" class="poster-card-3d" style="background-image: url('assets/logo_laxou_official_14.jpg');">
-            <div class="poster-overlay-monet"></div>
-            <div class="poster-date-tag-3d">28 AOÛT</div>
-            <div class="poster-content-3d">
-              <div class="poster-title-3d">Cinéma plein air : "Dragons"</div>
-              <div style="font-size: var(--text-xs); opacity: 0.95;">📍 Agora Champ-le-Bœuf • Tombée de la nuit</div>
-            </div>
-          </a>
-
-          <!-- Poster 4 -->
-          <a href="agenda.html" class="poster-card-3d" style="background-image: url('assets/logo_laxou_official_25.jpg');">
-            <div class="poster-overlay-monet"></div>
-            <div class="poster-date-tag-3d">5 SEPTEMBRE</div>
-            <div class="poster-content-3d">
-              <div class="poster-title-3d">Guinguette Municipale 2026</div>
-              <div style="font-size: var(--text-xs); opacity: 0.95;">📍 Rives de Laxou • 15h00 - 23h00</div>
-            </div>
-          </a>
-        </div>
-
+            <div class="social-footer-2027">
+              <div class="social-reaction-group">
+                <div class="reaction-icon like">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <span class="social-stats">304</span>
               </div>
-    </section>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  color: var(--color-muted);
+                  font-weight: 600;
+                "
+              >
+                52 Partages
+              </div>
+            </div>
+          </a>
 
-    <!-- 5. EQUIPEMENTS - MODERN SPLIT & INTERACTIVE CAROUSEL -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="equipements-container">
-          <!-- Left Content -->
-          <div>
-            <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-family: var(--font-display); font-weight: 900; color: var(--user-primary-dark); line-height: 1.1; margin-bottom: var(--space-2); letter-spacing: -1px;">
-              Proche de vous
-            </h2>
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: #009933; margin-bottom: var(--space-4); text-transform: uppercase; letter-spacing: 1px;">
-              Annuaires
-            </h3>
-            <p style="color: var(--color-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--space-6);">
-              Que vous cherchiez un service public, un équipement, une association ou un commerce, ils sont tous dans les annuaires !
+          <!-- Post 5 -->
+          <a
+            href="https://www.facebook.com/MairiedeLaxou/"
+            target="_blank"
+            rel="noopener"
+            class="social-card-2027"
+          >
+            <div class="social-author-2027">
+              <div class="social-avatar-2027">
+                <img
+                  src="assets/logo_laxou_official_5.png"
+                  alt="Mairie de Laxou"
+                />
+              </div>
+              <div class="social-meta-2027">
+                <h4>
+                  Mairie de Laxou
+                  <i
+                    class="fa-solid fa-circle-check"
+                    style="color: #34d399; font-size: 0.9rem"
+                  ></i>
+                </h4>
+                <span>Lundi à 10:30</span>
+              </div>
+            </div>
+            <div class="social-media-2027">
+              <img
+                src="assets/logo_laxou_official_21.jpg"
+                alt="Sport Laxou"
+                loading="lazy"
+              />
+            </div>
+            <p class="social-text-2027">
+              ⚽ Inscriptions associatives : Le forum des sports approche à
+              grands pas. Venez rencontrer les 40 clubs laxoviens le samedi 2
+              Septembre au complexe omnisports !
             </p>
-            
-            <!-- Modern Category Badges -->
-            <div class="equipements-badges-row">
-              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-person-swimming"></i> Piscine & Bassins</a>
-              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis & Gymnases</a>
-              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-masks-theater"></i> Médiathèque & Culture</a>
-              <a href="archives.html" class="equip-pill-badge" style="text-decoration:none;"><i class="fa-solid fa-tree"></i> Parcs & Jardins</a>
-            </div>
-
-            <a href="iframe.html" class="btn-equipements-map">
-              <i class="fa-solid fa-map-location-dot"></i> Explorer les 80+ lieux sur la carte →
-            </a>
-          </div>
-
-          <!-- Right: Interactive Photo Carousel -->
-          <div class="equip-carousel-wrapper" id="equipCarousel">
-            
-            <!-- Slide 1: Piscine -->
-            <a href="iframe.html" class="equip-carousel-slide active" style="display:block; text-decoration:none;">
-              <img src="assets/laxou_piscine_officielle.jpg?v=260819130621" alt="Piscine municipale et complexe aquatique de Laxou">
-              <div class="equip-carousel-overlay"></div>
-              <div class="equip-carousel-caption">
-                <div class="equip-carousel-tag"><i class="fa-solid fa-person-swimming"></i> Équipement Nautique</div>
-                <h3 class="equip-carousel-title">Piscine Municipale & Complexe Aquatique</h3>
+            <div class="social-footer-2027">
+              <div class="social-reaction-group">
+                <div class="reaction-icon like">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <div class="reaction-icon heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <span class="social-stats">127</span>
               </div>
-            </a>
-
-            <!-- Slide 2: Tennis -->
-            <a href="iframe.html" class="equip-carousel-slide" style="display:block; text-decoration:none;">
-              <img src="assets/equipement_tennis.jpg" alt="Courts de tennis en terre battue de Laxou">
-              <div class="equip-carousel-overlay"></div>
-              <div class="equip-carousel-caption">
-                <div class="equip-carousel-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Complexe Sportif</div>
-                <h3 class="equip-carousel-title">Courts de Tennis & Terrains Extérieurs</h3>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  color: var(--color-muted);
+                  font-weight: 600;
+                "
+              >
+                8 Commentaires
               </div>
-            </a>
-
-            <!-- Slide 3: Urbain / Bâtiment moderne -->
-            <a href="iframe.html" class="equip-carousel-slide" style="display:block; text-decoration:none;">
-              <img src="assets/equipement_urbain.jpg" alt="Pôle urbain et espaces associatifs de Laxou">
-              <div class="equip-carousel-overlay"></div>
-              <div class="equip-carousel-caption">
-                <div class="equip-carousel-tag"><i class="fa-solid fa-city"></i> Renouveau Urbain</div>
-                <h3 class="equip-carousel-title">Pôle d'Aménagement & Espaces Associatifs</h3>
-              </div>
-            </a>
-
-            <div class="equip-carousel-indicators">
-              <div class="equip-dot active"></div>
-              <div class="equip-dot"></div>
-              <div class="equip-dot"></div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. REFINED APPLE-GRADE NEWS CARDS -->
-    <section class="section-padding" style="background-color: var(--color-surface);">
-      <div class="container">
-        <div style="margin-bottom: 40px;">
-            <h2 style="margin-bottom: 0; font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 900; color: var(--user-primary-dark); letter-spacing: -1px;">Actualités de la ville</h2>
-        </div>
-
-        <div class="news-bento-grid">
-          <!-- 1. Featured (Une) -->
-          <a href="article.html" class="news-bento-card bento-featured">
-            <img src="assets/logo_laxou_official_16.jpg" class="bento-bg" alt="Vide greniers Laxou" loading="lazy">
-            <div class="bento-overlay"></div>
-            <div class="bento-content">
-              <span class="bento-tag">Vie locale</span>
-              <h3 class="bento-title">Ouverture des inscriptions du grand vide-greniers et de la braderie d'automne</h3>
-              <span class="bento-date">28 juillet 2026</span>
-            </div>
-          </a>
-
-          <!-- 2. Standard 1 -->
-          <a href="article.html" class="news-bento-card bento-standard">
-            <img src="assets/logo_laxou_official_17.jpg" class="bento-bg" alt="Accueil des nouveaux laxoviens" loading="lazy">
-            <div class="bento-overlay"></div>
-            <div class="bento-content">
-              <span class="bento-tag">Citoyenneté</span>
-              <h3 class="bento-title">Cérémonie d'accueil des nouveaux habitants</h3>
-              <span class="bento-date">4 août 2026</span>
-            </div>
-          </a>
-
-          <!-- 3. Standard 2 -->
-          <a href="article.html" class="news-bento-card bento-standard">
-            <img src="assets/logo_laxou_official_21.jpg" class="bento-bg" alt="Travaux avenue Paul Deroulède" loading="lazy">
-            <div class="bento-overlay"></div>
-            <div class="bento-content">
-              <span class="bento-tag" style="background: rgba(255, 59, 48, 0.75);">Travaux</span>
-              <h3 class="bento-title">Avenue Déroulède fermée pour réfection</h3>
-              <span class="bento-date">5 août 2026</span>
-            </div>
-          </a>
-
-          <!-- 4. Wide (Promo Magazine) -->
-          <a href="article.html" class="news-bento-card bento-wide">
-            <img src="assets/logo_laxou_official_23.jpg" class="bento-bg" alt="Laxou Actu N°240" loading="lazy">
-            <div class="bento-overlay bento-overlay-wide"></div>
-            <div class="bento-content">
-              <span class="bento-tag" style="background: var(--user-accent); color: white;">Nouveau Numéro</span>
-              <h3 class="bento-title">Le journal municipal Laxou Actu n°240 est disponible</h3>
-              <span class="bento-date">1er août 2026</span>
             </div>
           </a>
         </div>
-        
-        <div style="text-align: center; margin-top: 60px;">
-          <a href="actualites.html" class="btn-dark" style="border-radius: 50px; font-size: 1.1rem; padding: 16px 40px; font-weight: 700; display: inline-block; letter-spacing: 0.5px; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toutes les actualités</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- 8. SOCIAL HUB 2027 (FACEBOOK FEED) -->
-    <section class="social-2027-section">
-      <div class="social-header-2027">
-        <div>
-          <h2 class="social-title-2027">Laxou en <span>Direct</span></h2>
-          <p style="font-size: 1.2rem; color: var(--color-muted); margin-top: 0.5rem; max-width: 500px;">
-            Suivez la vie de la commune en temps réel à travers notre flux d'actualités immersif.
-          </p>
-        </div>
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="btn-fb-2027">
-          <i class="fa-brands fa-facebook"></i> Rejoindre la communauté
-        </a>
-      </div>
-
-      <div class="social-track-2027">
-        
-        <!-- Post 1 -->
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-card-2027">
-          <div class="social-author-2027">
-            <div class="social-avatar-2027"><img src="assets/logo_laxou_official_5.png" alt="Mairie de Laxou"></div>
-            <div class="social-meta-2027">
-              <h4>Mairie de Laxou <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 0.9rem;"></i></h4>
-              <span>Il y a 2 heures</span>
-            </div>
-          </div>
-          <div class="social-media-2027">
-            <img src="assets/logo_laxou_official_16.jpg" alt="Vide Grenier" loading="lazy">
-          </div>
-          <p class="social-text-2027">
-            🎉 Retour en images sur le vide-greniers de ce week-end ! Merci aux centaines d'exposants et aux visiteurs d'avoir bravé la chaleur. Une ambiance exceptionnelle dans nos rues !
-          </p>
-          <div class="social-footer-2027">
-            <div class="social-reaction-group">
-              <div class="reaction-icon like"><i class="fa-solid fa-thumbs-up"></i></div>
-              <div class="reaction-icon heart"><i class="fa-solid fa-heart"></i></div>
-              <span class="social-stats">142</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-muted); font-weight: 600;">12 Commentaires</div>
-          </div>
-        </a>
-
-        <!-- Post 2 -->
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-card-2027">
-          <div class="social-author-2027">
-            <div class="social-avatar-2027"><img src="assets/logo_laxou_official_5.png" alt="Mairie de Laxou"></div>
-            <div class="social-meta-2027">
-              <h4>Mairie de Laxou <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 0.9rem;"></i></h4>
-              <span>Hier à 14:30</span>
-            </div>
-          </div>
-          <div class="social-media-2027">
-            <img src="assets/logo_laxou_official_18.jpg" alt="Travaux Écoles" loading="lazy">
-          </div>
-          <p class="social-text-2027">
-            🚧 Point Travaux : L'isolation thermique de l'école Victor Hugo avance à grands pas. Objectif : -30% de consommation énergétique dès cet hiver ! #TransitionEcologique #Laxou
-          </p>
-          <div class="social-footer-2027">
-            <div class="social-reaction-group">
-              <div class="reaction-icon like"><i class="fa-solid fa-thumbs-up"></i></div>
-              <span class="social-stats">89</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-muted); font-weight: 600;">5 Partages</div>
-          </div>
-        </a>
-
-        <!-- Post 3 -->
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-card-2027">
-          <div class="social-author-2027">
-            <div class="social-avatar-2027"><img src="assets/logo_laxou_official_5.png" alt="Mairie de Laxou"></div>
-            <div class="social-meta-2027">
-              <h4>Mairie de Laxou <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 0.9rem;"></i></h4>
-              <span>Mardi à 09:15</span>
-            </div>
-          </div>
-          <div class="social-media-2027">
-            <img src="assets/logo_laxou_official_17.jpg" alt="Accueil des nouveaux" loading="lazy">
-          </div>
-          <p class="social-text-2027">
-            👋 Bienvenue à Laxou ! La cérémonie d'accueil des nouveaux habitants s'est tenue hier soir à l'Hôtel de Ville. Un moment d'échange privilégié avec vos élus.
-          </p>
-          <div class="social-footer-2027">
-            <div class="social-reaction-group">
-              <div class="reaction-icon heart"><i class="fa-solid fa-heart"></i></div>
-              <div class="reaction-icon like"><i class="fa-solid fa-thumbs-up"></i></div>
-              <span class="social-stats">215</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-muted); font-weight: 600;">18 Commentaires</div>
-          </div>
-        </a>
-
-        <!-- Post 4 -->
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-card-2027">
-          <div class="social-author-2027">
-            <div class="social-avatar-2027"><img src="assets/logo_laxou_official_5.png" alt="Mairie de Laxou"></div>
-            <div class="social-meta-2027">
-              <h4>Mairie de Laxou <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 0.9rem;"></i></h4>
-              <span>Lundi à 18:00</span>
-            </div>
-          </div>
-          <div class="social-media-2027" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);">
-            <h3 style="padding: 2rem; text-align: center; color: #d62450; font-size: 1.8rem; font-weight: 900; line-height: 1.2;">⚠️ Alerte Canicule : N'oubliez pas s'inscrire au registre CCAS.</h3>
-          </div>
-          <p class="social-text-2027">
-            Protégeons nos aînés. Pensez à vous hydrater régulièrement et contactez le CCAS si vous ou un proche êtes isolés. Le numéro vert est actif 24h/24.
-          </p>
-          <div class="social-footer-2027">
-            <div class="social-reaction-group">
-              <div class="reaction-icon like"><i class="fa-solid fa-thumbs-up"></i></div>
-              <span class="social-stats">304</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-muted); font-weight: 600;">52 Partages</div>
-          </div>
-        </a>
-
-        <!-- Post 5 -->
-        <a href="https://www.facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-card-2027">
-          <div class="social-author-2027">
-            <div class="social-avatar-2027"><img src="assets/logo_laxou_official_5.png" alt="Mairie de Laxou"></div>
-            <div class="social-meta-2027">
-              <h4>Mairie de Laxou <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 0.9rem;"></i></h4>
-              <span>Lundi à 10:30</span>
-            </div>
-          </div>
-          <div class="social-media-2027">
-            <img src="assets/logo_laxou_official_21.jpg" alt="Sport Laxou" loading="lazy">
-          </div>
-          <p class="social-text-2027">
-            ⚽ Inscriptions associatives : Le forum des sports approche à grands pas. Venez rencontrer les 40 clubs laxoviens le samedi 2 Septembre au complexe omnisports !
-          </p>
-          <div class="social-footer-2027">
-            <div class="social-reaction-group">
-              <div class="reaction-icon like"><i class="fa-solid fa-thumbs-up"></i></div>
-              <div class="reaction-icon heart"><i class="fa-solid fa-heart"></i></div>
-              <span class="social-stats">127</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-muted); font-weight: 600;">8 Commentaires</div>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- 10. ALBI FOOTER -->
+    <!-- 10. ALBI FOOTER -->
     <footer class="site-footer-aubagne">
-    <!-- Top Band (The "Blue" part) -->
-    <div class="footer-band">
-      <div class="container footer-band-inner">
-        
-        <div class="footer-socials">
-          <span class="social-label">Suivez-nous</span>
-          <a href="https://facebook.com/MairiedeLaxou/" target="_blank" rel="noopener" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-circle"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="social-circle"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
+      <!-- Top Band (The "Blue" part) -->
+      <div class="footer-band">
+        <div class="container footer-band-inner">
+          <div class="footer-socials">
+            <span class="social-label">Suivez-nous</span>
+            <a
+              href="https://facebook.com/MairiedeLaxou/"
+              target="_blank"
+              rel="noopener"
+              class="social-circle"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-circle"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="social-circle"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="social-circle"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="social-circle"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
 
-        <div class="footer-sites">
-          <a href="#" class="sites-link"><i class="fa-solid fa-circle-nodes"></i> Tous nos sites <i class="fa-solid fa-chevron-down" style="font-size:0.8rem; margin-left:4px;"></i></a>
-        </div>
+          <div class="footer-sites">
+            <a href="#" class="sites-link"
+              ><i class="fa-solid fa-circle-nodes"></i> Tous nos sites
+              <i
+                class="fa-solid fa-chevron-down"
+                style="font-size: 0.8rem; margin-left: 4px"
+              ></i
+            ></a>
+          </div>
 
-        <div class="footer-newsletter">
-          <span class="newsletter-label"><i class="fa-regular fa-envelope"></i> Newsletter</span>
-          <a href="#" class="btn-outline-white"><i class="fa-solid fa-check"></i> S'INSCRIRE</a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Bottom Area (The "White" part) -->
-    <div class="footer-main">
-      <div class="container footer-main-inner">
-        
-        <div class="footer-logo-col">
-          <img src="assets/logo_laxou_official_5.png" alt="Ville de Laxou" class="footer-logo-img">
-        </div>
-
-        <div class="footer-contact-col">
-          <p class="contact-title"><strong>Site de la ville de Laxou</strong></p>
-          <p>Du lundi au vendredi de 8h30 à 17h00.</p>
-          <p><i class="fa-solid fa-envelope"></i> 3 Avenue Paul Déroulède, 54520 Laxou</p>
-          <p><i class="fa-solid fa-phone"></i> 03 83 96 84 00</p>
-        </div>
-
-        <div class="footer-action-col">
-          <a href="contact.html" class="btn-outline-dark"><i class="fa-regular fa-comment"></i> NOUS CONTACTER</a>
-          <a href="#" class="btn-outline-dark"><i class="fa-solid fa-paperclip"></i> ESPACE PRESSE</a>
-        </div>
-
-      </div>
-
-      <div class="container footer-legals">
-        <div class="legals-left">
-          <i class="fa-solid fa-universal-access"></i> Conformité RGAA : <strong>Non conforme</strong>
-        </div>
-        <div class="legals-right">
-          <a href="#">Mentions légales</a>
-          <a href="#">Gestion des cookies</a>
-          <a href="#">Plan du site</a>
+          <div class="footer-newsletter">
+            <span class="newsletter-label"
+              ><i class="fa-regular fa-envelope"></i> Newsletter</span
+            >
+            <a href="#" class="btn-outline-white"
+              ><i class="fa-solid fa-check"></i> S'INSCRIRE</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
 
-  <script src="app.js?v=201247868626"></script>
+      <!-- Bottom Area (The "White" part) -->
+      <div class="footer-main">
+        <div class="container footer-main-inner">
+          <div class="footer-logo-col">
+            <img
+              src="assets/logo_laxou_official_5.png"
+              alt="Ville de Laxou"
+              class="footer-logo-img"
+            />
+          </div>
 
-  <script>
-    function switchTab(tabId, btnElement) {
-      // Remove active class from all buttons
-      document.querySelectorAll(".quick-pill-link").forEach(btn => btn.classList.remove("active"));
-      // Add active class to clicked button
-      btnElement.classList.add("active");
-      
-      // Hide all tab panels
-      document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
-      // Show targeted tab panel
-      document.getElementById("panel-" + tabId).classList.add("active");
-    }
+          <div class="footer-contact-col">
+            <p class="contact-title">
+              <strong>Site de la ville de Laxou</strong>
+            </p>
+            <p>Du lundi au vendredi de 8h30 à 17h00.</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i> 3 Avenue Paul Déroulède,
+              54520 Laxou
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 03 83 96 84 00</p>
+          </div>
 
-    // Equipment Photo Carousel Logic
-    let currentEquipSlide = 0;
-    function showEquipSlide(index) {
-      const slides = document.querySelectorAll(".equip-carousel-slide");
-      const dots = document.querySelectorAll(".equip-dot");
-      if (!slides.length) return;
-      if (index >= slides.length) index = 0;
-      if (index < 0) index = slides.length - 1;
-      currentEquipSlide = index;
+          <div class="footer-action-col">
+            <a href="contact.html" class="btn-outline-dark"
+              ><i class="fa-regular fa-comment"></i> NOUS CONTACTER</a
+            >
+            <a href="#" class="btn-outline-dark"
+              ><i class="fa-solid fa-paperclip"></i> ESPACE PRESSE</a
+            >
+          </div>
+        </div>
 
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
-    }
+        <div class="container footer-legals">
+          <div class="legals-left">
+            <i class="fa-solid fa-universal-access"></i> Conformité RGAA :
+            <strong>Non conforme</strong>
+          </div>
+          <div class="legals-right">
+            <a href="#">Mentions légales</a>
+            <a href="#">Gestion des cookies</a>
+            <a href="#">Plan du site</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    function nextEquipSlide() {
-      showEquipSlide(currentEquipSlide + 1);
-    }
+    <script src="app.js?v=201247868626"></script>
 
-    function prevEquipSlide() {
-      showEquipSlide(currentEquipSlide - 1);
-    }
+    <script>
+      function switchTab(tabId, btnElement) {
+        // Remove active class from all buttons
+        document
+          .querySelectorAll(".quick-pill-link")
+          .forEach((btn) => btn.classList.remove("active"));
+        // Add active class to clicked button
+        btnElement.classList.add("active");
 
-    // Auto-advance carousel smoothly every 3.2s
-    let equipTimer = setInterval(nextEquipSlide, 3200);
-    const carouselEl = document.getElementById("equipCarousel");
-    if (carouselEl) {
-      carouselEl.addEventListener("mouseenter", () => clearInterval(equipTimer));
-      carouselEl.addEventListener("mouseleave", () => {
-        clearInterval(equipTimer);
-        equipTimer = setInterval(nextEquipSlide, 3200);
-      });
-    }
-  </script>
-</body>
+        // Hide all tab panels
+        document
+          .querySelectorAll(".tab-panel")
+          .forEach((panel) => panel.classList.remove("active"));
+        // Show targeted tab panel
+        document.getElementById("panel-" + tabId).classList.add("active");
+      }
+
+      // Equipment Photo Carousel Logic
+      let currentEquipSlide = 0;
+      function showEquipSlide(index) {
+        const slides = document.querySelectorAll(".equip-carousel-slide");
+        const dots = document.querySelectorAll(".equip-dot");
+        if (!slides.length) return;
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+        currentEquipSlide = index;
+
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextEquipSlide() {
+        showEquipSlide(currentEquipSlide + 1);
+      }
+
+      function prevEquipSlide() {
+        showEquipSlide(currentEquipSlide - 1);
+      }
+
+      // Auto-advance carousel smoothly every 3.2s
+      let equipTimer = setInterval(nextEquipSlide, 3200);
+      const carouselEl = document.getElementById("equipCarousel");
+      if (carouselEl) {
+        carouselEl.addEventListener("mouseenter", () =>
+          clearInterval(equipTimer),
+        );
+        carouselEl.addEventListener("mouseleave", () => {
+          clearInterval(equipTimer);
+          equipTimer = setInterval(nextEquipSlide, 3200);
+        });
+      }
+    </script>
+  </body>
 </html>

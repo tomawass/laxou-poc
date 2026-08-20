@@ -25,24 +25,24 @@ export class AccessibilityManager {
    * @private
    */
   _initLiveRegion() {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
-    let el = document.getElementById('a11y-live-region');
+    let el = document.getElementById("a11y-live-region");
     if (!el) {
-      el = document.createElement('div');
-      el.id = 'a11y-live-region';
-      el.className = 'sr-only';
-      el.setAttribute('aria-live', 'polite');
-      el.setAttribute('aria-atomic', 'true');
-      el.style.position = 'absolute';
-      el.style.width = '1px';
-      el.style.height = '1px';
-      el.style.padding = '0';
-      el.style.margin = '-1px';
-      el.style.overflow = 'hidden';
-      el.style.clip = 'rect(0, 0, 0, 0)';
-      el.style.whiteSpace = 'nowrap';
-      el.style.border = '0';
+      el = document.createElement("div");
+      el.id = "a11y-live-region";
+      el.className = "sr-only";
+      el.setAttribute("aria-live", "polite");
+      el.setAttribute("aria-atomic", "true");
+      el.style.position = "absolute";
+      el.style.width = "1px";
+      el.style.height = "1px";
+      el.style.padding = "0";
+      el.style.margin = "-1px";
+      el.style.overflow = "hidden";
+      el.style.clip = "rect(0, 0, 0, 0)";
+      el.style.whiteSpace = "nowrap";
+      el.style.border = "0";
       document.body.appendChild(el);
     }
     this.liveRegionEl = el;
@@ -53,62 +53,74 @@ export class AccessibilityManager {
    * @private
    */
   _setupKeyboardNavigation() {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener("keydown", (e) => {
       // Ignorer si l'utilisateur saisit dans un champ texte
       const activeEl = document.activeElement;
-      const isInput = activeEl && (
-        activeEl.tagName === 'INPUT' ||
-        activeEl.tagName === 'TEXTAREA' ||
-        activeEl.tagName === 'SELECT'
-      );
+      const isInput =
+        activeEl &&
+        (activeEl.tagName === "INPUT" ||
+          activeEl.tagName === "TEXTAREA" ||
+          activeEl.tagName === "SELECT");
 
-      if (isInput && e.key !== 'Escape') return;
+      if (isInput && e.key !== "Escape") return;
 
       const panStep = 50;
 
       switch (e.key) {
         // Zoom clavier (+ / -)
-        case '+':
-        case '=':
+        case "+":
+        case "=":
           if (this.viewport) {
-            this.viewport.zoomAt(this.viewport.width / 2, this.viewport.height / 2, 1.25);
-            this.announce(`Zoom avant (Niveau ${this.viewport.zoom.toFixed(1)})`);
+            this.viewport.zoomAt(
+              this.viewport.width / 2,
+              this.viewport.height / 2,
+              1.25,
+            );
+            this.announce(
+              `Zoom avant (Niveau ${this.viewport.zoom.toFixed(1)})`,
+            );
           }
           break;
 
-        case '-':
-        case '_':
+        case "-":
+        case "_":
           if (this.viewport) {
-            this.viewport.zoomAt(this.viewport.width / 2, this.viewport.height / 2, 0.8);
-            this.announce(`Zoom arrière (Niveau ${this.viewport.zoom.toFixed(1)})`);
+            this.viewport.zoomAt(
+              this.viewport.width / 2,
+              this.viewport.height / 2,
+              0.8,
+            );
+            this.announce(
+              `Zoom arrière (Niveau ${this.viewport.zoom.toFixed(1)})`,
+            );
           }
           break;
 
         // Déplacement par flèches
-        case 'ArrowUp':
+        case "ArrowUp":
           if (this.viewport) {
             this.viewport.panBy(0, panStep);
             e.preventDefault();
           }
           break;
 
-        case 'ArrowDown':
+        case "ArrowDown":
           if (this.viewport) {
             this.viewport.panBy(0, -panStep);
             e.preventDefault();
           }
           break;
 
-        case 'ArrowLeft':
+        case "ArrowLeft":
           if (this.viewport) {
             this.viewport.panBy(panStep, 0);
             e.preventDefault();
           }
           break;
 
-        case 'ArrowRight':
+        case "ArrowRight":
           if (this.viewport) {
             this.viewport.panBy(-panStep, 0);
             e.preventDefault();
@@ -116,8 +128,8 @@ export class AccessibilityManager {
           break;
 
         // Touche Échap
-        case 'Escape':
-          this.eventBus.emit('drawer:toggled', { isOpen: false });
+        case "Escape":
+          this.eventBus.emit("drawer:toggled", { isOpen: false });
           break;
       }
     });
@@ -130,24 +142,28 @@ export class AccessibilityManager {
   _setupEventListeners() {
     if (!this.eventBus) return;
 
-    this.eventBus.on('place:selected', ({ place }) => {
+    this.eventBus.on("place:selected", ({ place }) => {
       if (place && place.name) {
-        this.announce(`Lieu sélectionné : ${place.name}, ${place.address || ''}`);
+        this.announce(
+          `Lieu sélectionné : ${place.name}, ${place.address || ""}`,
+        );
       }
     });
 
-    this.eventBus.on('filter:changed', ({ count, categoryId }) => {
-      this.announce(`${count} lieu${count > 1 ? 'x' : ''} trouvé${count > 1 ? 's' : ''}`);
+    this.eventBus.on("filter:changed", ({ count, categoryId }) => {
+      this.announce(
+        `${count} lieu${count > 1 ? "x" : ""} trouvé${count > 1 ? "s" : ""}`,
+      );
     });
   }
 
   /**
    * Annonce un message vocal au lecteur d'écran via ARIA live region.
-   * @param {string} message 
+   * @param {string} message
    */
   announce(message) {
     if (!this.liveRegionEl || !message) return;
-    this.liveRegionEl.textContent = '';
+    this.liveRegionEl.textContent = "";
     // Décalage léger pour garantir la détection de modification DOM par les lecteurs d'écran
     setTimeout(() => {
       if (this.liveRegionEl) {

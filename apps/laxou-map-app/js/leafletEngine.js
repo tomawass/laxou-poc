@@ -10,7 +10,10 @@ export class LeafletEngine {
    * @param {Object} [options] - Coordonnées et zoom initiaux
    */
   constructor(container, eventBus, options = {}) {
-    this.container = typeof container === 'string' ? document.getElementById(container) : container;
+    this.container =
+      typeof container === "string"
+        ? document.getElementById(container)
+        : container;
     this.eventBus = eventBus;
 
     this.map = null;
@@ -23,11 +26,13 @@ export class LeafletEngine {
 
     // URL des tuiles CartoDB
     this.TILE_URLS = {
-      dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-      light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
+      dark: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+      light:
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
     };
 
-    this.ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+    this.ATTRIBUTION =
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 
     this.init();
   }
@@ -36,28 +41,28 @@ export class LeafletEngine {
    * Initialise l'instance Leaflet et la couche de tuiles.
    */
   init() {
-    if (!this.container || typeof L === 'undefined') {
-      console.warn('Leaflet non disponible ou conteneur introuvable.');
+    if (!this.container || typeof L === "undefined") {
+      console.warn("Leaflet non disponible ou conteneur introuvable.");
       return;
     }
 
     // Supprimer tout canvas ou overlay préexistant dans le conteneur si besoin
-    const canvas = this.container.querySelector('canvas');
-    if (canvas) canvas.style.display = 'none';
+    const canvas = this.container.querySelector("canvas");
+    if (canvas) canvas.style.display = "none";
 
     // Créer la carte Leaflet sans les contrôles de zoom par défaut (on utilise nos boutons stylisés)
     this.map = L.map(this.container, {
       center: this.defaultCenter,
       zoom: this.defaultZoom,
       zoomControl: false,
-      attributionControl: false
+      attributionControl: false,
     });
 
     // Ajouter la couche de tuiles initiale
     this.tileLayer = L.tileLayer(this.TILE_URLS.dark, {
       attribution: this.ATTRIBUTION,
       maxZoom: 19,
-      subdomains: 'abcd'
+      subdomains: "abcd",
     }).addTo(this.map);
 
     this._setupEventListeners();
@@ -71,11 +76,11 @@ export class LeafletEngine {
     if (!this.map) return;
 
     // Clic sur le fond neutre de la carte ➔ émettre 'map:clicked' pour fermer le tiroir de détails
-    this.map.on('click', (e) => {
+    this.map.on("click", (e) => {
       // Vérifier si le clic est directement sur la carte et pas sur un marqueur
       if (this.eventBus) {
-        this.eventBus.emit('map:clicked', { originalEvent: e });
-        this.eventBus.emit('drawer:toggled', { isOpen: false });
+        this.eventBus.emit("map:clicked", { originalEvent: e });
+        this.eventBus.emit("drawer:toggled", { isOpen: false });
       }
     });
 
@@ -83,19 +88,19 @@ export class LeafletEngine {
     const emitViewportChange = () => {
       if (this.eventBus) {
         const center = this.map.getCenter();
-        this.eventBus.emit('viewport:changed', {
+        this.eventBus.emit("viewport:changed", {
           lat: center.lat,
           lng: center.lng,
-          zoom: this.map.getZoom()
+          zoom: this.map.getZoom(),
         });
       }
     };
 
-    this.map.on('move zoom viewreset resize', emitViewportChange);
+    this.map.on("move zoom viewreset resize", emitViewportChange);
 
     // Écouter les changements de thème
     if (this.eventBus) {
-      this.eventBus.on('theme:changed', ({ isDark }) => {
+      this.eventBus.on("theme:changed", ({ isDark }) => {
         this.setDarkMode(isDark);
       });
     }
@@ -103,7 +108,7 @@ export class LeafletEngine {
 
   /**
    * Bascule le fond de carte entre le thème Sombre (Dark Matter) et Clair (Voyager / Positron).
-   * @param {boolean} isDark 
+   * @param {boolean} isDark
    */
   setDarkMode(isDark) {
     this.isDarkMode = Boolean(isDark);
@@ -115,9 +120,9 @@ export class LeafletEngine {
 
   /**
    * Centre la carte sur une position géographique donnée.
-   * @param {number} lat 
-   * @param {number} lng 
-   * @param {number} [zoom] 
+   * @param {number} lat
+   * @param {number} lng
+   * @param {number} [zoom]
    */
   centerOnGeo(lat, lng, zoom = null) {
     if (!this.map) return;
@@ -126,10 +131,13 @@ export class LeafletEngine {
     if (!isFinite(numLat) || !isFinite(numLng)) return;
 
     // Zoomer suffisamment proche (niveau 16.5) pour isoler le lieu sélectionné
-    const targetZoom = (zoom !== null && isFinite(Number(zoom))) ? Number(zoom) : Math.max(16.5, this.map.getZoom());
+    const targetZoom =
+      zoom !== null && isFinite(Number(zoom))
+        ? Number(zoom)
+        : Math.max(16.5, this.map.getZoom());
     this.map.flyTo([numLat, numLng], targetZoom, {
       duration: 1.2,
-      easeLinearity: 0.25
+      easeLinearity: 0.25,
     });
   }
 

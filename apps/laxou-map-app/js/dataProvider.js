@@ -18,41 +18,51 @@ export class DataProvider {
   /**
    * Load and validate map data from URL/file path or direct object.
    * Dual-mode: Node.js fs vs Browser fetch vs Direct Object.
-   * @param {string|Object} [urlOrPath='./data.json'] 
+   * @param {string|Object} [urlOrPath='./data.json']
    * @returns {Promise<Object>} The loaded data object
    */
-  async loadData(urlOrPath = './data.json') {
+  async loadData(urlOrPath = "./data.json") {
     let rawData;
 
-    if (typeof urlOrPath === 'object' && urlOrPath !== null) {
+    if (typeof urlOrPath === "object" && urlOrPath !== null) {
       rawData = urlOrPath;
-    } else if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+    } else if (
+      typeof process !== "undefined" &&
+      process.versions &&
+      process.versions.node
+    ) {
       // Node.js environment
       try {
-        const fs = await import('node:fs/promises');
-        const path = await import('node:path');
-        const filePath = path.isAbsolute(urlOrPath) 
-          ? urlOrPath 
+        const fs = await import("node:fs/promises");
+        const path = await import("node:path");
+        const filePath = path.isAbsolute(urlOrPath)
+          ? urlOrPath
           : path.resolve(process.cwd(), urlOrPath);
-        const fileContent = await fs.readFile(filePath, 'utf-8');
+        const fileContent = await fs.readFile(filePath, "utf-8");
         rawData = JSON.parse(fileContent);
       } catch (err) {
-        throw new Error(`Failed to load data file in Node.js environment from "${urlOrPath}": ${err.message}`);
+        throw new Error(
+          `Failed to load data file in Node.js environment from "${urlOrPath}": ${err.message}`,
+        );
       }
     } else {
       // Browser environment
       try {
         const response = await fetch(urlOrPath);
         if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
+          throw new Error(
+            `HTTP error ${response.status}: ${response.statusText}`,
+          );
         }
         rawData = await response.json();
       } catch (err) {
-        if (typeof window !== 'undefined' && window.LAXOU_DATA) {
-          console.warn('Fetch fallback to window.LAXOU_DATA:', err.message);
+        if (typeof window !== "undefined" && window.LAXOU_DATA) {
+          console.warn("Fetch fallback to window.LAXOU_DATA:", err.message);
           rawData = window.LAXOU_DATA;
         } else {
-          throw new Error(`Failed to fetch data from "${urlOrPath}": ${err.message}`);
+          throw new Error(
+            `Failed to fetch data from "${urlOrPath}": ${err.message}`,
+          );
         }
       }
     }
@@ -60,9 +70,9 @@ export class DataProvider {
     this.validateSchema(rawData);
 
     // Apply custom localStorage overrides if present in browser
-    if (typeof window !== 'undefined' && window.localStorage) {
+    if (typeof window !== "undefined" && window.localStorage) {
       try {
-        const savedData = localStorage.getItem('LAXOU_CUSTOM_DATA');
+        const savedData = localStorage.getItem("LAXOU_CUSTOM_DATA");
         if (savedData) {
           const parsed = JSON.parse(savedData);
           if (Array.isArray(parsed.places)) {
@@ -70,7 +80,7 @@ export class DataProvider {
           }
         }
       } catch (e) {
-        console.warn('Could not read custom places from localStorage:', e);
+        console.warn("Could not read custom places from localStorage:", e);
       }
     }
 
@@ -86,13 +96,13 @@ export class DataProvider {
 
     this.isLoaded = true;
 
-    if (this.eventBus && typeof this.eventBus.emit === 'function') {
-      this.eventBus.emit('data:loaded', {
+    if (this.eventBus && typeof this.eventBus.emit === "function") {
+      this.eventBus.emit("data:loaded", {
         places: this.places,
         categories: this.categories,
         metadata: this.metadata,
         placesCount: this.places.length,
-        categoriesCount: this.categories.length
+        categoriesCount: this.categories.length,
       });
     }
 
@@ -104,20 +114,23 @@ export class DataProvider {
    * @private
    */
   _persistCustomData() {
-    if (typeof window !== 'undefined' && window.localStorage) {
+    if (typeof window !== "undefined" && window.localStorage) {
       try {
-        localStorage.setItem('LAXOU_CUSTOM_DATA', JSON.stringify({
-          places: this.places
-        }));
+        localStorage.setItem(
+          "LAXOU_CUSTOM_DATA",
+          JSON.stringify({
+            places: this.places,
+          }),
+        );
       } catch (e) {
-        console.warn('Erreur de sauvegarde localStorage:', e);
+        console.warn("Erreur de sauvegarde localStorage:", e);
       }
     }
   }
 
   /**
    * Ajoute un nouveau lieu dans le jeu de données.
-   * @param {Object} place 
+   * @param {Object} place
    */
   addPlace(place) {
     if (!place || !place.id || !place.name) return;
@@ -126,15 +139,15 @@ export class DataProvider {
     this._persistCustomData();
 
     if (this.eventBus) {
-      this.eventBus.emit('place:created', { place });
-      this.eventBus.emit('filter:changed', { places: this.places });
+      this.eventBus.emit("place:created", { place });
+      this.eventBus.emit("filter:changed", { places: this.places });
     }
   }
 
   /**
    * Met à jour un lieu existant.
-   * @param {string} id 
-   * @param {Object} updatedFields 
+   * @param {string} id
+   * @param {Object} updatedFields
    */
   updatePlace(id, updatedFields) {
     const existing = this.getPlaceById(id);
@@ -145,17 +158,17 @@ export class DataProvider {
     this._persistCustomData();
 
     if (this.eventBus) {
-      this.eventBus.emit('place:updated', { place: existing });
-      this.eventBus.emit('filter:changed', { places: this.places });
+      this.eventBus.emit("place:updated", { place: existing });
+      this.eventBus.emit("filter:changed", { places: this.places });
     }
   }
 
   /**
    * Supprime un lieu du jeu de données.
-   * @param {string} id 
+   * @param {string} id
    */
   deletePlace(id) {
-    const index = this.places.findIndex(p => p.id === id);
+    const index = this.places.findIndex((p) => p.id === id);
     if (index === -1) return;
 
     const removed = this.places.splice(index, 1)[0];
@@ -163,19 +176,19 @@ export class DataProvider {
     this._persistCustomData();
 
     if (this.eventBus) {
-      this.eventBus.emit('place:deleted', { placeId: id, place: removed });
-      this.eventBus.emit('filter:changed', { places: this.places });
+      this.eventBus.emit("place:deleted", { placeId: id, place: removed });
+      this.eventBus.emit("filter:changed", { places: this.places });
     }
   }
 
   /**
    * Validate dataset schema.
-   * @param {Object} rawData 
+   * @param {Object} rawData
    * @throws {Error} if schema is invalid
    */
   validateSchema(rawData) {
-    if (!rawData || typeof rawData !== 'object') {
-      throw new Error('Invalid dataset: root content must be an object.');
+    if (!rawData || typeof rawData !== "object") {
+      throw new Error("Invalid dataset: root content must be an object.");
     }
 
     if (!Array.isArray(rawData.places)) {
@@ -188,20 +201,26 @@ export class DataProvider {
 
     for (let i = 0; i < rawData.places.length; i++) {
       const p = rawData.places[i];
-      if (!p || typeof p !== 'object') {
+      if (!p || typeof p !== "object") {
         throw new Error(`Invalid place at index ${i}: must be an object.`);
       }
-      if (!p.id || typeof p.id !== 'string') {
-        throw new Error(`Invalid place at index ${i}: missing or invalid "id".`);
+      if (!p.id || typeof p.id !== "string") {
+        throw new Error(
+          `Invalid place at index ${i}: missing or invalid "id".`,
+        );
       }
-      if (!p.name || typeof p.name !== 'string') {
+      if (!p.name || typeof p.name !== "string") {
         throw new Error(`Invalid place "${p.id}": missing or invalid "name".`);
       }
-      if (!p.category || typeof p.category !== 'string') {
-        throw new Error(`Invalid place "${p.id}": missing or invalid "category".`);
+      if (!p.category || typeof p.category !== "string") {
+        throw new Error(
+          `Invalid place "${p.id}": missing or invalid "category".`,
+        );
       }
       if (!isFinite(Number(p.lat)) || !isFinite(Number(p.lng))) {
-        throw new Error(`Invalid place "${p.id}": missing or invalid lat/lng coordinates.`);
+        throw new Error(
+          `Invalid place "${p.id}": missing or invalid lat/lng coordinates.`,
+        );
       }
     }
   }
@@ -232,7 +251,7 @@ export class DataProvider {
 
   /**
    * Find place by ID.
-   * @param {string} id 
+   * @param {string} id
    * @returns {Object|null}
    */
   getPlaceById(id) {
@@ -243,32 +262,37 @@ export class DataProvider {
   /**
    * Normalize text for accent-insensitive and case-insensitive matching.
    * Converts French diacritics (e.g. é, è, ê, à, ç, œ) to ASCII equivalents.
-   * @param {string} str 
+   * @param {string} str
    * @returns {string}
    */
   normalizeText(str) {
-    if (!str || typeof str !== 'string') return '';
+    if (!str || typeof str !== "string") return "";
     return str
       .toLowerCase()
-      .replace(/[\u0153\u0152]/g, 'oe')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+      .replace(/[\u0153\u0152]/g, "oe")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
   /**
    * Filter places by category ID and multi-field text search query.
    * Matches name, description, address, and tags.
-   * @param {string} [categoryId='all'] 
-   * @param {string} [searchQuery=''] 
+   * @param {string} [categoryId='all']
+   * @param {string} [searchQuery='']
    * @returns {Array<Object>}
    */
-  filterPlaces(categoryId = 'all', searchQuery = '') {
-    const normCategory = (categoryId && typeof categoryId === 'string') ? categoryId.trim() : 'all';
+  filterPlaces(categoryId = "all", searchQuery = "") {
+    const normCategory =
+      categoryId && typeof categoryId === "string" ? categoryId.trim() : "all";
     const normQuery = this.normalizeText(searchQuery).trim();
 
-    return this.places.filter(place => {
+    return this.places.filter((place) => {
       // Category filter check
-      if (normCategory !== 'all' && normCategory !== '' && place.category !== normCategory) {
+      if (
+        normCategory !== "all" &&
+        normCategory !== "" &&
+        place.category !== normCategory
+      ) {
         return false;
       }
 
@@ -277,18 +301,19 @@ export class DataProvider {
         const nameNorm = this.normalizeText(place.name);
         const descNorm = this.normalizeText(place.description);
         const addrNorm = this.normalizeText(place.address);
-        
+
         let tagsNormMatch = false;
         if (Array.isArray(place.tags)) {
-          tagsNormMatch = place.tags.some(tag => this.normalizeText(tag).includes(normQuery));
+          tagsNormMatch = place.tags.some((tag) =>
+            this.normalizeText(tag).includes(normQuery),
+          );
         }
 
-        const matches = (
+        const matches =
           nameNorm.includes(normQuery) ||
           descNorm.includes(normQuery) ||
           addrNorm.includes(normQuery) ||
-          tagsNormMatch
-        );
+          tagsNormMatch;
 
         if (!matches) return false;
       }

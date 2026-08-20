@@ -47,7 +47,8 @@
   transition: var(--transition-fast);
 }
 
-.sidebar-link:hover, .sidebar-link.active {
+.sidebar-link:hover,
+.sidebar-link.active {
   background: var(--color-brand-600);
   color: white;
 }

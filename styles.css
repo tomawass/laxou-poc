@@ -106,7 +106,7 @@ body {
   background-color: var(--color-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-top: 150px;
+  padding-top: 90px;
 }
 
 h1,
@@ -173,7 +173,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 150px;
+  height: 90px;
   transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .logo-brand {
@@ -2461,7 +2461,7 @@ img {
   margin-top: 4rem;
 }
 .footer-band {
-  background-color: #0d5aa7; /* Institutional Blue */
+  background-color: var(--user-accent); /* Institutional Blue */
   color: #ffffff;
   padding: 1.2rem 0;
 }
@@ -2489,7 +2489,7 @@ img {
   width: 36px;
   height: 36px;
   background-color: #ffffff;
-  color: #0d5aa7;
+  color: var(--user-accent);
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.1rem;
@@ -2545,7 +2545,7 @@ img {
 }
 .btn-outline-white:hover {
   background: #ffffff;
-  color: #0d5aa7;
+  color: var(--user-accent);
 }
 
 /* THE WHITE MAIN AREA */
@@ -2628,12 +2628,12 @@ img {
   background: #ffffff;
 }
 .btn-outline-dark:hover {
-  background: #0d5aa7;
-  border-color: #0d5aa7;
+  background: var(--user-accent);
+  border-color: var(--user-accent);
   color: #ffffff;
 }
 .btn-outline-dark i {
-  color: #0d5aa7;
+  color: var(--user-accent);
 }
 .btn-outline-dark:hover i {
   color: #ffffff;
@@ -2664,6 +2664,53 @@ img {
   font-weight: 500;
 }
 .legals-right a:hover {
-  color: #0d5aa7;
+  color: var(--user-accent);
   text-decoration: underline;
+}
+
+/* =========================================
+   FOOTER SITES PANEL (DROPUP)
+   ========================================= */
+.footer-sites-panel {
+  background-color: #f2f9ec; /* Light green tint */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.footer-sites-panel.open {
+  max-height: 300px;
+}
+.sites-panel-inner {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2.5rem 0;
+  flex-wrap: wrap;
+}
+.site-partner-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--user-primary-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.site-partner-link:hover {
+  transform: translateY(-4px);
+  color: var(--user-accent);
+}
+.site-partner-link i {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--user-accent);
+}
+#sitesChevron {
+  transition: transform 0.3s ease;
+}
+#sitesChevron.open {
+  transform: rotate(180deg);
 }

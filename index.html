@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=201328810528">
+  <link rel="stylesheet" href="styles.css?v=201335357858">
 </head>
 <body>
 
@@ -445,59 +445,58 @@
     </section>
 
     <!-- 6. REFINED APPLE-GRADE NEWS CARDS -->
-    <section class="section-padding" style="background-color: var(--color-surface); overflow: hidden;">
-      <div class="container" style="margin-bottom: 40px;">
-        <div style="margin-bottom: 0px;">
+    <section class="section-padding" style="background-color: var(--color-surface);">
+      <div class="container">
+        <div style="margin-bottom: 40px;">
             <h2 style="margin-bottom: 0; font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 900; color: var(--user-primary-dark); letter-spacing: -1px;">Actualités de la ville</h2>
         </div>
-      </div>
 
-      <div class="news-track-2027">
-          <!-- Card 1 -->
-          <a href="article.html" class="news-card-2027">
-            <img src="assets/logo_laxou_official_16.jpg" class="news-bg-2027" alt="Vide greniers Laxou" loading="lazy">
-            <div class="news-overlay-2027"></div>
-            <div class="news-content-2027">
-              <span class="news-tag-2027">Vie locale</span>
-              <h3 class="news-title-2027">Ouverture des inscriptions du grand vide-greniers et de la braderie d'automne</h3>
-              <span class="news-date-2027"><i class="fa-regular fa-calendar"></i> 28 juillet 2026</span>
+        <div class="news-bento-grid">
+          <!-- 1. Featured (Une) -->
+          <a href="article.html" class="news-bento-card bento-featured">
+            <img src="assets/logo_laxou_official_16.jpg" class="bento-bg" alt="Vide greniers Laxou" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag">Vie locale</span>
+              <h3 class="bento-title">Ouverture des inscriptions du grand vide-greniers et de la braderie d'automne</h3>
+              <span class="bento-date">28 juillet 2026</span>
             </div>
           </a>
 
-          <!-- Card 2 -->
-          <a href="article.html" class="news-card-2027">
-            <img src="assets/logo_laxou_official_17.jpg" class="news-bg-2027" alt="Accueil des nouveaux laxoviens" loading="lazy">
-            <div class="news-overlay-2027"></div>
-            <div class="news-content-2027">
-              <span class="news-tag-2027">Citoyenneté</span>
-              <h3 class="news-title-2027">Cérémonie d'accueil des nouveaux habitants : Une soirée de rencontres</h3>
-              <span class="news-date-2027"><i class="fa-regular fa-calendar"></i> 4 août 2026</span>
+          <!-- 2. Standard 1 -->
+          <a href="article.html" class="news-bento-card bento-standard">
+            <img src="assets/logo_laxou_official_17.jpg" class="bento-bg" alt="Accueil des nouveaux laxoviens" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag">Citoyenneté</span>
+              <h3 class="bento-title">Cérémonie d'accueil des nouveaux habitants</h3>
+              <span class="bento-date">4 août 2026</span>
             </div>
           </a>
 
-          <!-- Card 3 -->
-          <a href="article.html" class="news-card-2027">
-            <img src="assets/logo_laxou_official_21.jpg" class="news-bg-2027" alt="Travaux avenue Paul Deroulède" loading="lazy">
-            <div class="news-overlay-2027"></div>
-            <div class="news-content-2027">
-              <span class="news-tag-2027" style="background: rgba(255, 59, 48, 0.4); border-color: rgba(255, 59, 48, 0.6);">Travaux</span>
-              <h3 class="news-title-2027">Avenue Déroulède fermée pour réfection majeure de la voirie</h3>
-              <span class="news-date-2027"><i class="fa-regular fa-calendar"></i> 5 août 2026</span>
+          <!-- 3. Standard 2 -->
+          <a href="article.html" class="news-bento-card bento-standard">
+            <img src="assets/logo_laxou_official_21.jpg" class="bento-bg" alt="Travaux avenue Paul Deroulède" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag" style="background: rgba(255, 59, 48, 0.75);">Travaux</span>
+              <h3 class="bento-title">Avenue Déroulède fermée pour réfection</h3>
+              <span class="bento-date">5 août 2026</span>
             </div>
           </a>
 
-          <!-- Card 4 -->
-          <a href="article.html" class="news-card-2027">
-            <img src="assets/logo_laxou_official_23.jpg" class="news-bg-2027" alt="Laxou Actu N°240" loading="lazy">
-            <div class="news-overlay-2027"></div>
-            <div class="news-content-2027">
-              <span class="news-tag-2027" style="background: rgba(118, 184, 47, 0.4); border-color: rgba(118, 184, 47, 0.6);">Magazine</span>
-              <h3 class="news-title-2027">Le journal municipal Laxou Actu n°240 est disponible en ligne et en kiosque</h3>
-              <span class="news-date-2027"><i class="fa-regular fa-calendar"></i> 1er août 2026</span>
+          <!-- 4. Wide (Promo Magazine) -->
+          <a href="article.html" class="news-bento-card bento-wide">
+            <img src="assets/logo_laxou_official_23.jpg" class="bento-bg" alt="Laxou Actu N°240" loading="lazy">
+            <div class="bento-overlay bento-overlay-wide"></div>
+            <div class="bento-content">
+              <span class="bento-tag" style="background: var(--user-accent); color: white;">Nouveau Numéro</span>
+              <h3 class="bento-title">Le journal municipal Laxou Actu n°240 est disponible</h3>
+              <span class="bento-date">1er août 2026</span>
             </div>
           </a>
         </div>
-      <div class="container">
+        
         <div style="text-align: center; margin-top: 60px;">
           <a href="actualites.html" class="btn-dark" style="border-radius: 50px; font-size: 1.1rem; padding: 16px 40px; font-weight: 700; display: inline-block; letter-spacing: 0.5px; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toutes les actualités</a>
         </div>

@@ -142,7 +142,8 @@ img {
    1. STICKY HEADER
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.96);
@@ -159,7 +160,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 82px;
+  height: 90px;
   transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .logo-brand {
@@ -184,7 +185,7 @@ img {
   border-bottom-color: rgba(0, 0, 0, 0.06);
 }
 .site-header.is-scrolled .header-inner {
-  height: 48px;
+  height: 60px;
 }
 .site-header.is-scrolled .logo-brand img {
   height: 32px;
@@ -485,6 +486,7 @@ img {
 }
 
 .search-box-main-wrapper {
+  z-index: 100;
   max-width: 720px;
   margin: 0 auto;
   position: relative;
@@ -513,7 +515,8 @@ img {
   outline: none;
   font-family: var(--font-body);
   font-size: 1rem;
-  color: var(--user-neutral-dark);
+  color: var(--user-neutral-dark); 
+  padding-top: 90px;
   background: transparent;
   padding: 8px 0;
 }
@@ -546,6 +549,8 @@ img {
 
 /* Quick Pills Under Search */
 .quick-pills-row {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;

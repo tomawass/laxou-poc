@@ -281,25 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.handleSearch = function(query) {
-  // Legacy fallback if someone presses Enter without selecting from dropdown
   if (!query || !query.trim()) return;
-  const q = query.trim().toLowerCase();
-  const routes = [
-    { keys: ['cantine', 'repas', 'periscolaire', 'garderie', 'simulateur', 'famille', 'ecole'], url: 'simulateur-periscolaire.html' },
-    { keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'champ le boeuf', '3d'], url: 'nprnu-map.html' },
-    { keys: ['elu', 'elus', 'maire', 'garcia', 'adjoint', 'conseil', 'equipe'], url: 'equipe-municipale.html' },
-    { keys: ['passeport', 'cni', 'identite', 'etat civil', 'naissance', 'mariage', 'deces', 'papiers'], url: 'article.html' },
-    { keys: ['contact', 'signaler', 'signalement', 'voirie', 'proprete', 'telephone', 'horaires'], url: 'contact.html' },
-    { keys: ['agenda', 'concert', 'cinema', 'festival', 'etoiles', 'sortir', 'spectacle', 'evenement'], url: 'agenda.html' },
-    { keys: ['arrete', 'deliberation', 'marches', 'recrutement', 'publications'], url: 'archives.html' },
-    { keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
-  ];
-  for (const route of routes) {
-    if (route.keys.some(k => q.includes(k) || k.includes(q))) {
-      window.location.href = route.url;
-      return;
-    }
-  }
-  window.location.href = 'archives.html';
+  // Aubagne style : on redirige vers une page de résultats intelligente
+  window.location.href = 'recherche.html?q=' + encodeURIComponent(query.trim());
 };
 

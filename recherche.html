@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concertation publique : Réaménagement du Centre-Village | Ville de Laxou</title>
-  <meta name="description" content="La Ville de Laxou lance une concertation citoyenne sur le réaménagement du centre-historique et l'aménagement des espaces verts.">
+  <title>Ma Mairie | Ville de Laxou</title>
+  <meta name="description" content="Informations institutionnelles, vie démocratique, conseil municipal et services de la Mairie de Laxou.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,9 @@
   <link rel="stylesheet" href="styles.css?v=201140436194">
 </head>
 <body>
-  </div>
 
   <!-- Header -->
-    <header class="site-header">
+  <header class="site-header">
     <div class="container header-inner">
       <!-- Clean Logo -->
       <a href="index.html" class="logo-brand" title="Accueil - Ville de Laxou">
@@ -135,67 +134,78 @@
     </div>
   </header>
 
+  <main id="main-content" style="padding-top: 120px; padding-bottom: 100px; min-height: 70vh;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--user-primary-dark); margin-bottom: 1rem;">Résultats de recherche</h1>
+      <p id="search-query-display" style="font-size: 1.2rem; color: var(--user-neutral-dark); margin-bottom: 3rem;">Recherche en cours...</p>
 
-  <main id="main-content" class="section-padding">
-    <div class="container">
+      <div class="search-box-main-wrapper" style="margin-bottom: 4rem;">
+        <form class="search-box-main" onsubmit="event.preventDefault(); window.location.href='recherche.html?q=' + document.getElementById('search-page-input').value;">
+          <input type="text" id="search-page-input" placeholder="Nouvelle recherche..." autocomplete="off">
+          <button type="submit" class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
 
-      <article>
-        <header style="margin-bottom: var(--space-6);">
-          <span class="card-tag">Urbanisme & Cadre de Vie</span>
-          <h1 style="margin-top: var(--space-2);">Concertation publique : Réaménagement du Centre-Village et Valorisation des Espaces Verts</h1>
-          
-          <div style="display: flex; gap: var(--space-4); font-size: var(--text-sm); color: var(--color-muted); border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-4);">
-            <span>📅 Publié le <strong>4 août 2026</strong></span>
-            <span>✍️ Par <strong>Direction de la Communication</strong></span>
-            <span>⏱️ Lecture : <strong>3 min</strong></span>
-          </div>
-        </header>
-
-        <div class="layout-with-sidebar">
-          <div>
-            <p class="hero-lead">Dans le cadre du programme de revitalisation urbaine, la Municipalité invite l'ensemble des Laxoviens à participer à la concertation citoyenne pour repenser les espaces publics du cœur historique.</p>
-
-            <img src="assets/logo_laxou_official_11.jpg" alt="Hôtel de Ville et parc de Laxou" class="card-img" style="height: 380px; margin-bottom: var(--space-6); border-radius: var(--radius-md);" loading="lazy" width="800" height="380">
-
-            <h2>Les objectifs du projet d'aménagement</h2>
-            <p>La transformation du centre-village repose sur trois piliers majeurs définis en concertation avec les élus et le Conseil des Sages :</p>
-
-            <div class="callout">
-              <strong>Point clé de la concertation :</strong> Trois ateliers de co-construction se tiendront en Mairie les 12, 19 et 26 septembre à 18h30. Entrée libre.
-            </div>
-
-            <ul style="margin-bottom: var(--space-6); padding-left: var(--space-6);">
-              <li><strong>Végétalisation accrue :</strong> Création d'îlots de fraîcheur et plantation de 120 arbres d'essences locales.</li>
-              <li><strong>Mobilités douces :</strong> Sécurisation des déplacements piétons et aménagement de pistes cyclables continues.</li>
-              <li><strong>Valorisation du patrimoine :</strong> Mise en lumière sobre des bâtiments anciens.</li>
-            </ul>
-
-            <h2>Comment participer et donner votre avis ?</h2>
-            <p>Un registre de concertation dématérialisé est mis à votre disposition. Vous pouvez transmettre vos remarques et propositions jusqu'au 30 septembre 2026.</p>
-
-            <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border); display: flex; gap: var(--space-4);">
-              <a href="page-type.html" class="btn btn-primary">Déposer une contribution en ligne →</a>
-              <a href="archives.html" class="btn btn-outline">Télécharger la plaquette (PDF)</a>
-            </div>
-          </div>
-
-          <aside>
-            <div class="sidebar-box">
-              <h3>En résumé</h3>
-              <p style="font-size: var(--text-sm); color: var(--color-muted);">Consultation citoyenne ouverte du 1er août au 30 septembre 2026.</p>
-              <hr style="margin: var(--space-4) 0; border: 0; border-top: 1px solid var(--color-border);">
-              <div style="font-weight: 600; font-size: var(--text-sm);">Contact dédié :</div>
-              <p style="font-size: var(--text-xs); color: var(--color-muted);">Service Urbanisme & Cadre de Vie<br>Tél : 03 83 96 84 10<br>urbanisme@laxou.fr</p>
-            </div>
-          </aside>
-        </div>
-      </article>
+      <div id="search-results-container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <!-- Results injected here -->
+      </div>
     </div>
   </main>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get('q');
+      const displayEl = document.getElementById('search-query-display');
+      const inputEl = document.getElementById('search-page-input');
+      const resultsContainer = document.getElementById('search-results-container');
+
+      if (!query) {
+        displayEl.innerHTML = "Aucun terme de recherche n'a été saisi.";
+        return;
+      }
+
+      displayEl.innerHTML = `Affichage des résultats pour : <strong>"${query}"</strong>`;
+      inputEl.value = query;
+
+      const q = query.trim().toLowerCase();
+      
+      const routes = [
+        { title: 'Simulateur Périscolaire & Cantine', desc: 'Calculez vos tarifs pour la cantine et la garderie.', icon: 'fa-calculator', keys: ['cantine', 'repas', 'periscolaire', 'garderie', 'simulateur', 'famille', 'ecole'], url: 'simulateur-periscolaire.html' },
+        { title: 'Carte Interactive NPRNU', desc: 'Découvrez les projets urbains et aménagements en 3D.', icon: 'fa-map-location-dot', keys: ['nprnu', 'carte', 'map', 'projet', 'amenagement', 'champ le boeuf', '3d'], url: 'nprnu-map.html' },
+        { title: 'Équipe Municipale', desc: 'Vos élus, conseillers municipaux et le Maire.', icon: 'fa-users', keys: ['elu', 'elus', 'maire', 'garcia', 'adjoint', 'conseil', 'equipe'], url: 'equipe-municipale.html' },
+        { title: 'Démarches : Passeport & État Civil', desc: 'Prendre rendez-vous pour une CNI, un passeport ou déclarer une naissance.', icon: 'fa-id-card', keys: ['passeport', 'cni', 'identite', 'etat civil', 'naissance', 'mariage', 'deces', 'papiers'], url: 'article.html' },
+        { title: 'Contact & Signalements', desc: 'Contacter la mairie, signaler un problème de voirie ou d\'éclairage.', icon: 'fa-phone', keys: ['contact', 'signaler', 'signalement', 'voirie', 'proprete', 'telephone', 'horaires'], url: 'contact.html' },
+        { title: 'Agenda Culturel', desc: 'Retrouvez tous les événements, concerts et festivals à Laxou.', icon: 'fa-calendar-days', keys: ['agenda', 'concert', 'cinema', 'festival', 'etoiles', 'sortir', 'spectacle', 'evenement'], url: 'agenda.html' },
+        { title: 'Publications & Délibérations', desc: 'Arrêtés municipaux, marchés publics et offres d\'emploi.', icon: 'fa-file-signature', keys: ['arrete', 'deliberation', 'marches', 'recrutement', 'publications'], url: 'archives.html' },
+        { title: 'Installations Sportives', desc: 'Trouver un gymnase, une piscine ou un stade.', icon: 'fa-volleyball', keys: ['sport', 'gymnase', 'piscine', 'terrain', 'stade', 'complexe'], url: 'iframe.html' }
+      ];
+
+      // Smart matching (includes partial letters)
+      const results = routes.filter(route => route.keys.some(k => k.includes(q) || q.includes(k)));
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = `<div style="padding: 2rem; background: #f8fafc; border-radius: 12px; text-align: center;">
+          <h3 style="color: var(--user-neutral-dark); margin-bottom: 1rem;">Oups, aucun résultat direct.</h3>
+          <p>Nous n'avons pas trouvé de correspondance exacte pour "${query}".<br>Essayez un mot-clé plus simple (ex: "cantine", "carte", "passeport").</p>
+          <a href="archives.html" class="btn-dark" style="margin-top: 1rem; display: inline-block;">Voir l'annuaire de toutes les démarches</a>
+        </div>`;
+      } else {
+        resultsContainer.innerHTML = results.map(res => `
+          <a href="${res.url}" style="display: block; padding: 1.5rem; background: #ffffff; border: 1px solid var(--color-border); border-radius: 12px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 15px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <h3 style="color: var(--user-primary-dark); font-size: 1.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid ${res.icon}" style="color: var(--user-accent-dark);"></i> ${res.title}
+            </h3>
+            <p style="color: var(--user-neutral-dark); margin: 0;">${res.desc}</p>
+          </a>
+        `).join('');
+      }
+    });
+  </script>
+
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <span>© 2026 Ville de Laxou — Logo Officiel Intégré</span>
+      <span>© 2026 Ville de Laxou — Page Ma Mairie</span>
       <span><a href="index.html">Retour à l'accueil</a></span>
     </div>
   </footer>

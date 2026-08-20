@@ -2348,3 +2348,210 @@ img {
 @media(max-width: 768px) {
   .news-card-2027 { flex: 0 0 85vw; height: 450px; }
 }
+
+/* =========================================
+   FOOTER AUBAGNE-STYLE (LAXOU)
+   ========================================= */
+.site-footer-aubagne {
+  width: 100%;
+  font-family: var(--font-body);
+  margin-top: 4rem;
+}
+.footer-band {
+  background-color: #0d5aa7; /* Institutional Blue */
+  color: #ffffff;
+  padding: 1.2rem 0;
+}
+.footer-band-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.social-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 0.8rem;
+}
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  color: #0d5aa7;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+.social-circle:hover {
+  transform: scale(1.1);
+  background-color: var(--user-accent);
+  color: #ffffff;
+}
+.footer-sites .sites-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+.footer-sites .sites-link:hover {
+  opacity: 0.8;
+}
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.newsletter-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-outline-white {
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-outline-white:hover {
+  background: #ffffff;
+  color: #0d5aa7;
+}
+
+/* THE WHITE MAIN AREA */
+.footer-main {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 4rem 0 2rem 0;
+  color: var(--user-neutral-dark);
+}
+.footer-main-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .footer-main-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .footer-band-inner {
+    flex-direction: column;
+  }
+}
+.footer-logo-img {
+  max-width: 220px;
+}
+@media (max-width: 992px) {
+  .footer-logo-img { margin: 0 auto; }
+}
+.footer-contact-col {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.contact-title {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.footer-contact-col p {
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 992px) {
+  .footer-contact-col p { justify-content: center; }
+}
+.footer-contact-col i {
+  color: #64748b;
+  width: 16px;
+  text-align: center;
+}
+.footer-action-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-outline-dark {
+  border: 1.5px solid #64748b;
+  color: var(--user-neutral-dark);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  background: #ffffff;
+}
+.btn-outline-dark:hover {
+  background: #0d5aa7;
+  border-color: #0d5aa7;
+  color: #ffffff;
+}
+.btn-outline-dark i {
+  color: #0d5aa7;
+}
+.btn-outline-dark:hover i {
+  color: #ffffff;
+}
+
+/* LEGALS */
+.footer-legals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cbd5e1;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.legals-left strong {
+  color: var(--user-neutral-dark);
+}
+.legals-right {
+  display: flex;
+  gap: 1.5rem;
+}
+.legals-right a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+.legals-right a:hover {
+  color: #0d5aa7;
+  text-decoration: underline;
+}

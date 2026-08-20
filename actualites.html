@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="styles.css?v=201140436194">
+  <link rel="stylesheet" href="styles.css?v=201217019541">
 </head>
 <body>
   </div>
@@ -24,13 +24,11 @@
         <img src="assets/logo_laxou_official_5.png" alt="Logo Officiel de la Ville de Laxou" style="height: 54px; width: auto;" loading="eager">
       </a>
 
-      <!-- Streamlined Navigation Bar -->
+      <!-- Streamlined Navigation Bar (Centered) -->
       <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
         <ul>
-          
-
           <li class="nav-item">
-            <a href="page-type.html" class="nav-link" aria-haspopup="true">Ma mairie ▾</a>
+            <a href="page-type.html" class="nav-link" aria-haspopup="true">Ma mairie <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
             <div class="dropdown-menu">
               <ul>
                 <li><a href="equipe-municipale.html">L'Équipe municipale & Conseil</a></li>
@@ -45,7 +43,7 @@
 
           <!-- NOUVEAU MENU : MES SERVICES -->
           <li class="nav-item">
-            <a href="archives.html" class="nav-link" aria-haspopup="true">Mes Services ▾</a>
+            <a href="archives.html" class="nav-link" aria-haspopup="true">Mes Services <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
             <div class="dropdown-menu mega-menu-3col">
               <div>
                 <div class="mega-col-title">Démarches & Citoyenneté</div>
@@ -78,7 +76,7 @@
 
           <!-- NOUVEAU MENU : DÉCOUVRIR LAXOU -->
           <li class="nav-item">
-            <a href="iframe.html" class="nav-link" aria-haspopup="true">Découvrir Laxou ▾</a>
+            <a href="iframe.html" class="nav-link" aria-haspopup="true">Découvrir Laxou <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
             <div class="dropdown-menu mega-menu-3col">
               <div>
                 <div class="mega-col-title">Culture & Sorties</div>
@@ -108,7 +106,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="article.html" class="nav-link" aria-haspopup="true">Actualités ▾</a>
+            <a href="article.html" class="nav-link" aria-haspopup="true">Actualités <i class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
             <div class="dropdown-menu">
               <ul>
                 <li><a href="article.html">Actualités municipales</a></li>
@@ -117,19 +115,13 @@
               </ul>
             </div>
           </li>
-
-          
-                <li><a href="contact.html">Annuaire des services municipaux</a></li>
-                <li><a href="contact.html">Rendez-vous avec le Maire</a></li>
-              </ul>
-            </div>
-          </li>
         </ul>
       </nav>
 
+      <!-- Boutons Actions à droite (Style Aubagne) -->
       <div class="header-actions-group">
-        <a href="contact.html" style="margin-right: 15px; font-weight: 600; color: var(--user-neutral-dark); text-decoration: none; font-size: 0.95rem;">Contact</a>
-        <a href="archives.html" class="btn-dark" style="margin-right: 15px; border-radius: 50px; font-weight: 600; padding: 8px 20px; font-size: 0.9rem;">Mes Démarches</a>
+        <a href="contact.html" class="nav-link" style="text-transform: none; font-weight: 600;">Contact</a>
+        <a href="archives.html" class="btn-dark" style="border-radius: 50px; padding: 10px 24px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;">Mes Démarches</a>
         <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
       </div>
     </div>

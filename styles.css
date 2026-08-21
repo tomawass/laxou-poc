@@ -2713,3 +2713,106 @@ img {
 #sitesChevron.open {
   transform: rotate(180deg);
 }
+
+/* =========================================
+   PAGE DE PÔLE (Ex: Laxou Nature)
+   ========================================= */
+.pole-header {
+  padding: 40px 0 30px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pole-breadcrumb {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.pole-breadcrumb a {
+  color: var(--user-accent);
+  text-decoration: none;
+}
+.pole-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.pole-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--user-primary-dark);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.pole-description {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+.pole-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.pole-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--user-neutral-dark);
+}
+.pole-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+.pole-card-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.pole-card-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.pole-card-badge {
+  align-self: flex-start;
+  background: #e6f4ea;
+  color: var(--user-accent);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border: 1px solid rgba(118, 184, 47, 0.2);
+}
+.pole-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--user-primary-dark);
+  margin-bottom: 10px;
+}
+.pole-card-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+.pole-card-arrow {
+  align-self: flex-end;
+  color: var(--user-accent);
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+.pole-card:hover .pole-card-arrow {
+  transform: translateX(5px);
+}

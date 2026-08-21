@@ -3503,3 +3503,61 @@ img {
   .slide-header { flex-direction: column; align-items: flex-start; gap: 10px; }
   .arrow-clean { display: none; } 
 }
+
+/* =========================================
+   EN-TÊTE SOBRE & ALIGNÉ À GAUCHE (STANDARD WEB)
+   ========================================= */
+.page-top-header {
+  padding: 30px 0 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.page-top-header .pole-breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 18px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.page-top-header .pole-breadcrumb a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.page-top-header .pole-breadcrumb a:hover {
+  color: var(--user-primary-dark);
+  text-decoration: underline;
+}
+
+.page-top-header .pole-breadcrumb span {
+  color: var(--user-primary-dark);
+  font-weight: 600;
+}
+
+.page-intro-block {
+  max-width: 900px;
+  text-align: left;
+}
+
+.page-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--user-primary-dark);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.page-main-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}

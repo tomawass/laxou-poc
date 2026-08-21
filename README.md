@@ -12,7 +12,7 @@
 
 ## Pourquoi ce POC ? Les Partis Pris Stratégiques
 
-Ce prototype s'attaque à la problématique du portail municipal de la ville de Laxou, qui n'est pas isolée. D'autres sites de mairie non mis au goût du jour partagent ces frictions : surcharge cognitive, navigation labyrinthique, manque de lisibilité mobile) en appliquant les standards graphiques et UX les plus récents :
+Ce prototype s'attaque à la problématique du portail municipal de la ville de Laxou qui n'est pas isolée. D'autres sites de mairie non mis au goût du jour partagent ces frictions : surcharge cognitive, navigation labyrinthique, manque de lisibilité mobile, en appliquant les standards graphiques et UX les plus récents :
 
 1. **Macro-Aération & Respiration :** Fin des pages surchargées. Rythme visuel strict, espaces généreux et hiérarchie typographique forte pour reposer l'œil et guider l'attention.
 2. **Architecture Bento Grid (Actualités) :** Mise en avant asymétrique de l'actualité, l'idée est de choisir quelle actualité pousser visuellement parlant.
@@ -55,10 +55,6 @@ Le prototype comprend une suite complète de gabarits et d'outils interactifs :
   - Bleu Institutionnel : `#0d5aa7`
   - Neutre Foncé : `#1e293b` (Lisibilité optimale des textes)
   - Fond & Cartes : Blanc pur `#ffffff` et gris perle `#f8fafc`
-- **Typographie :**
-  - Titrages : *Outfit* (Moderne, géométrique)
-  - Corps de texte : *Inter* (Ergonomie de lecture maximale, haute accessibilité)
-- **Iconographie :** FontAwesome 6 Pro / SVG natifs.
 - **Monogramme & Favicon :** Monogramme "LX" stylisé avec transparence 512x512px.
 
 ---

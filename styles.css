@@ -2998,3 +2998,94 @@ img {
     gap: 20px;
   }
 }
+
+/* =========================================
+   STYLE 2026/2027 POUR BIEN-ÊTRE ANIMAL
+   ========================================= */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+.book-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+.book-badge {
+  background: #e6f4ea;
+  color: var(--user-accent);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+.book-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--user-primary-dark);
+  margin-bottom: 8px;
+}
+.book-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+.book-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Timeline & Editions */
+.edition-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  border-left: 4px solid var(--user-accent);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-bottom: 20px;
+}
+.edition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.edition-badge {
+  background: var(--user-accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Feature Callout */
+.feature-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 30px;
+}

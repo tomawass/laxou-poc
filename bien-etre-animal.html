@@ -10,9 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   
-  <!-- ATTENTION : FONT AWESOME EST SUPPRIMÉ VOLONTAIREMENT -->
-  
-  <link rel="stylesheet" href="styles.css?v=99317465">
+  <link rel="stylesheet" href="styles.css?v=2026_318252">
 </head>
 <body>
 
@@ -228,7 +226,7 @@
     </header>
 
   <main>
-    <!-- Header Éditorial Pur -->
+    <!-- EN-TÊTE SOBRE & ALIGNÉ -->
     <section class="page-top-header">
       <div class="container">
         <nav class="pole-breadcrumb" aria-label="Fil d'Ariane">
@@ -244,198 +242,288 @@
       </div>
     </section>
 
-    <!-- Navigation Minimaliste (Texte Uniquement) -->
+    <!-- NAVIGATION PAR ONGLETS STICKY -->
     <nav class="minimal-sticky-nav">
-      <div class="container" style="display:flex; justify-content:center; gap:40px; overflow-x:auto;">
+      <div class="container" style="display:flex; justify-content:flex-start; gap:30px; overflow-x:auto;">
         <a href="#comite" class="nav-link active" data-index="0">Le Comité</a>
-        <a href="#fiches" class="nav-link" data-index="1">Fiches Pratiques</a>
-        <a href="#realisations" class="nav-link" data-index="2">Réalisations</a>
-        <a href="#animalaxou" class="nav-link" data-index="3">Animalaxou</a>
+        <a href="#fiches" class="nav-link" data-index="1">Guides & Livres</a>
+        <a href="#realisations" class="nav-link" data-index="2">Réalisations & Projets</a>
+        <a href="#animalaxou" class="nav-link" data-index="3">Salon Animalaxou</a>
       </div>
     </nav>
 
-    <!-- CONTAINER FULL-BLEED (SANS PRISON) -->
+    <!-- CARROUSEL PLEINE LARGEUR (SWIPE HORIZONTAL) -->
     <div class="fullbleed-carousel-wrap">
       <button class="arrow-clean left" id="prevBtn" aria-label="Précédent">‹</button>
       <button class="arrow-clean right" id="nextBtn" aria-label="Suivant">›</button>
 
       <div class="fullbleed-slides-container" id="slidesContainer">
         
-        <!-- PAGE 1 : Le Comité -->
+        <!-- SECTION 1 : LE COMITÉ CONSULTATIF (Design Éditorial + Chiffres + Timeline) -->
         <section id="comite" class="fullbleed-slide-panel">
           <div class="slide-inner-content">
             
-            <div class="slide-header">
-              <h2 class="slide-main-title">Le comité consultatif pour le bien-être animal</h2>
-              <span class="slide-badge">Créé le 4 nov. 2020</span>
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Démocratie Participative</span>
+              <h2 class="editorial-title">Une instance citoyenne dédiée à la condition animale</h2>
+              <p class="editorial-lead">
+                Créé le 4 novembre 2020 par le Conseil Municipal, le Comité Consultatif pour le Bien-Être Animal est un laboratoire d'initiatives permanentes réunissant élus, spécialistes et citoyens engagés.
+              </p>
             </div>
-            
-            <div class="content-grid-2">
-              <div>
-                <p class="slide-lead-text">
-                  Composé de <strong>12 membres, dont 4 élus municipaux</strong>, le comité est un groupe de réflexion permanent qui a pour mission de faire jaillir des idées novatrices pour améliorer la condition et la cohabitation animale à Laxou.
-                </p>
-                <div class="clean-callout">
-                  <h3>Les projets du Conseil consultatif</h3>
-                  <p>À travers les comptes-rendus de réunions, retrouvez les actions concrètes que le comité souhaite mettre en place.</p>
-                  <a href="#" class="btn-clean">Télécharger les projets (PDF)</a>
+
+            <!-- Chiffres Clés Graphiques -->
+            <div class="stats-banner-grid">
+              <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Membres permanents (4 élus & 8 citoyens)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">2020</div>
+                <div class="stat-label">Année de fondation de l'instance</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">+15</div>
+                <div class="stat-label">Projets et réunions plénières menés</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Engagement bénévole et citoyen</div>
+              </div>
+            </div>
+
+            <!-- Double Colonne : Mission & Documents récents -->
+            <div class="layout-2col" style="margin-top: 50px;">
+              <div class="col-main">
+                <h3 class="block-title">Missions & Champs d'action</h3>
+                <div class="feature-item">
+                  <div class="feature-bullet">1</div>
+                  <div>
+                    <h4>Sensibilisation & Médiation</h4>
+                    <p>Informer les administrés sur les devoirs des propriétaires d'animaux, le respect du cadre de vie et la prévention des abandons.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-bullet">2</div>
+                  <div>
+                    <h4>Aménagement Urbain</h4>
+                    <p>Conseiller la municipalité sur les infrastructures dédiées (espaces de liberté pour chiens, bornes de propreté, nichoirs et corridors de biodiversité).</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-bullet">3</div>
+                  <div>
+                    <h4>Protection & Soins</h4>
+                    <p>Accompagner la gestion éthique des populations félines (stérilisation, identification) et nouer des partenariats solidaires (mutuelle communale).</p>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <h3 class="section-subtitle">Comptes-Rendus & Synthèses</h3>
+              <div class="col-side">
+                <div class="side-doc-box">
+                  <h3 class="block-title" style="margin-bottom:15px;">Dernières publications</h3>
+                  <p style="color:#64748b; font-size:0.95rem; margin-bottom:20px;">
+                    Consultez les synthèses d'activité officielles votées par le comité.
+                  </p>
 
-                <details class="cr-accordion-clean" open>
-                  <summary>Synthèses des réunions (2022 - 2025)</summary>
-                  <div class="cr-accordion-content">
-                    <div class="cr-grid">
-                      <a href="#" class="cr-card-clean"><span class="cr-title">Synthèse 2025</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">Synthèse 2024</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">Synthèse 2023</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">Synthèse 2022</span><span class="cr-badge">PDF</span></a>
-                    </div>
+                  <div class="doc-download-list">
+                    <a href="#" class="doc-item">
+                      <div class="doc-icon-badge">PDF</div>
+                      <div class="doc-info">
+                        <span class="doc-name">Synthèse des actions 2025</span>
+                        <span class="doc-meta">Document officiel • 2.4 Mo</span>
+                      </div>
+                    </a>
+                    <a href="#" class="doc-item">
+                      <div class="doc-icon-badge">PDF</div>
+                      <div class="doc-info">
+                        <span class="doc-name">Bilan d'activité 2024</span>
+                        <span class="doc-meta">Document officiel • 1.8 Mo</span>
+                      </div>
+                    </a>
+                    <a href="#" class="doc-item">
+                      <div class="doc-icon-badge">PDF</div>
+                      <div class="doc-info">
+                        <span class="doc-name">Rapport d'orientation 2023</span>
+                        <span class="doc-meta">Document officiel • 1.5 Mo</span>
+                      </div>
+                    </a>
                   </div>
-                </details>
-
-                <details class="cr-accordion-clean">
-                  <summary>Comptes-Rendus détaillés (2021)</summary>
-                  <div class="cr-accordion-content">
-                    <div class="cr-grid">
-                      <a href="#" class="cr-card-clean"><span class="cr-title">8 novembre 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">27 septembre 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">6 septembre 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">29 juin 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">31 mai 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">26 avril 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">15 mars 2021</span><span class="cr-badge">PDF</span></a>
-                      <a href="#" class="cr-card-clean"><span class="cr-title">15 février 2021</span><span class="cr-badge">PDF</span></a>
-                    </div>
-                  </div>
-                </details>
+                </div>
               </div>
             </div>
 
           </div>
         </section>
 
-        <!-- PAGE 2 : Fiches Pratiques -->
+        <!-- SECTION 2 : FICHES PRATIQUES & LIVRES CONSEILLÉS -->
         <section id="fiches" class="fullbleed-slide-panel">
           <div class="slide-inner-content">
             
-            <div class="slide-header">
-              <h2 class="slide-main-title">Fiches pratiques & Ouvrages conseillés</h2>
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Ressources & Accompagnement</span>
+              <h2 class="editorial-title">Guides pratiques & Lectures recommandées</h2>
+              <p class="editorial-lead">
+                Pour bien vivre avec son animal au quotidien, retrouvez les fiches réflexes de la Ville de Laxou et une sélection d'ouvrages choisis par nos spécialistes.
+              </p>
             </div>
-            
-            <p class="slide-lead-text">
-              Parce que le bien-être animal passe aussi par une bonne information, la Ville de Laxou met à votre disposition des guides d'accompagnement au quotidien et une sélection d'ouvrages recommandés.
-            </p>
 
-            <div style="margin: 40px 0;">
-              <h3 class="section-subtitle">Fiches Pratiques à télécharger</h3>
-              <div class="cr-grid">
-                <a href="#" class="cr-card-clean"><span class="cr-title">Guide du propriétaire de chien</span><span class="cr-badge">PDF</span></a>
-                <a href="#" class="cr-card-clean"><span class="cr-title">Protection et statut des chats libres</span><span class="cr-badge">PDF</span></a>
-                <a href="#" class="cr-card-clean"><span class="cr-title">Chaleur et canicule : protéger son animal</span><span class="cr-badge">PDF</span></a>
-                <a href="#" class="cr-card-clean"><span class="cr-title">Les gestes de premiers secours</span><span class="cr-badge">PDF</span></a>
+            <!-- Grille de Fiches Thématiques Modernes -->
+            <div class="guides-cards-grid">
+              <div class="guide-card">
+                <div class="guide-badge">Guide Essentiel</div>
+                <h3 class="guide-title">Propriétaires de chiens</h3>
+                <p class="guide-desc">Règles de tenue en laisse, propreté urbaine, éducation et civisme au sein des parcs communaux.</p>
+                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
+              </div>
+
+              <div class="guide-card">
+                <div class="guide-badge">Faune & Protection</div>
+                <h3 class="guide-title">Statut des chats libres</h3>
+                <p class="guide-desc">Comprendre la gestion des chats sans maître, les campagnes de stérilisation et le rôle des nourrisseurs bénévoles.</p>
+                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
+              </div>
+
+              <div class="guide-card">
+                <div class="guide-badge">Santé & Climat</div>
+                <h3 class="guide-title">Chaleur & Canicule</h3>
+                <p class="guide-desc">Les gestes indispensables pour protéger vos animaux des coups de chaud, de l'asphalte brûlant et de la déshydratation.</p>
+                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
+              </div>
+
+              <div class="guide-card">
+                <div class="guide-badge">Urgences</div>
+                <h3 class="guide-title">Premiers secours</h3>
+                <p class="guide-desc">Numéros vétérinaires d'urgence de la Métropole, trousse de secours et réflexes en cas d'accident ou d'intoxication.</p>
+                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
               </div>
             </div>
 
-            <h3 class="section-subtitle">Ouvrages & Lectures recommandées</h3>
-            <div class="book-grid">
+            <!-- Section Livres (Design valorisé) -->
+            <div style="margin-top: 70px;">
+              <h3 class="block-title" style="margin-bottom: 25px;">La bibliothèque du bien-être animal</h3>
               
-              <div class="book-card">
-                <div class="book-cover-wrapper">
-                  <img src="assets/livre_harmony_portee_de_pattes.jpg" alt="Couverture Harmony à portée de pattes" class="book-cover-img">
+              <div class="book-grid">
+                
+                <div class="book-card">
+                  <div class="book-cover-wrapper">
+                    <img src="assets/livre_harmony_portee_de_pattes.jpg" alt="Couverture Harmony à portée de pattes" class="book-cover-img">
+                  </div>
+                  <span class="book-badge">Éducation Positive</span>
+                  <h4 class="book-title">Harmony à portée de pattes</h4>
+                  <p class="book-desc">
+                    Un guide accessible et concret : préparer l'arrivée de l'animal, comprendre sa santé et réussir son éducation positive. Avec 10 activités ludiques à réaliser soi-même.
+                  </p>
+                  <div class="book-footer">
+                    <span>Par Marine (Comportementaliste)</span>
+                    <span class="book-pages">111 pages</span>
+                  </div>
                 </div>
-                <span class="book-badge">Éducation & Conseils</span>
-                <h4 class="book-title">Harmony à portée de pattes</h4>
-                <p class="book-desc">
-                  Facile à lire, il va à l'essentiel : les achats à prévoir, la santé (de la vaccination à la trousse de secours), les apprentissages (de la propreté au rappel), et l'éducation positive. <strong>En prime : 10 activités à réaliser soi-même.</strong>
-                </p>
-                <div class="book-footer">
-                  <span>Par Marine (Comportementaliste)</span>
-                  <span style="color:var(--user-accent); font-weight:700;">111 pages</span>
-                </div>
-              </div>
 
-              <div class="book-card">
-                <div class="book-cover-wrapper">
-                  <img src="assets/livre_aux_animaux_debreux.jpg" alt="Couverture Aux animaux ma vie de vétérinaire en Lorraine" class="book-cover-img">
+                <div class="book-card">
+                  <div class="book-cover-wrapper">
+                    <img src="assets/livre_aux_animaux_debreux.jpg" alt="Couverture Aux animaux ma vie de vétérinaire en Lorraine" class="book-cover-img">
+                  </div>
+                  <span class="book-badge">Témoignage Régional</span>
+                  <h4 class="book-title">Aux animaux ma vie de vétérinaire</h4>
+                  <p class="book-desc">
+                    Le quotidien authentique d'un vétérinaire rural en Lorraine par Albert DEBREUX. Un récit sincère et émouvant entre passion du métier, anecdotes et urgences de campagne.
+                  </p>
+                  <div class="book-footer">
+                    <span>Éditions Gérard Louis</span>
+                    <span class="book-pages">237 pages</span>
+                  </div>
                 </div>
-                <span class="book-badge">Témoignage Lorraine</span>
-                <h4 class="book-title">Aux animaux ma vie de vétérinaire</h4>
-                <p class="book-desc">
-                  La réalité crue de la profession de vétérinaire rural en Lorraine par Albert DEBREUX. Un métier vécu comme une passion, alternant anecdotes amusantes, drames, échecs et réussites. Facile à lire et émouvant.
-                </p>
-                <div class="book-footer">
-                  <span>Éditions Gérard Louis</span>
-                  <span style="color:var(--user-accent); font-weight:700;">237 pages</span>
-                </div>
-              </div>
 
-              <div class="book-card">
-                <div class="book-cover-wrapper">
-                  <img src="assets/livre_au_nom_de_tous_les_animaux.jpg" alt="Couverture Au nom de tous les animaux" class="book-cover-img">
+                <div class="book-card">
+                  <div class="book-cover-wrapper">
+                    <img src="assets/livre_au_nom_de_tous_les_animaux.jpg" alt="Couverture Au nom de tous les animaux" class="book-cover-img">
+                  </div>
+                  <span class="book-badge">Droit & Société</span>
+                  <h4 class="book-title">Au nom de tous les animaux</h4>
+                  <p class="book-desc">
+                    Un plaidoyer percutant par Olivia SYMNIACOS, avocate dédiée à la cause animale. Une réflexion juridique et humaine essentielle sur l'évolution du statut des animaux.
+                  </p>
+                  <div class="book-footer">
+                    <a href="https://animalex-avocats.com" target="_blank" class="book-ext-link">animalex-avocats.com</a>
+                    <span class="book-pages">199 pages</span>
+                  </div>
                 </div>
-                <span class="book-badge">Droit Animalier</span>
-                <h4 class="book-title">Au nom de tous les animaux</h4>
-                <p class="book-desc">
-                  Magnifique plaidoyer d'Olivia SYMNIACOS, avocate spécialisée en droit animalier. Des histoires bouleversantes qui montrent que la cause animale mérite un engagement total.
-                </p>
-                <div class="book-footer">
-                  <a href="https://animalex-avocats.com" target="_blank" style="color:var(--user-accent); text-decoration:none; font-weight:700;">animalex-avocats.com</a>
-                  <span style="color:var(--user-accent); font-weight:700;">199 pages</span>
-                </div>
-              </div>
 
+              </div>
             </div>
 
           </div>
         </section>
 
-        <!-- PAGE 3 : Réalisations -->
+        <!-- SECTION 3 : RÉALISATIONS & PROJETS -->
         <section id="realisations" class="fullbleed-slide-panel">
           <div class="slide-inner-content">
             
-            <div class="slide-header">
-              <h2 class="slide-main-title">Réalisations existantes & futures</h2>
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Actions Concrètes</span>
+              <h2 class="editorial-title">Des réalisations visibles et des projets pour demain</h2>
+              <p class="editorial-lead">
+                Pour faire de Laxou une ville pionnière du vivre-ensemble, la municipalité concrétise des partenariats innovants et réaménage l'espace public.
+              </p>
             </div>
 
-            <div class="clean-callout" style="margin-bottom:40px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
-                <h3 style="margin:0; font-size:1.4rem;">Partenariat Mutuelle Santé</h3>
-                <span class="slide-badge" style="background:#22c55e; color:#fff;">Convention NOVAMUT</span>
+            <!-- Projet 1 : La Mutuelle Santé NOVAMUT -->
+            <div class="project-showcase-box">
+              <div class="project-header-flex">
+                <div>
+                  <span class="project-status active">Dispositif Disponible</span>
+                  <h3 class="project-title">Partenariat Mutuelle Santé Animale</h3>
+                </div>
+                <div class="project-partner">En partenariat avec <strong>NOVAMUT</strong></div>
               </div>
-              <p style="margin-bottom: 20px;">
-                Vos animaux font partie intégrante de votre famille. Pour vous aider à faire face aux coûts des soins vétérinaires (accidents, maladies, opérations), la <strong>Ville de Laxou</strong> a signé une convention de partenariat avec <strong>NOVAMUT Courtage</strong>.
+              <p class="project-desc">
+                Parce que les frais vétérinaires imprévus (chirurgies, soins d'urgence, maladies chroniques) ne doivent jamais conduire à l'abandon ou au renoncement de soins, la Ville de Laxou a conventionné une offre de mutuelle négociée accessible à tous les foyers laxoviens.
               </p>
-              <div class="cr-grid">
-                <div style="background:#fff; padding:15px; border-radius:8px; border:1px solid #e2e8f0; font-weight:500;"><strong>3 niveaux</strong> de garanties</div>
-                <div style="background:#fff; padding:15px; border-radius:8px; border:1px solid #e2e8f0; font-weight:500;"><strong>Tarifs négociés</strong> et maîtrisés</div>
-                <div style="background:#fff; padding:15px; border-radius:8px; border:1px solid #e2e8f0; font-weight:500;"><strong>Remboursements</strong> rapides</div>
-                <div style="background:#fff; padding:15px; border-radius:8px; border:1px solid #e2e8f0; font-weight:500;">Produit <strong>Made in France</strong></div>
+              
+              <div class="project-points-grid">
+                <div class="point-item">
+                  <strong>3 formules adaptées</strong>
+                  <span>De la prise en charge d'accidents aux soins complets</span>
+                </div>
+                <div class="point-item">
+                  <strong>Tarifs négociés</strong>
+                  <span>Des cotisations préférentielles sans intermédiaire</span>
+                </div>
+                <div class="point-item">
+                  <strong>Gestion locale</strong>
+                  <span>Traitement rapide et interlocuteur dédié</span>
+                </div>
+                <div class="point-item">
+                  <strong>Sans limite d'âge</strong>
+                  <span>Conditions d'adhésion assouplies pour les seniors</span>
+                </div>
               </div>
             </div>
 
-            <div style="background:#f8fafc; border-radius:14px; padding:35px; border:1px solid #e2e8f0;">
-              <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--user-primary-dark); margin-bottom: 12px;">Projet : Parc Canin à l'Hôtel de Ville</h3>
-              <p style="color: #475569; line-height: 1.7; margin-bottom: 25px; font-size:1.05rem;">
-                Le comité étudie la création d'une aire canine dédiée dans le parc de l'Hôtel de Ville. Un espace clos permettant aux chiens d'évoluer en toute liberté sans déranger les autres usagers du parc.
+            <!-- Projet 2 : Le Parc Canin -->
+            <div class="project-showcase-box" style="margin-top: 40px; background:#f8fafc; border: 1px solid #e2e8f0;">
+              <div class="project-header-flex">
+                <div>
+                  <span class="project-status ongoing">En Cours d'Étude</span>
+                  <h3 class="project-title">Création d'un Espace Canin à l'Hôtel de Ville</h3>
+                </div>
+              </div>
+              <p class="project-desc">
+                Aménagement d'une zone dédiée et clôturée au sein du parc municipal pour offrir un lieu de détente sécurisé aux chiens tout en préservant la quiétude des autres usagers du parc.
               </p>
-
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--user-primary-dark); margin-bottom: 15px;">Les trois avantages du projet</h4>
-              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:25px;">
-                <div style="background:#fff; padding:20px; border-radius:10px; border:1px solid #e2e8f0;">
-                  <h5 style="color:var(--user-accent); font-weight:700; margin-bottom:10px; font-size:1.1rem;">1. Socialisation</h5>
-                  <p style="font-size:0.95rem; color:#64748b; margin:0; line-height:1.5;">Espace de jeu indispensable au développement et à l'équilibre comportemental du chien.</p>
+              
+              <div class="pillars-3grid">
+                <div class="pillar-card">
+                  <h4>1. Socialisation</h4>
+                  <p>Un espace clos pour permettre aux chiens de jouer sans laisse et de développer des comportements équilibrés avec leurs congénères.</p>
                 </div>
-                <div style="background:#fff; padding:20px; border-radius:10px; border:1px solid #e2e8f0;">
-                  <h5 style="color:var(--user-accent); font-weight:700; margin-bottom:10px; font-size:1.1rem;">2. Mixité & Convivialité</h5>
-                  <p style="font-size:0.95rem; color:#64748b; margin:0; line-height:1.5;">Lieu de rencontre entre propriétaires de tous âges, contribuant à rompre l'isolement.</p>
+                <div class="pillar-card">
+                  <h4>2. Convivialité</h4>
+                  <p>Un point de rencontre chaleureux pour les habitants du quartier favorisant le lien social et l'échange de conseils.</p>
                 </div>
-                <div style="background:#fff; padding:20px; border-radius:10px; border:1px solid #e2e8f0;">
-                  <h5 style="color:var(--user-accent); font-weight:700; margin-bottom:10px; font-size:1.1rem;">3. Propreté Urbaine</h5>
-                  <p style="font-size:0.95rem; color:#64748b; margin:0; line-height:1.5;">Réduction des déjections sur les trottoirs grâce à la sensibilisation et aux bornes de propreté.</p>
+                <div class="pillar-card">
+                  <h4>3. Cadre de vie</h4>
+                  <p>Une démarche vertueuse qui réduit les nuisances sur les pelouses familiales et encourage le civisme avec des distributeurs dédiés.</p>
                 </div>
               </div>
             </div>
@@ -443,59 +531,58 @@
           </div>
         </section>
 
-        <!-- PAGE 4 : Animalaxou -->
+        <!-- SECTION 4 : SALON ANIMALAXOU (Événement majeur) -->
         <section id="animalaxou" class="fullbleed-slide-panel">
           <div class="slide-inner-content">
             
-            <div class="slide-header">
-              <h2 class="slide-main-title">Le Salon Animalaxou</h2>
-              <span class="slide-badge">Événement Annuel Plein Air</span>
-            </div>
-
-            <p class="slide-lead-text">
-              <strong>Depuis 2022, le comité organise chaque année son salon "Animalaxou"</strong>, le plus grand salon de plein air de Lorraine dédié au bien-être animal. Un événement 100% gratuit avec des stands d'information, des démonstrations et des rencontres avec des professionnels.
-            </p>
-
-            <h3 class="section-subtitle" style="margin-top:40px;">Historique des Éditions</h3>
-
-            <div class="edition-card" style="border-left-color:#22c55e; background:#f0fdf4;">
-              <div class="edition-header">
-                <h4 style="margin:0; font-family:var(--font-heading); font-size:1.3rem; color:var(--user-primary-dark);">4ᵉ édition — 2025</h4>
-                <span class="edition-badge" style="background:#22c55e;">Dimanche 28 septembre 2025</span>
-              </div>
-              <p style="color:#475569; line-height:1.6; margin:0; font-size:1.05rem;">
-                Rendez-vous pour la 4ᵉ édition ! <em>Animalaxou, c'est l'occasion rêvée de découvrir, apprendre, partager... et surtout d'agir ! Chaque petit geste compte.</em>
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Grand Événement Municipal</span>
+              <h2 class="editorial-title">Le Salon Animalaxou</h2>
+              <p class="editorial-lead">
+                Chaque automne, le plus grand salon de plein air de Lorraine dédié au bien-être animal rassemble associations, vétérinaires, éducateurs et milliers de familles au cœur de Laxou.
               </p>
             </div>
 
-            <div class="edition-card">
-              <div class="edition-header">
-                <h4 style="margin:0; font-family:var(--font-heading); font-size:1.2rem; color:var(--user-primary-dark);">3ᵉ édition — 2024</h4>
-                <span class="edition-badge" style="background:#94a3b8;">Édition Passée</span>
+            <!-- Hero Événement : Prochaine Édition 2025 -->
+            <div class="event-hero-card">
+              <div class="event-hero-badge">Prochain Rendez-Vous</div>
+              <div class="event-hero-main">
+                <div class="event-date-block">
+                  <span class="event-day">28</span>
+                  <span class="event-month">Sept. 2025</span>
+                  <span class="event-year">Dimanche</span>
+                </div>
+                <div class="event-details">
+                  <h3 class="event-name">4ᵉ Édition — « Agir au quotidien »</h3>
+                  <p class="event-location">📍 Parc de l'Hôtel de Ville de Laxou • Entrée Libre & Gratuite</p>
+                  <p class="event-summary">
+                    Démonstrations de secours canin, stands d'adoption responsables, ateliers d'ostéopathie animale, conseils en nutrition et village associatif.
+                  </p>
+                </div>
               </div>
-              <p style="color:#475569; line-height:1.6; margin:0;">
-                <strong>Thème :</strong> <em>"Être soi-même acteur du bien-être animal"</em>. L'humain au cœur de la relation homme-animal.
-              </p>
             </div>
 
-            <div class="edition-card">
-              <div class="edition-header">
-                <h4 style="margin:0; font-family:var(--font-heading); font-size:1.2rem; color:var(--user-primary-dark);">2ᵉ édition — 2023</h4>
-                <span class="edition-badge" style="background:#94a3b8;">Édition Passée</span>
+            <!-- Historique des Éditions (Timeline claire) -->
+            <h3 class="block-title" style="margin: 50px 0 25px;">Historique des éditions précédentes</h3>
+            
+            <div class="editions-history-grid">
+              <div class="history-card">
+                <div class="history-year">2024 — 3ᵉ Édition</div>
+                <h4>« Être acteur du bien-être animal »</h4>
+                <p>Mise en lumière du rôle fondamental des maîtres responsables et sensibilisation des plus jeunes avec des parcours éducatifs.</p>
               </div>
-              <p style="color:#475569; line-height:1.6; margin:0;">
-                <strong>Thème :</strong> <em>"La santé par l'animal, la santé pour l'animal"</em>. Thérapies assistées, soins naturels, nutrition et prévention vétérinaire.
-              </p>
-            </div>
 
-            <div class="edition-card">
-              <div class="edition-header">
-                <h4 style="margin:0; font-family:var(--font-heading); font-size:1.2rem; color:var(--user-primary-dark);">1ʳᵉ édition — 2022</h4>
-                <span class="edition-badge" style="background:#94a3b8;">Lancement</span>
+              <div class="history-card">
+                <div class="history-year">2023 — 2ᵉ Édition</div>
+                <h4>« La santé pour et par l'animal »</h4>
+                <p>Focus sur la médiation animale en milieu de santé (hôpitaux, EHPAD) et les soins préventifs vétérinaires naturels.</p>
               </div>
-              <p style="color:#475569; line-height:1.6; margin:0;">
-                Inauguration du salon en plein air avec les associations locales, démonstrations canines et sensibilisation citoyenne.
-              </p>
+
+              <div class="history-card">
+                <div class="history-year">2022 — 1ʳᵉ Édition</div>
+                <h4>Le Lancement Fondateur</h4>
+                <p>Première édition en plein air couronnée de succès, inaugurant la politique volontariste de la commune en faveur des animaux.</p>
+              </div>
             </div>
 
           </div>
@@ -751,8 +838,8 @@
           const delta = (faceCenter - center) / container.clientWidth;
           const clamped = Math.max(-1, Math.min(1, delta));
           
-          const scale = 1 - Math.abs(clamped) * 0.05;
-          const opacity = 1 - Math.abs(clamped) * 0.5;
+          const scale = 1 - Math.abs(clamped) * 0.04;
+          const opacity = 1 - Math.abs(clamped) * 0.4;
           
           face.style.transform = "scale(" + scale + ")";
           face.style.opacity = opacity;
@@ -763,7 +850,7 @@
       container.addEventListener("scroll", function() {
         window.clearTimeout(isScrolling);
         updateUI(); 
-        isScrolling = setTimeout(updateUI, 50); 
+        isScrolling = setTimeout(updateUI, 40); 
       }, {passive:true});
 
       prevBtn.addEventListener('click', () => {

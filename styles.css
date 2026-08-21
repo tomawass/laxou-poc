@@ -3247,3 +3247,46 @@ img {
   .arrow-3d { display: none; } /* On cache les flèches sur mobile car on peut swiper */
   .hbar-labels { display: none; }
 }
+
+/* =========================================
+   HEADER STYLE ÉDITORIAL / MAGAZINE
+   ========================================= */
+.editorial-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  position: relative;
+}
+.editorial-breadcrumb {
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.editorial-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--user-accent);
+  background: #f0f7e6;
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(118, 184, 47, 0.1);
+}
+.editorial-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--user-primary-dark);
+  margin: 0 0 25px 0;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.editorial-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.7;
+}

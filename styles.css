@@ -2816,3 +2816,101 @@ img {
 .pole-card:hover .pole-card-arrow {
   transform: translateX(5px);
 }
+
+/* =========================================
+   PAGE MÈRE SPA (Ex: Bien-être animal)
+   ========================================= */
+.spa-slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.spa-sticky-tabs {
+  position: sticky;
+  top: 0; 
+  background: #f8fafc;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  border-bottom: 2px solid #e2e8f0;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.spa-sticky-tabs::-webkit-scrollbar {
+  display: none;
+}
+.spa-tab-link {
+  padding: 20px 15px;
+  color: #64748b;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.spa-tab-link:hover {
+  color: var(--user-primary-dark);
+}
+.spa-tab-link.active {
+  color: var(--user-accent);
+  border-bottom-color: var(--user-accent);
+}
+.spa-slides-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.spa-slides-container::-webkit-scrollbar {
+  display: none;
+}
+.spa-slide-panel {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.spa-slide-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--user-primary-dark);
+  margin-bottom: 20px;
+}
+.spa-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+.spa-btn {
+  padding: 10px 20px;
+  background: #f1f5f9;
+  color: var(--user-neutral-dark);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+}
+.spa-btn:hover {
+  background: #e2e8f0;
+}
+.spa-btn.disabled {
+  opacity: 0;
+  pointer-events: none;
+}

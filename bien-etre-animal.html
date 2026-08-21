@@ -252,30 +252,15 @@
       <div class="container">
         <div class="spa-slider-wrapper">
           <!-- Menu collant des 4 sous-pages -->
-          <nav class="spa-sticky-tabs">
-            <a href="#comite" class="spa-tab-link active" data-index="0"
-              ><i class="fa-solid fa-users" style="margin-right: 6px"></i> Le
-              Comité</a
-            >
-            <a href="#fiches" class="spa-tab-link" data-index="1"
-              ><i class="fa-solid fa-book-open" style="margin-right: 6px"></i>
-              Fiches pratiques</a
-            >
-            <a href="#realisations" class="spa-tab-link" data-index="2"
-              ><i class="fa-solid fa-shield-dog" style="margin-right: 6px"></i>
-              Réalisations & Initiatives</a
-            >
-            <a href="#animal-laxou" class="spa-tab-link" data-index="3"
-              ><i
-                class="fa-solid fa-calendar-star"
-                style="margin-right: 6px"
-              ></i>
-              Salon Animalaxou</a
-            >
-          </nav>
+          
 
           <!-- Zone de glissement (Les 4 pages enfants) -->
-          <div class="spa-slides-container" id="slidesContainer">
+          
+    <div class="carousel-3d-wrap">
+      <button class="arrow-3d left" id="prevBtn" aria-label="Page précédente"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="arrow-3d right" id="nextBtn" aria-label="Page suivante"><i class="fa-solid fa-chevron-right"></i></button>
+
+      <div class="spa-slides-container" id="slidesContainer">
             <!-- =========================================
                PAGE 1 : Le Comité
                ========================================= -->
@@ -483,13 +468,7 @@
                 </div>
               </div>
 
-              <div class="spa-controls">
-                <button class="spa-btn disabled">Précédent</button>
-                <button class="spa-btn next-btn" data-target="1">
-                  Suivant : Fiches pratiques
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              
             </section>
 
             <!-- =========================================
@@ -668,15 +647,7 @@
                 </div>
               </div>
 
-              <div class="spa-controls">
-                <button class="spa-btn prev-btn" data-target="0">
-                  <i class="fa-solid fa-arrow-left"></i> Retour : Le Comité
-                </button>
-                <button class="spa-btn next-btn" data-target="2">
-                  Suivant : Réalisations & Initiatives
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              
             </section>
 
             <!-- =========================================
@@ -917,16 +888,7 @@
                 </div>
               </div>
 
-              <div class="spa-controls">
-                <button class="spa-btn prev-btn" data-target="1">
-                  <i class="fa-solid fa-arrow-left"></i> Retour : Fiches
-                  pratiques
-                </button>
-                <button class="spa-btn next-btn" data-target="3">
-                  Suivant : Salon Animalaxou
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              
             </section>
 
             <!-- =========================================
@@ -1105,17 +1067,30 @@
                 </p>
               </div>
 
-              <div class="spa-controls">
-                <button class="spa-btn prev-btn" data-target="2">
-                  <i class="fa-solid fa-arrow-left"></i> Retour : Réalisations
-                </button>
-                <button class="spa-btn disabled">Fin du dossier</button>
-              </div>
+              
             </section>
           </div>
-        </div>
+        
+      </div> <!-- fin spa-slides-container -->
+    </div> <!-- fin carousel-3d-wrap -->
+
+    <!-- Timeline Organique SVG -->
+    <div class="hbar-container">
+      <div class="hbar">
+        <svg id="hsvg" viewBox="0 0 660 40" preserveAspectRatio="none">
+          <path id="hpath" d="M10,20 C 100,0 140,40 230,20 C 320,0 360,40 450,20 C 540,0 580,40 650,20" />
+          <circle id="hmarker" cx="10" cy="20" r="6"></circle>
+        </svg>
       </div>
-    </main>
+      <div class="hbar-labels">
+        <span class="hbar-label">Le Comité</span>
+        <span class="hbar-label">Fiches & Livres</span>
+        <span class="hbar-label">Réalisations</span>
+        <span class="hbar-label">Animalaxou</span>
+      </div>
+    </div>
+
+  </main>
 
     <!-- Footer -->
     <footer class="site-footer-aubagne">
@@ -1307,75 +1282,103 @@
     </footer>
 
     <!-- SCRIPT POUR LE SLIDER SPA -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const container = document.getElementById("slidesContainer");
-        const tabs = document.querySelectorAll(".spa-tab-link");
-        const nextBtns = document.querySelectorAll(".next-btn");
-        const prevBtns = document.querySelectorAll(".prev-btn");
+    
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const carousel = document.getElementById('slidesContainer');
+      const faces = Array.from(carousel.querySelectorAll('.spa-slide-panel'));
+      const hpath = document.getElementById('hpath');
+      const hsvg = document.getElementById('hsvg');
+      const hmarker = document.getElementById('hmarker');
+      const totalLen = hpath.getTotalLength();
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const labels = document.querySelectorAll('.hbar-label');
 
-        // Fonction pour scroller vers un index
-        function goToSlide(index) {
-          const slideWidth = container.clientWidth;
-          container.scrollTo({ left: index * slideWidth, behavior: "smooth" });
-        }
-
-        // Clic sur les onglets du haut
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function (e) {
-            e.preventDefault();
-            const index = parseInt(this.getAttribute("data-index"));
-            goToSlide(index);
-          });
-        });
-
-        // Clic sur les boutons Précédent/Suivant en bas
-        nextBtns.forEach((btn) =>
-          btn.addEventListener("click", function () {
-            goToSlide(parseInt(this.getAttribute("data-target")));
-          }),
-        );
-        prevBtns.forEach((btn) =>
-          btn.addEventListener("click", function () {
-            goToSlide(parseInt(this.getAttribute("data-target")));
-          }),
-        );
-
-        // Détection du scroll pour mettre à jour l'URL et l'onglet actif
-        let isScrolling;
-        container.addEventListener("scroll", function () {
-          window.clearTimeout(isScrolling);
-
-          isScrolling = setTimeout(function () {
-            const index = Math.round(
-              container.scrollLeft / container.clientWidth,
-            );
-            if (tabs[index]) {
-              // Mettre à jour l'onglet actif
-              tabs.forEach((t) => t.classList.remove("active"));
-              tabs[index].classList.add("active");
-
-              // Mettre à jour l'URL sans recharger (API History)
-              const hash = tabs[index].getAttribute("href");
-              if (window.location.hash !== hash) {
-                history.replaceState(null, null, hash);
-              }
-            }
-          }, 100); // Debounce
-        });
-
-        // Au chargement, si l'URL contient un #hash, on va dessus directement
-        if (window.location.hash) {
-          setTimeout(() => {
-            const targetTab = Array.from(tabs).find(
-              (t) => t.getAttribute("href") === window.location.hash,
-            );
-            if (targetTab) {
-              goToSlide(parseInt(targetTab.getAttribute("data-index")));
-            }
-          }, 100);
-        }
+      // Création des points cliquables sur la courbe SVG
+      faces.forEach((face, i) => {
+        const frac = faces.length > 1 ? i / (faces.length - 1) : 0;
+        const pt = hpath.getPointAtLength(frac * totalLen);
+        const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('cx', pt.x);
+        dot.setAttribute('cy', pt.y);
+        dot.setAttribute('r', 8);
+        dot.setAttribute('class','wp');
+        dot.setAttribute('tabindex','0');
+        
+        dot.addEventListener('click', () => face.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'}));
+        hsvg.appendChild(dot);
       });
-    </script>
+
+      function updateTransforms(){
+        const rect = carousel.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        
+        faces.forEach((face, i) => {
+          const fr = face.getBoundingClientRect();
+          const faceCenter = fr.left + fr.width / 2;
+          const delta = (faceCenter - center) / rect.width;
+          const clamped = Math.max(-1, Math.min(1, delta));
+          
+          // Magie 3D
+          const angle = clamped * 45; // Rotation
+          const z = -Math.abs(clamped) * 200; // Recul en profondeur
+          const scale = 1 - Math.abs(clamped) * 0.1; 
+          const opacity = 1 - Math.abs(clamped) * 0.7;
+          
+          face.style.transform = `rotateY(${-angle}deg) translateZ(${z}px) scale(${scale})`;
+          face.style.opacity = opacity;
+          face.style.pointerEvents = Math.abs(clamped) > 0.2 ? 'none' : 'auto'; // Désactiver le clic sur les panneaux de fond
+          
+          if(Math.abs(clamped) < 0.2) {
+             labels.forEach(l => l.classList.remove('active'));
+             if(labels[i]) labels[i].classList.add('active');
+          }
+        });
+      }
+
+      function updateMarker(){
+        const max = carousel.scrollWidth - carousel.clientWidth;
+        const frac = max > 0 ? carousel.scrollLeft / max : 0;
+        const pt = hpath.getPointAtLength(frac * totalLen);
+        hmarker.setAttribute('cx', pt.x);
+        hmarker.setAttribute('cy', pt.y);
+      }
+
+      function nearestIndex(){
+        const rect = carousel.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        let best = 0, bestDist = Infinity;
+        faces.forEach((f, i) => {
+          const fr = f.getBoundingClientRect();
+          const d = Math.abs((fr.left + fr.width / 2) - center);
+          if (d < bestDist) { bestDist = d; best = i; }
+        });
+        return best;
+      }
+
+      function goTo(i){
+        i = Math.max(0, Math.min(faces.length - 1, i));
+        faces[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+      }
+
+      carousel.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+          updateTransforms();
+          updateMarker();
+        });
+      }, {passive:true});
+
+      prevBtn.addEventListener('click', () => goTo(nearestIndex() - 1));
+      nextBtn.addEventListener('click', () => goTo(nearestIndex() + 1));
+
+      // Initialisation
+      setTimeout(() => {
+        updateTransforms();
+        updateMarker();
+      }, 100);
+    });
+  </script>
+
   </body>
 </html>

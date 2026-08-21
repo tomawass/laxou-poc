@@ -3107,3 +3107,143 @@ img {
   padding: 25px;
   margin-bottom: 30px;
 }
+
+/* =========================================
+   MOTEUR 3D CAROUSEL (Inspiration Éditoriale)
+   ========================================= */
+.carousel-3d-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.spa-slides-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  perspective: 1600px; /* Profondeur 3D */
+  height: 75vh;
+  min-height: 600px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.spa-slides-container::-webkit-scrollbar {
+  display: none;
+}
+
+.spa-slide-panel {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  height: 100%;
+  overflow-y: auto;
+  padding: 40px 60px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  will-change: transform, opacity;
+  transform-origin: center center;
+  transition: box-shadow 0.3s;
+  /* Espacement pour ne pas coller aux bords pendant la 3D */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.arrow-3d {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: var(--user-primary-dark);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.arrow-3d:hover {
+  background: var(--user-accent);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+.arrow-3d.left { left: 10px; }
+.arrow-3d.right { right: 10px; }
+
+/* Timeline SVG (La Courbe) */
+.hbar-container {
+  max-width: 700px;
+  margin: 20px auto 60px auto;
+  position: relative;
+}
+.hbar {
+  position: relative;
+  height: 50px;
+}
+.hbar svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+#hpath {
+  fill: none;
+  stroke: #cbd5e1;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.wp {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #cbd5e1;
+  stroke-width: 3;
+  transition: stroke 0.3s, transform 0.3s;
+}
+.wp:hover {
+  stroke: var(--user-accent);
+  transform: scale(1.2);
+}
+#hmarker {
+  fill: var(--user-accent);
+  transition: cx 0.1s, cy 0.1s;
+}
+
+.hbar-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -5px;
+  padding: 0 15px;
+}
+.hbar-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s, transform 0.3s;
+  text-align: center;
+  flex: 1;
+}
+.hbar-label.active {
+  color: var(--user-accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .spa-slide-panel { padding: 30px 20px; }
+  .arrow-3d { display: none; } /* On cache les flèches sur mobile car on peut swiper */
+  .hbar-labels { display: none; }
+}

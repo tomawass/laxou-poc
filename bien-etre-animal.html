@@ -17,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="styles.css?v=4014382157" />
+    <link rel="stylesheet" href="styles.css?v=5014053670" />
   </head>
   <body>
     <!-- Header -->
@@ -269,47 +269,67 @@
           <!-- Zone de glissement (Les 4 pages enfants) -->
           <div class="spa-slides-container" id="slidesContainer">
             <!-- PAGE 1 : Le Comité -->
-            <section id="comite" class="spa-slide-panel">
-              <h2 class="spa-slide-title">
-                <i
-                  class="fa-solid fa-users"
-                  style="color: var(--user-accent); margin-right: 10px"
-                ></i>
-                Le comité Bien-être animal
-              </h2>
-              <p>
-                Créé en 2021, le comité "Bien-être animal" est une instance
-                consultative composée d'élus, d'associations et de citoyens
-                experts ou passionnés. Son but est d'étudier et de proposer des
-                solutions concrètes pour améliorer la place de l'animal dans
-                notre ville.
-              </p>
-              <br />
-              <h3>Missions principales :</h3>
-              <ul
-                style="
-                  line-height: 1.8;
-                  margin-top: 10px;
-                  padding-left: 20px;
-                  color: #475569;
-                "
-              >
-                <li>Mettre en place des campagnes de sensibilisation.</li>
-                <li>
-                  Gérer la régulation douce des animaux errants (chats libres).
-                </li>
-                <li>
-                  Créer des aménagements adaptés (parcs canins, nichoirs).
-                </li>
-              </ul>
-              <div class="spa-controls">
-                <button class="spa-btn disabled">Précédent</button>
-                <button class="spa-btn next-btn" data-target="1">
-                  Suivant : Fiches pratiques
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
+          <section id="comite" class="spa-slide-panel">
+            <h2 class="spa-slide-title"><i class="fa-solid fa-users" style="color:var(--user-accent); margin-right:10px;"></i> Le comité Bien-être animal</h2>
+            
+            <div class="content-grid-2">
+              <!-- Colonne Texte & Projet -->
+              <div>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 20px;">
+                  Créé par délibération du 4 novembre 2020, le <strong>comité consultatif pour le bien-être animal</strong> est composé de 12 membres, dont 4 élus municipaux.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 30px;">
+                  Véritable groupe de réflexion, il a pour but de faire jaillir des idées novatrices pour <strong>améliorer la cause animale</strong> au quotidien sur notre territoire.
+                </p>
+                <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border-left: 4px solid var(--user-accent);">
+                  <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--user-primary-dark); margin-bottom: 10px;">Les projets du Conseil</h3>
+                  <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 15px;">Découvrez les actions que le comité souhaite mettre en place à travers ce document de synthèse.</p>
+                  <a href="#" class="spa-btn" style="background: var(--user-accent); color: white; display: inline-flex; align-items: center; gap: 10px;"><i class="fa-solid fa-file-pdf"></i> Consulter le document</a>
+                </div>
               </div>
-            </section>
+
+              <!-- Colonne Comptes Rendus (Accordéons) -->
+              <div>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                  <div style="width: 4px; height: 24px; background: var(--user-accent); border-radius: 2px;"></div>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--user-primary-dark); margin: 0;">Comptes-Rendus & Synthèses</h3>
+                </div>
+
+                <!-- Accordéon 1 -->
+                <details class="cr-accordion" open>
+                  <summary><i class="fa-solid fa-folder-open" style="color: var(--user-accent);"></i> Synthèses des réunions (2022 - 2025)</summary>
+                  <div class="cr-accordion-content">
+                    <div class="cr-grid">
+                      <a href="#" class="cr-card"><span class="cr-card-title">Synthèse 2025</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Synthèse 2024</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Synthèse 2023</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Synthèse 2022</span><span class="cr-card-btn">PDF</span></a>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Accordéon 2 -->
+                <details class="cr-accordion">
+                  <summary><i class="fa-solid fa-folder" style="color: var(--user-accent);"></i> Comptes-Rendus 2021</summary>
+                  <div class="cr-accordion-content">
+                    <div class="cr-grid">
+                      <a href="#" class="cr-card"><span class="cr-card-title">Novembre 2021</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Septembre 2021</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Juin 2021</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Mai 2021</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Avril 2021</span><span class="cr-card-btn">PDF</span></a>
+                      <a href="#" class="cr-card"><span class="cr-card-title">Février 2021</span><span class="cr-card-btn">PDF</span></a>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <div class="spa-controls">
+              <button class="spa-btn disabled">Précédent</button>
+              <button class="spa-btn next-btn" data-target="1">Suivant : Fiches pratiques <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </section>
 
             <!-- PAGE 2 : Fiches Pratiques -->
             <section id="fiches" class="spa-slide-panel">

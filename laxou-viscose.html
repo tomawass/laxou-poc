@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viscose Expérience | Laxou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & PREMIUM DARK THEME */
+    body, html {
+      margin: 0; padding: 0;
+      width: 100vw; height: 100vh;
+      background-color: #0b0f19; /* Deep dark blue */
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    /* TYPOGRAPHY */
+    .header {
+      position: absolute;
+      top: 40px; left: 40px;
+      z-index: 100;
+      pointer-events: none;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .header p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    /* THE GOOEY CONTAINER */
+    .viscose-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      cursor: grab;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .viscose-container:active {
+      cursor: grabbing;
+    }
+
+    /* THE LIQUID FILTER */
+    svg.filters {
+      position: absolute;
+      width: 0; height: 0;
+      pointer-events: none;
+    }
+    
+    .blob-track {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      filter: url('#goo');
+      display: flex;
+      align-items: center;
+      will-change: transform;
+    }
+
+    /* THE BLOBS (BACKGROUNDS) */
+    .blob {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 380px; height: 500px;
+      background: #c0ea6a; /* Viscose bright accent */
+      border-radius: 80px;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    /* THE CONTENT (CRISP, NO FILTER) */
+    .content-track {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    .content-card {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 380px; height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      box-sizing: border-box;
+      will-change: transform;
+    }
+
+    .card-number {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: rgba(11, 15, 25, 0.4);
+      margin-bottom: 20px;
+    }
+    .content-card h2 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 15px 0;
+      color: #0b0f19;
+      pointer-events: auto;
+    }
+    .content-card p {
+      font-size: 1.1rem;
+      color: rgba(11, 15, 25, 0.7);
+      margin: 0;
+      font-weight: 500;
+      pointer-events: auto;
+    }
+    
+    .btn-explore {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #0b0f19;
+      color: #c0ea6a;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform 0.2s;
+    }
+    .btn-explore:hover {
+      transform: scale(1.05);
+    }
+
+    /* CUSTOM CURSOR */
+    .cursor-dot {
+      position: fixed;
+      top: 0; left: 0;
+      width: 20px; height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+      transition: width 0.2s, height 0.2s;
+    }
+    .viscose-container:active ~ .cursor-dot {
+      width: 10px; height: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>POC Laxou</h1>
+    <p>Expérience Visqueuse (Awwwards Style)</p>
+  </div>
+
+  <div class="viscose-container" id="container">
+    
+    <!-- SVG Filter for the Liquid Effect -->
+    <svg class="filters">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 45 -20" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- Liquid Background Layer -->
+    <div class="blob-track" id="blobTrack">
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+    </div>
+
+    <!-- Crisp Content Layer -->
+    <div class="content-track" id="contentTrack">
+      <div class="content-card">
+        <div class="card-number">01</div>
+        <h2>Le Comité</h2>
+        <p>L'instance citoyenne de la cause animale.</p>
+        <button class="btn-explore" onclick="window.location.href='bien-etre-animal.html#comite'">Explorer</button>
+      </div>
+      <div class="content-card">
+        <div class="card-number">02</div>
+        <h2>Guides & Livres</h2>
+        <p>Ressources et bibliographie recommandées.</p>
+        <button class="btn-explore" onclick="window.location.href='bien-etre-animal.html#fiches'">Explorer</button>
+      </div>
+      <div class="content-card">
+        <div class="card-number">03</div>
+        <h2>Réalisations</h2>
+        <p>Mutuelle, infrastructures et projets d'avenir.</p>
+        <button class="btn-explore" onclick="window.location.href='bien-etre-animal.html#realisations'">Explorer</button>
+      </div>
+      <div class="content-card">
+        <div class="card-number">04</div>
+        <h2>Animalaxou</h2>
+        <p>Le plus grand salon animalier de Lorraine.</p>
+        <button class="btn-explore" onclick="window.location.href='bien-etre-animal.html#animalaxou'">Explorer</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cursor-dot" id="cursor"></div>
+
+  <!-- PHYSICS ENGINE (Liquid Scrolling) -->
+  <script>
+    const container = document.getElementById('container');
+    const blobs = document.querySelectorAll('.blob');
+    const cards = document.querySelectorAll('.content-card');
+    const cursor = document.getElementById('cursor');
+
+    let targetScroll = 0;
+    let currentScroll = 0;
+    let isDragging = false;
+    let startX = 0;
+    let lastTime = Date.now();
+
+    const gap = 450; // Distance between blobs
+
+    // Custom Cursor
+    window.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Mouse / Touch Drag Events
+    const onStart = (clientX) => {
+      isDragging = true;
+      startX = clientX;
+    };
+    const onMove = (clientX) => {
+      if (!isDragging) return;
+      const dx = clientX - startX;
+      targetScroll += dx * 1.5; // Drag sensitivity
+      startX = clientX;
+    };
+    const onEnd = () => {
+      isDragging = false;
+    };
+
+    container.addEventListener('mousedown', e => onStart(e.clientX));
+    window.addEventListener('mousemove', e => onMove(e.clientX));
+    window.addEventListener('mouseup', onEnd);
+
+    container.addEventListener('touchstart', e => onStart(e.touches[0].clientX));
+    window.addEventListener('touchmove', e => onMove(e.touches[0].clientX));
+    window.addEventListener('touchend', onEnd);
+
+    // Wheel Scroll
+    window.addEventListener('wheel', e => {
+      targetScroll -= (e.deltaY + e.deltaX) * 1.2;
+    });
+
+    // Physics Loop
+    function render() {
+      const now = Date.now();
+      const dt = (now - lastTime) / 16;
+      lastTime = now;
+
+      // 1. Lerp for smooth scrolling (Inertia)
+      currentScroll += (targetScroll - currentScroll) * 0.1 * dt;
+
+      // 2. Snap to nearest card when velocity is low and not dragging
+      const velocity = targetScroll - currentScroll;
+      if (!isDragging && Math.abs(velocity) < 1) {
+        const nearestIndex = Math.round(-currentScroll / gap);
+        const clampedIndex = Math.max(0, Math.min(blobs.length - 1, nearestIndex));
+        targetScroll = -clampedIndex * gap;
+      }
+
+      // Limit bounds (elastic bounce)
+      const maxScroll = 0;
+      const minScroll = -(blobs.length - 1) * gap;
+      if (targetScroll > maxScroll + 200) targetScroll = maxScroll + 200;
+      if (targetScroll < minScroll - 200) targetScroll = minScroll - 200;
+
+      // 3. Apply Viscous Stretch based on velocity
+      const rawStretch = velocity * 0.003;
+      const stretch = Math.min(Math.max(rawStretch, -0.3), 0.3); // Cap distortion
+
+      blobs.forEach((blob, i) => {
+        const xOffset = (i * gap) + currentScroll;
+        // Skew and scaleX creates the "melting thread" effect inside the SVG filter
+        blob.style.transform = `translate(calc(-50% + ${xOffset}px), -50%) scaleX(${1 + Math.abs(stretch)}) skewX(${-stretch * 30}deg)`;
+        
+        // Sync crisp text without distortion
+        cards[i].style.transform = `translate(calc(-50% + ${xOffset}px), -50%)`;
+      });
+
+      requestAnimationFrame(render);
+    }
+
+    render();
+  </script>
+</body>
+</html>

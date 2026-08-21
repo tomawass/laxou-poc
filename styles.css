@@ -3004,23 +3004,41 @@ img {
    ========================================= */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 25px;
   margin-top: 25px;
 }
 .book-card {
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 24px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 .book-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  border-color: rgba(118, 184, 47, 0.4);
+}
+.book-cover-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+}
+.book-cover-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 .book-badge {
   background: #e6f4ea;
@@ -3030,11 +3048,11 @@ img {
   padding: 4px 10px;
   border-radius: 6px;
   align-self: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .book-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--user-primary-dark);
   margin-bottom: 8px;
@@ -3044,7 +3062,7 @@ img {
   color: #64748b;
   line-height: 1.6;
   flex-grow: 1;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 .book-footer {
   display: flex;

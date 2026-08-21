@@ -3980,3 +3980,147 @@ img {
   .layout-2col { grid-template-columns: 1fr; gap: 30px; }
   .event-hero-main { gap: 20px; }
 }
+
+/* =========================================
+   HYBRID: VISCOSE ENGINE + EDITORIAL CONTENT
+   ========================================= */
+.viscose-body {
+  background-color: #0b0f19;
+  color: #fff;
+  overflow: hidden; /* We scroll the carousel, not the body */
+}
+.viscose-main {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px); /* Leave room for standard site header if exists */
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP NAV */
+.viscose-top-nav {
+  padding: 20px 20px 10px;
+  text-align: center;
+  z-index: 100;
+  background: transparent;
+}
+.v-main-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+.v-tabs {
+  display: inline-flex;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 6px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+}
+.v-tab {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.v-tab:hover { color: #fff; }
+.v-tab.active {
+  background: #ffffff;
+  color: #0b0f19;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* THE CAROUSEL ENGINE */
+.viscose-container {
+  position: relative;
+  flex: 1;
+  width: 100vw;
+  overflow: hidden;
+  touch-action: pan-y; /* Allow vertical scroll naturally */
+}
+svg.filters { position: absolute; width: 0; height: 0; }
+
+.blob-track, .content-track {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  will-change: transform;
+}
+.blob-track { filter: url('#goo'); }
+.content-track { pointer-events: none; }
+
+/* THE LIQUID PANELS (White Blobs) */
+.blob {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 80vw;
+  max-width: 1100px;
+  height: 80vh;
+  background: #ffffff;
+  border-radius: 40px;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* THE CONTENT CONTAINERS */
+.content-card {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 80vw;
+  max-width: 1100px;
+  height: 80vh;
+  padding: 10px; /* Outer margin */
+  box-sizing: border-box;
+  will-change: transform;
+  pointer-events: auto; /* Re-enable clicks and scroll */
+}
+
+/* THE SCROLLABLE INNER AREA */
+.card-scroll-area {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 30px; /* Slightly less than blob */
+  padding: 40px 50px 80px;
+  box-sizing: border-box;
+  color: #334155; /* Text inside is dark! */
+  
+  /* Hide scrollbar for beauty */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.card-scroll-area::-webkit-scrollbar { display: none; }
+
+/* OVERRIDES FOR CONTENT INSIDE THE CARDS (Because they are now in white blobs) */
+.card-scroll-area .editorial-title { color: #0b0f19; font-size: 2.2rem; }
+.card-scroll-area .block-title { color: #0b0f19; }
+.card-scroll-area .doc-item { background: #f8fafc; border: 1px solid #e2e8f0; }
+.card-scroll-area .guide-card, 
+.card-scroll-area .book-card, 
+.card-scroll-area .project-showcase-box, 
+.card-scroll-area .history-card { 
+  background: #ffffff; 
+  border: 1px solid #e2e8f0; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+}
+.card-scroll-area .event-hero-card {
+  background: #0b0f19; /* Contrast block inside white panel */
+  color: #fff;
+}
+.card-scroll-area .event-name { color: #fff; }
+.card-scroll-area .event-location { color: #cbd5e1; }
+
+@media (max-width: 768px) {
+  .blob, .content-card { width: 92vw; height: 85vh; }
+  .card-scroll-area { padding: 30px 20px 60px; }
+  .v-main-title { font-size: 1.5rem; margin-bottom:10px; }
+  .v-tabs { width: 90vw; overflow-x: auto; justify-content: flex-start; padding:4px; }
+  .v-tab { font-size: 0.85rem; padding: 6px 14px; white-space: nowrap; }
+}

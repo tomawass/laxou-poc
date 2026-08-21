@@ -2,17 +2,17 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Bien-être animal | POC Laxou</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=2026_318252">
+  <link rel="stylesheet" href="styles.css?v=merged_322532">
 </head>
-<body>
+<body class="viscose-body">
 
   <header class="site-header">
       <div class="container header-inner">
@@ -225,653 +225,321 @@
       </div>
     </header>
 
-  <main>
-    <!-- EN-TÊTE SOBRE & ALIGNÉ -->
-    <section class="page-top-header">
-      <div class="container">
-        <nav class="pole-breadcrumb" aria-label="Fil d'Ariane">
-          <a href="index.html">Accueil</a> &gt; <a href="laxou-nature.html">Laxou Nature</a> &gt; <span>Bien-être animal</span>
-        </nav>
-        
-        <div class="page-intro-block">
-          <h1 class="page-main-title">Bien-être animal</h1>
-          <p class="page-main-desc">
-            Politique municipale, actions du comité consultatif, conseils pratiques pour les propriétaires d'animaux et salon annuel.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- NAVIGATION PAR ONGLETS STICKY -->
-    <nav class="minimal-sticky-nav">
-      <div class="container" style="display:flex; justify-content:flex-start; gap:30px; overflow-x:auto;">
-        <a href="#comite" class="nav-link active" data-index="0">Le Comité</a>
-        <a href="#fiches" class="nav-link" data-index="1">Guides & Livres</a>
-        <a href="#realisations" class="nav-link" data-index="2">Réalisations & Projets</a>
-        <a href="#animalaxou" class="nav-link" data-index="3">Salon Animalaxou</a>
-      </div>
-    </nav>
-
-    <!-- CARROUSEL PLEINE LARGEUR (SWIPE HORIZONTAL) -->
-    <div class="fullbleed-carousel-wrap">
-      <button class="arrow-clean left" id="prevBtn" aria-label="Précédent">‹</button>
-      <button class="arrow-clean right" id="nextBtn" aria-label="Suivant">›</button>
-
-      <div class="fullbleed-slides-container" id="slidesContainer">
-        
-        <!-- SECTION 1 : LE COMITÉ CONSULTATIF (Design Éditorial + Chiffres + Timeline) -->
-        <section id="comite" class="fullbleed-slide-panel">
-          <div class="slide-inner-content">
-            
-            <div class="editorial-section-intro">
-              <span class="editorial-tag">Démocratie Participative</span>
-              <h2 class="editorial-title">Une instance citoyenne dédiée à la condition animale</h2>
-              <p class="editorial-lead">
-                Créé le 4 novembre 2020 par le Conseil Municipal, le Comité Consultatif pour le Bien-Être Animal est un laboratoire d'initiatives permanentes réunissant élus, spécialistes et citoyens engagés.
-              </p>
-            </div>
-
-            <!-- Chiffres Clés Graphiques -->
-            <div class="stats-banner-grid">
-              <div class="stat-card">
-                <div class="stat-number">12</div>
-                <div class="stat-label">Membres permanents (4 élus & 8 citoyens)</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">2020</div>
-                <div class="stat-label">Année de fondation de l'instance</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">+15</div>
-                <div class="stat-label">Projets et réunions plénières menés</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Engagement bénévole et citoyen</div>
-              </div>
-            </div>
-
-            <!-- Double Colonne : Mission & Documents récents -->
-            <div class="layout-2col" style="margin-top: 50px;">
-              <div class="col-main">
-                <h3 class="block-title">Missions & Champs d'action</h3>
-                <div class="feature-item">
-                  <div class="feature-bullet">1</div>
-                  <div>
-                    <h4>Sensibilisation & Médiation</h4>
-                    <p>Informer les administrés sur les devoirs des propriétaires d'animaux, le respect du cadre de vie et la prévention des abandons.</p>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <div class="feature-bullet">2</div>
-                  <div>
-                    <h4>Aménagement Urbain</h4>
-                    <p>Conseiller la municipalité sur les infrastructures dédiées (espaces de liberté pour chiens, bornes de propreté, nichoirs et corridors de biodiversité).</p>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <div class="feature-bullet">3</div>
-                  <div>
-                    <h4>Protection & Soins</h4>
-                    <p>Accompagner la gestion éthique des populations félines (stérilisation, identification) et nouer des partenariats solidaires (mutuelle communale).</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-side">
-                <div class="side-doc-box">
-                  <h3 class="block-title" style="margin-bottom:15px;">Dernières publications</h3>
-                  <p style="color:#64748b; font-size:0.95rem; margin-bottom:20px;">
-                    Consultez les synthèses d'activité officielles votées par le comité.
-                  </p>
-
-                  <div class="doc-download-list">
-                    <a href="#" class="doc-item">
-                      <div class="doc-icon-badge">PDF</div>
-                      <div class="doc-info">
-                        <span class="doc-name">Synthèse des actions 2025</span>
-                        <span class="doc-meta">Document officiel • 2.4 Mo</span>
-                      </div>
-                    </a>
-                    <a href="#" class="doc-item">
-                      <div class="doc-icon-badge">PDF</div>
-                      <div class="doc-info">
-                        <span class="doc-name">Bilan d'activité 2024</span>
-                        <span class="doc-meta">Document officiel • 1.8 Mo</span>
-                      </div>
-                    </a>
-                    <a href="#" class="doc-item">
-                      <div class="doc-icon-badge">PDF</div>
-                      <div class="doc-info">
-                        <span class="doc-name">Rapport d'orientation 2023</span>
-                        <span class="doc-meta">Document officiel • 1.5 Mo</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- SECTION 2 : FICHES PRATIQUES & LIVRES CONSEILLÉS -->
-        <section id="fiches" class="fullbleed-slide-panel">
-          <div class="slide-inner-content">
-            
-            <div class="editorial-section-intro">
-              <span class="editorial-tag">Ressources & Accompagnement</span>
-              <h2 class="editorial-title">Guides pratiques & Lectures recommandées</h2>
-              <p class="editorial-lead">
-                Pour bien vivre avec son animal au quotidien, retrouvez les fiches réflexes de la Ville de Laxou et une sélection d'ouvrages choisis par nos spécialistes.
-              </p>
-            </div>
-
-            <!-- Grille de Fiches Thématiques Modernes -->
-            <div class="guides-cards-grid">
-              <div class="guide-card">
-                <div class="guide-badge">Guide Essentiel</div>
-                <h3 class="guide-title">Propriétaires de chiens</h3>
-                <p class="guide-desc">Règles de tenue en laisse, propreté urbaine, éducation et civisme au sein des parcs communaux.</p>
-                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
-              </div>
-
-              <div class="guide-card">
-                <div class="guide-badge">Faune & Protection</div>
-                <h3 class="guide-title">Statut des chats libres</h3>
-                <p class="guide-desc">Comprendre la gestion des chats sans maître, les campagnes de stérilisation et le rôle des nourrisseurs bénévoles.</p>
-                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
-              </div>
-
-              <div class="guide-card">
-                <div class="guide-badge">Santé & Climat</div>
-                <h3 class="guide-title">Chaleur & Canicule</h3>
-                <p class="guide-desc">Les gestes indispensables pour protéger vos animaux des coups de chaud, de l'asphalte brûlant et de la déshydratation.</p>
-                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
-              </div>
-
-              <div class="guide-card">
-                <div class="guide-badge">Urgences</div>
-                <h3 class="guide-title">Premiers secours</h3>
-                <p class="guide-desc">Numéros vétérinaires d'urgence de la Métropole, trousse de secours et réflexes en cas d'accident ou d'intoxication.</p>
-                <a href="#" class="guide-link">Consulter la fiche <span>→</span></a>
-              </div>
-            </div>
-
-            <!-- Section Livres (Design valorisé) -->
-            <div style="margin-top: 70px;">
-              <h3 class="block-title" style="margin-bottom: 25px;">La bibliothèque du bien-être animal</h3>
-              
-              <div class="book-grid">
-                
-                <div class="book-card">
-                  <div class="book-cover-wrapper">
-                    <img src="assets/livre_harmony_portee_de_pattes.jpg" alt="Couverture Harmony à portée de pattes" class="book-cover-img">
-                  </div>
-                  <span class="book-badge">Éducation Positive</span>
-                  <h4 class="book-title">Harmony à portée de pattes</h4>
-                  <p class="book-desc">
-                    Un guide accessible et concret : préparer l'arrivée de l'animal, comprendre sa santé et réussir son éducation positive. Avec 10 activités ludiques à réaliser soi-même.
-                  </p>
-                  <div class="book-footer">
-                    <span>Par Marine (Comportementaliste)</span>
-                    <span class="book-pages">111 pages</span>
-                  </div>
-                </div>
-
-                <div class="book-card">
-                  <div class="book-cover-wrapper">
-                    <img src="assets/livre_aux_animaux_debreux.jpg" alt="Couverture Aux animaux ma vie de vétérinaire en Lorraine" class="book-cover-img">
-                  </div>
-                  <span class="book-badge">Témoignage Régional</span>
-                  <h4 class="book-title">Aux animaux ma vie de vétérinaire</h4>
-                  <p class="book-desc">
-                    Le quotidien authentique d'un vétérinaire rural en Lorraine par Albert DEBREUX. Un récit sincère et émouvant entre passion du métier, anecdotes et urgences de campagne.
-                  </p>
-                  <div class="book-footer">
-                    <span>Éditions Gérard Louis</span>
-                    <span class="book-pages">237 pages</span>
-                  </div>
-                </div>
-
-                <div class="book-card">
-                  <div class="book-cover-wrapper">
-                    <img src="assets/livre_au_nom_de_tous_les_animaux.jpg" alt="Couverture Au nom de tous les animaux" class="book-cover-img">
-                  </div>
-                  <span class="book-badge">Droit & Société</span>
-                  <h4 class="book-title">Au nom de tous les animaux</h4>
-                  <p class="book-desc">
-                    Un plaidoyer percutant par Olivia SYMNIACOS, avocate dédiée à la cause animale. Une réflexion juridique et humaine essentielle sur l'évolution du statut des animaux.
-                  </p>
-                  <div class="book-footer">
-                    <a href="https://animalex-avocats.com" target="_blank" class="book-ext-link">animalex-avocats.com</a>
-                    <span class="book-pages">199 pages</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- SECTION 3 : RÉALISATIONS & PROJETS -->
-        <section id="realisations" class="fullbleed-slide-panel">
-          <div class="slide-inner-content">
-            
-            <div class="editorial-section-intro">
-              <span class="editorial-tag">Actions Concrètes</span>
-              <h2 class="editorial-title">Des réalisations visibles et des projets pour demain</h2>
-              <p class="editorial-lead">
-                Pour faire de Laxou une ville pionnière du vivre-ensemble, la municipalité concrétise des partenariats innovants et réaménage l'espace public.
-              </p>
-            </div>
-
-            <!-- Projet 1 : La Mutuelle Santé NOVAMUT -->
-            <div class="project-showcase-box">
-              <div class="project-header-flex">
-                <div>
-                  <span class="project-status active">Dispositif Disponible</span>
-                  <h3 class="project-title">Partenariat Mutuelle Santé Animale</h3>
-                </div>
-                <div class="project-partner">En partenariat avec <strong>NOVAMUT</strong></div>
-              </div>
-              <p class="project-desc">
-                Parce que les frais vétérinaires imprévus (chirurgies, soins d'urgence, maladies chroniques) ne doivent jamais conduire à l'abandon ou au renoncement de soins, la Ville de Laxou a conventionné une offre de mutuelle négociée accessible à tous les foyers laxoviens.
-              </p>
-              
-              <div class="project-points-grid">
-                <div class="point-item">
-                  <strong>3 formules adaptées</strong>
-                  <span>De la prise en charge d'accidents aux soins complets</span>
-                </div>
-                <div class="point-item">
-                  <strong>Tarifs négociés</strong>
-                  <span>Des cotisations préférentielles sans intermédiaire</span>
-                </div>
-                <div class="point-item">
-                  <strong>Gestion locale</strong>
-                  <span>Traitement rapide et interlocuteur dédié</span>
-                </div>
-                <div class="point-item">
-                  <strong>Sans limite d'âge</strong>
-                  <span>Conditions d'adhésion assouplies pour les seniors</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet 2 : Le Parc Canin -->
-            <div class="project-showcase-box" style="margin-top: 40px; background:#f8fafc; border: 1px solid #e2e8f0;">
-              <div class="project-header-flex">
-                <div>
-                  <span class="project-status ongoing">En Cours d'Étude</span>
-                  <h3 class="project-title">Création d'un Espace Canin à l'Hôtel de Ville</h3>
-                </div>
-              </div>
-              <p class="project-desc">
-                Aménagement d'une zone dédiée et clôturée au sein du parc municipal pour offrir un lieu de détente sécurisé aux chiens tout en préservant la quiétude des autres usagers du parc.
-              </p>
-              
-              <div class="pillars-3grid">
-                <div class="pillar-card">
-                  <h4>1. Socialisation</h4>
-                  <p>Un espace clos pour permettre aux chiens de jouer sans laisse et de développer des comportements équilibrés avec leurs congénères.</p>
-                </div>
-                <div class="pillar-card">
-                  <h4>2. Convivialité</h4>
-                  <p>Un point de rencontre chaleureux pour les habitants du quartier favorisant le lien social et l'échange de conseils.</p>
-                </div>
-                <div class="pillar-card">
-                  <h4>3. Cadre de vie</h4>
-                  <p>Une démarche vertueuse qui réduit les nuisances sur les pelouses familiales et encourage le civisme avec des distributeurs dédiés.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- SECTION 4 : SALON ANIMALAXOU (Événement majeur) -->
-        <section id="animalaxou" class="fullbleed-slide-panel">
-          <div class="slide-inner-content">
-            
-            <div class="editorial-section-intro">
-              <span class="editorial-tag">Grand Événement Municipal</span>
-              <h2 class="editorial-title">Le Salon Animalaxou</h2>
-              <p class="editorial-lead">
-                Chaque automne, le plus grand salon de plein air de Lorraine dédié au bien-être animal rassemble associations, vétérinaires, éducateurs et milliers de familles au cœur de Laxou.
-              </p>
-            </div>
-
-            <!-- Hero Événement : Prochaine Édition 2025 -->
-            <div class="event-hero-card">
-              <div class="event-hero-badge">Prochain Rendez-Vous</div>
-              <div class="event-hero-main">
-                <div class="event-date-block">
-                  <span class="event-day">28</span>
-                  <span class="event-month">Sept. 2025</span>
-                  <span class="event-year">Dimanche</span>
-                </div>
-                <div class="event-details">
-                  <h3 class="event-name">4ᵉ Édition — « Agir au quotidien »</h3>
-                  <p class="event-location">📍 Parc de l'Hôtel de Ville de Laxou • Entrée Libre & Gratuite</p>
-                  <p class="event-summary">
-                    Démonstrations de secours canin, stands d'adoption responsables, ateliers d'ostéopathie animale, conseils en nutrition et village associatif.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Historique des Éditions (Timeline claire) -->
-            <h3 class="block-title" style="margin: 50px 0 25px;">Historique des éditions précédentes</h3>
-            
-            <div class="editions-history-grid">
-              <div class="history-card">
-                <div class="history-year">2024 — 3ᵉ Édition</div>
-                <h4>« Être acteur du bien-être animal »</h4>
-                <p>Mise en lumière du rôle fondamental des maîtres responsables et sensibilisation des plus jeunes avec des parcours éducatifs.</p>
-              </div>
-
-              <div class="history-card">
-                <div class="history-year">2023 — 2ᵉ Édition</div>
-                <h4>« La santé pour et par l'animal »</h4>
-                <p>Focus sur la médiation animale en milieu de santé (hôpitaux, EHPAD) et les soins préventifs vétérinaires naturels.</p>
-              </div>
-
-              <div class="history-card">
-                <div class="history-year">2022 — 1ʳᵉ Édition</div>
-                <h4>Le Lancement Fondateur</h4>
-                <p>Première édition en plein air couronnée de succès, inaugurant la politique volontariste de la commune en faveur des animaux.</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
+  <main class="viscose-main">
+    
+    <!-- HEADER ADAPTÉ AU THÈME DARK/VISCOSE -->
+    <div class="viscose-top-nav">
+      <nav class="pole-breadcrumb" style="justify-content: center; margin-bottom:10px;">
+        <a href="index.html" style="color:#94a3b8;">Accueil</a> <span style="color:#64748b;">&gt;</span> <a href="laxou-nature.html" style="color:#94a3b8;">Laxou Nature</a> <span style="color:#64748b;">&gt;</span> <span style="color:#fff;">Bien-être animal</span>
+      </nav>
+      <h1 class="v-main-title">Dossier Bien-Être Animal</h1>
+      <div class="v-tabs" id="vTabs">
+        <button class="v-tab active" data-idx="0">Le Comité</button>
+        <button class="v-tab" data-idx="1">Guides & Livres</button>
+        <button class="v-tab" data-idx="2">Réalisations</button>
+        <button class="v-tab" data-idx="3">Animalaxou</button>
       </div>
     </div>
 
+    <!-- MOTEUR VISCOSE -->
+    <div class="viscose-container" id="container">
+      
+      <svg class="filters">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -20" result="goo" />
+            <!-- Pas de atop ici pour que les blobs fusionnent de manière pure (couleur unie) -->
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- COUCHE 1 : LES BLOBS QUI FONDENT (FILTRE APPLIQUÉ) -->
+      <div class="blob-track" id="blobTrack">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+
+      <!-- COUCHE 2 : LE CONTENU NET (SANS FILTRE, TEXTE SÉLECTIONNABLE) -->
+      <div class="content-track" id="contentTrack">
+        
+        <!-- CARTE 1 -->
+        <div class="content-card">
+          <div class="card-scroll-area">
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Démocratie Participative</span>
+              <h2 class="editorial-title">Une instance citoyenne dédiée à la condition animale</h2>
+              <p class="editorial-lead">Créé en novembre 2020, le Comité est un laboratoire d'initiatives réunissant élus et citoyens engagés.</p>
+            </div>
+            
+            <div class="stats-banner-grid" style="margin-bottom:30px;">
+              <div class="stat-card" style="box-shadow:none; border:1px solid #e2e8f0;"><div class="stat-number">12</div><div class="stat-label">Membres (4 élus, 8 citoyens)</div></div>
+              <div class="stat-card" style="box-shadow:none; border:1px solid #e2e8f0;"><div class="stat-number">+15</div><div class="stat-label">Projets & réunions plénières</div></div>
+            </div>
+
+            <h3 class="block-title">Missions d'action</h3>
+            <div class="feature-item">
+              <div class="feature-bullet">1</div>
+              <div><h4>Sensibilisation & Médiation</h4><p>Informer sur les devoirs des propriétaires et la prévention des abandons.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-bullet">2</div>
+              <div><h4>Aménagement Urbain</h4><p>Infrastructures dédiées (parcs canins, bornes de propreté).</p></div>
+            </div>
+
+            <div class="side-doc-box" style="margin-top:40px; box-shadow:none;">
+              <h3 class="block-title">Synthèses officielles</h3>
+              <div class="doc-download-list">
+                <a href="#" class="doc-item"><div class="doc-icon-badge">PDF</div><div class="doc-info"><span class="doc-name">Synthèse des actions 2025</span></div></a>
+                <a href="#" class="doc-item"><div class="doc-icon-badge">PDF</div><div class="doc-info"><span class="doc-name">Bilan d'activité 2024</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTE 2 -->
+        <div class="content-card">
+          <div class="card-scroll-area">
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Ressources & Accompagnement</span>
+              <h2 class="editorial-title">Guides pratiques & Lectures</h2>
+              <p class="editorial-lead">Retrouvez les fiches réflexes de la Ville et une sélection d'ouvrages.</p>
+            </div>
+
+            <div class="guides-cards-grid" style="margin-bottom:40px;">
+              <div class="guide-card" style="box-shadow:none;"><div class="guide-badge">Essentiel</div><h3 class="guide-title">Propriétaires de chiens</h3><p class="guide-desc">Tenue en laisse, propreté.</p></div>
+              <div class="guide-card" style="box-shadow:none;"><div class="guide-badge">Faune</div><h3 class="guide-title">Chats libres</h3><p class="guide-desc">Stérilisation et statut.</p></div>
+              <div class="guide-card" style="box-shadow:none;"><div class="guide-badge">Climat</div><h3 class="guide-title">Canicule</h3><p class="guide-desc">Protéger des fortes chaleurs.</p></div>
+            </div>
+
+            <h3 class="block-title">La bibliothèque du bien-être</h3>
+            <div class="book-grid">
+              <div class="book-card" style="box-shadow:none; border:1px solid #e2e8f0;">
+                <div class="book-cover-wrapper"><img src="assets/livre_harmony_portee_de_pattes.jpg" class="book-cover-img"></div>
+                <span class="book-badge">Éducation</span>
+                <h4 class="book-title">Harmony à portée de pattes</h4>
+                <p class="book-desc">Préparer l'arrivée, santé et éducation positive. 111 pages.</p>
+              </div>
+              <div class="book-card" style="box-shadow:none; border:1px solid #e2e8f0;">
+                <div class="book-cover-wrapper"><img src="assets/livre_aux_animaux_debreux.jpg" class="book-cover-img"></div>
+                <span class="book-badge">Témoignage</span>
+                <h4 class="book-title">Ma vie de vétérinaire</h4>
+                <p class="book-desc">Le quotidien d'un vétérinaire rural en Lorraine. 237 pages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTE 3 -->
+        <div class="content-card">
+          <div class="card-scroll-area">
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Actions Concrètes</span>
+              <h2 class="editorial-title">Projets et partenariats locaux</h2>
+            </div>
+
+            <div class="project-showcase-box" style="box-shadow:none; margin-bottom:30px;">
+              <div class="project-header-flex">
+                <div>
+                  <span class="project-status active">Disponible</span>
+                  <h3 class="project-title">Mutuelle Santé NOVAMUT</h3>
+                </div>
+              </div>
+              <p class="project-desc">Convention de partenariat pour une offre de mutuelle négociée pour les foyers laxoviens.</p>
+              <div class="project-points-grid">
+                <div class="point-item"><strong>3 formules</strong><span>Soins adaptés</span></div>
+                <div class="point-item"><strong>Tarifs négociés</strong><span>Prix maîtrisés</span></div>
+                <div class="point-item"><strong>Sans limite d'âge</strong><span>Pour les seniors</span></div>
+              </div>
+            </div>
+
+            <div class="project-showcase-box" style="background:#f8fafc; box-shadow:none;">
+              <span class="project-status ongoing">En Étude</span>
+              <h3 class="project-title">Parc Canin (Hôtel de Ville)</h3>
+              <p class="project-desc">Aménagement d'une zone dédiée et clôturée dans le parc municipal.</p>
+              <div class="pillars-3grid" style="margin-top:20px;">
+                <div class="pillar-card"><h4>1. Socialisation</h4><p>Jeu libre.</p></div>
+                <div class="pillar-card"><h4>2. Convivialité</h4><p>Rencontres.</p></div>
+                <div class="pillar-card"><h4>3. Propreté</h4><p>Réduction des nuisances.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTE 4 -->
+        <div class="content-card">
+          <div class="card-scroll-area">
+            <div class="editorial-section-intro">
+              <span class="editorial-tag">Grand Événement</span>
+              <h2 class="editorial-title">Le Salon Animalaxou</h2>
+              <p class="editorial-lead">Le plus grand salon de plein air de Lorraine dédié au bien-être animal.</p>
+            </div>
+
+            <div class="event-hero-card" style="box-shadow:none;">
+              <div class="event-hero-badge">Prochain Rendez-Vous</div>
+              <div class="event-hero-main">
+                <div class="event-date-block" style="border:none; background:rgba(255,255,255,0.15);">
+                  <span class="event-day">28</span>
+                  <span class="event-month">Sept. 2025</span>
+                </div>
+                <div class="event-details">
+                  <h3 class="event-name">4ᵉ Édition</h3>
+                  <p class="event-location">📍 Parc de l'Hôtel de Ville • Entrée Gratuite</p>
+                  <p class="event-summary">Démonstrations, adoptions responsables, ostéopathie, village associatif.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="block-title" style="margin: 40px 0 20px;">Rétrospective</h3>
+            <div class="editions-history-grid">
+              <div class="history-card" style="box-shadow:none;">
+                <div class="history-year">2024 — 3ᵉ Édition</div>
+                <h4>Être acteur du bien-être</h4>
+              </div>
+              <div class="history-card" style="box-shadow:none;">
+                <div class="history-year">2023 — 2ᵉ Édition</div>
+                <h4>La santé par l'animal</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer-aubagne">
-      <!-- Top Band (The "Blue" part) -->
-
-      <!-- TOUS NOS SITES PANEL -->
-      <div class="footer-sites-panel" id="footerSitesPanel">
-        <div class="container sites-panel-inner">
-          <a
-            href="https://www.grandnancy.eu/accueil"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Métropole du<br />Grand Nancy</span>
-          </a>
-          <a
-            href="https://www.meurthe-et-moselle.fr/"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Département de<br />Meurthe-et-Moselle</span>
-          </a>
-          <a
-            href="https://www.grandest.fr/"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Région<br />Grand Est</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-band">
-        <div class="container footer-band-inner">
-          <div class="footer-socials">
-            <span class="social-label">Suivez-nous</span>
-            <a
-              href="https://facebook.com/MairiedeLaxou/"
-              target="_blank"
-              rel="noopener"
-              class="social-circle"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-
-          <div class="footer-sites">
-            <a
-              href="javascript:void(0)"
-              class="sites-link"
-              onclick="
-                document
-                  .getElementById('footerSitesPanel')
-                  .classList.toggle('open');
-                document
-                  .getElementById('sitesChevron')
-                  .classList.toggle('open');
-              "
-            >
-              <i class="fa-solid fa-circle-nodes"></i> Tous nos sites
-              <i
-                class="fa-solid fa-chevron-down"
-                id="sitesChevron"
-                style="
-                  font-size: 0.8rem;
-                  margin-left: 6px;
-                  transition: transform 0.3s;
-                "
-              ></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Area (The "White" part) -->
-      <div class="footer-main">
-        <div class="container footer-main-inner">
-          <div class="footer-logo-col">
-            <img
-              src="assets/logo_laxou_official_5.png"
-              alt="Ville de Laxou"
-              class="footer-logo-img"
-            />
-          </div>
-
-          <div class="footer-contact-col">
-            <p
-              class="contact-title"
-              style="
-                margin-bottom: 1.5rem;
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-              "
-            >
-              <strong>Site de la ville de Laxou</strong>
-            </p>
-            <div
-              style="
-                display: flex;
-                gap: 1.5rem;
-                margin-bottom: 1.5rem;
-                font-weight: 600;
-                flex-wrap: wrap;
-              "
-            >
-              <span
-                ><i
-                  class="fa-solid fa-location-dot"
-                  style="color: var(--user-accent); margin-right: 6px"
-                ></i
-                >3 Avenue Paul Déroulède, 54520 Laxou</span
-              >
-              <span
-                ><i
-                  class="fa-solid fa-phone"
-                  style="color: var(--user-accent); margin-right: 6px"
-                ></i
-                >03 83 96 84 00</span
-              >
-            </div>
-
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 1.5rem;
-                font-size: 0.9rem;
-                color: #475569;
-                line-height: 1.5;
-              "
-            >
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Horaires d'ouverture :</strong
-                ><br />
-                Du lundi au vendredi<br />08h30 à 12h00 puis 13h00 à 16h30
-              </div>
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Service État Civil :</strong
-                ><br />
-                Du lundi au vendredi<br />de 8h30 à 16h30
-              </div>
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Service Urbanisme :</strong
-                ><br />
-                Du lundi au vendredi<br />de 13h00 à 16h30
-              </div>
-            </div>
-          </div>
-          <div class="footer-action-col">
-            <a href="contact.html" class="btn-outline-dark"
-              ><i class="fa-regular fa-comment"></i> NOUS CONTACTER</a
-            >
-          </div>
-        </div>
-
-        <div class="container footer-legals">
-          <div class="legals-left">
-            <i class="fa-solid fa-universal-access"></i> Conformité RGAA :
-            <strong>Non conforme</strong>
-          </div>
-          <div class="legals-right">
-            <a href="#">Mentions légales</a>
-            <a href="#">Gestion des cookies</a>
-            <a href="#">Plan du site</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+  <!-- PHYSICS ENGINE (Le fameux moteur visqueux) -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const container = document.getElementById("slidesContainer");
-      const tabs = document.querySelectorAll(".nav-link");
-      const nextBtn = document.getElementById("nextBtn");
-      const prevBtn = document.getElementById("prevBtn");
-      const faces = Array.from(document.querySelectorAll('.fullbleed-slide-panel'));
+      const container = document.getElementById('container');
+      const blobs = document.querySelectorAll('.blob');
+      const cards = document.querySelectorAll('.content-card');
+      const tabs = document.querySelectorAll('.v-tab');
 
-      function goToSlide(index) {
-        const slideWidth = container.clientWidth;
-        container.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
-      }
+      // Configuration dynamique de la taille
+      // On calcule l'écartement (gap) en fonction de la largeur de la fenêtre
+      let gap = window.innerWidth * 0.85; 
 
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", function(e) {
-          e.preventDefault();
-          const index = parseInt(this.getAttribute("data-index"));
-          goToSlide(index);
-        });
-      });
-
-      function updateUI() {
-        const index = Math.round(container.scrollLeft / container.clientWidth);
-        
-        tabs.forEach(t => t.classList.remove("active"));
-        if(tabs[index]) tabs[index].classList.add("active");
-        
-        if(tabs[index]) {
-          const hash = tabs[index].getAttribute("href");
-          if (window.location.hash !== hash) {
-            history.replaceState(null, null, hash);
-          }
-        }
-
-        if(index === 0) {
-          prevBtn.style.opacity = '0.3';
-          prevBtn.style.pointerEvents = 'none';
-        } else {
-          prevBtn.style.opacity = '1';
-          prevBtn.style.pointerEvents = 'auto';
-        }
-
-        if(index === faces.length - 1) {
-          nextBtn.style.opacity = '0.3';
-          nextBtn.style.pointerEvents = 'none';
-        } else {
-          nextBtn.style.opacity = '1';
-          nextBtn.style.pointerEvents = 'auto';
-        }
-
-        faces.forEach((face, i) => {
-          const fr = face.getBoundingClientRect();
-          const center = container.getBoundingClientRect().left + container.clientWidth / 2;
-          const faceCenter = fr.left + fr.width / 2;
-          const delta = (faceCenter - center) / container.clientWidth;
-          const clamped = Math.max(-1, Math.min(1, delta));
-          
-          const scale = 1 - Math.abs(clamped) * 0.04;
-          const opacity = 1 - Math.abs(clamped) * 0.4;
-          
-          face.style.transform = "scale(" + scale + ")";
-          face.style.opacity = opacity;
-        });
-      }
-
-      let isScrolling;
-      container.addEventListener("scroll", function() {
-        window.clearTimeout(isScrolling);
-        updateUI(); 
-        isScrolling = setTimeout(updateUI, 40); 
-      }, {passive:true});
-
-      prevBtn.addEventListener('click', () => {
-        const currentIndex = Math.round(container.scrollLeft / container.clientWidth);
-        goToSlide(Math.max(0, currentIndex - 1));
-      });
-      nextBtn.addEventListener('click', () => {
-        const currentIndex = Math.round(container.scrollLeft / container.clientWidth);
-        goToSlide(Math.min(faces.length - 1, currentIndex + 1));
-      });
-
-      if(window.location.hash) {
-        setTimeout(() => {
-          const targetTab = Array.from(tabs).find(t => t.getAttribute("href") === window.location.hash);
-          if (targetTab) {
-            goToSlide(parseInt(targetTab.getAttribute("data-index")));
-          }
-        }, 100);
-      }
+      let targetScroll = 0;
+      let currentScroll = 0;
+      let lastTime = Date.now();
       
-      updateUI();
+      // Touch/Drag state
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let isHorizontalSwipe = false;
+      let isVerticalScroll = false;
+
+      // Handle Resize
+      window.addEventListener('resize', () => {
+        gap = window.innerWidth * 0.85;
+        // Recalculate target to stay on current card
+        const currentIndex = Array.from(tabs).findIndex(t => t.classList.contains('active'));
+        if (currentIndex !== -1) {
+          targetScroll = -currentIndex * gap;
+          currentScroll = targetScroll;
+        }
+      });
+
+      // Navigation by Tabs
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          targetScroll = -index * gap;
+        });
+      });
+
+      // Touch & Drag Handling (Mobile & Desktop Trackpad)
+      container.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        isHorizontalSwipe = false;
+        isVerticalScroll = false;
+      }, {passive: true});
+
+      container.addEventListener('touchmove', e => {
+        if (isVerticalScroll) return; // Allow normal native scroll inside card
+
+        const dx = e.touches[0].clientX - touchStartX;
+        const dy = e.touches[0].clientY - touchStartY;
+
+        // Detect axis of swipe
+        if (!isHorizontalSwipe && !isVerticalScroll) {
+          if (Math.abs(dx) > Math.abs(dy) + 5) {
+            isHorizontalSwipe = true;
+          } else if (Math.abs(dy) > Math.abs(dx) + 5) {
+            isVerticalScroll = true;
+            return;
+          }
+        }
+
+        if (isHorizontalSwipe) {
+          e.preventDefault(); // Stop native navigation/overscroll
+          targetScroll += dx * 1.5;
+          touchStartX = e.touches[0].clientX;
+        }
+      }, {passive: false});
+
+      container.addEventListener('touchend', () => {
+        if (isHorizontalSwipe) snapToNearest();
+      });
+
+      // Mouse Wheel Handling (Horizontal scrolling)
+      container.addEventListener('wheel', e => {
+        // If the card itself is scrolling vertically, let it.
+        // We capture horizontal scrolling for the carousel.
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+          e.preventDefault();
+          targetScroll -= e.deltaX * 1.5;
+          
+          // Debounce snap
+          clearTimeout(window.snapTimer);
+          window.snapTimer = setTimeout(snapToNearest, 150);
+        }
+      }, {passive: false});
+
+      function snapToNearest() {
+        const nearestIndex = Math.round(-targetScroll / gap);
+        const clampedIndex = Math.max(0, Math.min(blobs.length - 1, nearestIndex));
+        targetScroll = -clampedIndex * gap;
+      }
+
+      // 60FPS Physics Loop
+      function render() {
+        const now = Date.now();
+        const dt = (now - lastTime) / 16;
+        lastTime = now;
+
+        // Inertia Lerp
+        currentScroll += (targetScroll - currentScroll) * 0.1 * dt;
+
+        // Bounds (Elastic edge)
+        const minScroll = -(blobs.length - 1) * gap;
+        if (targetScroll > 150) targetScroll = 150;
+        if (targetScroll < minScroll - 150) targetScroll = minScroll - 150;
+
+        const velocity = targetScroll - currentScroll;
+        const stretch = Math.min(Math.max(velocity * 0.0015, -0.2), 0.2); // Cap the viscous distortion
+
+        // Update active tab based on position
+        const activeIndex = Math.max(0, Math.min(blobs.length - 1, Math.round(-currentScroll / gap)));
+        tabs.forEach(t => t.classList.remove('active'));
+        if (tabs[activeIndex]) tabs[activeIndex].classList.add('active');
+
+        blobs.forEach((blob, i) => {
+          const xOffset = (i * gap) + currentScroll;
+          // Apply stretch & skew to simulate liquid viscosity
+          blob.style.transform = `translate(calc(-50% + ${xOffset}px), -50%) scaleX(${1 + Math.abs(stretch)}) skewX(${-stretch * 15}deg)`;
+          
+          // Content tracks the position WITHOUT the stretch/skew so it remains perfectly readable
+          cards[i].style.transform = `translate(calc(-50% + ${xOffset}px), -50%)`;
+        });
+
+        requestAnimationFrame(render);
+      }
+
+      render();
     });
   </script>
 </body>

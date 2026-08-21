@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+const fs = require("fs");
+const path = require("path");
+
+const dir = "/Users/carlair/.gemini/antigravity/scratch/laxou-production";
+const htmlPath = path.join(dir, "bien-etre-animal.html");
+let html = fs.readFileSync(htmlPath, "utf-8");
+
+const headerMatch = html.match(/<header class="site-header">[\s\S]*?<\/header>/);
+const footerMatch = html.match(/<footer class="site-footer-aubagne">[\s\S]*?<\/footer>/);
+
+const headerHTML = headerMatch ? headerMatch[0] : "";
+const footerHTML = footerMatch ? footerMatch[0] : "";
+let ts = Date.now().toString().slice(-6);
+
+const fullHTML = \`<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -12,220 +26,11 @@
   
   <!-- ATTENTION : FONT AWESOME EST SUPPRIMÉ VOLONTAIREMENT -->
   
-  <link rel="stylesheet" href="styles.css?v=9014316003">
+  <link rel="stylesheet" href="styles.css?v=9014\${ts}">
 </head>
 <body>
 
-  <header class="site-header">
-      <div class="container header-inner">
-        <!-- Clean Logo -->
-        <a
-          href="index.html"
-          class="logo-brand"
-          title="Accueil - Ville de Laxou"
-        >
-          <img
-            src="assets/logo_laxou_official_5.png"
-            alt="Logo Officiel de la Ville de Laxou"
-            style="height: 54px; width: auto"
-            loading="eager"
-          />
-        </a>
-
-        <!-- Streamlined Navigation Bar (Centered) -->
-        <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
-          <ul>
-            <li class="nav-item">
-              <a href="page-type.html" class="nav-link" aria-haspopup="true"
-                >Ma mairie
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 0.7em; margin-left: 4px"
-                ></i
-              ></a>
-              <div class="dropdown-menu">
-                <ul>
-                  <li>
-                    <a href="equipe-municipale.html"
-                      >L'Équipe municipale & Conseil</a
-                    >
-                  </li>
-                  <li><a href="page-type.html">Jumelages</a></li>
-                  <li><a href="page-type.html">Conseils de proximité</a></li>
-                  <li><a href="page-type.html">Police municipale</a></li>
-                  <li><a href="archives.html">Marchés publics</a></li>
-                  <li><a href="page-type.html">Budget / Finances</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <!-- NOUVEAU MENU : MES SERVICES -->
-            <li class="nav-item">
-              <a href="archives.html" class="nav-link" aria-haspopup="true"
-                >Mes Services
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 0.7em; margin-left: 4px"
-                ></i
-              ></a>
-              <div class="dropdown-menu mega-menu-3col">
-                <div>
-                  <div class="mega-col-title">Démarches & Citoyenneté</div>
-                  <ul>
-                    <li>
-                      <a href="article.html"
-                        >État civil (Naissance, mariage, décès)</a
-                      >
-                    </li>
-                    <li>
-                      <a href="article.html">Cartes d'identité / passeports</a>
-                    </li>
-                    <li>
-                      <a href="archives.html">Élections & Inscriptions</a>
-                    </li>
-                    <li><a href="page-type.html">Cimetières</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="mega-col-title">Enfance & Famille</div>
-                  <ul>
-                    <li>
-                      <a href="page-type.html">Portail Famille dématérialisé</a>
-                    </li>
-                    <li><a href="page-type.html">Crèches & Inscriptions</a></li>
-                    <li>
-                      <a href="page-type.html"
-                        >Restauration scolaire & Cantine</a
-                      >
-                    </li>
-                    <li>
-                      <a href="page-type.html">Garderie & Activités 6-11 ans</a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="mega-col-title">Quotidien & Solidarité</div>
-                  <ul>
-                    <li>
-                      <a href="iframe.html">Urbanisme (Permis & Travaux)</a>
-                    </li>
-                    <li>
-                      <a href="contact.html"
-                        >Signalements (voirie, éclairage)</a
-                      >
-                    </li>
-                    <li>
-                      <a href="page-type.html"
-                        >Seniors, CCAS & Action sociale</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <!-- NOUVEAU MENU : DÉCOUVRIR LAXOU -->
-            <li class="nav-item">
-              <a href="iframe.html" class="nav-link" aria-haspopup="true"
-                >Découvrir Laxou
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 0.7em; margin-left: 4px"
-                ></i
-              ></a>
-              <div class="dropdown-menu mega-menu-3col">
-                <div>
-                  <div class="mega-col-title">Culture & Sorties</div>
-                  <ul>
-                    <li><a href="agenda.html">Agenda des événements</a></li>
-                    <li><a href="agenda.html">Médiathèques & CILM</a></li>
-                    <li><a href="page-type.html">L'École de Musique</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="mega-col-title">Sport & Nature</div>
-                  <ul>
-                    <li><a href="iframe.html">Installations sportives</a></li>
-                    <li>
-                      <a href="iframe.html">Parcs, Jardins & Rénovation</a>
-                    </li>
-                    <li><a href="laxou-nature.html">Laxou Nature</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="mega-col-title">Vie Associative</div>
-                  <ul>
-                    <li>
-                      <a href="archives.html"
-                        ><strong>Annuaire des associations</strong></a
-                      >
-                    </li>
-                    <li>
-                      <a href="page-type.html">Subventions aux associations</a>
-                    </li>
-                    <li>
-                      <a href="iframe.html">Réservation de salles & terrains</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a href="article.html" class="nav-link" aria-haspopup="true"
-                >Actualités
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 0.7em; margin-left: 4px"
-                ></i
-              ></a>
-              <div class="dropdown-menu">
-                <ul>
-                  <li><a href="article.html">Actualités municipales</a></li>
-                  <li>
-                    <a href="archives.html"
-                      >Publications administratives & Arrêtés</a
-                    >
-                  </li>
-                  <li><a href="iframe.html">L'application mobile Laxou</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Boutons Actions à droite (Style Aubagne) -->
-        <div class="header-actions-group">
-          <a
-            href="contact.html"
-            class="nav-link"
-            style="text-transform: none; font-weight: 600"
-            >Contact</a
-          >
-          <a
-            href="archives.html"
-            class="btn-dark"
-            style="
-              border-radius: 50px;
-              padding: 10px 24px;
-              font-weight: 700;
-              text-transform: uppercase;
-              font-size: 0.85rem;
-              letter-spacing: 0.5px;
-            "
-            >Mes Démarches</a
-          >
-          <button
-            id="navToggle"
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="mainNav"
-          >
-            ☰
-          </button>
-        </div>
-      </div>
-    </header>
+  \${headerHTML}
 
   <main>
     <!-- Header Éditorial Pur -->
@@ -405,7 +210,7 @@
             <div class="clean-callout" style="margin-bottom:40px;">
               <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
                 <h3 style="margin:0; font-size:1.4rem;">Partenariat Mutuelle Santé</h3>
-                <span class="slide-badge" style="background:#22c55e; color:#fff;">Convention NOVAMUT</span>
+                <span class="slide-badge">Convention NOVAMUT</span>
               </div>
               <p style="margin-bottom: 20px;">
                 Vos animaux font partie intégrante de votre famille. Pour vous aider à faire face aux coûts des soins vétérinaires (accidents, maladies, opérations), la <strong>Ville de Laxou</strong> a signé une convention de partenariat avec <strong>NOVAMUT Courtage</strong>.
@@ -507,193 +312,7 @@
 
   </main>
 
-  <footer class="site-footer-aubagne">
-      <!-- Top Band (The "Blue" part) -->
-
-      <!-- TOUS NOS SITES PANEL -->
-      <div class="footer-sites-panel" id="footerSitesPanel">
-        <div class="container sites-panel-inner">
-          <a
-            href="https://www.grandnancy.eu/accueil"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Métropole du<br />Grand Nancy</span>
-          </a>
-          <a
-            href="https://www.meurthe-et-moselle.fr/"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Département de<br />Meurthe-et-Moselle</span>
-          </a>
-          <a
-            href="https://www.grandest.fr/"
-            target="_blank"
-            rel="noopener"
-            class="site-partner-link"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Région<br />Grand Est</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-band">
-        <div class="container footer-band-inner">
-          <div class="footer-socials">
-            <span class="social-label">Suivez-nous</span>
-            <a
-              href="https://facebook.com/MairiedeLaxou/"
-              target="_blank"
-              rel="noopener"
-              class="social-circle"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" class="social-circle"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-
-          <div class="footer-sites">
-            <a
-              href="javascript:void(0)"
-              class="sites-link"
-              onclick="
-                document
-                  .getElementById('footerSitesPanel')
-                  .classList.toggle('open');
-                document
-                  .getElementById('sitesChevron')
-                  .classList.toggle('open');
-              "
-            >
-              <i class="fa-solid fa-circle-nodes"></i> Tous nos sites
-              <i
-                class="fa-solid fa-chevron-down"
-                id="sitesChevron"
-                style="
-                  font-size: 0.8rem;
-                  margin-left: 6px;
-                  transition: transform 0.3s;
-                "
-              ></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Area (The "White" part) -->
-      <div class="footer-main">
-        <div class="container footer-main-inner">
-          <div class="footer-logo-col">
-            <img
-              src="assets/logo_laxou_official_5.png"
-              alt="Ville de Laxou"
-              class="footer-logo-img"
-            />
-          </div>
-
-          <div class="footer-contact-col">
-            <p
-              class="contact-title"
-              style="
-                margin-bottom: 1.5rem;
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-              "
-            >
-              <strong>Site de la ville de Laxou</strong>
-            </p>
-            <div
-              style="
-                display: flex;
-                gap: 1.5rem;
-                margin-bottom: 1.5rem;
-                font-weight: 600;
-                flex-wrap: wrap;
-              "
-            >
-              <span
-                ><i
-                  class="fa-solid fa-location-dot"
-                  style="color: var(--user-accent); margin-right: 6px"
-                ></i
-                >3 Avenue Paul Déroulède, 54520 Laxou</span
-              >
-              <span
-                ><i
-                  class="fa-solid fa-phone"
-                  style="color: var(--user-accent); margin-right: 6px"
-                ></i
-                >03 83 96 84 00</span
-              >
-            </div>
-
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 1.5rem;
-                font-size: 0.9rem;
-                color: #475569;
-                line-height: 1.5;
-              "
-            >
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Horaires d'ouverture :</strong
-                ><br />
-                Du lundi au vendredi<br />08h30 à 12h00 puis 13h00 à 16h30
-              </div>
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Service État Civil :</strong
-                ><br />
-                Du lundi au vendredi<br />de 8h30 à 16h30
-              </div>
-              <div>
-                <strong style="color: var(--user-neutral-dark)"
-                  >Service Urbanisme :</strong
-                ><br />
-                Du lundi au vendredi<br />de 13h00 à 16h30
-              </div>
-            </div>
-          </div>
-          <div class="footer-action-col">
-            <a href="contact.html" class="btn-outline-dark"
-              ><i class="fa-regular fa-comment"></i> NOUS CONTACTER</a
-            >
-          </div>
-        </div>
-
-        <div class="container footer-legals">
-          <div class="legals-left">
-            <i class="fa-solid fa-universal-access"></i> Conformité RGAA :
-            <strong>Non conforme</strong>
-          </div>
-          <div class="legals-right">
-            <a href="#">Mentions légales</a>
-            <a href="#">Gestion des cookies</a>
-            <a href="#">Plan du site</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+  \${footerHTML}
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -719,9 +338,11 @@
       function updateUI() {
         const index = Math.round(container.scrollLeft / container.clientWidth);
         
+        // Mettre à jour les onglets
         tabs.forEach(t => t.classList.remove("active"));
         if(tabs[index]) tabs[index].classList.add("active");
         
+        // Mettre à jour l'URL sans saut
         if(tabs[index]) {
           const hash = tabs[index].getAttribute("href");
           if (window.location.hash !== hash) {
@@ -729,6 +350,7 @@
           }
         }
 
+        // Mettre à jour les flèches
         if(index === 0) {
           prevBtn.style.opacity = '0.3';
           prevBtn.style.pointerEvents = 'none';
@@ -745,6 +367,7 @@
           nextBtn.style.pointerEvents = 'auto';
         }
 
+        // Effet de parallaxe / flou léger pour ne pas être une "page rigide"
         faces.forEach((face, i) => {
           const fr = face.getBoundingClientRect();
           const center = container.getBoundingClientRect().left + container.clientWidth / 2;
@@ -755,7 +378,7 @@
           const scale = 1 - Math.abs(clamped) * 0.05;
           const opacity = 1 - Math.abs(clamped) * 0.5;
           
-          face.style.transform = "scale(" + scale + ")";
+          face.style.transform = \`scale(\${scale})\`;
           face.style.opacity = opacity;
         });
       }
@@ -763,7 +386,7 @@
       let isScrolling;
       container.addEventListener("scroll", function() {
         window.clearTimeout(isScrolling);
-        updateUI(); 
+        updateUI(); // Maj instantanée pour animation fluide
         isScrolling = setTimeout(updateUI, 50); 
       }, {passive:true});
 
@@ -776,6 +399,7 @@
         goToSlide(Math.min(faces.length - 1, currentIndex + 1));
       });
 
+      // Initialisation URL Hash
       if(window.location.hash) {
         setTimeout(() => {
           const targetTab = Array.from(tabs).find(t => t.getAttribute("href") === window.location.hash);
@@ -789,4 +413,231 @@
     });
   </script>
 </body>
-</html>
+</html>\`;
+
+fs.writeFileSync(htmlPath, fullHTML, "utf-8");
+
+// CSS UPDATE 
+const cssPath = path.join(dir, "styles.css");
+let css = fs.readFileSync(cssPath, "utf-8");
+
+// We will append the new clear fullbleed styles
+const fullbleedCSS = \`
+/* =========================================
+   CLEAN FULLBLEED CAROUSEL (NO PRISON, NO ICONS)
+   ========================================= */
+.minimal-sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.nav-link {
+  color: #64748b;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  color: var(--user-primary-dark);
+}
+.nav-link.active {
+  color: var(--user-primary-dark);
+  border-bottom-color: var(--user-accent);
+}
+
+.fullbleed-carousel-wrap {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  background: #fdfdfd;
+}
+
+.fullbleed-slides-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.fullbleed-slides-container::-webkit-scrollbar {
+  display: none;
+}
+
+.fullbleed-slide-panel {
+  flex: 0 0 100vw;
+  scroll-snap-align: start;
+  padding: 60px 0 100px; /* Espace vertical généreux */
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+.slide-inner-content {
+  max-width: 1000px; /* Largeur de lecture normale */
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.slide-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+.slide-main-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--user-primary-dark);
+  margin: 0;
+}
+.slide-badge {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.slide-lead-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 30px;
+}
+.section-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--user-primary-dark);
+  margin-bottom: 20px;
+}
+
+/* CLEAN UI ELEMENTS */
+.clean-callout {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--user-accent);
+}
+.clean-callout h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--user-primary-dark);
+  margin-bottom: 10px;
+}
+.clean-callout p {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.btn-clean {
+  display: inline-block;
+  background: var(--user-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.btn-clean:hover {
+  background: #5a8f22;
+}
+
+/* ACCORDIONS CLEAN */
+.cr-accordion-clean {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.cr-accordion-clean summary {
+  padding: 20px 0;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--user-primary-dark);
+  cursor: pointer;
+  list-style: none;
+}
+.cr-accordion-clean summary::-webkit-details-marker { display: none; }
+.cr-accordion-content {
+  padding: 0 0 20px 0;
+}
+
+/* CARDS CLEAN */
+.cr-card-clean {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.cr-card-clean:hover {
+  border-color: var(--user-accent);
+}
+.cr-title {
+  font-weight: 600;
+  color: #334155;
+}
+.cr-badge {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* CLEAN ARROWS */
+.arrow-clean {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(5px);
+  color: var(--user-primary-dark);
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  line-height: 0;
+  padding-bottom: 4px; /* Centrage optique */
+}
+.arrow-clean:hover {
+  background: var(--user-primary-dark);
+  color: #fff;
+}
+.arrow-clean.left { left: 2vw; }
+.arrow-clean.right { right: 2vw; }
+
+@media (max-width: 900px) {
+  .slide-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .arrow-clean { display: none; } /* Hide arrows on small screens, rely on swipe */
+}
+\`;
+
+css = css + fullbleedCSS;
+fs.writeFileSync(cssPath, css, "utf-8");
+
+console.log("Rewrite complete: Clean UI, no icons, full-bleed 100vw pages.");
